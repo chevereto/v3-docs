@@ -1,1 +1,1 @@
-<?php return ['/setup/', '/configurable-features/', '/customization/', '/extend/', '/API/', '/security/'];
+<?php return ['/setup/', '/features/', '/customization/', '/extend/', '/API/', '/security/'];

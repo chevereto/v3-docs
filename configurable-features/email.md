@@ -1,17 +1,14 @@
-Email
-=====
+# Email
 
 This feature allows you to customize the overall email delivery settings which are located at Dashboard > Settings > Email.
 
-Configurable values
--------------------
+## Configurable values
 
-*   System email address and "FROM" name
-*   Email mode (either SMTP or PHPMail)
-*   For SMTP you can configure the security protocol, host, port, etc.
+- System email address and "FROM" name
+- Email mode (either SMTP or PHPMail)
+- For SMTP you can configure the security protocol, host, port, etc.
 
-Recommended settings
---------------------
+## Recommended settings
 
 The SMTP email method is highly recommended because it works better to deliver emails. The native PHP function (PHPMail) should only be used at development environment and for reliability you should always use SMTP.
 

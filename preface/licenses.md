@@ -1,12 +1,10 @@
-Licenses
-========
+# Licenses
 
 Chevereto main release (3.X) is commercial software and you need a license key to install and use Chevereto 3 in your server. All Chevereto licenses share the exact same system functionalities and the only difference is how many domains are allowed per license type.
 
 The license key is automatically included when you download any paid release. You can find the actual license key string in your [client panel](https://chevereto.com/panel/license).
 
-License types
--------------
+## License types
 
 ### Core license
 

@@ -1,12 +1,10 @@
-Requirements
-============
+# Requirements
 
-* Server: Nginx / Apache
-* Database: MySQL 8 / MariaDB 10
-* PHP 7.3+ (5.6 min) with extensions: `curl hash json mbstring pdo pdo-mysql zip session`
+- Server: Nginx / Apache
+- Database: MySQL 8 / MariaDB 10
+- PHP 7.3+ (5.6 min) with extensions: `curl hash json mbstring pdo pdo-mysql zip session`
 
-PHP settings
-------------
+## PHP settings
 
 The following `ini` directives are recommended for Chevereto installations:
 
@@ -17,25 +15,23 @@ max_execution_time = 30;
 memory_limit = 512M;
 ```
 
-File permissions
-----------------
+## File permissions
 
 Chevereto requires write access in the following paths (recursive):
 
-* `app/content`
-* `app/content/languages`
-* `app/content/languages/cache`
-* `app/content/locks`
-* `app/content/system`
-* `content`
-* `images`
+- `app/content`
+- `app/content/languages`
+- `app/content/languages/cache`
+- `app/content/locks`
+- `app/content/system`
+- `content`
+- `images`
 
 Chevereto is PHP software and the web server (Nginx/Apache) inherit its permissions to Chevereto so the files must be accesible to the user running the webserver (usually `www-data`). The webserver user should be in the owner group of your website folders to allow Chevereto to work properly.
 
 `Read` and `Write` access to the temp folder (`/tmp` in Linux; `C:/Windows/Temp` in Windows).
 
-Database
---------
+## Database
 
 ### Privileges
 
@@ -43,19 +39,18 @@ MySQL user must have `ALL PRIVILEGES` over the target database.
 
 ### cPanel create database
 
-* Login to your website cPanel
-* Go to "**MySQL® Database Wizard**"
-    * **Step 1** will create the database that Chevereto will use to store data. Save that user name (it will be asked later on).
-    * **Step 2** will create the database user who connects to the database. Save that user name and password (it will be asked later on).
-    * **Step 3** will grant permissions to that database. Make sure to select `ALL PRIVILEGES` because this will add the permissions to the database user over the database where Chevereto will be installed.
+- Login to your website cPanel
+- Go to "**MySQL® Database Wizard**"
 
-Real connecting IP
-------------------
+  - **Step 1** will create the database that Chevereto will use to store data. Save that user name (it will be asked later on).
+  - **Step 2** will create the database user who connects to the database. Save that user name and password (it will be asked later on).
+  - **Step 3** will grant permissions to that database. Make sure to select `ALL PRIVILEGES` because this will add the permissions to the database user over the database where Chevereto will be installed.
+
+## Real connecting IP
 
 For setups under any kind of proxy (including CloudFlare) it is required that the web server sets the appropiate value for the client connecting IP. For Nginx, you must use `ngx_http_realip_module`. For Apache, `mod_remoteip` according to the IP ranges of your proxy.
 
-Pretty URLs
------------
+## Pretty URLs
 
 ### Apache Server
 

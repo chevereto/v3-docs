@@ -1,14 +1,12 @@
-Categories
-==========
+# Categories
 
 Chevereto allows you to create unlimited categories which helps to clasify the uploaded images and generate listings based in each category.
 
-Step-by-step Add a Category
----------------------------
+## Step-by-step Add a Category
 
-*   Go to Dashboard > Settings > Categories.
-*   Click on "Add category".
-*   Fill the form with the required data.
+- Go to Dashboard > Settings > Categories.
+- Click on "Add category".
+- Fill the form with the required data.
 
 ### SEO Categories
 

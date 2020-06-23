@@ -1,7 +1,7 @@
 Install
 =======
 
-If you have a VPS or dedicated server, follow our [Root install (LEMP)](https://chevereto.com/docs/root-install) guide. For everything else, make sure that your server meets all the [system requirements](https://chevereto.com/docs/requirements) then do one of the following procedures:
+If you have a VPS or dedicated server, follow our [Root install (LEMP)](./root-install.md) guide. For everything else, make sure that your server meets all the [system requirements](./requirements.md) then do one of the following procedures:
 
 A. Install using our Installer
 ------------------------------
@@ -35,7 +35,7 @@ Docker allows you to easily install and maintain all the server dependencies wit
 Install issues
 --------------
 
-Most common install issue is missing [system requirements](https://chevereto.com/docs/requirements) so make sure that you are running a compatible system and that all the data is correct like working MySQL credentials and privileges. For other issues feel free to ask for [support](https://chevereto.com/support).
+Most common install issue is missing [system requirements](./requirements.md) so make sure that you are running a compatible system and that all the data is correct like working MySQL credentials and privileges. For other issues feel free to ask for [support](https://chevereto.com/support).
 
 app/settings.php
 ----------------

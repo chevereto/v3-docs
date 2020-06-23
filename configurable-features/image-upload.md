@@ -1,10 +1,8 @@
-Image upload
-============
+# Image upload
 
 The image upload is the main feature of Chevereto and you can highly customize how it works at Dashboard > Settings > Image Upload.
 
-Configurable values
--------------------
+## Configurable values
 
 ### Uploads (Enable/disable)
 

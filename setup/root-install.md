@@ -1,47 +1,56 @@
-Root install (LEMP)
-===================
+# Root install (LEMP)
 
 This guide is for **Ubuntu 18.04.3 (LTS) x64** and it will install Chevereto in a LEMP stack (Linux, NGINX, MySQL and PHP). This guide can be customized to use your target domain name:
 
-Domain name (without www.)  Guide for domain: example.com
+Domain name (without www.) Guide for domain: example.com
 
-0\. Prepare the system
-----------------------
+## 0\. Prepare the system
 
 Before begin, make sure that the base system is updated.
+
 ```
 sudo apt update && sudo apt upgrade
 ```
+
 Go with the recommended option if asked about updating or keep packages.
 
-1\. Install NGINX
------------------
+## 1\. Install NGINX
+
 ```
 sudo apt install nginx
 ```
-2\. Install MySQL database
---------------------------
+
+## 2\. Install MySQL database
+
 ```
 sudo apt install mysql-server
 ```
+
 Enter to the MySQL console.
+
 ```
 sudo mysql -u root
 ```
+
 Once in the MySQL console, you will see a `mysql>` prompt. Run the following statements:
+
 ```
 CREATE DATABASE chevereto;
 CREATE USER 'chevereto' IDENTIFIED BY 'enter_a_password_here';
 GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'enter_a_password_here';
 quit
 ```
+
 **Note:** You must take note of the database name, user and password (where it reads `enter_a_password_here`) as these details will be required later on.
 
 Once the database, user and permissions are set, run the following command to secure your MySQL installation.
+
 ```
 sudo mysql_secure_installation
 ```
+
 Answer all the questions as follows.
+
 ```
 Set root password? [Y/n] n
 Remove anonymous users? [Y/n] y
@@ -49,41 +58,53 @@ Disallow root login remotely? [Y/n] y
 Remove test database and access to it? [Y/n] y
 Reload privilege tables now? [Y/n] y
 ```
-3\. Install PHP
----------------
+
+## 3\. Install PHP
+
 ```
 sudo apt install php-fpm php-zip php-curl php-mbstring php-gd php-mysql
 ```
+
 Create the `chevereto.ini` file using the nano editor.
+
 ```
 sudo nano /etc/php/7.2/fpm/conf.d/chevereto.ini
 ```
+
 Paste `Ctrl+Shift+V` this:
+
 ```
 upload_max_filesize = 20M;
 post_max_size = 20M;
 max_execution_time = 30;
 memory_limit = 512M;
 ```
+
 Write close `Ctrl+o Ctrl+x`.
 
-4\. Setup the website
----------------------
+## 4\. Setup the website
 
 Create the path for the website files and assign the `www-data` owner and group.
+
 ```
 sudo mkdir -p /var/www/html/example.com/public_html
 sudo chown www-data:www-data /var/www/html/example.com/public_html
 ```
+
 Remove the default NGINX website.
+
 ```
 sudo rm -f /etc/nginx/sites-enabled/default
 ```
+
 Create the website configuration file using the nano editor.
+
 ```
 sudo nano /etc/nginx/sites-available/example.com.conf
 ```
+
 Paste `Ctrl+Shift+V` this:
+
 ```
 server {
     listen         80 default_server;
@@ -125,60 +146,74 @@ server {
     }
 }
 ```
+
 Write close `Ctrl+o Ctrl+x`.
 
 Create the website symbolic link (site available).
+
 ```
 sudo ln -s /etc/nginx/sites-available/example.com.conf /etc/nginx/sites-enabled/
 ```
+
 Restart PHP and NGINX.
+
 ```
 sudo systemctl restart php7.2-fpm
 sudo systemctl restart nginx
 ```
-5\. Setup HTTPS
----------------
+
+## 5\. Setup HTTPS
 
 Install the Certbot and web server-specific packages, then run Certbot.
+
 ```
 sudo apt install python-certbot-nginx
 sudo certbot --nginx
 ```
+
 Answer yes when it ask if you will like to automatically redirect HTTP traffic to HTTPS traffic.
 
 When the tool completes, Certbot will update your web server configuration so that it uses the new certificate.
 
-6\. Install Chevereto
----------------------
+## 6\. Install Chevereto
 
 Download the installer to your website directory, masked as www-data.
+
 ```
 sudo -u www-data wget -O /var/www/html/example.com/public_html/installer.php https://chevereto.com/download/file/installer
 ```
+
 Open your website at `/installer.php`, follow the process (ignore the warning about Nginx rules). Once done, go to the dashboad and make sure that the connecting IP match yours.
 
-7\. Real connecting IP (CloudFlare, optional)
----------------------------------------------
+## 7\. Real connecting IP (CloudFlare, optional)
 
 If you run CloudFlare you will need to configure the `ngx_http_realip_module`. Install the CloudFlare IP ranges sync script.
+
 ```
 wget -P /opt/scripts https://raw.githubusercontent.com/ergin/nginx-cloudflare-real-ip/master/cloudflare-sync-ips.sh
 chmod +x /opt/scripts/cloudflare-sync-ips.sh
 /opt/scripts/cloudflare-sync-ips.sh
 ```
+
 The file `/etc/nginx/cloudflare` should include now the CloudFlare IP ranges, which now must be included into your NGINX configuration at `/etc/nginx/nginx.conf`. Include the following line inside the `http{}` block:
+
 ```
 include /etc/nginx/cloudflare;
 ```
+
 Add a crontab to update CloudFlare IP ranges everyday.
+
 ```
 sudo crontab -e
 ```
+
 If asked about the editor, choose `nano`.
 
 Paste `Ctrl+Shift+V` this:
+
 ```
 # Auto sync Cloudflare IP ranges and reload NGINX
 0 */12 * * * /opt/scripts/cloudflare-sync-ips.sh >/dev/null 2>&1
 ```
+
 Write close `Ctrl+o Ctrl+x`.

@@ -1,5 +1,4 @@
 module.exports = {
-    base: '/v3/',
     title: 'Chevereto Docs',
     description: 'Documentation for Chevereto',
     head: [

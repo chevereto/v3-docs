@@ -4,7 +4,7 @@ This guide is for **Ubuntu 18.04.3 (LTS) x64** and it will install Chevereto in 
 
 Domain name (without www.) Guide for domain: example.com
 
-## 0\. Prepare the system
+## Prepare the system
 
 Before begin, make sure that the base system is updated.
 
@@ -14,13 +14,13 @@ sudo apt update && sudo apt upgrade
 
 Go with the recommended option if asked about updating or keep packages.
 
-## 1\. Install NGINX
+## Install NGINX
 
 ```
 sudo apt install nginx
 ```
 
-## 2\. Install MySQL database
+## Install MySQL database
 
 ```
 sudo apt install mysql-server
@@ -59,7 +59,7 @@ Remove test database and access to it? [Y/n] y
 Reload privilege tables now? [Y/n] y
 ```
 
-## 3\. Install PHP
+## Install PHP
 
 ```
 sudo apt install php-fpm php-zip php-curl php-mbstring php-gd php-mysql
@@ -82,7 +82,7 @@ memory_limit = 512M;
 
 Write close `Ctrl+o Ctrl+x`.
 
-## 4\. Setup the website
+## Setup the website
 
 Create the path for the website files and assign the `www-data` owner and group.
 
@@ -162,7 +162,7 @@ sudo systemctl restart php7.2-fpm
 sudo systemctl restart nginx
 ```
 
-## 5\. Setup HTTPS
+## Setup HTTPS
 
 Install the Certbot and web server-specific packages, then run Certbot.
 
@@ -175,7 +175,7 @@ Answer yes when it ask if you will like to automatically redirect HTTP traffic t
 
 When the tool completes, Certbot will update your web server configuration so that it uses the new certificate.
 
-## 6\. Install Chevereto
+## Install Chevereto
 
 Download the installer to your website directory, masked as www-data.
 
@@ -185,7 +185,7 @@ sudo -u www-data wget -O /var/www/html/example.com/public_html/installer.php htt
 
 Open your website at `/installer.php`, follow the process (ignore the warning about Nginx rules). Once done, go to the dashboad and make sure that the connecting IP match yours.
 
-## 7\. Real connecting IP (CloudFlare, optional)
+## Real connecting IP (CloudFlare, optional)
 
 If you run CloudFlare you will need to configure the `ngx_http_realip_module`. Install the CloudFlare IP ranges sync script.
 

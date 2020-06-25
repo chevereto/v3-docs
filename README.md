@@ -1,15 +1,17 @@
 # Introduction
 
-Welcome to the Chevereto documentation. Here you will find all the resources that you need to know to get into the system. This documentation always refers to the last version so to use this documentation properly make sure you have your website updated.
+> This is the documentation for both Chevereto V3 and Chevereto-Free
 
-## Localized translations
+Here you will find all the (known) resources that you need to know to get into the system. This documentation covers V3 and any user is welcome to collaborate improving this documentation.
 
-You can also browse a [Chinese version](https://ch.cndrew.cn/) of this documentation (thanks to [](https://cndrew.cn/)Uncle_drew).
+## Localized Translations
 
-## Our philosophy
+You can also browse a [Chinese version](https://ch.cndrew.cn/) of this documentation (thanks to [Uncle_drew](https://cndrew.cn/)).
+
+## Our Philosophy
 
 Chevereto is an application which allows you to setup your own image sharing website. Our goal is to allow anyone to self-host their own image sharing service. We believe in build a real alternative for those who want a customized white-label image sharing service.
 
-## Help and support
+## Help and Support
 
 If you need help with something don't hesitate to ask for [support](https://chevereto.com/support).

@@ -6,11 +6,12 @@ Debug refers to ways to detect issues in your installation. Doing debug is the o
 
 Chevereto exception handler includes 4 debug levels that you can configure to meet your needs. The debug levels are detailed in the following table:
 
-- Level Description
-- 0 None
-- 1 Error log (default)
-- 2 Print errors without error log
-- 3 Print and log errors
+Level | Description
+----- | ------------------------------
+0     | None
+1     | Error log (default)
+2     | Print errors without error log
+3     | Print and log errors
 
 Default debug level is Error log (1) and to change this you must edit the `app/settings.php` file. If your settings file doesn't have the `debug_level` property here is a sample:
 

@@ -20,12 +20,16 @@ CloudFlafe offers a wide range of HTTPS solutions that allows you to easily turn
 - Click on the gear icon and select "CloudFlare settings"
 - Scroll down to the SSL section and select your configuration
 
-### Force HTTPS
+### How do I force my site to only use HTTPS/SSL?
 
-By default CloudFlare HTTPS doesn't force all the traffic to HTTPS. To force HTTPS do the following:
+By default CloudFlare HTTPS doesn't force all the traffic to HTTPS.
+
+To force all traffic to HTTPS, enable the "Always Use HTTPS" feature within the Edge Certificates tab of the Cloudflare "SSL/TLS" page.
+
+If you only want to redirect for a subset of requests, consider creating an “Always use HTTPS” page rule as detailed below:
 
 - Go to your [websites](https://www.cloudflare.com/my-websites)
-- Click on the gear icon and select "Page rules"
+- Click on the gear icon and select "Page Rules"
 - Enter your website in the URL pattern input
 - Toggle the "Always use HTTPS" switch
 - Click on "Add rule" at the bottom

@@ -35,7 +35,7 @@ Stack trace:
 ```
 
 ::: warning DON'T PANIC
-When you see something like this don't panic. The whole system works using PHP Exceptions so is normal to get a trace like this, and as you may notice the full path is not being disclosed so there are no security flaws here.
+The system works using PHP Exceptions so is normal to get a trace like this, and as you may notice the full path is not being disclosed so there are no security flaws here.
 :::
 
 **Note:** In production is not recommended to display or show any kind of PHP error or Chevereto exception. We encourage you to use `debug_level 1` for production websites.

@@ -1,8 +1,10 @@
 # Requirements
 
-- Server: Nginx / Apache
-- Database: MySQL 8 / MariaDB 10
 - PHP 7.3+ (5.6 min) with extensions: `curl hash json mbstring pdo pdo-mysql zip session`
+- Database: MySQL 8 / MariaDB 10
+- Server: Nginx / Apache
+
+> MySQL 5.6 could also work, but we can't guarantee that you won't find any issues. Try to prefer hosting providers with support for newer versions.
 
 ## PHP settings
 
@@ -17,7 +19,7 @@ memory_limit = 512M;
 
 ## File permissions
 
-Chevereto requires write access in the following paths (recursive):
+Chevereto requires **recursive write** access in the following paths:
 
 - `app/content`
 - `app/content/languages`
@@ -48,17 +50,14 @@ MySQL user must have `ALL PRIVILEGES` over the target database.
 
 ## Real connecting IP
 
-For setups under any kind of proxy (including CloudFlare) it is required that the web server sets the appropiate value for the client connecting IP. For Nginx, you must use `ngx_http_realip_module`. For Apache, `mod_remoteip` according to the IP ranges of your proxy.
+For setups under any kind of proxy (including CloudFlare) it is required that the web server sets the appropriate value for the client connecting IP
+
+- Nginx: `ngx_http_realip_module`
+- Apache: `mod_remoteip`
 
 ## Pretty URLs
 
-### Apache Server
-
-You will need Apache [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). Chevereto comes with a `.htaccess` file that manages the URL rewriting so you only need to upload this file and make sure that `mod_rewrite` is enabled and working
-
-If you have issues with pretty URLs and Apache try enabling the `RewriteBase /` directive and make sure that in your virtualhost you have `Allow Override All`
-
-### Nginx server
+### Nginx
 
 Use the following directives in your site configuration:
 
@@ -89,6 +88,14 @@ location / {
 }
 ```
 
+### Apache
+
+You will need Apache [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). Chevereto comes with a `.htaccess` file that manages the URL rewriting so you only need to upload this file and make sure that `mod_rewrite` is enabled and working
+
+If you have issues with pretty URLs and Apache try enabling the `RewriteBase /` directive and make sure that in your virtualhost you have `Allow Override All`
+
 ### Other webservers
 
 You should refer to any documentation regarding URL rewriting or "friendly URLs" for your server software.
+
+> 🧔🏾 Feel free to improve this page if you know how to set up Chevereto in other web servers

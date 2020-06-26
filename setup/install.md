@@ -1,13 +1,12 @@
 # Install
 
-If you have a VPS or dedicated server, follow our [Root install (LEMP)](./root-install.md) guide. For everything else, make sure that your server meets all the [system requirements](./requirements.md) then do one of the following procedures:
+> Installing on a VPS? Check our [Root install (LEMP)](./root-install.md) guide
+
+Make sure that your server meets all the [system requirements](./requirements.md) then do one of the following procedures:
 
 ## A. Install using our Installer
 
-The installer is a single `.php` file which will download and extract the latest release.
-
-- Upload the [installer](https://chevereto.com/download/file/installer) to your target destination (usually the `public_html` folder).
-- Open your website at `/installer.php` and follow the process.
+The [installer](installer.md) is a single `.php` file which will download and extract the latest release. This is the recommended way to provision Chevereto.
 
 ## B. Install via zip
 
@@ -19,21 +18,23 @@ The installer is a single `.php` file which will download and extract the latest
 
 If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico](https://netenberg.com/fantastico.php), you can install Chevereto-Free with just one click, it should be available for one-click install under the "Image Galleries" category.
 
-**Note:** Our paid edition isn't available in any of these script libraries. However, you can install Chevereto Free and then **one-click upgrade** it to the paid edition directly from the dashboard panel.
+> **Note:** Our paid edition isn't available in these script libraries. However, you can install Chevereto Free and then **one-click upgrade** it to the paid edition directly from the `/dashboard` panel.
 
 ## D. Install using Docker
 
 Docker allows you to easily install and maintain all the server dependencies with ease by using automated application containers. The ready-to-use Docker images are under [nmtan/chevereto](https://hub.docker.com/r/nmtan/chevereto/) (many thanks to [Tan Nguyen](https://github.com/tanmng)).
 
-**Note:** Use the `installer` tag to use Docker with our paid edition.
+> **Note:** Use the `installer` tag to use Docker with our paid edition.
 
 ## Install issues
 
-Most common install issue is missing [system requirements](./requirements.md) so make sure that you are running a compatible system and that all the data is correct like working MySQL credentials and privileges. For other issues feel free to ask for [support](https://chevereto.com/support).
+Most common install issue is missing [system requirements](./requirements.md) so make sure that you are running a compatible system and that all the data is correct like working MySQL credentials and privileges.
 
-## app/settings.php
+> Check our [community support](https://chevereto.com/community/categories/support.43/) in case you need help with the server provisioning
 
-This file contains the application settings like DB credentials and other settings. This file may look like this:
+## Settings File
+
+The file `app/settings.php` contains the application settings like DB credentials and other settings. It may look like this:
 
 ```php
 <?php
@@ -47,3 +48,21 @@ $settings['db_table_prefix'] = 'chv_';
 $settings['db_driver'] = 'mysql';
 $settings['debug_level'] = 1;
 ```
+
+### Settings Hacks
+
+Code below shows an example on how to override settings that will affect the behavior of the system.
+
+```php
+$settings['session.save_path'] = 'absolute_path_to_sessions';
+$settings['default_timezone'] = 'timezone identifier';
+$settings['https'] = TRUE;
+```
+
+- Use `session.save_path` to set the target session directory
+- Use `default_timezone` to set the right [timezone](https://www.php.net/manual/en/timezones.php)
+- Use `https` `true` to always force HTTPS (required if HTTPS isn't auto detected)
+
+### Runtime php.ini configuration
+
+As `app/settings.php` is loaded everywhere and it is not override by the update procedure, this is the safer place to add runtime `php.ini` directives using [`ini_set`](https://www.php.net/manual/en/function.ini-set.php).

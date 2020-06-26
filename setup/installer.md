@@ -2,7 +2,7 @@
 
 The Installer is a single PHP file that downloads, extracts and install Chevereto. You can [download](https://chevereto.com/download/file/installer) it and execute it anywhere you want to install Chevereto.
 
-You can learn more about it at [chevereto/installer](https://github.com/chevereto/installer) and [chevereto/installer-source](https://github.com/chevereto/installer-source)
+You can learn more about it at [chevereto/installer](https://github.com/chevereto/installer) which is build from [chevereto/installer-source](https://github.com/chevereto/installer-source)
 
 ## How it Works
 
@@ -15,6 +15,11 @@ The installer will prompt with steps to install the software, after that it will
 
 ## Troubleshoot
 
-The Installer is built on top of many assumptions that not always perform as expected. For example, the Installer assumes that URL rewriting is working properly and that HTTP requests can be made to `/install`.
+::: warning DON'T PANIC
+The installer works on top of HTTP so it relies in many sub-systems that could fail. If doesn't work for you the recommendation is to follow another [install](install.md) procedure.
+:::
 
-If the installer fails **before** extracting the software you should switch to manual installation. If it fails **after** extracting the software you should continue the process at `/install`. In both cases get rid of the installer file.
+- It fails **before** extracting the software: Switch to manual installation
+- It fails **after** extracting the software: Go to `/install` to continue the process
+
+> ⚠ In both cases REMOVE the `installer.php` file

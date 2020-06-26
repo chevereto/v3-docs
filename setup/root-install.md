@@ -1,8 +1,8 @@
 # Root install (LEMP)
 
-This guide is for **Ubuntu 18.04.3 (LTS) x64** and it will install Chevereto in a LEMP stack (Linux, NGINX, MySQL and PHP). This guide can be customized to use your target domain name:
+This guide is for **Ubuntu 18.04.3 (LTS) x64** and it will install Chevereto in a LEMP stack (Linux, NGINX, MySQL and PHP).
 
-Domain name (without www.) Guide for domain: example.com
+> Replace `example.com` with your own domain
 
 ## Prepare the system
 
@@ -217,3 +217,15 @@ Paste `Ctrl+Shift+V` this:
 ```
 
 Write close `Ctrl+o Ctrl+x`.
+
+## Extra Steps
+
+### Email
+
+You may need to configure email sending from this server. If you don't, make sure to fill in the email transactional service you want to use at `Dashboard > Settings > Email`.
+
+> We recommend to use a transactional service rather than using your server for sending emails
+
+### Uptime monitor
+
+Setup an uptime monitoring to make sure that your website doesn't went offline without notice.

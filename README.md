@@ -1,6 +1,6 @@
 # Introduction
 
-> This is the documentation for both Chevereto V3 and Chevereto-Free
+> This is the documentation for both Chevereto V3 and Chevereto-Free 😘
 
 Here you will find all the (known) resources that you need to know to get into the system. This documentation covers V3 and any user is welcome to collaborate improving this documentation.
 

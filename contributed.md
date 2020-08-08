@@ -2,7 +2,11 @@
 
 The following content has been provided by users of the software. Feel free to contribute yours and show others.
 
-> 👏🏾 All the linked content is user provided. If you contributed to Chhevereto [let me know](https://chevereto.com/contact) to gift you a paid license 🎁✨. Thanks for contributing!
+> 👏🏾 All the linked content is user provided.
+
+::: tip THANK YOU!
+If you contributed to Chevereto [let me know](https://chevereto.com/contact) to gift you a paid license ✨🎁 as my way to say thanks for contributing!
+:::
 
 ## Guides
 

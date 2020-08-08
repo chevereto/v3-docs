@@ -6,11 +6,19 @@ An external storage works pretty much like add a network drive to your computer,
 
 Instead of store the files in the server hard disk, the system will store the files in an external storage server. Chevereto will map each image to the corresponding storage system and it will use the given Storage URL to locate that file and all the Chevereto system functionalities will work exactly the same.
 
+### URL Mapping
+
+The storage URL will be used to "map" the uploaded images to the target storage URL by appending the file location to this URL. For example, if you set `https://storage.com/bucket/` as URL, it will map to `https://storage.com/bucket/the-file-path.jpg`. You can completely customize this URL to map your storage scheme.
+
+::: warning
+Chevereto only maps the URL to present a resulting image storage URL. The storage URL must resolve to the mapped URL
+:::
+
 ## Step-by-step add external storage
 
 To add an external storage in Chevereto follow these steps:
 
-- Go to Dashboard > Settings > External Storage
+- Go to `Dashboard > Settings > External Storage`
 - Click on "Add storage"
 - Submit the form with the required data
 

@@ -1,30 +1,42 @@
 # Install
 
-> Installing on a VPS? Check our [Root install (LEMP)](./root-install.md) guide
+This refers to the provisioning alternatives for getting a Chevereto installation in your own server. It takes from granted that your server meets all the [system requirements](./requirements.md).
 
-Make sure that your server meets all the [system requirements](./requirements.md) then do one of the following procedures:
+If you are new into self-hosting you should check the [guides](../contributed.md#guides) created by other users of the software.
 
-## A. Install using our Installer
+> If you are installing on a VPS check our [Root install (LEMP)](./root-install.md) guide.
 
-The [installer](installer.md) is a single `.php` file which will download and extract the latest release. This is the recommended way to provision Chevereto.
+## Procedures
 
-## B. Install via zip
+### A. Install using our Installer
+
+The [installer](installer.md) is a single `.php` file which will download and extract the latest release. This is the recommended way to provision Chevereto (the actual software, not the server).
+
+### B. Install using Docker
+
+Docker allows you to easily install a container version of the software.
+
+> 👏🏾 All the Docker images are [user provided](https://hub.docker.com/search?q=chevereto&type=image). If you know about more Docker images let's us know to list it here. Thanks for contributing!
+
+Note: when using Docker with the paid edition check that the image support our `installer`.
+> 
+- [nmtan/chevereto](https://hub.docker.com/r/nmtan/chevereto/) thanks to [Tan Nguyen](https://github.com/tanmng)
+- [zaywalker/chevereto](https://hub.docker.com/r/zaywalker/chevereto) thanks to [Jae Yoon KIM](https://github.com/zaywalker)
+- [einverne/chevereto](https://hub.docker.com/r/einverne/chevereto) thanks to [Ein Verne](https://github.com/einverne)
+
+> Check our [guides](../contributed.md#guides) section for help setting up a Docker environment.
+
+### C. Install via zip
 
 - Download the [latest release](https://chevereto.com/panel/downloads)
 - Upload all the contents of the `chevereto` folder to your server (usually in the `public_html` folder)
 - Go to your target website URL and follow the instructions
 
-## C. Install using Softaculous/Fantastico
+### D. Install using Softaculous/Fantastico
 
 If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico](https://netenberg.com/fantastico.php), you can install Chevereto-Free with just one click, it should be available for one-click install under the "Image Galleries" category.
 
 > **Note:** Our paid edition isn't available in these script libraries. However, you can install Chevereto Free and then **one-click upgrade** it to the paid edition directly from the `/dashboard` panel.
-
-## D. Install using Docker
-
-Docker allows you to easily install and maintain all the server dependencies with ease by using automated application containers. The ready-to-use Docker images are under [nmtan/chevereto](https://hub.docker.com/r/nmtan/chevereto/) (many thanks to [Tan Nguyen](https://github.com/tanmng)).
-
-> **Note:** Use the `installer` tag to use Docker with our paid edition.
 
 ## Install issues
 

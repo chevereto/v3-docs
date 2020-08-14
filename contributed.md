@@ -25,6 +25,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-07-27 [Let’s Install Chevereto with Docker! Self-Hosted Image Hosting](https://geeked.host/lets-install-chevereto-with-docker-self-hosted-image-hosting/)
 - 2020-06-15 [群晖Docker安装chevereto图床](https://cloud.tencent.com/developer/article/1645239)
 - 2020-03-10 [基于Docker的Chevereto部署](https://www.zhuxiaolong.xyz/2020/03/10/%E5%9F%BA%E4%BA%8EDocker%E7%9A%84Chevereto%E9%83%A8%E7%BD%B2/#Docker-Compose-%E5%AE%89%E8%A3%85)
+- 2020-02-18 [威联通（NAS）搭建个人图床](https://juejin.im/post/6844904067236364295)
 - 2020-02-18 [折腾笔记：用Chevereto搭建个人图库&分享小姐姐们](https://www.littlemodesty.com/website-building/use-chevereto-to-build-a-self-hosted-image-home/)
 - 2020-02-06 [Chevereto图床搭建教程 | 利用VPS搭建个人图床实战](https://merlinblog.xyz/wiki/chevereto.html)
 - 2020-01-25 [[Guide] Docker paid version with nmtan/chevereto:installer and real ip fix (reverse proxy)](https://chevereto.com/community/threads/guide-docker-paid-version-with-nmtan-chevereto-installer-and-real-ip-fix-reverse-proxy.11887/)

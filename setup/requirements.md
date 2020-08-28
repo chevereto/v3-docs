@@ -4,7 +4,7 @@
 - Database: MySQL 8 / MariaDB 10
 - Server: Nginx / Apache
 
-> MySQL 5.6 could also work, but we can't guarantee that you won't find any issues. Try to prefer hosting providers with support for newer versions.
+> The web server must be have [URL rewriting](#URL-rewriting) enabled. Instructions for [Nginx rewriting](#Nginx) are available. For Apache, make sure that `mod_rewrite` is enabled and that your virtual host settings allows to perform URL rewriting ().
 
 ## PHP settings
 
@@ -55,13 +55,13 @@ For setups under any kind of proxy (including CloudFlare) it is required that th
 - Nginx: `ngx_http_realip_module`
 - Apache: `mod_remoteip`
 
-## Pretty URLs
+## URL rewriting
 
 ### Nginx
 
 Use the following directives in your site configuration:
 
-```
+```nginx
 # Context limits
 client_max_body_size 20M;
 
@@ -92,9 +92,19 @@ location / {
 
 You will need Apache [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). Chevereto comes with a `.htaccess` file that manages the URL rewriting so you only need to upload this file and make sure that `mod_rewrite` is enabled and working
 
-If you have issues with pretty URLs and Apache try enabling the `RewriteBase /` directive and make sure that in your virtualhost you have `Allow Override All`
+Make sure that in your virtual host you have `Allow Override All`.
 
-### Other webservers
+```apache
+    <Directory /var/www/html>
+        Options -Indexes +FollowSymLinks +MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+```
+
+If you still have issues with pretty URLs and Apache try enabling the `RewriteBase /` directive in the root `.htaccess` file. 
+
+### Other web servers
 
 You should refer to any documentation regarding URL rewriting or "friendly URLs" for your server software.
 

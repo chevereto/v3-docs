@@ -19,6 +19,7 @@ The installer will prompt with steps to install the software, after that it will
 The installer works on top of HTTP so it relies in many sub-systems that could fail. If doesn't work for you the recommendation is to follow another [install](install.md) procedure.
 :::
 
+- If you get an **Unable to perform HTTP request** it means that URL rewriting and/or other systems are preventing the installer to issue HTTP requests to `/install`.
 - It fails **before** extracting the software: Switch to manual installation
 - It fails **after** extracting the software: Go to `/install` to continue the process
 

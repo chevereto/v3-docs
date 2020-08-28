@@ -2,10 +2,8 @@
 
 The following content has been provided by users of the software. Feel free to contribute yours and show others.
 
-> 👏🏾 All the linked content is user provided.
-
 ::: tip THANK YOU!
-If you contributed to Chevereto [let me know](https://chevereto.com/contact) to gift you a paid license ✨🎁 as my way to say thanks for contributing!
+If you contributed to Chevereto [let me know](https://chevereto.com/contact) to gift you a paid license ✨🎁 as my way to say thanks for showing others how to use my software!
 :::
 
 ## Guides
@@ -20,6 +18,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 #### Step-by-step instructions
 
+- 2020-08-19 [Chevereto免费图床搭建教程 | vps搭建免费图床教程](https://chens.life/How-to-build-a-free-image-bed.html)
 - 2020-08-07 [Chevereto on Docker – Self-hosted Imgur](https://dbtechreviews.com/2020/08/chevereto-on-docker-self-hosted-imgur/)
 - 2020-08-04 [使用 Docker 安装 Chevereto](https://juejin.im/post/6857029114718355463)
 - 2020-07-27 [Let’s Install Chevereto with Docker! Self-Hosted Image Hosting](https://geeked.host/lets-install-chevereto-with-docker-self-hosted-image-hosting/)

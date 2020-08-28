@@ -48,7 +48,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 ### External tools
 
 - 2020-06-03 [Typora使用PicGo自动上传图片到Chevereto图床](https://www.zzhyun.com/2020/06/03/159/)
-- 2020-05-22 [](https://chevereto.com/community/threads/itm-chevereto-integration-xenforo-2-1.12234/)
+- 2020-05-22 [[ITM] Chevereto Integration - XenForo 2.1](https://chevereto.com/community/threads/itm-chevereto-integration-xenforo-2-1.12234/)
 - 2020-04-18 [Mac uPic-Chevereto图床配置教程](https://www.sukeycz.com/course/uPic-Chevereto-imageuploads)
 - 2020-02-26 [typora + chevereto之博客图片终极解决方法](http://guiu.xyz/p/c90ee787.html)
 - 2020-01-22 [uPic 图床配置教程 - Chevereto](https://xiaodongxier.com/118.html)

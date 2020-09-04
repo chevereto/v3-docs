@@ -1,6 +1,6 @@
 # Debug
 
-Debugging refers to ways to detect issues in your installation. By default the system is provisioned for production, debug is the only way to understand where is exactly the issue in your system and is extremely useful when it comes to narrow down the source of an error.
+By default, the system is provisioned for production. Debug is the only way to understand where is exactly a given issue in your system and is extremely useful when it comes to narrow down the source of an error.
 
 ## Debug level
 

@@ -43,6 +43,8 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ### Extending
 
+- 2020-03-12 [给你的 Chevereto 添加鉴黄功能,支持百度,腾讯,Moderatecontent,Sightengine](https://alone88.cn/archives/804.html)
+- 2020-03-09 [Chevereto 增加百度AI审核功能,开启鉴黄功能，后台可设置](https://alone88.cn/archives/796.html)
 - 2020-03-08 [-ITM- Chevereto Integration 2.0](https://github.com/McAtze/-ITM-CheveretoIntegration)
 
 ### External tools

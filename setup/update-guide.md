@@ -35,7 +35,7 @@ If the images table has more than 1,000,000 records, Chevereto will dump the SQL
 
 > 👴🏾 These are steps needed when updating from very old releases
 
-### Update from V2.1 - 2.6V
+### Update from V2.1 - V2.6
 
 When updating from these old versions try to always perform a database backup of your system.
 

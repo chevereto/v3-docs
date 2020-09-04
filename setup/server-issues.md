@@ -2,14 +2,14 @@
 
 Not all web servers follow some basic standards and in some cases even having a server that meets the [system requirements](./requirements.md) you could find issues that won't allow Chevereto to work properly.
 
-## Webserver
+## Webserver issues
 
 - Apache `mod_rewrite` disabled or `Allow Override All` missing in virtual hosts
 - Missing writing permissions in Chevereto paths
 - Bad or invalid setup (timezone, multi-views, timeout, etc.)
 - Wrong NGINX server block / PHP-FPM issues
 
-## PHP
+## PHP issues
 
 PHP runs over your Webserver in different flavours (module or `fcgi`) and with different libraries and settings that can cause issues:
 
@@ -22,7 +22,7 @@ PHP runs over your Webserver in different flavours (module or `fcgi`) and with d
 
 Note that `php.ini` directives are also responsible for the file upload limits. You should check this article for more info: [PHP common pitfalls](http://www.php.net/manual/en/features.file-upload.common-pitfalls.php).
 
-## MySQL
+## MySQL issues
 
 The most common things to worry are:
 

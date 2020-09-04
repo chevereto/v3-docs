@@ -1,65 +1,39 @@
 # Requirements
 
-- PHP 7.3+ (5.6 min) with extensions: `curl hash json mbstring pdo pdo-mysql zip session`
+- Web Server: Nginx / Apache / **any*
+- PHP 7.4 (7.0 min) with: `curl hash json mbstring pdo pdo-mysql zip session`
 - Database: MySQL 8 / MariaDB 10
-- Server: Nginx / Apache
 
-> The web server must be have [URL rewriting](#URL-rewriting) enabled. Instructions for [Nginx rewriting](#Nginx) are available. For Apache, make sure that `mod_rewrite` is enabled and that your virtual host settings allows to perform URL rewriting ().
+## Web server
 
-## PHP settings
+### PHP provisioning
 
-The following `ini` directives are recommended for Chevereto installations:
+The web server must be configured to execute [PHP](http://php.net/) and it is recommended to provision it using [PHP-FPM](https://www.php.net/manual/en/install.fpm.php).
 
-```
-upload_max_filesize = 20M;
-post_max_size = 20M;
-max_execution_time = 30;
-memory_limit = 512M;
-```
+### Filesystem permissions
 
-## File permissions
+The webserver user should be in the owner group of your installation. This is required to allow Chevereto to modify the filesystem, which is required to one-click update and many other features.
+
+> 😜 The web server user is usually `www-data`
 
 Chevereto requires **recursive write** access in the following paths:
 
 - `app/content`
 - `app/content/languages`
 - `app/content/languages/cache`
-- `app/content/locks`
 - `app/content/system`
 - `content`
 - `images`
 
-Chevereto is PHP software and the web server (Nginx/Apache) inherit its permissions to Chevereto so the files must be accesible to the user running the webserver (usually `www-data`). The webserver user should be in the owner group of your website folders to allow Chevereto to work properly.
-
 `Read` and `Write` access to the temp folder (`/tmp` in Linux; `C:/Windows/Temp` in Windows).
 
-## Database
+### URL rewriting
 
-### Privileges
+The web server must rewrite HTTP requests like `GET /image/some-name.<id>` to `/index.php`. Instructions for [Nginx](https://nginx.org/) and [Apache HTTP Server](https://httpd.apache.org/) below.
 
-MySQL user must have `ALL PRIVILEGES` over the target database.
+#### Nginx URL rewriting
 
-### cPanel create database
-
-- Login to your website cPanel
-- Go to "**MySQL® Database Wizard**"
-
-  - **Step 1** will create the database that Chevereto will use to store data. Save that user name (it will be asked later on).
-  - **Step 2** will create the database user who connects to the database. Save that user name and password (it will be asked later on).
-  - **Step 3** will grant permissions to that database. Make sure to select `ALL PRIVILEGES` because this will add the permissions to the database user over the database where Chevereto will be installed.
-
-## Real connecting IP
-
-For setups under any kind of proxy (including CloudFlare) it is required that the web server sets the appropriate value for the client connecting IP
-
-- Nginx: `ngx_http_realip_module`
-- Apache: `mod_remoteip`
-
-## URL rewriting
-
-### Nginx
-
-Use the following directives in your site configuration:
+`example.com.conf`
 
 ```nginx
 # Context limits
@@ -88,11 +62,9 @@ location / {
 }
 ```
 
-### Apache
+#### Apache HTTP Server URL rewriting
 
-You will need Apache [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html). Chevereto comes with a `.htaccess` file that manages the URL rewriting so you only need to upload this file and make sure that `mod_rewrite` is enabled and working
-
-Make sure that in your virtual host you have `Allow Override All`.
+Make sure that [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) is enabled and that your virtual host settings allows to perform URL rewriting:
 
 ```apache
     <Directory /var/www/html>
@@ -102,10 +74,74 @@ Make sure that in your virtual host you have `Allow Override All`.
     </Directory>
 ```
 
-If you still have issues with pretty URLs and Apache try enabling the `RewriteBase /` directive in the root `.htaccess` file. 
+Apache configuration `.htaccess` files are already included in the software.
 
-### Other web servers
+`/.htaccess`
 
-You should refer to any documentation regarding URL rewriting or "friendly URLs" for your server software.
+```apache
+# Disable server signature
+ServerSignature Off
 
-> 🧔🏾 Feel free to improve this page if you know how to set up Chevereto in other web servers
+# Enable CORS across all your subdomains (replace dev\.local with your domain\.com)
+# SetEnvIf Origin ^(https?://.+\.dev\.local(?::\d{1,5})?)$   CORS_ALLOW_ORIGIN=$1
+# Header append Access-Control-Allow-Origin  %{CORS_ALLOW_ORIGIN}e   env=CORS_ALLOW_ORIGIN
+# Header merge  Vary "Origin"
+
+# Disable directory listing (-indexes), Multiviews (-MultiViews)
+Options -Indexes
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+
+	RewriteEngine On
+
+	# If you have problems with the rewrite rules remove the "#" from the following RewriteBase line
+	# You will also have to change the path to reflect the path to your Chevereto installation
+	# If you are using alias is most likely that you will need this.
+	#RewriteBase /
+
+	# 404 images
+	# If you want to have your own fancy "image not found" image remove the "#" from RewriteCond and RewriteRule lines
+	# Make sure to apply the correct paths to reflect your current installation
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule images/.+\.(gif|jpe?g|png|bmp|webp) - [NC,L,R=404]
+	#RewriteRule images/.+\.(gif|jpe?g|a?png|bmp|webp) content/images/system/default/404.gif [NC,L]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_URI} !\.(css|js|html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|exe|gif|gz|gzip|ico|jpe?g|jpe|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|swf|tar|tif|tiff|wav|webp|wma|wri|xla|xls|xlsx|xlt|xlw|zip)$ [NC]
+	RewriteRule . index.php [L]
+
+</IfModule>
+```
+
+### Real connecting IP
+
+For setups under any kind of proxy (including CloudFlare) is required that the web server sets the appropriate value for the client connecting IP.
+
+> ⚠ If this is not configured the software won't be able to detect the users IPs
+
+- Nginx: `ngx_http_realip_module`
+- Apache: `mod_remoteip`
+
+## PHP
+
+### PHP settings
+
+The following `ini` directives are recommended for Chevereto installations:
+
+```ini
+upload_max_filesize = 20M;
+post_max_size = 20M;
+max_execution_time = 30;
+memory_limit = 512M;
+```
+
+## Database
+
+### Privileges
+
+MySQL/MariaDB user must have `ALL PRIVILEGES` over the target database. Chevereto will require the following for connecting to the database:
+
+- Database name
+- Database user and its password

@@ -1,5 +1,7 @@
 # Website settings
 
+`dashboard/settings/website`
+
 ## Website name
 
 Determines the name of your website, it will be used in all document titles (trailing).

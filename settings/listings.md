@@ -1,5 +1,7 @@
 # Listing settings
 
+`dashboard/settings/listings`
+
 ## List items per page
 
 Determines how many items will be displayed per page.

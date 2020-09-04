@@ -15,9 +15,11 @@ $settings['db_driver'] = 'mysql';
 $settings['debug_level'] = 1;
 ```
 
-## Hacks
+## Runtime `php.ini` configuration
 
-The settings file is included in all executions. It can be used to force PHP settings or to add any given extra code. Code below shows an example on how to override settings that will affect the behavior of the system.
+As `app/settings.php` is loaded everywhere and not override by the update procedure, is the safer place to add runtime `php.ini` directives using [`ini_set`](https://www.php.net/manual/en/function.ini-set.php).
+
+## Options
 
 ```php
 $settings['session.save_path'] = 'absolute_path_to_sessions';

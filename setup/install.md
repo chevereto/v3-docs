@@ -1,10 +1,10 @@
 # Install
 
-This refers to the provisioning alternatives for getting a Chevereto installation in your own server. It takes from granted that your server meets all the [system requirements](./requirements.md).
-
-If you are new into self-hosting you should check the [guides](../contributed.md#guides) created by other users of the software.
+This refers to the provisioning alternatives for getting Chevereto installed in your server. It takes from granted that your server meets all the [system requirements](./requirements.md).
 
 > If you are installing on a VPS check our [Root install (LEMP)](./root-install.md) guide.
+
+If you are new into self-hosting you should check the [guides](../contributed.md#guides) created by other users of the software.
 
 ## Procedures
 
@@ -62,7 +62,3 @@ If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico
 Most common install issue is missing [system requirements](./requirements.md) so make sure that you are running a compatible system and that all the data is correct like working MySQL credentials and privileges.
 
 > Check our [community support](https://chevereto.com/community/categories/support.43/) in case you need help with the server provisioning
-
-## Runtime php.ini configuration
-
-As `app/settings.php` is loaded everywhere and it is not override by the update procedure, this is the safer place to add runtime `php.ini` directives using [`ini_set`](https://www.php.net/manual/en/function.ini-set.php).

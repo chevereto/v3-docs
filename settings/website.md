@@ -1,6 +1,6 @@
 # Website settings
 
-`dashboard/settings/website`
+`/dashboard/settings/website`
 
 ## Website name
 

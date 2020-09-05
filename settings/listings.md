@@ -1,6 +1,6 @@
 # Listing settings
 
-`dashboard/settings/listings`
+`/dashboard/settings/listings`
 
 ## List items per page
 

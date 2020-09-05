@@ -1,6 +1,6 @@
 # Content settings
 
-`dashboard/settings/content`
+`/dashboard/settings/content`
 
 ## Lock NSFW editing
 

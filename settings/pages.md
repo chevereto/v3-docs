@@ -18,43 +18,42 @@ Toggles if the page is active or not.
 
 ### Type
 
-Determines the page type, which can be of type internal or link.
+Determines the page type.
 
-#### Internal
+- Internal page is a `.php` file in which you can do anything.
+- Link page is just a link to a target URL.
 
-A internal page is a `.php` file in which you can do anything.
-
-##### Internal page type
+### Internal page type
 
 Determines the type of internal page, which can be of type terms of service or extra page.
 
-##### Page visibility
+### Page visibility
 
 Toggles the visibility of the page link.
 
-##### URL key
+### URL key
 
 Determines the URL key (path) for the page.
 
-##### File path
+### File path
 
 Determines the file path where the page will be saved.
 
-##### Meta keywords
+### Meta keywords
 
 Determines the [meta](https://www.w3schools.com/tags/tag_meta.asp) keywords.
 
-##### Meta description
+### Meta description
 
 Determines the [meta](https://www.w3schools.com/tags/tag_meta.asp) description.
 
-##### Source code
+### Source code
 
 The code for the internal `.php` page.
 
-#### Link
+### Link URL [page type link]
 
-A link page is just a link to a target URL.
+Determines the link URL. Applies only for page type link.
 
 ### Link target attribute
 

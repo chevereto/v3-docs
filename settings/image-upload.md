@@ -136,23 +136,27 @@ The medium image size. Images will be resized based on the [medium image fixed d
 
 Toggles image watermarking, which are images that are merged in front of the images. Useful for any branding need.
 
-### Watermark user toggles
+## Watermark user toggles
 
 Which user uploads will be watermarked.
 
-### Watermark file toggles
+## Watermark file toggles
 
 Which image formats will be watermarked.
 
-### Minimum image size needed to apply watermark
+## Minimum image size needed to apply watermark
 
 Determines the minimum image size criteria needed to watermark an image.
 
-### Watermark image
+## Watermark image
 
 The image used to watermark image uploads.
 
-### Watermark position
+| Type  | Recommended  |
+|---|---|
+| Image | PNG with alpha transparency |
+
+## Watermark position
 
 The area where the watermark will be applied to the image.
 
@@ -162,14 +166,14 @@ The area where the watermark will be applied to the image.
 | Left center | Center center | Right center |
 | Left bottom | Center bottom | Right bottom |
 
-### Watermark percentage
+## Watermark percentage
 
 The watermark size expresed in percentage of the target area.
 
-### Watermark margin
+## Watermark margin
 
 A margin to implement around the watermark. Useful if the watermark is not implemented at center/center.
 
-### Watermark opacity
+## Watermark opacity
 
 The opacity of the watermark image.

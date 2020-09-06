@@ -1,13 +1,15 @@
 # Users
 
+`/dashboard/settings/consent-screen`
+
 ## Enable signups
 
 Toggles the ability to signup to your website.
 
 | Value  | Effect  |
 |---|---|
-| Enabled | Enable users to signup  |
-| Disabled | Disable users signup  |
+| Enabled | Enable users to signup |
+| Disabled | Disable users signup |
 
 ## Enable user content delete
 

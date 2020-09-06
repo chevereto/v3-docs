@@ -4,34 +4,51 @@
 
 ## List items per page
 
-Determines how many items will be displayed per page.
+Determines how many items will be displayed per page. The more you display, the slower it gets. Choose wisely.
 
-> The more you display, the slower it gets. Choose wisely.
+| Type  | Recommended  |
+|---|---|
+| Integer  | 24  |
 
 ## List pagination mode
 
 Determines how pagination will work.
 
-> Classic pagination use page numbers, endless scrolling adds the content to the current page without requiring to jump pages.
+| Value  | Effect  |
+|---|---|
+| Classic pagination  | Use conventional pages to browse listings  |
+| Endless scrolling  | Use XHR to append content to the listing page  |
 
 ## Listing viewer
 
 Toggles the listing viewer.
 
-> The listing viewer enables a full-screen image browsing experience.
+| Value  | Effect  |
+|---|---|
+| Enabled  | Enables a a full-screen image browsing experience, like a lightbox  |
+| Disabled  | No viewer |
 
 ## Image listing size
 
 Determines how images will be fitted in listings.
 
-> Fixed will use a tiled representation, fluid will use a masonry.
+| Value  | Effect  |
+|---|---|
+| Fixed  | Tiled listing display, fixed width and height |
+| Fluid  | Masonry listing display, automatic height |
 
 ## Album listing images requirement (explore)
 
-Determine how many images an album must contain before being able to be shown in explore.
+Determine the album image count required to show the album in listings.
 
-> Use zero (0) to display all albums, including empty ones.
+| Type  | Recommended  |
+|---|---|
+| Integer  | 5  |
 
 ## Listing columns number
 
 Determines the number of columns used for listing. You can control this for a wide selection of devices: phone, phablet, tablet, laptop and desktop.
+
+| Type  | Recommended  |
+|---|---|
+| Integer  | `1` or `2` columns for small devices  |

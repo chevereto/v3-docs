@@ -1,17 +1,5 @@
 # Theme
 
-You can configure the theme in the [dashboard](./dashboard.md) for things like logo, favicon, custom CSS, custom JS, etc. You can also configure your banners directly from the admin dashboard.
-
-## Add custom CSS and JS
-
-Chevereto allows you to quick and easy inject custom CSS and JS code into your website. To do this simple follow these steps:
-
-- Go to Dashboard > Theme
-- Put your code in the "Custom CSS code" and "Custom JS code" boxes
-- Save your changes
-
-**Note:** You can also add custom CSS and JS using [custom hooks](#custom-hooks).
-
 ## Theme overrides
 
 Theme overrides works by detecting a file override which replaces a given theme file, so the system will use the override instead of the default file. Overrides are placed at `app/themes/Peafowl/overrides`. For example, let's say you want to replace `app/themes/Peafowl/views/image.php` you have to simply copy the file to `app/themes/Peafowl/overrides/views/image.php` and the system will now use the override instead of the default file.

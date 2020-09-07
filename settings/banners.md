@@ -2,34 +2,20 @@
 
 `/dashboard/settings/banners`
 
-The system comes with 32 predefined ad spaces (16 for NSFW, 16 for SFW) that allows you to generate revenue with your image hosting website.
+The system comes with 16 predefined ad spaces (32 if you consider SFW and NSFW usage) that allows you to generate revenue.
 
-## Ad networks (normal websites)
+| Location  | Ad spaces  |
+|---|---|
+| Homepage  | Before main title (homepage), After call to action (homepage), After cover (homepage), After listing (homepage)  |
+| Listings | Before pagination, After pagination |
+| Content (image and album) | Tab about column, Before comments
+ |
+| Image page | Inside viewer top (image page), Inside viewer foot (image page), After image viewer (image page), Before header (image page), After header (image page), Footer (image page) |
+| Album page | Before header (album page), After header (album page)
+ |
+| User profile page | After top (user profile), Before listing (user profile) |
+| Explore page | After top (explore page) |
 
-Depending in your website niche and your traffic source you will notice that some Ad networks works better or worse for you. Here is a list with the Ad networks that you should try.
-
-- Google AdSense
-- Yahoo Advertising
-- Bing Ads
-- Vibrant Media
-- Clicksor
-- Chitika
-- BidVertiser
-- SiteScout
-- BuySellAds
-- Commission Junction
-
-You can enable/disable to show banners in NSFW content which helps in this kind of Ad networks. To configure this setting go to Dashboard > Settings > Content and toggle the "Show banners in not safe content" option.
-
-## Ad networks (adult websites)
-
-If you are planing to create an adult image hosting website you will need to use Ad networks that works with this kind of content. Here is a list of adult content Ad networks.
-
-- AdultFriendFinder and its [network](https://secure.adultfriendfinder.com/p/partners/main.cgi?site=ffadult&action=summary_sites)
-- LoadedCash
-- TotemCash
-- XXXwebTraffic
-- ClickCash
-- JuicyAds
-- AdXpansion
-- 
+::: tip
+Although ad slots are intended to be used to place banners, you can use these for placing any kind of HTML code.
+:::

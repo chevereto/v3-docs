@@ -3,7 +3,7 @@
 `/dashboard/settings/email`
 
 ::: tip
-Test email delivery results at [tools](./tools.md).
+Test email delivery results at [tools](./tools.md#send-test-email).
 :::
 
 ## From name
@@ -18,9 +18,7 @@ Determines the `from` name used when sending transactional emails.
 
 Determines the `email` used when sending transactional emails.
 
-::: tip
 It is recommended to use a "no-reply" address.
-:::
 
 | Type  | Example |
 |---|---|
@@ -28,11 +26,9 @@ It is recommended to use a "no-reply" address.
 
 ## Incoming email address
 
-Determines the `email` inbox used to contact form and system alters.
+Determines the `email` inbox.
 
-::: tip
 Contact form and system notifications will send emails to this address.
-:::
 
 | Type  | Example |
 |---|---|

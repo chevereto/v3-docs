@@ -1,12 +1,8 @@
 # Banners
 
-Chevereto is a traffic making machine and you will surely find useful to monetize it with ads. By default the system comes with 16 predefined ad spaces that allows you to generate revenue with your image hosting website.
+`/dashboard/settings/banners`
 
-## Step-by-step Add banner codes
-
-- Go to Dashboard > Settings > Banners.
-- Paste your code in the desired ad space block.
-- Scroll down and click on "Save changes".
+The system comes with 32 predefined ad spaces (16 for NSFW, 16 for SFW) that allows you to generate revenue with your image hosting website.
 
 ## Ad networks (normal websites)
 
@@ -36,5 +32,4 @@ If you are planing to create an adult image hosting website you will need to use
 - ClickCash
 - JuicyAds
 - AdXpansion
-
-By the way Cheveteto comes with a black theme that works lovely for adult content.
+- 

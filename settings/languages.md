@@ -44,7 +44,6 @@ This sets  This means that for all users this will be the default language used 
 
 Select which languages are available to use in your installation. You can selective turn on/off any language.
 
-| Type  | Values  |
+| Type  | Available  |
 |---|---|
-| Checkbox  | Check to use - Unchecked to don't use  |
-
+| Checkbox  | Bahasa Indonesia, Čeština, Dansk, Deutsch, Eesti (Eesti), English, Español, Français, Italiano, Lietuvių (Lietuva), Magyar, Nederlands, ‪Norsk Bokmål‬, Polski, Português, Português (Brasil), Slovenčina, Suomi, Svenska, Tiếng Việt, Türkçe, Ελληνικά, Български, Русский, Српски, Українська, עברית, العربية, فارسی, ไทย, 한국어, 日本語, 简体中文, 繁體中文  |

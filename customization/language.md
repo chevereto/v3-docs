@@ -24,11 +24,9 @@ Considering using a [.po editor software](https://www.google.com/search?q=po%20e
 
 All language strings can be customized to fit what you want to show to your visitors. That way, you don't need to touch the theme at all.
 
-### Language overrides
-
 The system works by overriding the target translation. For example, replacing `Upload and share your images.` to "Upload, do it now!" by doing the following procedure:
 
-### 1\. Get the translation string (`msgid` and `msgstr` values)
+### 1. Get the translation string (`msgid` and `msgstr` values)
 
 - Go to the `app/content/languages` folder
 - Open the file `en.po` (in this example we are overriding English language)
@@ -44,7 +42,7 @@ msgstr ""
 The property `msgstr` is empty because English is the base language. If you open any other language you will see that value actually translated.
 :::
 
-### 2\. Override translation string
+### 2. Override translation string
 
 - Go to the `app/content/languages/overrides` folder
 - Create the file `en.po` with these contents:
@@ -58,12 +56,8 @@ msgstr "Upload, do it now!"
 You only need to replace `msgstr` because that is the translation string.
 :::
 
-The result is that the system now will display `Upload, do it now!` instead of `Upload and share your images.`.
+The result is that the system now will display `Upload, do it now!` instead of the default `Upload and share your images.` and it will only affect that language.
 
 ::: warning
 **Note:** You don't actually need a gettext editor for language overrides, but make sure to use double-quotes. If you need to put a double quote inside `msgstr` use `\"` (escaped double-quote).
 :::
-
-### Performance wise
-
-Maybe you are aware of the impact of doing this but don't worry about it. Chevereto uses translations cache, the impact on the system performance is none.

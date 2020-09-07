@@ -1,5 +1,7 @@
 # External services
 
+`/dashboard/settings/external-services`
+
 Chevereto includes built-in support for CDN, reCAPTCHA, comment systems, analytics and Cloudflare. The external services can be configured at Dashboard > Settings > External services.
 
 ## CDN

@@ -1,4 +1,6 @@
-# Storage
+# External storage
+
+`/dashboard/settings/external-storage`
 
 Storage works pretty much like add a network drive to your computer, the uploaded files will be stored in this external storage rather than in your website local hard drive which helps to leverage your server load and deliver a more reliable website.
 
@@ -47,16 +49,6 @@ To add an external storage in Chevereto follow these steps:
 - Submit the form with the required data
 
 If the storage credentials are correct the storage will be added and then you can toggle the activate checkbox to enable or disable that storage. When no storage is set to active the system will use the local storage.
-
-- [x] Amazon S3
-- [ ] B2
-- [x] FTP
-- [x] SFTP
-- [x] Google Cloud
-- [ ] Local
-- [ ] Microsoft Azure
-- [x] OpenStack
-- [x] S3 compatible
 
 ## Storage APIs
 

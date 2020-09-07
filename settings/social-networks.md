@@ -1,5 +1,7 @@
 # Social networks
 
+`/dashboard/settings/social-networks`
+
 This feature allows you to customize the built-in social networks integrations which are located at Dashboard > Settings > Social networks.
 
 ## Enable social network login

@@ -1,5 +1,7 @@
 # Languages
 
+`/dashboard/settings/languages`
+
 Chevereto uses `gettext` syntax for its translations and the system comes with a lot of languages built-in which you can find in the `app/content/languages` folder.
 
 ## Dashboard settings

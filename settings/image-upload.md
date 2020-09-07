@@ -136,6 +136,10 @@ The medium image size. Images will be resized based on the [medium image fixed d
 
 Toggles image watermarking, which are images that are merged in front of the images. Useful for any branding need.
 
+::: tip
+Watermark settings below applies only if `Watermarks` is `Enabled`.
+:::
+
 ## Watermark user toggles
 
 Which user uploads will be watermarked.
@@ -168,7 +172,7 @@ The area where the watermark will be applied to the image.
 
 ## Watermark percentage
 
-The watermark size expresed in percentage of the target area.
+The watermark size expressed in percentage of the target area.
 
 ## Watermark margin
 

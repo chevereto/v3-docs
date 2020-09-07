@@ -20,7 +20,7 @@ Determines the album routing.
 
 ## Hostname
 
-* For sub-domain wildcards.
+* Applies when using sub-domain wildcards.
 
 Determines the hostname.
 

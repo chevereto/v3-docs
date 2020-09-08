@@ -8,7 +8,6 @@ The system comes with 16 predefined ad spaces (32 if you consider SFW and NSFW u
 Although ad slots are intended to be used to place banners, you can use these for placing any kind of HTML code.
 :::
 
-
 | Location  | Ad spaces  |
 |---|---|
 | Homepage  | Before main title (homepage), After call to action (homepage), After cover (homepage), After listing (homepage)  |

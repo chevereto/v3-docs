@@ -2,76 +2,110 @@
 
 `/dashboard/settings/social-networks`
 
-This feature allows you to customize the built-in social networks integrations which are located at Dashboard > Settings > Social networks.
+## Facebook
 
-## Enable social network login
+Toggles usage of [Facebook login](../extra/social-login.md#facebook-login).
 
-To enable a social network you will need to get API keys in each social network service so is recommended to follow the steps in this documentation in each case. Once you get the API keys you only need to enable/disable the target social network in Dashboard > Settings > Social networks and put the API keys of each app.
+| Value  | Effect  |
+|---|---|
+| Enabled  | Enable login with Facebook (not recommended)  |
+| Disabled  | Disable login with Facebook (recommended)  |
 
-## Facebook login
+## Facebook app id
 
-To enable Facebook login you will need to create a [Facebook app](https://developers.facebook.com/).
+*Applies only if `Facebook` is set to `Enabled`.
 
-- Go to `https://developers.facebook.com/apps` (you must be logged in Facebook) and click on "Add a New App".
+| Type  | Description  |
+|---|---|
+| String  | Facebook app id  |
 
-- Enter your new app display name, email and category when prompted
+## Facebook app secret
 
-- Click on "Create App ID", you will redirected to a new page
+*Applies only if `Facebook` is set to `Enabled`.
 
-- Go to "Settings" and then click on "Add Platform"
+| Type  | Description  |
+|---|---|
+| String  | Facebook app secret  |
 
-- Select "Website" and then enter your website URL, click on "Save Changes" at the bottom of the page
+## Twitter
 
-- Add your app domain, privacy and terms URLs. Remember to click on "Save Changes" at the bottom
+Toggles usage of [Twitter login](../extra/social-login.md#twitter-login).
 
-- Go to "Products" and then click on "Facebook Login" (you must add that product if isn't there)
+| Value  | Effect  |
+|---|---|
+| Enabled  | Enable login with Twitter  |
+| Disabled  | Disable login with Twitter  |
 
-- On "Client OAuth Settings" make sure to enable "Web OAuth Login"
+## Twitter API key
 
-- Under "Valid OAuth redirect URIs" enter `http://yourwebsite.com/connect/facebook`
-- Under "Deauthorize Callback URL" enter `http://yourwebsite.com/`
+*Applies only if `Twitter` is set to `Enabled`.
 
-- Go to "App Review" and make your app public (this will enable your app for everybody)
+| Type  | Description  |
+|---|---|
+| String  | Twitter API key  |
 
-- Once your app gets approved as public you can go to "Dashboard" and then copy "App ID" and "App Secret" in your Chevereto website (Dashboard > Settings > Social Networks)
+## Twitter API secret
 
-Take special note for the Facebook APP Review. Your app will be only visible to you until you complete all the information required by Facebook.
+*Applies only if `Twitter` is set to `Enabled`.
 
-## Twitter login
+| Type  | Description  |
+|---|---|
+| String  | Twitter API secret  |
 
-To enable Twitter you will need to create a [Twitter app](https://apps.twitter.com/).
+## Twitter account
 
-- Go to `apps.twitter.com` and click on "Create New App".
-- Use the following settings:
+*Applies only if `Twitter` is set to `Enabled`.
 
-  - Website: `http://www.yourwebsite.com`
-  - Callback URL: `http://www.yourwebsite.com/connect/twitter`
-  - Allow this application to be used to Sign in with Twitter (On).
+| Type  | Example  |
+|---|---|
+| String  | @chevereto  |
 
-- Use the following permissions:
+## Google
 
-  - Read and Write (selected).
+Toggles usage of [Google login](../extra/social-login.md#google-login).
 
-## Google Sign-in
+| Value  | Effect  |
+|---|---|
+| Enabled  | Enable login with Google  |
+| Disabled  | Disable login with Google  |
 
-To enable Google Google Sign-in:
+## Google client id
 
-- Go to [Integrating Google Sign-In into your web app](https://developers.google.com/identity/sign-in/web/sign-in#before_you_begin) and click on "Configure Project".
-- Set the project and product name when asked.
-- In "Configure your OAuth client" under "Where are you calling from?" select `Web server`
+*Applies only if `Google` is set to `Enabled`.
 
-  - Authorized redirect URIs: `http://yourwebsite.com/connect/google`
-  - Hit "Create"
-  - After clicking on "Create" you will get your `Client ID` and `Client Secret` that you will need to provide in your Chevereto dashboard.
+| Type  | Description  |
+|---|---|
+| String  | Google client id  |
 
-- You can always manage your API credentials and usage later in the [API Console](https://console.cloud.google.com/).
+## Google client secret
 
-## VK login
+*Applies only if `Google` is set to `Enabled`.
 
-To enable VK you will need to create a [VK app](https://vk.com/dev).
+| Type  | Description  |
+|---|---|
+| String  | Google client secret  |
 
-- Go to `vk.com/dev` and click on "Create An Application" and select category: Website
-- Fill your website data
-- Click on "Connect site"
-- Authorized redirect URI: `http://www.yourwebsite.com/connect/vk`
-- In app settings page make sure that Open API is enabled
+## VK
+
+Toggles usage of [VK login](../extra/social-login.md#vk-login).
+
+| Value  | Effect  |
+|---|---|
+| Enabled  | Enable login with VK  |
+| Disabled  | Disable login with VK  |
+
+## VK client id
+
+*Applies only if `VK` is set to `Enabled`.
+
+| Type  | Description  |
+|---|---|
+| String  | VL client id  |
+
+## VK client secret
+
+*Applies only if `VK` is set to `Enabled`.
+
+| Type  | Description  |
+|---|---|
+| String  | VK client secret  |

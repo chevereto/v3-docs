@@ -14,7 +14,7 @@ Kindly read the [CloudFlare documentation](https://support.cloudflare.com/hc/en-
 
 ## CloudFlare HTTPS
 
-CloudFlafe offers a wide range of HTTPS solutions that allows you to easily turn on/off SSL on your website. Depending on what kind of certificate you want to handle they offer "Flexible" and "Full" SSL variations. To enable HTTPS follow these steps:
+CloudFlare offers a wide range of HTTPS solutions that allows you to easily turn on/off SSL on your website. Depending on what kind of certificate you want to handle they offer "Flexible" and "Full" SSL variations. To enable HTTPS follow these steps:
 
 - Go to your [websites](https://www.cloudflare.com/my-websites)
 - Click on the gear icon and select "CloudFlare settings"

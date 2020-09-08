@@ -1,6 +1,12 @@
-# Popup Upload plugin
+# Popup Upload Plugin
 
-The popup upload plugin (PUP) is a small file that allows Chevereto based websites to provide external image uploading via a small JavaScript file. PUP is enabled by default in all Chevereto based websites since version 3.10.2 and when enabled, instructions will be available at `/plugin` in your website.
+The popup upload plugin (PUP) is a small file that allows to provide external image uploading via a small JavaScript file.
+
+::: tip
+When PUP is enabled, the route `/plugin` shows the instructions in how to add image uploading functionality to other websites.
+:::
+
+## How it works
 
 PUP binds user-editable content with an upload button that will trigger an image upload dialog and it will auto handle the codes needed for image insertion. End-users will experience a fluid and neat process without leaving the original website.
 
@@ -34,114 +40,156 @@ This applies to all PUP options. The format is **data-_key_** where **_key_** is
 
 This is the list of all the plugin key options available.
 
-- url
+### `url`
 
-  URL of the target Chevereto website.
+URL of the target Chevereto website.
 
-- palette
+| Type | Example |
+|---|---|
+| String | https://demo.chevereto.com |
 
-  Named color palette of the button or a comma-separated list of colors (HEX, RGB, etc.). When using a comma-separated list of colors, the system will bind each color to a `%n` color index (starting at `%1`) that you can use with custom CSS. Supported list of palette names: `default`, `clear`, `turquoise`, `green`, `blue`, `purple`, `darkblue`, `yellow`, `orange`, `red`, `grey`, `black`.
+### `palette`
 
-- auto-insert
+Named color palette of the button or a comma-separated list of colors (HEX, RGB, etc.). When using a comma-separated list of colors, the system will bind each color to a `%n` color index (starting at `%1`) that you can use with custom CSS.
 
-  Embed codes to auto insert in the target editable content. Default `bbcode-embed-medium`. Codes using `full`, `medium` or `thumbnail` will link to the image viewer page. Use `0` to disable auto insert. Supported embed codes strings:
+| Type | Values | Default |
+|---|---|---|
+| String | `default` `clear` `turquoise` `green` `blue` `purple` `darkblue` `yellow` `orange` `red` `grey` `black` | `default` |
 
-  - `viewer-links`
-  - `direct-links`
-  - `html-embed`
-  - `html-embed-full`
-  - `html-embed-medium`
-  - `html-embed-thumbnail`
-  - `bbcode-embed`
-  - `bbcode-embed-full`
-  - `bbcode-embed-medium`
-  - `bbcode-embed-thumbnail`
-  - `markdown-embed`
-  - `markdown-embed-full`
-  - `markdown-embed-medium`
-  - `markdown-embed-thumbnail`
+### `auto-insert`
 
-- sibling
+  Embed codes to auto insert in the target editable content. Codes using `full`, `medium` or `thumbnail` will link to the image viewer page.
+  
+  Use `0` to disable auto insert.
 
-  Sibling CSS selector to use it as a reference to the DOM node where the button should be inserted. By default, the button will be placed relative to the editable content. When the sibling is defined, the plugin will search for that element and it will use it as the reference for button insertion. Value `css-selector`.
+| Type | Values | Default |
+|---|---|---|
+| String | `0` `viewer-links` `direct-links` `html-embed` `html-embed-full` `html-embed-medium` `html-embed-thumbnail` `bbcode-embed` `bbcode-embed-full` `bbcode-embed-medium` `bbcode-embed-thumbnail` `markdown-embed` `markdown-embed-full` `markdown-embed-medium` `markdown-embed-thumbnail` | `bbcode-embed-medium` |
 
-- sibling-pos
+### `sibling`
 
-  Position, relative to the sibling, to place the button. Default `after`. Values `before`, `after`.
+Sibling CSS selector to use it as a reference to the DOM node where the button should be inserted. By default, the button will be placed relative to the editable content. When the sibling is defined, the plugin will search for that element and it will use it as the reference for button insertion.
 
-- vendor
+| Type | Example |
+|---|---|
+| String | `.sibling` |
 
-  Named vendor string. Default `auto`. Supported vendors strings: `bbpress`, `discourse`, `discuz`, `ipb`, `mybb`, `nodebb`, `phpbb`, `smf`, `vanilla`, `vbulletin`, `woltlab`, `xenforo`
+### `sibling-pos`
 
-- mode
+Position relative to the sibling to place the button.
 
-  Plugin mode. By default, the plugin binds to any matching editor box. Use `manual` mode to explicitly insert the button and stop any automatic binding. Default `auto`. Value `auto`, `manual`.
+| Type | Values | Default |
+|---|---|---|
+| String | `before` `after` | `after` |
 
-- target
+### `vendor`
 
-  CSS selector for target editable content. Use it when manually inserting the button. Default `auto`. Value `css-selector`.
+Named vendor string.
 
-- lang
+| Type | Values | Default |
+|---|---|---|
+| String | `bbpress` `discourse` `discuz` `ipb` `mybb` `nodebb` `phpbb` `smf` `vanilla` `vbulletin` `woltlab` `xenforo` | `auto` |
 
-  Button language for two-letter and four-letter language codes. Default `auto`. Supported language strings: `ar`, `cs`, `de`, `es`, `fi`, `fr`, `id`, `it`, `ja`, `nl`, `pt_BR`, `ru`, `zh_CN`, `zh_TW`
+### `mode`
 
-- container-class
+Plugin mode. By default, the plugin binds to any matching editor box. Use `manual` mode to explicitly insert the button and stop any automatic binding.
 
-  Custom button container class name. It binds `%cClass` to the template stack. By default, the system will use `chevereto-pup-container`.
+| Type | Values | Default |
+|---|---|---|
+| String | `auto` `manual` | `auto` |
 
-- button-class
+### `target`
 
-  Custom button class name. It binds `%bClass` to the template stack. By default, the system will use `chevereto-pup-button`.
+CSS selector for target editable content. Use it when manually inserting the button.
 
-- html
+| Type | Example | Default |
+|---|---|---|
+| String | `.selector` | `auto` |
 
-  Custom HTML for the button. For more on this, check the [custom HTML and CSS](#custom-html-and-css) section.
+### `lang`
 
-- css
+Button language for two-letter and four-letter language codes.
 
-  Custom CSS for the plugin button. For more on this, check the [custom HTML and CSS](#custom-html-and-css) section.
+| Type | Values | Default |
+|---|---|---|
+| String | `ar` `cs` `de` `es` `fi` `fr` `id` `it` `ja` `nl` `pt_BR` `ru` `zh_CN` `zh_TW` | `auto` |
 
-- fit-editor
+### `container-class`
 
-  A boolean indicating if the plugin should fit the button to the target editor toolbar. Values `0` (disabled), `1` (enabled). When disabled, the plugin won't fit the button styling to the target editor (override valid only for supported vendors).
+Custom button container class name. It binds `%cClass` to the template stack.
 
-- observe
+| Type | Example | Default |
+|---|---|---|
+| String | `className` | `chevereto-pup-container` |
 
-  CSS selector for elements that on click event will trigger sibling observation and then button insertion. Useful for dynamic editors that generate editor code on the fly. Value `css-selector`.
+### `button-class`
 
-- observe-cache
+Custom button class name. It binds `%bClass` to the template stack.
 
-  A boolean indicating if a matched observed element should be cached. Default `1`. Values `0` (disabled), `1` (enabled). When enabled, it will stop observing the matched observed element click events. Always disable observe cache if the editor is dynamically generated and not stored as a DOM node.
+| Type | Example | Default |
+|---|---|---|
+| String | `className` | `chevereto-pup-button` |
+
+### `html`
+
+[Custom HTML](#custom-html).
+
+| Type | Example |
+|---|---|---|
+| String | `<div>Button<div>` |
+
+### `css`
+
+[Custom HTML](#custom-html).
+
+| Type | Example |
+|---|---|
+| String | `.div { color: red; }` |
+
+### `fit-editor`
+
+A boolean indicating if the plugin should fit the button to the target editor toolbar.
+
+When disabled, the plugin won't fit the button styling to the target editor (override valid only for supported vendors).
+
+| Type | Values |
+|---|---|
+| Integer | `0` `1` |
+
+### `observe`
+
+CSS selector for elements that on click event will trigger sibling observation and then button insertion (live append). Useful for dynamic editors that generate editor boxes on the fly.
+
+| Type | Example |
+|---|---|---|
+| String | `.selector` |
+
+### `observe-cache`
+
+A boolean indicating if a matched observed element should be cached.
+
+When enabled, it will stop observing the matched observed element click events. Always disable observe cache if the editor is dynamically generated and not stored as a DOM node.
+
+| Type | Values | Default |
+|---|---|---|
+| Integer | `0` `1` | `1` |
 
 ### Custom HTML and CSS
 
-PUP support custom templates and it includes template placeholders. A template placeholder is a special string that PUP will convert into usable markup. This is the list of template placeholders available:
+PUP supports template placeholders, which is a special string that PUP will convert into usable markup.
 
-- %x
+Template placeholders available:
 
-  PUP button observer (must be used to trigger button action)
+| Tag | Description |
+|---|---|
+| %x | PUP button observer (must be used to trigger button action) |
+| %cClass | Container class name |
+| %bClass | Button class name |
+| %iClass | Icon class name |
+| %iconSvg | Vector icon in the form of a ready-to-use SVG HTML tag |
+| %text | Translated button text |  
 
-- %cClass
-
-  Container class name
-
-- %bClass
-
-  Button class name
-
-- %iClass
-
-  Icon class name
-
-- %iconSvg
-
-  Vector icon in the form of a ready-to-use SVG HTML tag
-
-- %text
-
-  Translated button text
-
-For custom CSS, you can also use color palette placeholders in the form of `%n` where **n** is the color palette index so it binds `%1`, `%2`, ..., `%n` placeholders.
+For custom CSS, you can also use color palette placeholders in the form of `%n` where **n** is the color palette index. It binds `%1`, `%2`, ..., `%n` placeholders.
 
 Custom HTML works by indicating the template string as an option attribute. In this example, this is the custom HTML that we want to use:
 

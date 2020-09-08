@@ -44,8 +44,8 @@ The setting `PHP mail() func.` should only be used at development environment an
 
 | Value  | Effect  |
 |---|---|
-| SMTP  | Uses [Simple Mail Transfer Protocol](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) for sending emails  |
-| PHP mail() func.  | Uses PHP's [mail function](https://www.php.net/manual/en/function.mail.php)  |
+| SMTP  | Send email using [Simple Mail Transfer Protocol](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) |
+| PHP mail() func.  | Send email using PHP [mail function](https://www.php.net/manual/en/function.mail.php)  |
 
 ::: tip
 Below SMTP settings applies only when `Email mode` is set to `SMTP`.

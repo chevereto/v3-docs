@@ -1,4 +1,4 @@
-# Introduction
+# Dashboard
 
 System is controlled at the Dashboard panel, which is the route at `/dashboard` where you can administer your website.
 

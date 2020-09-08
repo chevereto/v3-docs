@@ -4,6 +4,11 @@
 
 The system comes with 16 predefined ad spaces (32 if you consider SFW and NSFW usage) that allows you to generate revenue.
 
+::: tip
+Although ad slots are intended to be used to place banners, you can use these for placing any kind of HTML code.
+:::
+
+
 | Location  | Ad spaces  |
 |---|---|
 | Homepage  | Before main title (homepage), After call to action (homepage), After cover (homepage), After listing (homepage)  |
@@ -13,7 +18,3 @@ The system comes with 16 predefined ad spaces (32 if you consider SFW and NSFW u
 | Album page | Before header (album page), After header (album page) |
 | User profile page | After top (user profile), Before listing (user profile) |
 | Explore page | After top (explore page) |
-
-::: tip
-Although ad slots are intended to be used to place banners, you can use these for placing any kind of HTML code.
-:::

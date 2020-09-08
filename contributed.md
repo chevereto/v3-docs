@@ -12,6 +12,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 #### Videos
 
+- 2020-09-08 [Chevereto图床搭建教程 | VPS搭建个人图床 小白一学就会的搭建教学 属于自己的图床 谷歌云GCP一键宝塔安装 简单图床教学](https://www.youtube.com/watch?v=QLa9VC1r94A)
 - 2020-08-07 [Chevereto Installed on Docker - Self-Hosted Imgur](https://www.youtube.com/watch?v=SO4Mt0ikukY)
 - 2020-07-27 [Let's Install Chevereto with Docker! Self-Hosted Image Hosting](https://www.youtube.com/watch?v=zcliC-QIVgE)
 - 2020-05-28 [【群晖NAS】商用级图床项目，Chevereto](https://www.youtube.com/watch?v=h26LpCaBXiY)

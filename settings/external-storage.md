@@ -2,122 +2,155 @@
 
 `/dashboard/settings/external-storage`
 
-Storage works pretty much like add a network drive to your computer, the uploaded files will be stored in this external storage rather than in your website local hard drive which helps to leverage your server load and deliver a more reliable website.
+## Adding storages
 
-## How does it works
+Click on "Add storage".
 
-Chevereto will map each image to the corresponding storage system and it will use the given Storage URL to locate that file and all the Chevereto system functionalities will work exactly the same.
+## Storage values (common)
 
-## URL Mapping
+### Name
 
-The storage URL will be used to "map" the uploaded images to the target storage URL by appending the file location to this URL. For example, if you set `https://storage.com/bucket/` as URL, it will map to `https://storage.com/bucket/the-file-path.jpg`. You can completely customize this URL to map your storage scheme.
+The name for the storage.
+
+| Type  | Accepted |
+|---|---|
+| String  | max length 32 |
+
+### Bucket
+
+The bucket where the files will be stored.
+
+| Type  | Description |
+|---|---|
+| String  | The bucket name |
+
+### Key
+
+The API key to access storage.
+
+| Type  | Description |
+|---|---|
+| String  | Public key |
+
+### Secret
+
+The API secret to access storage.
+
+| Type  | Description |
+|---|---|
+| String  | Secret key |
+
+### Storage capacity
+
+The capacity allowed for the storage.
+
+| Type  | Example |
+|---|---|
+| String  | 20 GB |
+
+### URL
+
+The URL that will be mapped to the storage.
+
+| Type  | Example |
+|---|---|
+| String  | `https://storage1.demo.chevereto.com/bucket/` |
 
 ::: warning
-Chevereto only maps the URL to present a resulting image storage URL. The storage URL must resolve to the mapped URL
+For the example above, a file at `https://storage1.demo.chevereto.com/bucket/example.jpg` should be resolving.
 :::
 
-## Storage URL
+## Alibaba Cloud OSS
 
-The storage URL is the URL that Chevereto will use to map the files stored in the given storage. This could be the direct URL, a CNAME URL, a CDN URL or any URL that resolves the requested image. This means that you can customize the URL that you want to use for the storage. Is recommended that you use URLs that match your domain so try to take advantage of using a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
+### Endpoint
 
-## CDN over external storage
+Besides common settings, Alibaba Cloud OSS requires to provide the endpoint.
 
-Since you can customize the storage URL you can easily add a CDN for each storage you want to use. You only need to go to your CDN provider and create a pull zone for the origin storage URL. So if you are using Amazon S3 the source or origin URL will be something like this:
+| Type  | Description |
+|---|---|
+| String  | Alibaba Cloud OSS endpoint |
 
-```
-http://s3.amazonaws.com/my-bucket/
-```
+## Amazon S3
 
-So your CDN url will be something like this:
+Besides common settings, Amazon S3 requires to provide the region.
 
-```
-http://pullzone-url.at.cdn-service.com/
-```
+| Type  | Description |
+|---|---|
+| String  | Amazon S3 region |
 
-And a CNAME record will allow you to end up with something like this:
+## Backblaze B2
 
-```
-http://s3-cdn.mydomain.com/
-```
+Uses common settings, but Backblaze B2 names key/secret in differently.
 
-## Step-by-step add storage
+| Value  | Description |
+|---|---|
+| Key  | Account ID |
+| Secret  | Master Application Key |
 
-To add an external storage in Chevereto follow these steps:
+## FTP
 
-- Go to `Dashboard > Settings > External Storage`
-- Click on "Add storage"
-- Submit the form with the required data
+Besides some common settings, FTP requires other values.
 
-If the storage credentials are correct the storage will be added and then you can toggle the activate checkbox to enable or disable that storage. When no storage is set to active the system will use the local storage.
+| Value  | Description | Example |
+|---|---|---|
+| Server  | IP address or hostname | `127.0.0.1` `ftp.chevereto.com` |
+| Path  | Server FTP path | `/path/in/server/`
+|
+| User  | FTP user | username |
+| Password  | FTP password | password |
 
-## Storage APIs
+## Google Cloud
 
-### Amazon S3
+Besides some common settings, Google Cloud requires to provide the key in JSON format.
 
-The Amazon S3 API allows to upload images to an [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3) bucket. You will need an [Amazon Web Services](https://aws.amazon.com/) (AWS) account for this.
+### Private key
 
-- To setup Amazon S3:
-  - Create access credentials from [Identity and Access Management](https://console.aws.amazon.com/iam/home?#users) console
-  - Click on "Create New Users", make sure to enable "Programmatic access"
-  - On permissions, associate **AmazonS3FullAccess**
-  - Store the **user name**, **Access Key ID** and **Secret Access Key** at the end of the process
-  - Create a bucket from the [S3 console](https://console.aws.amazon.com/s3)
-  - Click on "Create a Bucket" and proceed to create a bucket
-  - On permissions, make sure "Block new public ACLs" and "Remove public access" are unchecked (Public access settings)
-  - Store the **bucket name** and the **region**
-  - You don't need to setup logging
+| Type  | Description |
+|---|---|
+| String  | Google Cloud JSON key |
 
-If you want to use a custom domain follow the [CNAME](https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs) documentation. Otherwise just make sure that the [Storage URL](#storage-url) ends with `/<your_bucket_name>/`
+## Local
 
-### S3 Compatible
+Besides some common settings, Local requires to provide the local path.
 
-The S3 Compatible API allows to upload images to any bucket implementing the S3 standard. The configuration is exactly the same as Amazon S3 but the storage isn't provided by Amazon.
+| Type  | Description |
+|---|---|
+| String  | Local path |
 
-### Backblaze B2
+## Microsoft Azure
 
-Todo.
+Besides some common settings, Microsoft Azure requires other values.
 
-### FTP
+| Value  | Description |
+|---|---|
+| Account  | Microsoft Azure AccountName |
+| Key  | Microsoft Azure Accountkey |
+| Endpoint  | Microsoft Azure endpoint |
 
-The FTP API allows to upload images to a server implementing the [File Transfer Protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
+## OpenStack
 
-### SFTP
+Besides some common settings, OpenStack requires other values.
 
-The SFTP API allows to upload images to a server implementing the [SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol).
+| Value  | Description |
+|---|---|
+| Service name | For example, `swift` |
+| Identity URL | Identity API endpoint |
+| Username | The username |
+| Password | The password |
+| Region | Storage region |
+| Container | Storage container |
+| Tenant id | Tenant id (account id) |
+| Tenant name | Tenant name (account name) |
 
-### Google Cloud
+## S3 compatible
 
-The Google Cloud API allows to upload images to a Google Cloud Storage bucket. You will need a [Google Cloud](https://cloud.google.com/) service account and [activate cloud storage](https://cloud.google.com/storage/docs/signup) for this.
+Besides some common settings, S3 compatible requires to provide the region and the endpoint.
 
-- To setup Google Cloud Storage:
-  - Create a project
-  - Go to "APIs & services" dashboard and make sure that "Google Cloud Storage JSON API" is enabled
-  - Go to "APIs & services" > "Credentials", click on "Create credentials" then click on "Service account key"
-  - Make sure to use the following settings:
-    - Select your service account or create a new one.
-    - Key type: JSON
-    - Your browser will start to download the JSON key file. Store **the file contents**.
-  - Go to "Storage" then click on "Browser"
-  - Create a bucket by clicking the "Create bucket" button. Store the **bucket name**.
+| Value  | Description |
+|---|---|
+| Region | Storage region |
+| Endpoint | Storage endpoint |
 
-### Local
+## SFTP
 
-The Local API allows to upload images to any filesystem path in the server.
-
-### Microsoft Azure
-
-Todo.
-
-### OpenStack
-
-The OpenStack API allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
-
-- OpenStack configuration for RunAbove:
-  - Identity URL: <https://auth.Runabove.io/v2.0>
-  - Username: Your RunAbove username
-  - Password: Your RunAbove password
-  - Region: `SBG-1` or `BHS-1` This is the data center where your container was created
-  - Container: Name of your created container
-  - Tenant id: Leave it blank
-  - Tenant name: Your `project id`, found on OpenStack Horizon on the left side (CURRENT PROJECT))
-  - URL: Your URL to access the container (see [RunAbove CNAME](https://community.runabove.com/kb/en/object-storage/how-to-put-object-storage-behind-your-domain-name.html))
+Same as [FTP](#ftp), but using the [SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol) protocol.

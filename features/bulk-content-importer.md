@@ -109,11 +109,13 @@ To start an importing task, click on "process" under the "actions" menu.
 
 The importing jobs statuses get defined as follow:
 
-- Queued: Job is in the processing queue (default status).
-- Working: Job is being parsed.
-- Paused: Job is paused.
-- Canceled: Job aborted by the user.
-- Completed: Job completed.
+| Status | Description |
+|---|---|
+| Queued | Job is in the processing queue (default status) |
+| Working | Job is being parsed |
+| Paused | Job is paused |
+| Canceled | Job aborted by the user |
+| Completed | Job completed |
 
 Once you start a process, its status will change to "working". If you abandon a working process it will get locked for processing. After a short time, the status will get changed to "paused".
 

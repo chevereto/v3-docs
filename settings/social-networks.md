@@ -4,7 +4,7 @@
 
 ## Facebook
 
-Toggles usage of [Facebook login](../extra/social-login.md#facebook-login).
+Toggles usage of [Facebook login](../features/social-login.md#facebook-login).
 
 | Value  | Effect  |
 |---|---|
@@ -29,7 +29,7 @@ Toggles usage of [Facebook login](../extra/social-login.md#facebook-login).
 
 ## Twitter
 
-Toggles usage of [Twitter login](../extra/social-login.md#twitter-login).
+Toggles usage of [Twitter login](../features/social-login.md#twitter-login).
 
 | Value  | Effect  |
 |---|---|
@@ -62,7 +62,7 @@ Toggles usage of [Twitter login](../extra/social-login.md#twitter-login).
 
 ## Google
 
-Toggles usage of [Google login](../extra/social-login.md#google-login).
+Toggles usage of [Google login](../features/social-login.md#google-login).
 
 | Value  | Effect  |
 |---|---|
@@ -87,7 +87,7 @@ Toggles usage of [Google login](../extra/social-login.md#google-login).
 
 ## VK
 
-Toggles usage of [VK login](../extra/social-login.md#vk-login).
+Toggles usage of [VK login](../features/social-login.md#vk-login).
 
 | Value  | Effect  |
 |---|---|

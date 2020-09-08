@@ -1,7 +1,5 @@
 # Security
 
-Chevereto system includes security features that allows you to have a more robust and reliable website.
-
 ## Encoded IDs
 
 Chevereto public IDs are encoded in order to avoid enumeration and get hard to guess URLs. All the users, images and albums ids are encoded.
@@ -10,11 +8,9 @@ Chevereto public IDs are encoded in order to avoid enumeration and get hard to g
 
 When you install Chevereto the system creates a randomly generated `crypt_salt` which is used by the `CHV\encodeID()` and `CHV\decodeID()` functions. This allows to conver the numeric ids stored in the database to alphanumeric ids and it also means that the public ids vary from each different installation
 
-## CSRF
+## CSRF protection
 
 Cross-site request forgery ([CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)) is an exploit that is used to fool the websites by transmitting instructions from a remote website without the user's consent, for example trigger a delete content request.
-
-### CSRF protection
 
 The CSRF protection is based in the usage of a request token. The request token is set by session when the website loads and is asked when subsequential request are being made. If the token doesn't match the session it means that the request has not being initiated by the session and the system will return a 403 error.
 

@@ -15,7 +15,7 @@ The [chevereto/installer](https://github.com/chevereto/installer) is a single `.
 - Upload the [installer](https://chevereto.com/download/file/installer) to your server target destination (usually the `public_html` folder).
 - Open your website at `/installer.php` and follow the process.
 
-![](https://camo.githubusercontent.com/1c1a868703419338eb6b01802270171b4bbb134d/68747470733a2f2f63686576657265746f2e636f6d2f7372632f696d672f696e7374616c6c65722f73637265656e2d76322e706e673f3230313930363233)
+![Chevereto Installer](https://camo.githubusercontent.com/1c1a868703419338eb6b01802270171b4bbb134d/68747470733a2f2f63686576657265746f2e636f6d2f7372632f696d672f696e7374616c6c65722f73637265656e2d76322e706e673f3230313930363233)
 
 The installer will prompt with steps to install the software, after that it will download the software, extract it and it will post to `/install` the data previously provided.
 
@@ -38,7 +38,8 @@ Docker allows you to easily install a container version of the software.
 > 👏🏾 All the Docker images are [user provided](https://hub.docker.com/search?q=chevereto&type=image). If you know about more Docker images let's us know to list it here. Thanks for contributing!
 
 Note: when using Docker with the paid edition check that the image support our `installer`.
-> 
+
+- [linuxserver/chevereto](https://hub.docker.com/r/linuxserver/chevereto) thanks to [linuxserver.io](https://www.linuxserver.io/)
 - [nmtan/chevereto](https://hub.docker.com/r/nmtan/chevereto/) thanks to [Tan Nguyen](https://github.com/tanmng)
 - [zaywalker/chevereto](https://hub.docker.com/r/zaywalker/chevereto) thanks to [Jae Yoon KIM](https://github.com/zaywalker)
 - [einverne/chevereto](https://hub.docker.com/r/einverne/chevereto) thanks to [Ein Verne](https://github.com/einverne)
@@ -55,10 +56,14 @@ Note: when using Docker with the paid edition check that the image support our `
 
 If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico](https://netenberg.com/fantastico.php), you can install Chevereto-Free with just one click, it should be available for one-click install under the "Image Galleries" category.
 
-> **Note:** Our paid edition isn't available in these script libraries. However, you can install Chevereto Free and then **one-click upgrade** it to the paid edition directly from the `/dashboard` panel.
+::: warning
+**Note:** Our paid edition isn't available in these script libraries. However, you can install Chevereto Free and then **one-click upgrade** it to the paid edition directly from the `/dashboard` panel.
+:::
 
 ## Install issues
 
 Most common install issue is missing [system requirements](./requirements.md) so make sure that you are running a compatible system and that all the data is correct like working MySQL credentials and privileges.
 
-> Check our [community support](https://chevereto.com/community/categories/support.43/) in case you need help with the server provisioning
+::: tip
+Check our [community support](https://chevereto.com/community/categories/support.43/) in case you need help with the server provisioning
+:::

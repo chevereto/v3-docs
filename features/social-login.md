@@ -36,14 +36,15 @@ To enable Twitter login you will need to create a [Twitter app](https://apps.twi
 
 To enable Google Google Sign-in:
 
-- Go to [Integrating Google Sign-In into your web app](https://developers.google.com/identity/sign-in/web/sign-in#before_you_begin) and click on "Configure Project".
-- Set the project and product name when asked.
-- In "Configure your OAuth client" under "Where are you calling from?" select `Web server`
+- Go to [Credentials page](https://console.developers.google.com/apis/credentials)
+- Click **Create credentials** > **OAuth client ID**.
+- Select the **Web application** application type.
+- Name your OAuth 2.0 client
+- Add `http://yourwebsite.com/connect/google` at **Authorized redirect URIs** and click **Create**.
 
-  - Authorized redirect URIs: `http://yourwebsite.com/connect/google`
-  - Hit "Create"
-  - After clicking on "Create" you will get your `Client ID` and `Client Secret` that you will need to provide in your Chevereto dashboard.
-  - You can always manage your API credentials and usage later in the [API Console](https://console.cloud.google.com/).
+After configuration is complete, **take note** of the **client ID** and **Client Secret** that got created.
+
+Go to [Google login settings](https://v3-docs.chevereto.com/settings/social-networks.html#google) to enable Google login in your Chevereto installation.
 
 ## VK login
 

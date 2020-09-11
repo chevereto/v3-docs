@@ -38,6 +38,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ### Hacks/Tips
 
+- 2020-11-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
 - 2020-05-24 [图床程序Chevereto安装问题记录](https://xiaodongxier.com/119.html)
 - 2020-05-05 [Chevereto使用暗抄（BCC）方式保存smtp发送的邮件](https://madlax.pw/2020/05/379.html)
 - 2020-04-23 [Chevereto使用宝塔PHP7.3的GD库不支持webp，需升级7.4](https://madlax.pw/2020/04/375.html)

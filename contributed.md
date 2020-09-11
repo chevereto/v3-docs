@@ -6,18 +6,14 @@ The following content has been provided by users of the software. It contains gu
 If you contributed to Chevereto [let me know](https://chevereto.com/contact) to gift you a paid license ✨🎁 as my way to say thanks for showing others how to use my software!
 :::
 
-## Guides
-
-### Installing
-
-#### Videos
+## Videos
 
 - 2020-09-08 [Chevereto图床搭建教程 | VPS搭建个人图床 小白一学就会的搭建教学 属于自己的图床 谷歌云GCP一键宝塔安装 简单图床教学](https://www.youtube.com/watch?v=QLa9VC1r94A)
 - 2020-08-07 [Chevereto Installed on Docker - Self-Hosted Imgur](https://www.youtube.com/watch?v=SO4Mt0ikukY)
 - 2020-07-27 [Let's Install Chevereto with Docker! Self-Hosted Image Hosting](https://www.youtube.com/watch?v=zcliC-QIVgE)
 - 2020-05-28 [【群晖NAS】商用级图床项目，Chevereto](https://www.youtube.com/watch?v=h26LpCaBXiY)
 
-#### Step-by-step instructions
+## Installation guides
 
 - 2020-08-25 [Self-hosting an image gallery with Chevereto](https://tech.davidfield.co.uk/self-hosted-image-gallery-with-chevereto/)
 - 2020-08-19 [Chevereto免费图床搭建教程 | vps搭建免费图床教程](https://chens.life/How-to-build-a-free-image-bed.html)
@@ -36,20 +32,20 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2019-08-29 [Chevereto安装教程](https://yremp.live/chevereto/)
 - 2019-05-18 [Chevereto免费相册程序安装与使用-免费自建图床和公共图片相册](https://wzfou.com/chevereto/)
 
-### Hacks/Tips
+## Hacks/Tips
 
 - 2020-11-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
 - 2020-05-24 [图床程序Chevereto安装问题记录](https://xiaodongxier.com/119.html)
 - 2020-05-05 [Chevereto使用暗抄（BCC）方式保存smtp发送的邮件](https://madlax.pw/2020/05/379.html)
 - 2020-04-23 [Chevereto使用宝塔PHP7.3的GD库不支持webp，需升级7.4](https://madlax.pw/2020/04/375.html)
 
-### Extending
+## Extending
 
 - 2020-03-12 [给你的 Chevereto 添加鉴黄功能,支持百度,腾讯,Moderatecontent,Sightengine](https://alone88.cn/archives/804.html)
 - 2020-03-09 [Chevereto 增加百度AI审核功能,开启鉴黄功能，后台可设置](https://alone88.cn/archives/796.html)
 - 2020-03-08 [-ITM- Chevereto Integration 2.0](https://github.com/McAtze/-ITM-CheveretoIntegration)
 
-### External tools
+## External tools
 
 - 2020-06-03 [Typora使用PicGo自动上传图片到Chevereto图床](https://www.zzhyun.com/2020/06/03/159/)
 - 2020-05-22 [[ITM] Chevereto Integration - XenForo 2.1](https://chevereto.com/community/threads/itm-chevereto-integration-xenforo-2-1.12234/)

@@ -48,4 +48,12 @@ module.exports = {
         editLinks: true,
         lastUpdated: true,
     },
+    plugins: [
+        [
+            '@vuepress/google-analytics',
+            {
+            'ga': 'UA-25384365-3'
+            }
+        ]
+    ]
 };

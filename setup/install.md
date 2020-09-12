@@ -21,7 +21,7 @@ The installer will prompt with steps to install the software, after that it will
 
 #### Troubleshoot
 
-::: warning DON'T PANIC
+::: warning Don't panic
 The installer works on top of HTTP so it relies in many sub-systems that could fail. If doesn't work for you the recommendation is to follow another install procedure.
 :::
 
@@ -29,7 +29,7 @@ The installer works on top of HTTP so it relies in many sub-systems that could f
 - It fails **before** extracting the software: Switch to manual installation
 - It fails **after** extracting the software: Go to `/install` to continue the process
 
-> ⚠ In both cases REMOVE the `installer.php` file
+⚠ In both cases REMOVE the `installer.php` file
 
 ### B. Install using Docker
 
@@ -44,7 +44,7 @@ Note: when using Docker with the paid edition check that the image support our `
 - [zaywalker/chevereto](https://hub.docker.com/r/zaywalker/chevereto) thanks to [Jae Yoon KIM](https://github.com/zaywalker)
 - [einverne/chevereto](https://hub.docker.com/r/einverne/chevereto) thanks to [Ein Verne](https://github.com/einverne)
 
-> Check our [guides](../contributed.md#guides) section for help setting up a Docker environment.
+Check our [guides](../contributed.md#guides) section for user provided guides on setting up a Docker environment.
 
 ### C. Install via zip
 
@@ -56,7 +56,7 @@ Note: when using Docker with the paid edition check that the image support our `
 
 If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico](https://netenberg.com/fantastico.php), you can install Chevereto-Free with just one click, it should be available for one-click install under the "Image Galleries" category.
 
-::: warning
+::: warning Paid edition
 **Note:** Our paid edition isn't available in these script libraries. However, you can install Chevereto Free and then **one-click upgrade** it to the paid edition directly from the `/dashboard` panel.
 :::
 
@@ -64,6 +64,6 @@ If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico
 
 Most common install issue is missing [system requirements](./requirements.md) so make sure that you are running a compatible system and that all the data is correct like working MySQL credentials and privileges.
 
-::: tip
+::: tip Get help
 Check our [community support](https://chevereto.com/community/categories/support.43/) in case you need help with the server provisioning
 :::

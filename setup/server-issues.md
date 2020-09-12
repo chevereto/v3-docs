@@ -8,6 +8,7 @@ Not all web servers follow some basic standards and in some cases even having a 
 - Missing writing permissions in Chevereto paths
 - Bad or invalid setup (timezone, multi-views, timeout, etc.)
 - Wrong NGINX server block / PHP-FPM issues
+- `mod_security` or any other artifact blocking requests from/to
 
 ## PHP issues
 

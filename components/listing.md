@@ -4,6 +4,31 @@ The listing component is in charge of handling the fetching of user generated re
 
 A list of any type can be created anywhere and the query-result can be retrieved directly as an `array` or as a template-able HTML presentation.
 
+## List methods
+
+The following methods are available for controlling the listing component.
+
+| Method          | Parameter | Description                                                                                 |
+| --------------- | --------- | ------------------------------------------------------------------------------------------- |
+| debugQuery      | _none_    | Returns a `string` with the listing query dump (available after calling `exec`)             |
+| setApproved     | boolean   | Set the `image_is_approved` flag (default `1`)                                              |
+| setType         | string    | Set the listing type: `images`, `users`, `albums`                                           |
+| setOffset       | integer   | Set the offset to fetch rows                                                                |
+| setSeek         | string    | ID to seek next-to                                                                          |
+| setReverse      | boolean   | Set the revese flag. Using `1` will reverse the results                                     |
+| setParamsHidden | string    | Set listing params hidden (not visible in the URL)                                          |
+| setLimit        | integer   | Set how many results to fetch                                                               |
+| setItemsPerPage | integer   | Set how many results per page                                                               |
+| setSortType     | string    | Set sorting type: `date`, `size`, `views`, `id`, `image_count`, `name`, `title`, `username` |
+| setSortOrder    | string    | Set how to sort: `asc`, `desc`                                                              |
+| setWhere        | string    | Set `WHERE` clauses                                                                         |
+| setOwner        | integer   | Set the user_id who owns content to be listed content                                       |
+| setRequester    | integer   | array                                                                                       | Set the user_id (or user array) who is requesting the listing |
+| setCategory     | integer   | Set the category id for the content                                                         |
+| setTools        | array     | A list with the tools available (listing manager)                                           |
+| exec            | _none_    | Performs the listing query and generates its output (properties `output` and `output_assoc` |
+| htmlOutput      | string    | Formats the `output` as an HTML string                                                      |
+
 ## Helpers
 
 The values returned by helpers will be aware of the current `HTTP GET` parameters.
@@ -15,30 +40,6 @@ The helper function `CHV\Listing::getParams` allows to fetch the applicable list
 ### Listing helper `getTabs`
 
 The helper function `CHV\Listing::getTabs` allows to handle tabbed listings. Tabs provide a different sort option for Chevereto listings.
-
-### GET parameters
-
-The following GET parameters will affect the return of the helpers.
-
-| Parameter  | Description                                        | Values                                                                        |
-| ---------- | -------------------------------------------------- | ----------------------------------------------------------------------------- |
-| pagination | Pagination mode                                    | `endless`, `classic`                                                           |
-| offset     | The offset to fetch results                        | type integer                                                                  |
-| sort       | List sort option (`sortable`_asc, `sortable`_desc) | Sortable: `date`,  `size`, `views`, `id`, `image_count`, `name`, `title`, `username` |
-| seek       | ID to seek next-to                                 | type public id                                                                |
-| peek       | ID to seek prev-to                                 | type public id                                                                |
-| page       | The page number                                    | type integer                                                                  |
-
-Usage is simple as append the parameters for the listing URL query string.
-
-```txt
-/?offset=4&sort=id_desc&seek=ifNk"
-```
-
-Remarks:
-
-- `seek` and `peek` can't be used at the same time.
-- `page` just holds a numeric reference, listings paginate based on seek/peek + offset.
 
 ## Examples
 

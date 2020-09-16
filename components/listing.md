@@ -188,7 +188,7 @@ $route = function ($handler) {
         // Force output header, print the data
         header('Content-Type:text/plain');
         foreach ($list->output_assoc as $pos => $item) {
-            echo $item['url_viewer'] . "\n";
+            echo $item['image']['url'] . "\n";
         };
         // Stop execution once done
         die();

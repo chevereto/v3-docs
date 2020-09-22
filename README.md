@@ -4,7 +4,8 @@ This is the documentation for both **Chevereto V3** and **Chevereto-Free**.
 
 ## Localized Translations
 
-You can also browse a [Chinese version](https://ch.cndrew.cn/) of this documentation (thanks to [Uncle_drew](https://cndrew.cn/)).
+- [Chinese version](https://docs.doge.uk/zh/chevereto/) (thanks to [QSong](https://resbeta.com/)).
+- [Chinese version](https://ch.cndrew.cn/) (thanks to [Uncle_drew](https://cndrew.cn/)).
 
 ## Contributing
 

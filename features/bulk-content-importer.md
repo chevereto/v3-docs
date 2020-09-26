@@ -15,12 +15,12 @@ Go to `dashboard/bulk`, from there you will be able to add and manage importing 
 The bulk importer scans the target importing directory and creates content accordingly parsing rules described below. User assets (avatar, background image) will get uploaded to the system user folder.
 
 ::: tip
-The parser creates users and albums only if those doesn't exists. It detects if `username` exists, and it does the same for albums (based on the `album_name` + album owner).
+The parser creates users and albums only if those doesn't exists. It detects if `username` exists, and it does the same for albums (based on the album name + its owner).
 :::
 
 ### Top-level folder as username
 
-Top-level folders within the importing path will be handled as `username`. Second-level folders will be parsed as `album_name`.
+Top-level folders within the importing path will be handled as `username`. Second-level folders will be parsed as `album name`.
 
 ```shell
 ./<path>
@@ -36,7 +36,7 @@ For the tree above, the parser will:
 - Create `rodolfo` user (if the user doesn't exists)
 - Create album `weapons` under `rodolfo` user (if the album doesn't exists)
 - Upload the images contained in `./<path>/rodolfo/weapons` to rodolfo's `weapons` album
-- Upload `logo.png` to `rodolfo` (no album)
+- Upload `logo-alt.png` to `rodolfo` (no album)
 
 ### Top-level folders as albums
 
@@ -57,7 +57,7 @@ For the tree above, the parser will:
 
 ### No parse
 
-No folder is parsing, only images will be imported as guest.
+No folder is parsed, only images will be imported as guest.
 
 ```shell
 ./<path>
@@ -150,7 +150,7 @@ Metadata properties merges the content being parsed, meaning that you don't need
 
 ### Image metadata
 
-JSON metadata file bellow provides a sample metadata for `machine-gun.jpg`.
+JSON metadata file below provides a sample metadata for `machine-gun.jpg`.
 
 ```json
 {

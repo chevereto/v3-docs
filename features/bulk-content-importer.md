@@ -88,13 +88,13 @@ The system works with a scheduled command to continuously process the importing.
 
 Manual importing works by creating a one-time job that will be carried on a filesystem path and parsing method of your choice.
 
-::: warn
+::: warning Permissions
 The path must be writable by the PHP user, make sure that `www-data` (or the specific user in your case) owns the target importing folder.
 :::
 
 Once you add the import job, click on "process" under the "actions" menu. The job status will change to "working".
 
-::: warn
+::: warning Browser-based
 Manual importing is orchestrated with JavaScript, meaning that you must keep the web browser active to carry on the process. Don't worry, the process can be paused/resumed at any time.
 :::
 
@@ -246,7 +246,7 @@ Profile images have to be located in the `.assets/` folder inside the user folde
         └── rodo-bkg.jpg
 ```
 
-::: warn User assets
+::: warning User assets
 The type of the image assets must be one of the file formats handled by your installation.
 :::
 

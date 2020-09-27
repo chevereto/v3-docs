@@ -15,6 +15,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Installation guides
 
+- 2020-09-19 [一台服务器搭建Hexo和Chevereto](https://blog.shenyuanluo.com/ConfigHexoAndChevereto.html)
 - 2020-08-25 [Self-hosting an image gallery with Chevereto](https://tech.davidfield.co.uk/self-hosted-image-gallery-with-chevereto/)
 - 2020-08-19 [Chevereto免费图床搭建教程 | vps搭建免费图床教程](https://chens.life/How-to-build-a-free-image-bed.html)
 - 2020-08-07 [Chevereto on Docker – Self-hosted Imgur](https://dbtechreviews.com/2020/08/chevereto-on-docker-self-hosted-imgur/)
@@ -25,6 +26,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-02-18 [威联通（NAS）搭建个人图床](https://juejin.im/post/6844904067236364295)
 - 2020-02-18 [折腾笔记：用Chevereto搭建个人图库&分享小姐姐们](https://www.littlemodesty.com/website-building/use-chevereto-to-build-a-self-hosted-image-home/)
 - 2020-02-06 [Chevereto图床搭建教程 | 利用VPS搭建个人图床实战](https://merlinblog.xyz/wiki/chevereto.html)
+- 2020-02-02 [docker compose 部署迁移 Chevereto 图床程序教程](https://www.ioiox.com/archives/80.html)
 - 2020-01-25 [[Guide] Docker paid version with nmtan/chevereto:installer and real ip fix (reverse proxy)](https://chevereto.com/community/threads/guide-docker-paid-version-with-nmtan-chevereto-installer-and-real-ip-fix-reverse-proxy.11887/)
 - 2020-01-04 [宝塔面板源码安装Chevereto最新免费版 – 算是靠谱的图床解决方案之一](https://www.daniao.org/7882.html)
 - 2019-11-04 [在宝塔环境下安装Chevereto最新免费版](https://sunsea.im/bt-install-Chevereto-Free.html)

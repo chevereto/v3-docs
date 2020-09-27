@@ -1,6 +1,6 @@
 # Introduction
 
-This is the documentation for both **Chevereto V3** and **Chevereto-Free**.
+This is the documentation for both [Chevereto V3](https://chevereto.com/pricing) and [Chevereto-Free](https://github.com/chevereto/chevereto-free).
 
 ## Localized Translations
 
@@ -11,7 +11,7 @@ This is the documentation for both **Chevereto V3** and **Chevereto-Free**.
 
 You can contribute to improve this documentation. All pages are editable and we also have a section for user [contributed](./contributed.md) content.
 
-Feel free to collaborate.
+Feel free to collaborate and help others.
 
 ## Author
 

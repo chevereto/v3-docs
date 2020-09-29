@@ -49,7 +49,8 @@ module.exports = {
         lastUpdated: true,
         algolia: {
             apiKey: '93a34618e3c74fff9d8d4f182087b2fe',
-            indexName: 'docs'
+            indexName: 'docs',
+            appId: 'UHBM6Q7GSI'
         }
     },
     plugins: [

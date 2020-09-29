@@ -47,6 +47,10 @@ module.exports = {
         smoothScroll: true,
         editLinks: true,
         lastUpdated: true,
+        algolia: {
+            apiKey: '93a34618e3c74fff9d8d4f182087b2fe',
+            indexName: 'docs'
+        }
     },
     plugins: [
         [

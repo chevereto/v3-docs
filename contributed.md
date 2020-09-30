@@ -41,8 +41,20 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-05-05 [Chevereto使用暗抄（BCC）方式保存smtp发送的邮件](https://madlax.pw/2020/05/379.html)
 - 2020-04-23 [Chevereto使用宝塔PHP7.3的GD库不支持webp，需升级7.4](https://madlax.pw/2020/04/375.html)
 
-## Extending
+## Browser extensions
 
+### Firefox
+
+- [Chevereto download button](https://addons.mozilla.org/en-US/firefox/addon/chevereto-download-button/)
+
+### Google Chrome
+
+- [Chevereto download button](https://chrome.google.com/webstore/detail/chevereto-download-button/lgcgmhfenjjeghjipookhcplpifakgcd)
+- [Chevereto Uploader by Your-Pictionary.com](https://chrome.google.com/webstore/detail/chevereto-uploader-by-you/memndahppdnephfcpklgnldajahnahfo/related)
+
+## Integrating
+
+- 2020-04-29 [Chevereto Imagehosting Upload By Jasper(zhujia18)](https://discuss.flarum.org/d/23585-chevereto-imagehosting-upload)
 - 2020-03-12 [给你的 Chevereto 添加鉴黄功能,支持百度,腾讯,Moderatecontent,Sightengine](https://alone88.cn/archives/804.html)
 - 2020-03-09 [Chevereto 增加百度AI审核功能,开启鉴黄功能，后台可设置](https://alone88.cn/archives/796.html)
 - 2020-03-08 [-ITM- Chevereto Integration 2.0](https://github.com/McAtze/-ITM-CheveretoIntegration)

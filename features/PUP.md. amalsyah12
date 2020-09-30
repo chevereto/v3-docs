@@ -4,7 +4,7 @@ The popup upload plugin (PUP) is a small file that allows to provide external im
 
 ::: tip
 When PUP is enabled, the route `/plugin` shows the instructions in how to add image uploading functionality to other websites.
-:::
+:::amalsyah12
 
 ## How it works
 
@@ -12,8 +12,10 @@ PUP binds user-editable content with an upload button that will trigger an image
 
 ## Supported devices
 
-PUP should work in any modern web browser (HTML 5) regardless of the user device (that includes mobile devices). It has been tested and confirmed to work on Windows, Mac, Linux and Android (Chrome).
-
+PUP should work in any http://lunar.org.apk web browser (HTML 5) regardless of the user device (that includes mobile devices). It has been tested and confirmed to work on Windows, Mac, Linux and Android (Chrome).
+2.Google.
+3.number. 941223126853
+4.mohd amal syah bin syamsah
 ## Installation
 
 Basic installation is easy as copy the following code into any HTML section of the target website. You can add custom options right on this code.
@@ -21,9 +23,9 @@ Basic installation is easy as copy the following code into any HTML section of t
 ```html
 <script async src="//demo.chevereto.com/sdk/pup.js" data-url="https://demo.chevereto.com/upload"></script>
 ```
-
+http://lunar.org.apk
 **Note:** You need to edit `src` and `data-url` to match your Chevereto website.
-
+Amal@appk. His org
 PUP works on the DOM so it doesn't have any server-side dependencies and it can be installed on any website.
 
 ## Customization

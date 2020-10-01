@@ -162,7 +162,7 @@ sh admpass.sh
 ```
 
 Type your username and password, and you've completed the configuration of OpenLiteSpeed authentication.
-After that, you can visit the OpenLiteSpeed web interface. Open your favorite web browser and go to `http://server-ip:8070`
+After that, you can visit the OpenLiteSpeed web interface. Open your favorite web browser and go to `http://server-ip:7080`
 On the OpenLiteSpeed dashboard, click the `Server Configuration` menu on the left and click the `External App` tab.
 To add the new PHP 7.4 configuration, click the add `+` button on the right.
 For the type, choose the `LiteSpeed SAPI App` and click the `Next` button.

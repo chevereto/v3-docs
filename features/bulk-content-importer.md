@@ -10,6 +10,10 @@ Importing takes the content from the importing path and *import it* into databas
 
 Go to `dashboard/bulk`, from there you will be able to add and manage importing jobs.
 
+::: warning Permissions
+The target importing path must be writable by the PHP user, make sure that `www-data` (or the specific user in your case) owns the target importing folder.
+:::
+
 ## Parsing formats
 
 The bulk importer scans the target importing directory and creates content accordingly parsing rules described below. User assets (avatar, background image) will get uploaded to the system user folder.
@@ -80,22 +84,35 @@ Automatic importing works by continuously observe the `importing/` path. In this
 | `./importing/parse-albums` | [Top-level folders as albums](#top-level-folders-as-albums)   |
 | `./importing/no-parse`     | [No folder parsing](#no-parse)                                |
 
-::: warn Cron required
-The system works with a scheduled command to continuously process the importing. You will need to add the crontab entry that you will find at `dashboard/bulk`. Please refer to your server administrator in how to add this entry to your server.
-:::
+### Cron entry
+
+Automatic importing works with a scheduled command to continuously process the importing. At `dashboard/bulk` you will see a [cron](https://en.wikipedia.org/wiki/Cron) entry like this:
+
+```sh
+* * * * * IS_CRON=1 THREAD_ID=1 /usr/bin/php /public_html/importing.php >/dev/null 2>&1
+```
+
+The cron entry above instruct to run the importer each minute, with `THREAD_ID=1` flag.
+
+> Refer to your server administrator in how to add this entry to your server.
+
+### Performance tunning
+
+You can speed up the process by running the importing in multiple threads. Simply add more cron entries:
+
+```sh
+* * * * * IS_CRON=1 THREAD_ID=1 /usr/bin/php /public_html/importing.php >/dev/null 2>&1
+* * * * * IS_CRON=1 THREAD_ID=2 /usr/bin/php /public_html/importing.php >/dev/null 2>&1
+```
+
+You could add as many entries your hardware can tolerate.
 
 ## Manual importing
 
-Manual importing works by creating a one-time job that will be carried on a filesystem path and parsing method of your choice.
+Manual importing works by creating a one-time job that will be carried on a file system path and parsing method of your choice.
 
-::: warning Permissions
-The path must be writable by the PHP user, make sure that `www-data` (or the specific user in your case) owns the target importing folder.
-:::
-
-Once you add the import job, click on "process" under the "actions" menu. The job status will change to "working".
-
-::: warning Browser-based
-Manual importing is orchestrated with JavaScript, meaning that you must keep the web browser active to carry on the process. Don't worry, the process can be paused/resumed at any time.
+::: danger Low-Performance
+Manual importing is orchestrated with XHR, meaning that you must keep the web browser active to carry on the process. This could be too slow when importing a large collection.
 :::
 
 ## Statuses

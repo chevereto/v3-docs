@@ -1,44 +1,67 @@
 # External storage
 
-External storage works like adding a network drive to your computer. The uploaded files will be stored in this external storage rather than in your website local hard drive, which helps to leverage your server load and deliver a more reliable website.
+External storage allows to use external servers for storing user uploads, which helps to leverage your server load and deliver a more reliable website. If you use multiple external storage servers, it will help to distribute the traffic of these assets.
 
-## How does it works
+## How it works
 
-Chevereto maps each image to the corresponding storage server using the given Storage URL to locate that file.
+External storage works in two layers:
 
-## URL Mapping
-
-The storage URL will be used to "map" the uploaded images to the target storage URL by appending the file location to this URL. For example, if you set `https://storage.com/bucket/` as URL, it will map to `https://storage.com/bucket/the-file-path.jpg`. You can completely customize this URL to map your storage scheme.
-
-::: warning
-Chevereto only maps the URL to present a resulting image storage URL. The storage URL must resolve to the mapped URL
-:::
+- Backend: Uploads objects to the target server
+- Frontend: Access uploaded objects directly
 
 ## Storage URL
 
-The storage URL is the URL that Chevereto will use to map the files stored in the given storage. This could be the direct URL, a CNAME URL, a CDN URL or any URL that resolves the requested image. This means that you can customize the URL that you want to use for the storage. Is recommended that you use URLs that match your domain so try to take advantage of using a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
+Chevereto maps each image to the corresponding storage server using the given Storage URL, which acts as a base URL to locate that file.
 
-## CDN over external storage
+For example, using Amazon S3 with direct storage:
 
-Since you can customize the storage URL you can easily add a CDN for each storage you want to use. You only need to go to your CDN provider and create a pull zone for the origin storage URL. So if you are using Amazon S3 the source or origin URL will be something like this:
+| Property     | Value                                          |
+| ------------ | ---------------------------------------------- |
+| Bucket       | `my-bucket`                                    |
+| Storage URL  | `https://s3.amazonaws.com/my-bucket/`          |
+| Stored image | `my-bucket/image.jpg`                          |
+| Mapped URL   | `https://s3.amazonaws.com/my-bucket/image.jpg` |
 
-```
+::: tip CNAME
+Is recommended that you use URLs that match your domain so try to take advantage of using a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
+:::
+
+Another example, Amazon S3 with folder-based storage and custom CNAME (`img.domain.com`):
+
+| Property     | Value                                                   |
+| ------------ | ------------------------------------------------------- |
+| Bucket       | `my-bucket`                                             |
+| Storage URL  | `https://img.domain.com/my-bucket/`                     |
+| Stored image | `/my-bucket/2020/10/06/image.jpg`                       |
+| Mapped URL   | `https://img.domain.com/my-bucket/2020/10/06/image.jpg` |
+
+::: danger URL resolver
+The mapped URL MUST resolve to the given resource. Chevereto won't resolve this URL, it will only handle the mapping. Check the documentation of your external storage to retrieve this URL or how to customize it to use your own domain.
+:::
+
+### Storage URL with CDN
+
+Easily add a CDN for each storage you want to use. You only need to go to your CDN provider and create a pull zone for the origin storage URL.
+
+If you are using Amazon S3, the source (origin) URL will be something like this:
+
+```sh
 https://s3.amazonaws.com/my-bucket/
 ```
 
-So your CDN url will be something like this:
+The CDN URL provided by your CDN service will be something like this:
 
-```
+```sh
 https://pullzone-url.at.cdn-service.com/
 ```
 
-And a CNAME record will allow you to end up with something like this:
+Adding a CNAME record for the above URL will allow you to end up with a Storage URL like this:
 
-```
-https://s3-cdn.mydomain.com/
+```sh
+https://s3-cdn.domain.com/
 ```
 
-## dding a new external storage
+## Adding a new external storage
 
 If the storage credentials are correct the storage will be added and then you can toggle the activate checkbox to enable or disable that storage. When no storage is set to active the system will use the local storage.
 

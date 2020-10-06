@@ -22,13 +22,17 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-08-07 [Chevereto on Docker – Self-hosted Imgur](https://dbtechreviews.com/2020/08/chevereto-on-docker-self-hosted-imgur/)
 - 2020-08-04 [使用 Docker 安装 Chevereto](https://juejin.im/post/6857029114718355463)
 - 2020-07-27 [Let’s Install Chevereto with Docker! Self-Hosted Image Hosting](https://geeked.host/lets-install-chevereto-with-docker-self-hosted-image-hosting/)
+
 - 2020-06-15 [群晖Docker安装chevereto图床](https://cloud.tencent.com/developer/article/1645239)
+- 2020-05-20 [群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
 - 2020-03-10 [基于Docker的Chevereto部署](https://www.zhuxiaolong.xyz/2020/03/10/%E5%9F%BA%E4%BA%8EDocker%E7%9A%84Chevereto%E9%83%A8%E7%BD%B2/#Docker-Compose-%E5%AE%89%E8%A3%85)
+- 2020-03-09 [Chevereto图床搭建教程](https://www.dqzboy.com/chevereto%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B)
 - 2020-02-18 [威联通（NAS）搭建个人图床](https://juejin.im/post/6844904067236364295)
 - 2020-02-18 [折腾笔记：用Chevereto搭建个人图库&分享小姐姐们](https://www.littlemodesty.com/website-building/use-chevereto-to-build-a-self-hosted-image-home/)
 - 2020-02-06 [Chevereto图床搭建教程 | 利用VPS搭建个人图床实战](https://merlinblog.xyz/wiki/chevereto.html)
 - 2020-02-02 [docker compose 部署迁移 Chevereto 图床程序教程](https://www.ioiox.com/archives/80.html)
 - 2020-01-25 [[Guide] Docker paid version with nmtan/chevereto:installer and real ip fix (reverse proxy)](https://chevereto.com/community/threads/guide-docker-paid-version-with-nmtan-chevereto-installer-and-real-ip-fix-reverse-proxy.11887/)
+- 2020-01-12 [宝塔面板源码安装Chevereto最新免费版](https://www.sevesum.com/221.html)
 - 2020-01-04 [宝塔面板源码安装Chevereto最新免费版 – 算是靠谱的图床解决方案之一](https://www.daniao.org/7882.html)
 - 2019-11-04 [在宝塔环境下安装Chevereto最新免费版](https://sunsea.im/bt-install-Chevereto-Free.html)
 - 2019-11-01 [CentOS下使用Docker搭建Chevereto图床](https://www.qinayu.cn/posts/1e84ba96.html)
@@ -55,6 +59,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Integrating
 
+- 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](http://www.nutongsun.com/9947.html)
 - 2020-04-29 [Chevereto Imagehosting Upload By Jasper(zhujia18)](https://discuss.flarum.org/d/23585-chevereto-imagehosting-upload)
 - 2020-03-12 [给你的 Chevereto 添加鉴黄功能,支持百度,腾讯,Moderatecontent,Sightengine](https://alone88.cn/archives/804.html)
 - 2020-03-09 [Chevereto 增加百度AI审核功能,开启鉴黄功能，后台可设置](https://alone88.cn/archives/796.html)

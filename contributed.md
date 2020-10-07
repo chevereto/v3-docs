@@ -22,6 +22,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-08-07 [Chevereto on Docker – Self-hosted Imgur](https://dbtechreviews.com/2020/08/chevereto-on-docker-self-hosted-imgur/)
 - 2020-08-04 [使用 Docker 安装 Chevereto](https://juejin.im/post/6857029114718355463)
 - 2020-07-27 [Let’s Install Chevereto with Docker! Self-Hosted Image Hosting](https://geeked.host/lets-install-chevereto-with-docker-self-hosted-image-hosting/)
+- 2020-07-23 [Chevereto——简介及安装](https://cloud.tencent.com/developer/article/1667722)
 - 2020-06-15 [群晖Docker安装chevereto图床](https://cloud.tencent.com/developer/article/1645239)
 - 2020-05-20 [群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
 - 2020-03-10 [基于Docker的Chevereto部署](https://www.zhuxiaolong.xyz/2020/03/10/%E5%9F%BA%E4%BA%8EDocker%E7%9A%84Chevereto%E9%83%A8%E7%BD%B2/#Docker-Compose-%E5%AE%89%E8%A3%85)

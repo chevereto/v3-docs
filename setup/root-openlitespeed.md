@@ -337,17 +337,20 @@ Private Key File: /etc/letsencrypt/live/example.com/privkey.pem
 Certificate File: /etc/letsencrypt/live/example.com/fullchain.pem
 Chained Certificate: Yes
 ```
+
 Click Save when you're done, restart the server by clicking the Graceful restart button, and now you should have successfully installed LetsEncrypt Certificate on your Website.
 
 Before we can go through the web-based setup process for Chevereto, we need to adjust some entries in our Chevereto directory, start by giving ownership of all files in the directory to the user nobody and the group nogroup, which the OpenLiteSpeed web server runs by default. The following chown command grants OpenLiteSpeed the ability to read and write files in the Chevereto directory so that it can serve the website and do updates automatically:
+
 ```
 chown -R nobody:nogroup /usr/local/lsws/example.com/
 ```
+
 To change php.ini file and to increase the upload limit, you have to change following values in `/usr/local/lsws/lsphp74/etc/php/7.4/litespeed/php.ini`:
+
 ```
 upload_max_filesize = 20M
 post_max_size = 20M
 max_execution_time = 30
 memory_limit = 512M
-in the server path
 ```

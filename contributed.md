@@ -15,6 +15,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Installation guides
 
+- 2020-10-07 [自建Chevereto图床](https://left.pink/archives/3321)
 - 2020-10-01 [【自建图床】通过宝塔面板搭建图床|Chevereto图床程序搭建教程](https://zhujiget.com/5465.html)
 - 2020-09-19 [一台服务器搭建Hexo和Chevereto](https://blog.shenyuanluo.com/ConfigHexoAndChevereto.html)
 - 2020-08-25 [Self-hosting an image gallery with Chevereto](https://tech.davidfield.co.uk/self-hosted-image-gallery-with-chevereto/)
@@ -23,6 +24,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-08-04 [使用 Docker 安装 Chevereto](https://juejin.im/post/6857029114718355463)
 - 2020-07-27 [Let’s Install Chevereto with Docker! Self-Hosted Image Hosting](https://geeked.host/lets-install-chevereto-with-docker-self-hosted-image-hosting/)
 - 2020-07-23 [Chevereto——简介及安装](https://cloud.tencent.com/developer/article/1667722)
+- 2020-07-03 [宝塔面板安装chevereto3：多域版本的安装使用教程/附如何开启webp图片上传](https://www.daniao.org/9937.html)
 - 2020-06-15 [群晖Docker安装chevereto图床](https://cloud.tencent.com/developer/article/1645239)
 - 2020-05-20 [群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
 - 2020-03-10 [基于Docker的Chevereto部署](https://www.zhuxiaolong.xyz/2020/03/10/%E5%9F%BA%E4%BA%8EDocker%E7%9A%84Chevereto%E9%83%A8%E7%BD%B2/#Docker-Compose-%E5%AE%89%E8%A3%85)
@@ -32,16 +34,25 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-02-06 [Chevereto图床搭建教程 | 利用VPS搭建个人图床实战](https://merlinblog.xyz/wiki/chevereto.html)
 - 2020-02-02 [docker compose 部署迁移 Chevereto 图床程序教程](https://www.ioiox.com/archives/80.html)
 - 2020-01-25 [[Guide] Docker paid version with nmtan/chevereto:installer and real ip fix (reverse proxy)](https://chevereto.com/community/threads/guide-docker-paid-version-with-nmtan-chevereto-installer-and-real-ip-fix-reverse-proxy.11887/)
+- 2020-01-15 [宝塔面板docker安装chevereto图床 – 优点就是不用自己配置环境](https://www.daniao.org/7896.html)
 - 2020-01-12 [宝塔面板源码安装Chevereto最新免费版](https://www.sevesum.com/221.html)
 - 2020-01-04 [宝塔面板源码安装Chevereto最新免费版 – 算是靠谱的图床解决方案之一](https://www.daniao.org/7882.html)
+- 2020-01-01 [使用 Chevereto 图床程序搭建个人图床实现图片自助托管](https://www.pieruo.com/17415.html)
 - 2019-11-04 [在宝塔环境下安装Chevereto最新免费版](https://sunsea.im/bt-install-Chevereto-Free.html)
 - 2019-11-01 [CentOS下使用Docker搭建Chevereto图床](https://www.qinayu.cn/posts/1e84ba96.html)
 - 2019-08-29 [Chevereto安装教程](https://yremp.live/chevereto/)
 - 2019-05-18 [Chevereto免费相册程序安装与使用-免费自建图床和公共图片相册](https://wzfou.com/chevereto/)
 
+## Guides
+
+- 2020-06-16 [Chevereto 接入又拍云实现图片外部存储方法](https://www.pieruo.com/192.html)
+- 2020-09-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
+
 ## Hacks/Tips
 
-- 2020-11-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
+- 2020-09-18 [Chevereto 首页显示图片托管数量的实现方法](https://www.pieruo.com/204.html)
+- 2020-09-09 [Chevereto 图床程序注册页面添加通过邀请码注册功能](https://www.pieruo.com/203.html)
+- 2020-06-27 [修改 Chevereto 图床程序 给登录页面添加公共头部和尾部](https://www.pieruo.com/198.html)
 - 2020-05-24 [图床程序Chevereto安装问题记录](https://xiaodongxier.com/119.html)
 - 2020-05-05 [Chevereto使用暗抄（BCC）方式保存smtp发送的邮件](https://madlax.pw/2020/05/379.html)
 - 2020-04-23 [Chevereto使用宝塔PHP7.3的GD库不支持webp，需升级7.4](https://madlax.pw/2020/04/375.html)
@@ -59,7 +70,8 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Integrating
 
-- 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](http://www.nutongsun.com/9947.html)
+- 2020-07-26 [网站图片从 wordpress 搬迁到图床 图片路径批量替换实现方法](https://www.pieruo.com/201.html)
+- 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](https://www.daniao.org/9947.html)
 - 2020-04-29 [Chevereto Imagehosting Upload By Jasper(zhujia18)](https://discuss.flarum.org/d/23585-chevereto-imagehosting-upload)
 - 2020-03-12 [给你的 Chevereto 添加鉴黄功能,支持百度,腾讯,Moderatecontent,Sightengine](https://alone88.cn/archives/804.html)
 - 2020-03-09 [Chevereto 增加百度AI审核功能,开启鉴黄功能，后台可设置](https://alone88.cn/archives/796.html)

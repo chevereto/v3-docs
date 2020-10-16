@@ -2,11 +2,37 @@
 
 ## Encoded IDs
 
-Chevereto public IDs are encoded in order to avoid enumeration and get hard to guess URLs. All the users, images and albums ids are encoded.
+Chevereto public IDs are encoded in order to avoid enumeration and get hard to guess URLs. All the users, images and albums ids are encoded for public use.
+
+Public IDs are encoded to avoid any attempt of content enumeration attack.
 
 ### Encoding and decoding IDs
 
-When you install Chevereto the system creates a randomly generated `crypt_salt` which is used by the `CHV\encodeID()` and `CHV\decodeID()` functions. This allows to conver the numeric ids stored in the database to alphanumeric ids and it also means that the public ids vary from each different installation
+On installation, Chevereto creates a randomly generated `crypt_salt` which is used by the `CHV\encodeID()` and `CHV\decodeID()` functions. This allows to convert the numeric ids stored in the database to alphanumeric ids. Public ids vary from each different installation.
+
+### Making encoded IDs larger
+
+Larger encoded IDs will be always better for preserving the privacy of the uploaded content.
+
+You have to alternatives to achieve larger encoded IDs:
+
+#### Altering `id_padding` setting
+
+::: warning
+This method will affect previously generated links. Use it only if is safe to edit the IDs.
+:::
+
+Go to the database, find the `chv_settings` table and edit the `setting_name` identified as `id_padding`. (zero by default).
+
+Entering an integer value like `5000` will instruct the system to generate IDs using this base padding.
+
+#### Altering `chv_images` table
+
+::: tip
+This method won't affect any previously generated links.
+:::
+
+Go to the database, find the `chv_images` table and change the `AUTOINCREMENT` to the ID padding you want to use.
 
 ## CSRF protection
 

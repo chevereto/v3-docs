@@ -8,6 +8,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Videos
 
+- 2020-10-21 [搭建Chevereto开源图床作为云存储视频教程](https://jyg789.com/3940.html)
 - 2020-09-08 [Chevereto图床搭建教程 | VPS搭建个人图床 小白一学就会的搭建教学 属于自己的图床 谷歌云GCP一键宝塔安装 简单图床教学](https://www.youtube.com/watch?v=QLa9VC1r94A)
 - 2020-08-07 [Chevereto Installed on Docker - Self-Hosted Imgur](https://www.youtube.com/watch?v=SO4Mt0ikukY)
 - 2020-07-27 [Let's Install Chevereto with Docker! Self-Hosted Image Hosting](https://www.youtube.com/watch?v=zcliC-QIVgE)
@@ -15,6 +16,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Installation guides
 
+- 2020-10-17 [宝塔面板安装chevereto教程，一款强大好用的图床程序！](https://www.feiyubk.com/archives/29.html)
 - 2020-10-07 [自建Chevereto图床](https://left.pink/archives/3321)
 - 2020-10-01 [【自建图床】通过宝塔面板搭建图床|Chevereto图床程序搭建教程](https://zhujiget.com/5465.html)
 - 2020-09-19 [一台服务器搭建Hexo和Chevereto](https://blog.shenyuanluo.com/ConfigHexoAndChevereto.html)
@@ -45,6 +47,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Guides
 
+- 2020-10-18 [Chevereto 图片展示页面默认显示嵌入代码](https://www.openos.org/post/610/)
 - 2020-06-16 [Chevereto 接入又拍云实现图片外部存储方法](https://www.pieruo.com/192.html)
 - 2020-09-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
 

@@ -31,6 +31,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-05-20 [群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
 - 2020-03-10 [基于Docker的Chevereto部署](https://www.zhuxiaolong.xyz/2020/03/10/%E5%9F%BA%E4%BA%8EDocker%E7%9A%84Chevereto%E9%83%A8%E7%BD%B2/#Docker-Compose-%E5%AE%89%E8%A3%85)
 - 2020-03-09 [Chevereto图床搭建教程](https://www.dqzboy.com/chevereto%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B)
+- 2020-02-28 [基于阿里云对象存储OSS搭建图床教程](https://lmqyu.cn/869.html)
 - 2020-02-18 [威联通（NAS）搭建个人图床](https://juejin.im/post/6844904067236364295)
 - 2020-02-18 [折腾笔记：用Chevereto搭建个人图库&分享小姐姐们](https://www.littlemodesty.com/website-building/use-chevereto-to-build-a-self-hosted-image-home/)
 - 2020-02-06 [Chevereto图床搭建教程 | 利用VPS搭建个人图床实战](https://merlinblog.xyz/wiki/chevereto.html)

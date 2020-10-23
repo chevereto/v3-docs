@@ -2,8 +2,7 @@
 
 This guide is for **Ubuntu 20.04 (LTS) x64** and it will show you how to set up Chevereto with OpenLiteSpeed web server on Ubuntu.
 
-> Replace `example.com` with your own domain 
-
+> Replace `example.com` with your own domain
 > Point the A record of `host.example.com` on your server ip
 
 ## Prepare the system
@@ -15,13 +14,17 @@ sudo apt update && sudo apt upgrade
 ```
 
 ## Set up hostname
+
 Changing the hostname on Ubuntu 20.04 is a rather simple process involving just few steps.
 It is recommended to use a fully-qualified domain name (FQDN ) such as `host.example.com` for both static and transient names.
 First, check your current hostname, to do so use either `hostnamectl` or `hostname` command:
+
 ```
 hostnamectl
 ```
+
 Changing the system hostname is a simple process, the syntax is as follows:
+
 ```
 sudo hostnamectl set-hostname host.example.com
 ```
@@ -44,7 +47,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-If you are running Ubuntu on a cloud instance and the `cloud-init` package is installed, you also need to edit the `/etc/cloud/cloud.cfg` file. 
+If you are running Ubuntu on a cloud instance and the `cloud-init` package is installed, you also need to edit the `/etc/cloud/cloud.cfg` file.
 This package is usually installed by default in the images provided by the cloud providers, and it is used to handle the initialization of the cloud instances.
 If the file exists on your system open it:
 
@@ -58,11 +61,15 @@ Search for `preserve_hostname`, and change the value from `false` to `true`:
 # This will cause the set+update hostname module to not operate (if true)
 preserve_hostname: true
 ```
+
 Save the file and close your editor, and let us verify the change:
+
 ```
 hostnamectl
 ```
+
 Your new hostname will be printed on the terminal:
+
 ```
    Static hostname: host.example.com
    Pretty hostname: Chevereto's Webserver
@@ -75,17 +82,21 @@ Your new hostname will be printed on the terminal:
             Kernel: Linux 5.4.0-26-generic
       Architecture: x86-64
 ```
+
 **Note:** The rebooting of the system is an optional step and not required.
 
 ```
 sudo reboot
 ```
+
 ## Install OpenLiteSpeed
+
 Unfortunately, OpenLiteSpeed is not in the official Ubuntu 20.04 repositories, so you will need to add OpenLiteSpeed official repository to your system:
 
 ```
 wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash
 ```
+
 Once the repository is added, now install the application by refreshing the APT cache and running the following command:
 
 ```
@@ -94,50 +105,69 @@ sudo apt install openlitespeed
 ```
 
 ## Install PHP 7.4
+
 Also, install the package that installs PHP 7.4 support for OpenLiteSpeed, you can install the PHP 7.4 by running this command:
+
 ```
 sudo apt install lsphp74 lsphp74-common lsphp74-mysql lsphp74-dev lsphp74-curl lsphp74-dbg lsphp74-imagick -y
 ```
+
 Now, enable PHP 7.4 support for OpenLiteSpeed, you will need to create a symbolic link of the installed package:
+
 ```
 sudo ln -sf /usr/local/lsws/lsphp74/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5
 ```
 
 ## Install MySQL Database (MariaDB 10.5)
+
 As first we have to import MariaDB gpk key:
+
 ```
 sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
 ```
+
 Now you have to add MariaDB APT repository:
+
 ```
 sudo add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.globo.tech/repo/10.5/ubuntu focal main'
 ```
+
 ```
 sudo apt update
 ```
+
 ```
 sudo apt install mariadb-client mariadb-server
 ```
+
 Once the installation is complete, start the MariaDB service and add it to the boot time:
+
 ```
 systemctl start mariadb
 systemctl enable mariadb
 ```
+
 As first we have to secure our MySQL installation, and we will use the 'mysql_secure_installation' command-line tool for it:
+
 ```
 mysql_secure_installation
 ```
+
 Set up your root password, and type "Y" for the rest of the configuration:
+
 ```
 Set a root password? [Y/n] Y
 Remove anonymous users? [Y/n] Y
 Remove test database and access to it? [Y/n] Y
 Reload privilege tables now? [Y/n] Y
 ```
+
 Enter to the MySQL console:
+
 ```
 sudo mysql -u root
 ```
+
 Once in the MySQL console, you will see a `mysql>` prompt. Run the following statements:
 
 ```
@@ -151,8 +181,8 @@ quit
 
 ## Setup the website
 
-Now, we can start running OpenLiteSpeed, and manage the webserver in a very fast and comfortable way, 
-the graphical interface works through port 7080 and requires a username and password, 
+Now, we can start running OpenLiteSpeed, and manage the webserver in a very fast and comfortable way,
+the graphical interface works through port 7080 and requires a username and password,
 therefore we need to set up the user and password authentication for the OpenLiteSpeed dashboard.
 Go to the `/usr/local/lsws/admin/misc/` directory and now run the bash script `admpass.sh` as below.
 
@@ -191,6 +221,7 @@ Listener Name: Default
 IP Address: ANY
 Port: 80
 ```
+
 After that save it and click on the restart button in the dashboard, now we got OpenLiteSpeed runing on Port 80, open your web browser and type the server IP address on the address bar, and you should get the default index page of OpenLiteSpeed.
 
 It's time to setup Virtual Host, as first we have to create directorys for our Website:
@@ -212,6 +243,7 @@ Enable Scripts/ExtApps: Yes
 Restrained: Yes
 External App Set UID Mode: Server UID
 ```
+
 Click the Save button and when you're done, you will get following error:
 
 ```
@@ -234,6 +266,7 @@ Use Server Index Files: No
 Index files: index.php, index.html, index.htm
 Auto Index: No
 ```
+
 Click Save when you're done, next we have to choose Log files, go to the `Log` section and click Edit against `Virtual Host Log` and enter the following values:
 
 ```
@@ -242,6 +275,7 @@ File Name: $VH_ROOT/logs/error.log
 Log Level: ERROR
 Rolling Size (bytes): 10M
 ```
+
 **Note:** You can select the DEBUG log level if you were on a production/development server.
 
 Click Save, then click the plus sign in the `Access Log` section to add a new entry, enter the following values:
@@ -257,6 +291,7 @@ Keep Days: 30
 Bytes log: Not Set
 Compress Archive: Yes
 ```
+
 Click Save when you're done, next, we need to configure `Access Control` under the `Security` section, set the following values:
 
 ```
@@ -284,38 +319,47 @@ Next we have to set `Listeners`, for this go to the `Listeners section` and clic
 Virtual Host: example.com
 Domains: example.com
 ```
+
 Click Save when you're done, now click the Graceful restart button to apply all of the above changes and to restart the server.
 
 ## Setup SSL
+
 Setting up SSL in OpenLiteSpeed requires setting up two certificates,  a self-signed certificate for the entire server and a Let's Encrypt location-specific server certificate, let's create the self-signed certificate first:
 
 ```
 openssl req -x509 -days 365 -newkey rsa:4096 -keyout key.pem -out cert.pem -nodes
 ```
+
 In order to be able to use Let's Encrypt, we have to install the Certbot tool:
 
 ```
 sudo apt install certbot
 ```
+
 Obtain the SSL certificate for Website:
 
 ```
 sudo certbot certonly --webroot -w /usr/local/lsws/example.com/html/ -d example.com
 ```
+
 **Note:** Follow the interactive prompt.
 
 Now navigate to the OpenliteSpeed dashboard and go to `Listeners` >> `Add New Listener` and add the following values:
+
 ```
 Listener Name: SSL
 IP Address: ANY
 Port: 443
 Secure: Yes
 ```
+
 Click Save when you're done, then go to the `Virtual Host Mappings` section under the `SSL listener` by clicking `SSL`, click the Add button and enter the following values:
+
 ```
 Virtual Host: example.com
 Domains: example.com
 ```
+
 Click Save when you're done, go to `Listeners` >> `SSL Listener` >> `SSL Tab` >> `SSL Private Key & Certificate` (Edit button) and enter the following values for the self-signed certificate we created earlier:
 
 ```
@@ -323,6 +367,7 @@ Private Key File: /srv/self-signed/key.pem
 Certificate File: /srv/self-signed/cert.pem
 Chained Certificate: Yes
 ```
+
 Move the self-signed certificate to another directory from root:
 
 ```

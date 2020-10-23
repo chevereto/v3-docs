@@ -2,15 +2,17 @@
 
 This refers to the provisioning alternatives for getting Chevereto installed in your server. It takes from granted that your server meets all the [system requirements](./requirements.md).
 
-> If you are installing on a VPS check our [Root install (LEMP)](./root-install.md) guide.
+::: tip Using VPS?
+If you are installing on a VPS check our [Root install (LEMP)](./root-install.md) and [Root install (OpenLiteSpeed)](./root-openlitespeed.md) guides.
+:::
 
-If you are new into self-hosting you should check the [guides](../contributed.md#guides) created by other users of the software.
+New into self-hosting? Check the [guides](../contributed.md#guides) created by other users of the software.
 
 ## Procedures
 
 ### A. Install using our Installer (recommended)
 
-The [chevereto/installer](https://github.com/chevereto/installer) is a single `.php` file which will download and extract the latest release.
+The [chevereto/installer](https://github.com/chevereto/installer) is a single `.php` file which will download and extract the latest release in the target destination.
 
 - Upload the [installer](https://chevereto.com/download/file/installer) to your server target destination (usually the `public_html` folder).
 - Open your website at `/installer.php` and follow the process.

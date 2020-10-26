@@ -18,6 +18,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 - 2020-10-24 [群晖通过Docker安装图床工具Chevereto的步骤](https://www.weizhiyong.com/archives/4309)
 - 2020-10-17 [宝塔面板安装chevereto教程，一款强大好用的图床程序！](https://www.feiyubk.com/archives/29.html)
+- 2020-10-12 [Chevereto自建图床](https://www.jilespace.net/1235.html)
 - 2020-10-07 [自建Chevereto图床](https://left.pink/archives/3321)
 - 2020-10-01 [【自建图床】通过宝塔面板搭建图床|Chevereto图床程序搭建教程](https://zhujiget.com/5465.html)
 - 2020-09-19 [一台服务器搭建Hexo和Chevereto](https://blog.shenyuanluo.com/ConfigHexoAndChevereto.html)
@@ -30,6 +31,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-07-03 [宝塔面板安装chevereto3：多域版本的安装使用教程/附如何开启webp图片上传](https://www.daniao.org/9937.html)
 - 2020-06-15 [群晖Docker安装chevereto图床](https://cloud.tencent.com/developer/article/1645239)
 - 2020-05-20 [群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
+- 2020-04-05 [服务器搭建图床：Chevereto安装教程](https://blog.csdn.net/weixin_43426647/article/details/105328153)
 - 2020-03-10 [基于Docker的Chevereto部署](https://www.zhuxiaolong.xyz/2020/03/10/%E5%9F%BA%E4%BA%8EDocker%E7%9A%84Chevereto%E9%83%A8%E7%BD%B2/#Docker-Compose-%E5%AE%89%E8%A3%85)
 - 2020-03-09 [Chevereto图床搭建教程](https://www.dqzboy.com/chevereto%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B)
 - 2020-02-28 [基于阿里云对象存储OSS搭建图床教程](https://lmqyu.cn/869.html)

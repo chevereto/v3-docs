@@ -18,7 +18,7 @@ Some bad providers use heavy marketing strategies to be the first on search resu
 
 Some providers, specially the big ones, will claim that they are the #1 in several categories that are either made up or available to purchase from any blog or magazine.
 
-#### Scrape affiliates
+#### Discard affiliates
 
 There are many websites with rankings, reviews or anything related to hosting providers and you shouldn't trust in any measurement, level or even comparison. Most of these websites are merely doing affiliate marketing.
 
@@ -41,7 +41,7 @@ You can always ask for user feedback in our [community](https://chevereto.com/co
 
 ## Providers
 
-This is a list of know hosting providers that advertise to support Chevereto or to be optimized for the purpose of running Chevereto. Links in this section aren't sponsored neither contain any kind of affiliate marketing.
+This is a list of know hosting providers that advertise to either support Chevereto or to be optimized for the purpose of running it. Links in this section aren't sponsored nor contain any kind of affiliate marketing.
 
 ::: tip Feedback?
 If you know about a provider to recommend or to warn about a bad provider, please let us know to provide notes on each case.

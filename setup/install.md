@@ -6,7 +6,7 @@ This refers to the provisioning alternatives for getting Chevereto installed in 
 If you are installing on a VPS check our [Root install (LEMP)](./root-install.md) and [Root install (OpenLiteSpeed)](./root-openlitespeed.md) guides.
 :::
 
-New into self-hosting? Check the [guides](../contributed.md#guides) created by other users of the software.
+New into self-hosting? Check the user powered [guides](../contributed.md#guides) and our recommendation on [hosting](hosting.md) providers.
 
 ## Procedures
 

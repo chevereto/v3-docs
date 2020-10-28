@@ -16,6 +16,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Installation guides
 
+- 2020-10-28 [chevereto收费版安装教程，这可能是我用过最好的图床程序了！](https://www.shejibiji.com/archives/4672)
 - 2020-10-24 [群晖通过Docker安装图床工具Chevereto的步骤](https://www.weizhiyong.com/archives/4309)
 - 2020-10-17 [宝塔面板安装chevereto教程，一款强大好用的图床程序！](https://www.feiyubk.com/archives/29.html)
 - 2020-10-12 [Chevereto自建图床](https://www.jilespace.net/1235.html)

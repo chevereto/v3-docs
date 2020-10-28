@@ -12,6 +12,12 @@ This guide contains the steps to update Chevereto to its last version. Depending
 
 ## Manual Procedure
 
+This outlines the manual update procedure which may be required in certain circumstances:
+
+- Unable to reach `chevereto.com` API server (required to download the software)
+- Missing permissions on the `php` user over the software files
+- Manual DB queries required indicated by the `#Dumped update query` message
+
 ### Files
 
 This procedure will be required if unable to login to your installation or if your server is unable to fetch the Chevereto API.
@@ -24,11 +30,13 @@ This procedure will be required if unable to login to your installation or if yo
 
 ### Database
 
-If the images table has more than 1,000,000 records, Chevereto will dump the SQL statements required to carry the database update which must run directly in the SQL console. You can force dumping the update query by going to `/dashboard/settings/system`.
+If [dump update query](../settings/system.md#dump-update-query) setting is **enabled** or if the images table has **more than 1,000,000** records, Chevereto will dump the SQL statements required to carry the database update which must run directly in the SQL console.
+
+Chevereto has this caveat to potentially avoid breaking your database, as the process could take several minutes to complete. When manually updating the database always keep the following considerations:
 
 - Disconnect all peers
-- Turn off the SQL server, work directly in its console
-- Run the SQL statements one-by-one directly in the SQL console
+- Turn off the SQL server, work directly in its console (phpMyAdmin, Adminer, CLI)
+- Run the SQL statements one-by-one (a semi-colon `;` denotes when a SQL statement ends)
 - If everything goes well, turn everything back online
 
 ## Legacy Update

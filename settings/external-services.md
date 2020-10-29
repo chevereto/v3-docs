@@ -6,36 +6,36 @@
 
 Toggles usage of [Akismet](https://akismet.com/) service.
 
-| Value  | Effect  |
-|---|---|
+| Value    | Effect          |
+| -------- | --------------- |
 | Enabled  | Enable Akismet  |
-| Disabled  | Disable Akismet  |
+| Disabled | Disable Akismet |
 
 ## Akismet API key
 
 *Applies only if `Akismet spam protection` is `Enabled`.
 
-| Type  | Description  |
-|---|---|
-| String  | Akismet API key  |
+| Type   | Description     |
+| ------ | --------------- |
+| String | Akismet API key |
 
 ## StopForumSpam spam protection
 
 Toggles usage of [Stop Forum Spam](https://stopforumspam.com/) service.
 
-| Value  | Effect  |
-|---|---|
+| Value    | Effect                  |
+| -------- | ----------------------- |
 | Enabled  | Enable Stop Forum Spam  |
-| Disabled  | Disable Stop Forum Spam  |
+| Disabled | Disable Stop Forum Spam |
 
 ## CDN
 
 Toggles usage of [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) (Content delivery network).
 
-| Value  | Effect  |
-|---|---|
+| Value    | Effect      |
+| -------- | ----------- |
 | Enabled  | Enable CDN  |
-| Disabled  | Disable CDN  |
+| Disabled | Disable CDN |
 
 ## CDN URL
 
@@ -43,18 +43,18 @@ Toggles usage of [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) (
 
 Determines the CDN for the website. The CDN URL will be used for all local static resources.
 
-| Type  | Description  |
-|---|---|
-| String  | The CDN (pull) URL  |
+| Type   | Description        |
+| ------ | ------------------ |
+| String | The CDN (pull) URL |
 
 ## reCAPTCHA
 
 Toggles usage of [reCAPTCHA](https://www.google.com/recaptcha/about/).
 
-| Value  | Effect  |
-|---|---|
+| Value    | Effect            |
+| -------- | ----------------- |
 | Enabled  | Enable reCAPTCHA  |
-| Disabled  | Disable reCAPTCHA  |
+| Disabled | Disable reCAPTCHA |
 
 ## reCAPTCHA version
 
@@ -62,9 +62,9 @@ Toggles usage of [reCAPTCHA](https://www.google.com/recaptcha/about/).
 
 Determines the reCAPTCHA version. It must match the version spec for your key.
 
-| Type  | Values  |
-|---|---|
-| Integer  | 2, 3  |
+| Type    | Values |
+| ------- | ------ |
+| Integer | 2, 3   |
 
 ## reCAPTCHA site key
 
@@ -72,9 +72,9 @@ Determines the reCAPTCHA version. It must match the version spec for your key.
 
 Determines the reCAPTCHA site key.
 
-| Type  | Values  |
-|---|---|
-| String  | reCAPTCHA site key  |
+| Type   | Values             |
+| ------ | ------------------ |
+| String | reCAPTCHA site key |
 
 ## reCAPTCHA secret key
 
@@ -82,9 +82,9 @@ Determines the reCAPTCHA site key.
 
 Determines the reCAPTCHA secret key.
 
-| Type  | Values  |
-|---|---|
-| String  | reCAPTCHA secret key  |
+| Type   | Values               |
+| ------ | -------------------- |
+| String | reCAPTCHA secret key |
 
 ## reCAPTCHA threshold
 
@@ -94,10 +94,10 @@ Determines the reCAPTCHA threshold.
 
 For example, if you
 
-| Value  | Effect  |
-|---|---|
-| 0  | Always display reCAPTCHA |
-| n  | Display reCAPTCHA after (n) failed attempts, for example when failing to provide the right login credentials |
+| Value | Effect                                                                                                       |
+| ----- | ------------------------------------------------------------------------------------------------------------ |
+| 0     | Always display reCAPTCHA                                                                                     |
+| n     | Display reCAPTCHA after (n) failed attempts, for example when failing to provide the right login credentials |
 
 ## Force reCAPTCHA on contact page
 
@@ -105,19 +105,19 @@ For example, if you
 
 Toggle showing (forced) reCAPTCHA on contact page.
 
-| Value  | Effect  |
-|---|---|
+| Value    | Effect                                   |
+| -------- | ---------------------------------------- |
 | Enabled  | Enable forced reCAPTCHA on contact page  |
-| Disabled  | Disable forced reCAPTCHA on contact page |
+| Disabled | Disable forced reCAPTCHA on contact page |
 
 ## Comments API
 
 Determines the comment API to use.
 
-| Value  | Effect  |
-|---|---|
-| Disqus  | Use [Disqus](https://disqus.com/) comment service  |
-| JavaScript/HTML  | Use any HTML comment provider  |
+| Value           | Effect                                            |
+| --------------- | ------------------------------------------------- |
+| Disqus          | Use [Disqus](https://disqus.com/) comment service |
+| JavaScript/HTML | Use any HTML comment provider                     |
 
 ## Disqus shortname
 
@@ -125,9 +125,9 @@ Determines the comment API to use.
 
 Determines the Disqus shortname.
 
-| Type  | Value  |
-|---|---|
-| String  | Disqus shortname  |
+| Type   | Value            |
+| ------ | ---------------- |
+| String | Disqus shortname |
 
 ## Disqus secret key
 
@@ -135,9 +135,9 @@ Determines the Disqus shortname.
 
 Determines the Disqus secret key.
 
-| Type  | Value  |
-|---|---|
-| String  | Disqus secret key  |
+| Type   | Value             |
+| ------ | ----------------- |
+| String | Disqus secret key |
 
 ## Disqus public key
 
@@ -145,9 +145,9 @@ Determines the Disqus secret key.
 
 Determines the Disqus public key.
 
-| Type  | Value  |
-|---|---|
-| String  | Disqus public key  |
+| Type   | Value             |
+| ------ | ----------------- |
+| String | Disqus public key |
 
 ## Comment code
 
@@ -155,18 +155,18 @@ Determines the Disqus public key.
 
 Determines the HTML comment code, which will get added to image view.
 
-| Type  | Value  |
-|---|---|
-| String  | HTML  |
+| Type   | Value |
+| ------ | ----- |
+| String | HTML  |
 
 ## ModerateContent
 
 Toggles usage of [ModerateContent](https://www.moderatecontent.com/) service.
 
-| Value  | Effect  |
-|---|---|
+| Value    | Effect                  |
+| -------- | ----------------------- |
 | Enabled  | Enable ModerateContent  |
-| Disabled  | Disable ModerateContent  |
+| Disabled | Disable ModerateContent |
 
 ## ModerateContent API Key
 
@@ -174,9 +174,9 @@ Toggles usage of [ModerateContent](https://www.moderatecontent.com/) service.
 
 Determines the ModerateContent API key.
 
-| Type  | Value  |
-|---|---|
-| String  | ModerateContent API key  |
+| Type   | Value                   |
+| ------ | ----------------------- |
+| String | ModerateContent API key |
 
 ## Automatic approve
 
@@ -184,10 +184,10 @@ Determines the ModerateContent API key.
 
 Toggles automatic approve for content approved by ModerateContent.
 
-| Value  | Effect  |
-|---|---|
+| Value    | Effect                                    |
+| -------- | ----------------------------------------- |
 | Enabled  | Enable ModerateContent automatic approve  |
-| Disabled  | Disable ModerateContent automatic approve  |
+| Disabled | Disable ModerateContent automatic approve |
 
 ## Block content
 
@@ -195,11 +195,11 @@ Toggles automatic approve for content approved by ModerateContent.
 
 Determines which content will be blocked by ModerateContent.
 
-| Value  | Effect  |
-|---|---|
-| Disabled  | Don't block any content  |
-| Adult  | Block adult content |
-| Teen and adult  | Block adult and teen content |
+| Value          | Effect                       |
+| -------------- | ---------------------------- |
+| Disabled       | Don't block any content      |
+| Adult          | Block adult content          |
+| Teen and adult | Block adult and teen content |
 
 ## Flag NSFW
 
@@ -207,18 +207,18 @@ Determines which content will be blocked by ModerateContent.
 
 Determines which content will get NSFW flagged by ModerateContent.
 
-| Value  | Effect  |
-|---|---|
-| Disabled  | Don't flag any content  |
-| Adult  | Flag adult as NSFW |
-| Teen and adult  | Flag adult and teen as NSFW |
+| Value          | Effect                      |
+| -------------- | --------------------------- |
+| Disabled       | Don't flag any content      |
+| Adult          | Flag adult as NSFW          |
+| Teen and adult | Flag adult and teen as NSFW |
 
 ## Analytics code
 
-Determines the analytics HTML code that will track stats for your website.
+Determines the analytics HTML code that will track stats for your website. This is where you can place the tracking code provided by Google Analytics, Heap, Yandex.Metrica, [Matomo](https://matomo.org/), Mixpanel, etc.
 
-This code will get printed in all views.
+Code you enter in this section will be printed in all views.
 
-| Type  | Description  |
-|---|---|
-| String  | HTML |
+| Type   | Description |
+| ------ | ----------- |
+| String | HTML        |

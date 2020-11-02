@@ -41,7 +41,7 @@ Docker allows you to easily install a container version of the software.
 
 Note: when using Docker with the paid edition check that the image support our `installer`.
 
-- [linuxserver/chevereto](https://hub.docker.com/r/linuxserver/chevereto) thanks to [linuxserver.io](https://www.linuxserver.io/) - [support](https://forums.unraid.net/topic/97235-support-linuxserverio-chevereto/)
+- [linuxserver/chevereto](https://github.com/linuxserver/docker-chevereto) ([fleet](https://fleet.linuxserver.io/image?name=linuxserver/chevereto)) thanks to [linuxserver.io](https://www.linuxserver.io/) - [support](https://forums.unraid.net/topic/97235-support-linuxserverio-chevereto/)
 - [nmtan/chevereto](https://hub.docker.com/r/nmtan/chevereto/) thanks to [Tan Nguyen](https://github.com/tanmng)
 - [zaywalker/chevereto](https://hub.docker.com/r/zaywalker/chevereto) thanks to [Jae Yoon KIM](https://github.com/zaywalker)
 - [einverne/chevereto](https://hub.docker.com/r/einverne/chevereto) thanks to [Ein Verne](https://github.com/einverne)

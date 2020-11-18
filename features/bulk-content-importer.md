@@ -107,6 +107,10 @@ You can speed up the process by running the importing in multiple threads. Simpl
 
 You could add as many entries your hardware can tolerate.
 
+### Locking
+
+The automatic importing process can be locked by placing an empty lock file at `./importing/.lock`. The automatic importing process won't be carried until this file doesn't exists.
+
 ## Manual importing
 
 Manual importing works by creating a one-time job that will be carried on a file system path and parsing method of your choice.
@@ -276,12 +280,13 @@ The whole importing process gets logged in texts files located at `/app/import/j
 The metadata format used is exactly the same used by Google Photos, meaning that you can run away from that proprietary service and start owning your photos.
 
 - Go to [Google Takeout](https://takeout.google.com/)
-- Select Google Photos and follow the process
-- Once you're done, you will get a zipped file
-- Rename `Takeout/Google Photos` folder to the target username
+- Select **Google Photos** and follow the process
+- At Delivery method pick **Send download link via email**
+- Once done, you will get a zipped file
+- Rename `Takeout/Google Photos` folder to the target username, for example `Takeout/Rodolfo`
 
-From there, you can take the folder for automatic importing or one-time (manual importing).
+From here you can take the folder for either [automatic](#automatic-importing) or [manual](#manual-importing) importing.
 
 ::: warning Metadata
-At this time the image metadata provided by Google Photos for images is named as `imagename.ext.json` format, which is not recognized by Chevereto yet. I'm working in add support for this in the next revision.
+All Google Photos metadata naming conventions are recognized from Chevereto V3.17
 :::

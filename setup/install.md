@@ -62,6 +62,12 @@ If your web hosting includes [Softaculous](https://softaculous.com/)/[Fantastico
 **Note:** Our paid edition isn't available in these script libraries. However, you can install Chevereto Free and then **one-click upgrade** it to the paid edition directly from the `/dashboard` panel.
 :::
 
+## Cron
+
+Since Chevereto v3.17 background jobs are issued using a cron, which is a scheduled task for jobs like removing images from external storage, remove expired images and many other maintenance tasks. At `/dashboard` you will find the crontab entry for your installation.
+
+Kindly refer to the documentation of your server software for the procedure to add add the cron entry.
+
 ## Install issues
 
 Most common install issue is missing [system requirements](./requirements.md) so make sure that you are running a compatible system and that all the data is correct like working MySQL credentials and privileges.

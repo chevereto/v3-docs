@@ -28,19 +28,11 @@ This outlines the manual update procedure which may be required in certain circu
 - Missing permissions on the `php` user over the software files
 - DB queries need to be manually executed (for system stability)
 
-::: danger Dumped update query
-If at `/install` you see a plain text message staring with `#Dumped update query` it means that you MUST manually run the printed queries in your MySQL console. [Learn more](#database).
-:::
-
-### System files
-
-- Download the [latest release](https://chevereto.com/panel/downloads)
-- Backup all your file changes (theme, routes, etc.)
-- Upload all the files and folders from the `chevereto` folder
-- Login to your website (admin user) and then go to `/install`
-- Restore or merge your file changes (only if needed)
-
 ### Database
+
+::: danger Dumped update query
+If at `/install` you see a plain text message staring with `#Dumped update query` it means that you MUST manually run the printed queries in your MySQL console.
+:::
 
 If [dump update query](../settings/system.md#dump-update-query) setting is **enabled** or if the images table has **more than 1,000,000** records, Chevereto will dump the SQL statements required to carry the database update which must run directly in the SQL console.
 
@@ -50,6 +42,15 @@ Chevereto has this caveat to potentially avoid breaking your database, as the pr
 - Turn off the SQL server, work directly in its console (phpMyAdmin, Adminer, CLI)
 - Run the SQL statements one-by-one (a semi-colon `;` denotes when a SQL statement ends)
 - If everything goes well, turn everything back online
+
+
+### System files
+
+- Download the [latest release](https://chevereto.com/panel/downloads)
+- Backup all your file changes (theme, routes, etc.)
+- Upload all the files and folders from the `chevereto` folder
+- Login to your website (admin user) and then go to `/install`
+- Restore or merge your file changes (only if needed)
 
 ## Legacy Update
 

@@ -2,25 +2,37 @@
 
 This guide contains the steps to update Chevereto to its last version. Depending on which version you are currently running you should follow the adequate update procedure.
 
+::: warning Check system requirements
+Always check that you requirements won't conflict with the update. In doubt, you can always [ask first](../get-updates.md).
+:::
+
+::: danger Backup your database
+Make sure to always have a working backup of your database. It will be impossible to rollback without a database backup.
+:::
+
 ## One-click update
 
 - Go to `/dashboard` and click on "check for updates"
 - The system will carry the update
 - Restore or merge your file changes (only if needed)
 
-> If you don't see the "check for updates" is because you are running an older version
+::: tip
+If the process fails, try with the manual update procedure.
+:::
 
-## Manual Procedure
+## Manual update
 
 This outlines the manual update procedure which may be required in certain circumstances:
 
 - Unable to reach `chevereto.com` API server (required to download the software)
 - Missing permissions on the `php` user over the software files
-- Manual DB queries required indicated by the `#Dumped update query` message
+- DB queries need to be manually executed (for system stability)
 
-### Files
+::: danger Dumped update query
+If at `/install` you see a plain text message staring with `#Dumped update query` it means that you MUST manually run the printed queries in your MySQL console. [Learn more](#database).
+:::
 
-This procedure will be required if unable to login to your installation or if your server is unable to fetch the Chevereto API.
+### System files
 
 - Download the [latest release](https://chevereto.com/panel/downloads)
 - Backup all your file changes (theme, routes, etc.)
@@ -41,7 +53,11 @@ Chevereto has this caveat to potentially avoid breaking your database, as the pr
 
 ## Legacy Update
 
-> 👴🏾 These are steps needed when updating from very old releases
+> 👴🏾 These are steps needed when updating from very old releases (unsupported)
+
+::: warning Unsupported
+These versions are really old, if you encounter any issue upgrading from these please report it.
+:::
 
 ### Update from V2.1 - V2.6
 

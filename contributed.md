@@ -30,6 +30,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-07-27 [Let’s Install Chevereto with Docker! Self-Hosted Image Hosting](https://geeked.host/lets-install-chevereto-with-docker-self-hosted-image-hosting/)
 - 2020-07-23 [Chevereto——简介及安装](https://cloud.tencent.com/developer/article/1667722)
 - 2020-07-03 [宝塔面板安装chevereto3：多域版本的安装使用教程/附如何开启webp图片上传](https://www.daniao.org/9937.html)
+- 2020-06-18 [Docker Composer+Google Drive安装付费版著名图床chevereto无限容量](https://1024.ee/index.php/2020/06/18/docker-composergoogle-drive%E5%AE%89%E8%A3%85%E4%BB%98%E8%B4%B9%E7%89%88%E8%91%97%E5%90%8D%E5%9B%BE%E5%BA%8Achevereto%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F/)
 - 2020-06-15 [群晖Docker安装chevereto图床](https://cloud.tencent.com/developer/article/1645239)
 - 2020-05-20 [群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
 - 2020-04-05 [服务器搭建图床：Chevereto安装教程](https://blog.csdn.net/weixin_43426647/article/details/105328153)
@@ -96,4 +97,5 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Reviews
 
+- 2020-12-05 [Gone too Soon - From Koken to Chevereto](https://den.black/gone-too-soon-from-koken-to-chevereto/)
 - 2020-01-10 [Chevereto: Bilder Hosting für den eigenen Server](https://www.youtube.com/watch?v=wriVgnEfJ0Y)

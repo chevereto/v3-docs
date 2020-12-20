@@ -1,20 +1,57 @@
 # Requirements
 
-- Web Server: Nginx / Apache / **any*
-- PHP 7.4 (7.0 min) with: `curl hash json mbstring pdo pdo-mysql zip session`
+- PHP 7.4 (7.3 min) with: `curl hash json mbstring pdo pdo-mysql zip session`
 - Database: MySQL 8 / MariaDB 10
+- Cron
+- Web Server: Nginx / Apache / **any*
+
+## PHP
+
+The following `ini` directives are recommended for Chevereto installations:
+
+```ini
+upload_max_filesize = 20M;
+post_max_size = 20M;
+max_execution_time = 30;
+memory_limit = 512M;
+```
+
+## Database
+
+MySQL/MariaDB user must have `ALL PRIVILEGES` over the target database. Chevereto will require the following for connecting to the database:
+
+- Database name
+- Database user and its password
+
+## Cron
+
+A cron is required to process the application background jobs. The cron for your installation may look like this:
+
+```sh
+* * * * * IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php >/dev/null 2>&1
+```
+
+Where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule.
+
+### Testing cron
+
+You can go to [explainshell](https://explainshell.com/explain?cmd=IS_CRON%3D1+%2Fusr%2Fbin%2Fphp+%2Fvar%2Fwww%2Fhtml%2Fchevereto.loc%2Fpublic_html%2Fcron.php+%3E%2Fdev%2Fnull+2%3E%261) to inspect the command, you can freely alter it to match your needs. Run the command as `www-data` user by adding `sudo -u www-data` to the command:
+
+```sh
+sudo -u www-data IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php >/dev/null 2>&1
+```
 
 ## Web server
 
 ### PHP provisioning
 
-The web server must be configured to execute [PHP](http://php.net/) and it is recommended to provision it using [PHP-FPM](https://www.php.net/manual/en/install.fpm.php).
+The web server must be configured to execute [PHP](http://php.net/) and it is **recommended** to provision it using [PHP-FPM](https://www.php.net/manual/en/install.fpm.php).
 
-### Filesystem permissions
+### Filesystem
 
 The webserver user should be in the owner group of your installation. This is required to allow Chevereto to modify the filesystem, which is required to one-click update and many other features.
 
-> 😜 The web server user is usually `www-data`
+> Web server user is usually `www-data`
 
 Chevereto requires **recursive write** access in the following paths:
 
@@ -93,24 +130,24 @@ Options -MultiViews
 
 <IfModule mod_rewrite.c>
 
-	RewriteEngine On
+    RewriteEngine On
 
-	# If you have problems with the rewrite rules remove the "#" from the following RewriteBase line
-	# You will also have to change the path to reflect the path to your Chevereto installation
-	# If you are using alias is most likely that you will need this.
-	#RewriteBase /
+    # If you have problems with the rewrite rules remove the "#" from the following RewriteBase line
+    # You will also have to change the path to reflect the path to your Chevereto installation
+    # If you are using alias is most likely that you will need this.
+    #RewriteBase /
 
-	# 404 images
-	# If you want to have your own fancy "image not found" image remove the "#" from RewriteCond and RewriteRule lines
-	# Make sure to apply the correct paths to reflect your current installation
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule images/.+\.(gif|jpe?g|png|bmp|webp) - [NC,L,R=404]
-	#RewriteRule images/.+\.(gif|jpe?g|a?png|bmp|webp) content/images/system/default/404.gif [NC,L]
+    # 404 images
+    # If you want to have your own fancy "image not found" image remove the "#" from RewriteCond and RewriteRule lines
+    # Make sure to apply the correct paths to reflect your current installation
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule images/.+\.(gif|jpe?g|png|bmp|webp) - [NC,L,R=404]
+    #RewriteRule images/.+\.(gif|jpe?g|a?png|bmp|webp) content/images/system/default/404.gif [NC,L]
 
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_URI} !\.(css|js|html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|exe|gif|gz|gzip|ico|jpe?g|jpe|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|swf|tar|tif|tiff|wav|webp|wma|wri|xla|xls|xlsx|xlt|xlw|zip)$ [NC]
-	RewriteRule . index.php [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !\.(css|js|html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|exe|gif|gz|gzip|ico|jpe?g|jpe|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|swf|tar|tif|tiff|wav|webp|wma|wri|xla|xls|xlsx|xlt|xlw|zip)$ [NC]
+    RewriteRule . index.php [L]
 
 </IfModule>
 ```
@@ -124,24 +161,3 @@ For setups under any kind of proxy (including CloudFlare) is required that the w
 - Nginx: `ngx_http_realip_module`
 - Apache: `mod_remoteip`
 
-## PHP
-
-### PHP settings
-
-The following `ini` directives are recommended for Chevereto installations:
-
-```ini
-upload_max_filesize = 20M;
-post_max_size = 20M;
-max_execution_time = 30;
-memory_limit = 512M;
-```
-
-## Database
-
-### Privileges
-
-MySQL/MariaDB user must have `ALL PRIVILEGES` over the target database. Chevereto will require the following for connecting to the database:
-
-- Database name
-- Database user and its password

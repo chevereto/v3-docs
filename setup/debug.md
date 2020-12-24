@@ -1,17 +1,19 @@
 # Debug
 
-In production is usually that when something goes wrong the error is suppressed. It is an intended behavior to don't expose application system messages to the public and to manually enable debug to check the system.
+::: tip
+Having issues debugging? Check the [troubleshot](./troubleshot.md#debugging).
+:::
 
 ## Debug level
 
 The built-in exception handler levels are detailed in the following table:
 
-| Level | Description                    |
-| ----- | ------------------------------ |
-| 0     | None                           |
-| 1     | Error log (default)            |
-| 2     | Print errors (no logging) |
-| 3     | Print errors and log to `error_log`)           |
+| Level | Description                          |
+| ----- | ------------------------------------ |
+| 0     | None                                 |
+| 1     | Error log (default)                  |
+| 2     | Print errors (no logging)            |
+| 3     | Print errors and log to `error_log`) |
 
 Default debug level is `1` and to change this you must edit the `app/settings.php` file. If your [settings file](./settings-file.md) doesn't have the `debug_level` property here is a sample:
 
@@ -42,23 +44,11 @@ In production is not recommended to display or show any kind of PHP error or Che
 
 To enable printed errors (`error_reporting`) you will need to go to your `Dashboard > Settings > System`. By enabling this all the runtime errors will be printed which means that they will be visible. Enable this is recommended only in development environments.
 
-## Troubleshoot
-
-Usually servers are configured for **production usage** so it is desired to don't print any of these messages to the end-user. This usually means no-errors being printed, white pages, 500 errors, which could really annoy your debugging experience.
-
-Check these if you have trouble debugging:
-
-- You have configured the [debug level](#debug-level)
-- You have configured the [PHP error reporting](#php-error-reporting)
-- `php.ini` `display_errors` and `error_log` are properly configured
-- The user running the process has permissions on the logs path
-- You have restarted PHP-FPM/Apache/Nginx to apply changes
-
-## Debugging HTTP
+## HTTP
 
 To debug HTTP you can use any web browser console, which is a tool usually built-in in all modern web browsers. It allows you to debug everything HTTP related.
 
-### Using the web browser console
+### Web browser console
 
 - The browser console is usually bind to `F12` key or via context menu **inspect element**
 - Once in the console, locate the **network tab**, where you will be able to analyze HTTP traffic

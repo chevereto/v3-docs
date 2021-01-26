@@ -52,7 +52,7 @@ If everything is OK you will see that and ShareX is ready to upload directly to 
 
 ## Upload images to an user account
 
-Chevereto API V1 works uploading images as guest. If you want to upload images to a given user check the [API user upload Workaround](./../api/V1.md).
+Chevereto API V1 works uploading images as guest. If you want to upload images to a given user check the [API user upload Workaround](./../API/V1.md).
 
 ## Need help?
 

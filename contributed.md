@@ -33,6 +33,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 - 2020-06-18 [Docker Composer+Google Drive安装付费版著名图床chevereto无限容量](https://1024.ee/index.php/2020/06/18/docker-composergoogle-drive%E5%AE%89%E8%A3%85%E4%BB%98%E8%B4%B9%E7%89%88%E8%91%97%E5%90%8D%E5%9B%BE%E5%BA%8Achevereto%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F/)
 - 2020-06-15 [群晖Docker安装chevereto图床](https://cloud.tencent.com/developer/article/1645239)
 - 2020-05-20 [群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
+- 2020-04-16 [利用 Chevereto 自建图床](https://heysen.xyz/other/self-picture-bed.html)
 - 2020-04-05 [服务器搭建图床：Chevereto安装教程](https://blog.csdn.net/weixin_43426647/article/details/105328153)
 - 2020-03-10 [基于Docker的Chevereto部署](https://www.zhuxiaolong.xyz/2020/03/10/%E5%9F%BA%E4%BA%8EDocker%E7%9A%84Chevereto%E9%83%A8%E7%BD%B2/#Docker-Compose-%E5%AE%89%E8%A3%85)
 - 2020-03-09 [Chevereto图床搭建教程](https://www.dqzboy.com/chevereto%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B)
@@ -53,12 +54,15 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Guides
 
+- 2021-01-24 [[已解决]Chevereto后台在线升级出现Can’t write into /app/install/update/temp/ path 的错](https://www.4dmayi.com/3105.html)
+- 2021-01-23 [宝塔环境下配置Chevereto图床程序使其支持WeBP格式的图片|支持Chevereto免费版](https://www.4dmayi.com/3093.html)
 - 2020-10-18 [Chevereto 图片展示页面默认显示嵌入代码](https://www.openos.org/post/610/)
 - 2020-06-16 [Chevereto 接入又拍云实现图片外部存储方法](https://www.pieruo.com/192.html)
 - 2020-09-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
 
 ## Hacks/Tips
 
+- 2021-01-19 [Chevereto无法登录显示[请求被拒绝，您或者没有权限访问此页面]的解决办法](https://www.fuyimokuai.com/news/aHR0cDovL3d3dy5iYWlkdS5jb20vbGluaz91cmw9eVYyTENDTFI1c1BxWFpzZ3Z6cl9fby03WXFBQm5hQWVEMnlTTzlXVUlIUDVBXzlhRDZ3d2s0LUx3cm51M1ZTUkVZZ1ppUER0WXJJNDE0V2gxMk8xeV8tdWw4MUduQjVMaTVsS0N2TVhTeXE=.html)
 - 2020-09-18 [Chevereto 首页显示图片托管数量的实现方法](https://www.pieruo.com/204.html)
 - 2020-09-09 [Chevereto 图床程序注册页面添加通过邀请码注册功能](https://www.pieruo.com/203.html)
 - 2020-06-27 [修改 Chevereto 图床程序 给登录页面添加公共头部和尾部](https://www.pieruo.com/198.html)
@@ -79,6 +83,7 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 
 ## Integrating
 
+- 2021-01-10 [WordPress 主题 编辑器中添加上传到 Chevereto图床](https://www.letcloud.cn/1775.html) 
 - 2020-07-26 [网站图片从 wordpress 搬迁到图床 图片路径批量替换实现方法](https://www.pieruo.com/201.html)
 - 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](https://www.daniao.org/9947.html)
 - 2020-04-29 [Chevereto Imagehosting Upload By Jasper(zhujia18)](https://discuss.flarum.org/d/23585-chevereto-imagehosting-upload)
@@ -98,4 +103,5 @@ If you contributed to Chevereto [let me know](https://chevereto.com/contact) to 
 ## Reviews
 
 - 2020-12-05 [Gone too Soon - From Koken to Chevereto](https://den.black/gone-too-soon-from-koken-to-chevereto/)
+- 2020-07-01 [Saying goodbye to Flickr and hi to Chevereto](https://guneetnarula.com/blog/2020/07/saying-goodbye-to-flickr-and-hi-to-chevereto/)
 - 2020-01-10 [Chevereto: Bilder Hosting für den eigenen Server](https://www.youtube.com/watch?v=wriVgnEfJ0Y)

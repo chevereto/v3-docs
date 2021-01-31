@@ -7,7 +7,7 @@
 
 ## PHP
 
-PHP be provided with the following extensions: `curl hash json mbstring pdo pdo-mysql zip session`.
+PHP be provided with the following extensions: `curl hash json mbstring pdo pdo-mysql zip session xml`.
 
 ::: tip Imagick
 Since **Chevereto v3.18.0** the system uses `Imagick` (ImageMagick) image processing and it requires `Fileinfo` plus related libraries for the formats you want to allow. If no Imagick is present the system will fallback to `php-gd`.

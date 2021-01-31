@@ -1,11 +1,19 @@
 # Requirements
 
-- PHP 7.4 (7.3 min) with: `curl hash json mbstring pdo pdo-mysql zip session`
+- PHP 7.4 (7.3 min)
 - Database: MySQL 8 / MariaDB 10
 - Cron
 - Web Server: Nginx / Apache / **any*
 
 ## PHP
+
+PHP be provided with the following extensions: `curl hash json mbstring pdo pdo-mysql zip session`.
+
+::: tip Imagick
+Since **Chevereto v3.18.0** the system uses `Imagick` (ImageMagick) image processing and it requires `Fileinfo` plus related libraries for the formats you want to allow. If no Imagick is present the system will fallback to `php-gd`.
+:::
+
+### php.ini
 
 The following `ini` directives are recommended for Chevereto installations:
 
@@ -160,4 +168,3 @@ For setups under any kind of proxy (including CloudFlare) is required that the w
 
 - Nginx: `ngx_http_realip_module`
 - Apache: `mod_remoteip`
-

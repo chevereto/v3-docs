@@ -44,6 +44,7 @@ module.exports = {
         logo: '/logo.svg',
         // repo: 'chevereto/chevereto',
         docsRepo: 'chevereto/docs',
+        docsBranch: 'main',
         smoothScroll: true,
         editLinks: true,
         lastUpdated: true,

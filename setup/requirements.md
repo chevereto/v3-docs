@@ -7,10 +7,12 @@
 
 ## PHP
 
-PHP be provided with the following extensions: `curl hash json mbstring pdo pdo-mysql zip session xml`.
+PHP **must** be provided with the following extensions: `curl hash json mbstring pdo pdo-mysql zip session xml`.
+
+PHP **must** include support for image formats `PNG GIF JPG BMP WEBP` (under Imagick or GD).
 
 ::: tip Imagick
-Since **Chevereto v3.18.0** the system uses `Imagick` (ImageMagick) image processing and it requires `Fileinfo` plus related libraries for the formats you want to allow. If no Imagick is present the system will fallback to `php-gd`.
+The system uses `Imagick` (ImageMagick) image processing by default, which requires `Fileinfo`. If no Imagick is present the system will fallback to GD.
 :::
 
 ### php.ini

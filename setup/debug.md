@@ -1,7 +1,7 @@
 # Debug
 
 ::: tip
-Having issues debugging? Check the [troubleshot](./troubleshot.md#debugging).
+Having issues debugging? Check the [troubleshoot](./troubleshoot.md#debugging).
 :::
 
 ## Debug level

@@ -1,6 +1,6 @@
-# Troubleshot
+# Troubleshoot
 
-Having issues when running the software? Follow the indications in this guide to be able to troubleshot any problem you may be experiencing.
+Having issues when running the software? Follow the indications in this guide to be able to troubleshoot any problem you may be experiencing.
 
 ::: tip Do
 It is encouraged that you identify/isolate the alleged problem **before** asking others for help. Document and inform yourself about the context of the problem before contacting others, including Chevereto support.

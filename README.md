@@ -23,7 +23,3 @@ We have a section for [user contributed](./contributed.md) content. [Send your t
 
 - [Chinese version](https://docs.doge.uk/zh/chevereto/) (thanks to [QSong](https://resbeta.com/)).
 - [Chinese version](https://ch.cndrew.cn/) (thanks to [Uncle_drew](https://cndrew.cn/)).
-
-## Contributing
-
-Chevereto is made from Chile by [Rodolfo Berrios](http://rodolfoberrios.com/).

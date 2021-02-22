@@ -6,5 +6,10 @@ return [
     'customization/', 
     'extend/', 
     'API/', 
-    'security/'
+    'security/',
+    'README.md',
+    'get-updates.md',
+    'contributed.md',
+    'contributing.md',
+    'licenses.md',
 ];

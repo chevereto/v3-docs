@@ -1,6 +1,23 @@
-# Introduction
+# Chevereto V3
 
-This is the documentation for both [Chevereto V3](https://chevereto.com/pricing) and [Chevereto-Free](https://github.com/chevereto/chevereto-free).
+```sh
+ __     _______ 
+ \ \   / /___ / 
+  \ \ / /  |_ \ 
+   \ V /  ___) |
+    \_/  |____/ 
+                
+```
+
+::: tip
+This is the documentation for both [Chevereto V3](https://chevereto.com/pricing) and [Chevereto-Free](https://github.com/chevereto/chevereto-free/releases).
+:::
+
+You can contribute to improve this documentation, all pages are editable.
+
+## Contributed
+
+We have a section for [user contributed](./contributed.md) content. [Send your tips](./get-updates.md) to get listed.
 
 ## Localized Translations
 
@@ -8,11 +25,5 @@ This is the documentation for both [Chevereto V3](https://chevereto.com/pricing)
 - [Chinese version](https://ch.cndrew.cn/) (thanks to [Uncle_drew](https://cndrew.cn/)).
 
 ## Contributing
-
-You can contribute to improve this documentation. All pages are editable and we also have a section for user [contributed](./contributed.md) content.
-
-Feel free to collaborate and help others.
-
-## Author
 
 Chevereto is made from Chile by [Rodolfo Berrios](http://rodolfoberrios.com/).

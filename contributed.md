@@ -2,10 +2,6 @@
 
 The following content has been provided by users of the software. It contains guides, reviews and everything you may want to known about Chevereto. Feel free to contribute yours and show others.
 
-::: tip THANK YOU!
-If you contributed to Chevereto [let me know](https://chevereto.com/contact) to gift you a paid license ✨🎁 as my way to say thanks for showing others how to use my software!
-:::
-
 ## Videos
 
 - 2020-10-21 [搭建Chevereto开源图床作为云存储视频教程](https://jyg789.com/3940.html)

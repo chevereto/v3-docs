@@ -3,16 +3,16 @@
 - PHP 7.4 (7.3 min)
 - Database: MySQL 8 / MariaDB 10
 - Cron
-- Web Server: Nginx / Apache / **any*
+- Web Server: Nginx / Apache / *any*
 
 ## PHP
 
-PHP **must** be provided with the following extensions: `curl hash json mbstring pdo pdo-mysql zip session xml`.
+PHP **must** be provided with the following extensions: `curl hash json mbstring pdo pdo-mysql zip session xml fileinfo`.
 
 PHP **must** include support for image formats `PNG GIF JPG BMP WEBP` (under Imagick or GD).
 
 ::: tip Imagick
-The system uses `Imagick` (ImageMagick) image processing by default, which requires `Fileinfo`. If no Imagick is present the system will fallback to GD.
+The system uses `Imagick` (ImageMagick) image processing **by default**. Fallback to GD.
 :::
 
 ### php.ini

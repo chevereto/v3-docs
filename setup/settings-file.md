@@ -15,18 +15,22 @@ $settings['db_driver'] = 'mysql';
 $settings['debug_level'] = 1;
 ```
 
-## Runtime `php.ini` configuration
-
-As `app/settings.php` is loaded everywhere and not override by the update procedure, is the safer place to add runtime `php.ini` directives using [`ini_set`](https://www.php.net/manual/en/function.ini-set.php).
-
 ## Options
 
 ```php
 $settings['session.save_path'] = 'absolute_path_to_sessions';
-$settings['default_timezone'] = 'timezone identifier';
+$settings['default_timezone'] = 'timezone_identifier';
 $settings['https'] = TRUE;
+$settings['image_formats_available'] = ['JPG', 'PNG', 'GIF'];
 ```
 
-- Use `session.save_path` to set the target session directory
-- Use `default_timezone` to set the right [timezone](https://www.php.net/manual/en/timezones.php)
-- Use `https` `true` to always force HTTPS (required if HTTPS isn't auto detected)
+| Option                    | Effect                                                                                                |
+| ------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `session.save_path`       | Set the target session directory                                                                      |
+| `default_timezone`        | Set the [timezone](https://www.php.net/manual/en/timezones.php)                                       |
+| `https`                   | Use `true` to always force HTTPS                                                                      |
+| `image_formats_available` | Comma-separated list of system-enabled image formats. Defaults `['PNG', 'GIF', 'JPG', 'BMP', 'WEBP']` |
+
+## Runtime `php.ini` configuration
+
+As `app/settings.php` is loaded everywhere and not override by the update procedure, is the safer place to add runtime `php.ini` directives using [`ini_set`](https://www.php.net/manual/en/function.ini-set.php).

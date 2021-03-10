@@ -80,6 +80,7 @@ The following content has been provided by users of the software. It contains gu
 
 ## Integrating
 
+- 2021-02-25 [[自建图床] Chevereto 图床增加百度内容审核（鉴黄）功能](https://www.idc.moe/archives/image-review-for-Chevereto-Free.html)
 - 2021-01-10 [WordPress 主题 编辑器中添加上传到 Chevereto图床](https://www.letcloud.cn/1775.html) 
 - 2020-07-26 [网站图片从 wordpress 搬迁到图床 图片路径批量替换实现方法](https://www.pieruo.com/201.html)
 - 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](https://www.daniao.org/9947.html)

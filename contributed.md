@@ -13,6 +13,7 @@ The following content has been provided by users of the software. It contains gu
 ## Installation guides
 
 - 2021-02-18 [Self Hosted Private Photo Gallery With Chevereto](https://breakingupwithbigtech.com/self-hosted-private-photo-gallery-with-chevereto/)
+- 2021-01-09 [Chevereto 图床搭建](https://apppiece.com/195/)
 - 2020-10-28 [chevereto收费版安装教程，这可能是我用过最好的图床程序了！](https://www.shejibiji.com/archives/4672)
 - 2020-10-24 [群晖通过Docker安装图床工具Chevereto的步骤](https://www.weizhiyong.com/archives/4309)
 - 2020-10-17 [宝塔面板安装chevereto教程，一款强大好用的图床程序！](https://www.feiyubk.com/archives/29.html)

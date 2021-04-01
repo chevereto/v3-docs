@@ -1,5 +1,7 @@
 <?php
 
 return [
-    'contributing.md' => '❤ Contributing'
+    'get-started/' => '🔥 Get Started',
+    'setup/' => '🏗 Setup',
+    'settings/' => '⚙️ Settings',
 ];

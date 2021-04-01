@@ -3,18 +3,10 @@
 To install Chevereto it requires a server environment where the software and uploaded files will be served. This server can be anywhere, but it must be configured to run Chevereto properly.
 
 ::: warning Requirements
-Always check that the server for Chevereto provides the requirements required to run Chevereto. Don't ignore the system messages mentioning lack of server software as those are detections in the application layer.
+Always check that the server for Chevereto provides the [requirements](../setup/requirements.md) required to run Chevereto. Don't ignore the system messages mentioning lack of server software as those are detections in the application layer.
 :::
-
-## System requirements
-
-Your server must meet the system [requirements](../setup/requirements.md).
 
 ## Installation methods
-
-::: tip
-There are also many [user contributed](../contributed.md) installation guides.
-:::
 
 ### Installer (recommended)
 
@@ -32,6 +24,7 @@ Using CLI:
 php installer.php -a download -s chevereto -l=licenseKeyHere
 ```
 </code-block>
+
 <code-block title="Free">
 ```php
 php installer.php -a download -s chevereto-free
@@ -47,6 +40,7 @@ php installer.php -a download -s chevereto-free
 php installer.php -a extract -s chevereto -p /var/www/html -f chevereto-pkg-*.zip
 ```
 </code-block>
+
 <code-block title="Free">
 ```php
 php installer.php -a extract -s chevereto-free -p /var/www/html -f chevereto-pkg-*.zip

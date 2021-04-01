@@ -1,15 +1,11 @@
 <?php
 
 return [
+    'README.md',
+    'contributed.md',
+    'licenses.md',
+    'get-started/', 
     'setup/', 
     'features/', 
-    'customization/', 
-    'extend/', 
     'API/', 
-    'security/',
-    'README.md',
-    'get-updates.md',
-    'contributed.md',
-    'contributing.md',
-    'licenses.md',
 ];

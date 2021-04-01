@@ -42,7 +42,7 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/logo.svg',
-        repo: 'chevereto/chevereto-free',
+        // repo: 'chevereto/chevereto',
         docsRepo: 'chevereto/v3-docs',
         docsBranch: 'main',
         smoothScroll: true,

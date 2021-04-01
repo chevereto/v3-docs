@@ -43,6 +43,17 @@ A cron is required to process the application background jobs. The cron for your
 
 Where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule.
 
+### Using Docker
+
+When using Docker is recommended that the cron setup executes outside the container. You can achieve that by running this from the host:
+
+```sh
+docker exec -it \
+    --user www-data \
+    -e IS_CRON=1 \
+    my-container /usr/local/bin/php /var/www/html/cron.php
+```
+
 ### Testing cron
 
 You can go to [explainshell](https://explainshell.com/explain?cmd=IS_CRON%3D1+%2Fusr%2Fbin%2Fphp+%2Fvar%2Fwww%2Fhtml%2Fchevereto.loc%2Fpublic_html%2Fcron.php+%3E%2Fdev%2Fnull+2%3E%261) to inspect the command, you can freely alter it to match your needs. Run the command as `www-data` user by adding `sudo -u www-data` to the command:

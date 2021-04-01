@@ -48,3 +48,18 @@ This message indicates an error caught by Chevereto, but hidden due to **product
 > By default the system hints `debug_mode = 3` but you can use any level (1, 2, 3).
 
 When debug is enabled, the message will now include the full error trace which allows a better understanding of the situation. This information is what you need to provide others when asking for help.
+
+### Database
+
+::: danger Dumped update query
+If at `/install` you see a plain text message starting with `#Dumped update query` it means that you **MUST** manually run the printed queries in your MySQL console.
+:::
+
+If [dump update query](../settings/system.md#dump-update-query) setting is **enabled** or if the images table has **more than 1,000,000** records, Chevereto will dump the SQL statements required to carry the database update which must run directly in the SQL console.
+
+Chevereto has this functionality to minimize breaking your large database as the process could take several minutes to complete. When manually updating the database always keep the following considerations:
+
+- Disconnect all peers
+- Turn off the SQL server, work directly in its console (phpMyAdmin, Adminer, CLI)
+- Run the SQL statements one-by-one (a semi-colon `;` denotes when a SQL statement ends)
+- If everything goes well, turn everything back online

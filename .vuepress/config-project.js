@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'V3 docs',
+    title: 'V3 Docs',
     description: 'Documentation for Chevereto V3',
     head: [
         ['link', {

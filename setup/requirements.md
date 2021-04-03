@@ -1,6 +1,6 @@
 # Requirements
 
-- PHP 7.4 (7.3 min)
+- PHP 7.4
 - Database: MySQL 8 / MariaDB 10
 - Cron
 - Web Server: Nginx / Apache / *any*
@@ -38,10 +38,10 @@ MySQL/MariaDB user must have `ALL PRIVILEGES` over the target database. Cheveret
 A cron is required to process the application background jobs. The cron for your installation may look like this:
 
 ```sh
-* * * * * IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php >/dev/null 2>&1
+* * * * * IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php
 ```
 
-Where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule.
+Where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
 
 ### Using Docker
 
@@ -54,12 +54,12 @@ docker exec -it \
     my-container /usr/local/bin/php /var/www/html/cron.php
 ```
 
-### Testing cron
+### Run cron
 
 You can go to [explainshell](https://explainshell.com/explain?cmd=IS_CRON%3D1+%2Fusr%2Fbin%2Fphp+%2Fvar%2Fwww%2Fhtml%2Fchevereto.loc%2Fpublic_html%2Fcron.php+%3E%2Fdev%2Fnull+2%3E%261) to inspect the command, you can freely alter it to match your needs. Run the command as `www-data` user by adding `sudo -u www-data` to the command:
 
 ```sh
-sudo -u www-data IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php >/dev/null 2>&1
+sudo -u www-data IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php
 ```
 
 ## Web server

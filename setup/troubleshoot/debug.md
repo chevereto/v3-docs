@@ -7,7 +7,7 @@ Debug enables to dump information about errors that may be affecting the softwar
 Debug can be enabled using [environment](../system/environment.md) variables, it can be also enabled using [settings file](../system/settings-file.md).
 
 ::: tip
-When using Docker, debug is always at `/dev/stderr` regardless of this configuration.
+Using Docker? debug is always at `/dev/stderr`. Run `docker logs -f container` to see those.
 :::
 
 ## Debug level

@@ -2,6 +2,18 @@
 
 This is the environment variables reference for Chevereto.
 
+## Debug
+
+Environment variables for debug.
+
+::: tip
+When using Docker it always logs to `/dev/stderr` regardless this configuration.
+:::
+
+| Variable              | Example |
+| --------------------- | ------- |
+| CHEVERETO_DEBUG_LEVEL | 1       |
+
 ## Database
 
 Environment variables for the database details.

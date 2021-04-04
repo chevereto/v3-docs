@@ -1,4 +1,4 @@
-# 🤗 Contributed
+# Contributed
 
 The following content has been provided by users of the software. It contains guides, reviews and everything you may want to known about Chevereto. Feel free to contribute yours and show others.
 

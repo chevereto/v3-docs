@@ -1,8 +1,8 @@
-# API version 1
+# API v1
 
-Chevereto API v1 (also known as Bridge API) allows to upload pictures as guest to your Chevereto powered website. is called bridge API because is pretty much the same as the API from Chevereto 2.X and is the transition to the future API v2.
+Chevereto API v1 allows to upload pictures as guest to your Chevereto powered website.
 
-API v1 doesn't have rate limiting but is affected by the Flood upload limits setted in your admin dashboard. Because of this, you should only use this API for your very own applications or scripts.
+API v1 doesn't have rate limiting but is affected by the configured flood upload limit in your admin dashboard. You should only use this API for your very own applications or scripts, is not intended for public usage.
 
 ## API key
 
@@ -16,7 +16,7 @@ API v1 calls can be done using the POST or GET request methods but since GET req
 
 ### Request URL
 
-```
+```plain
 http://mysite.com/api/1/<action>/
 ```
 
@@ -29,7 +29,7 @@ http://mysite.com/api/1/<action>/
 
 ### Example call
 
-```
+```plain
 GET http://mysite.com/api/1/upload/?key=12345&source=http://somewebsite/someimage.jpg&format=json
 ```
 
@@ -117,7 +117,7 @@ When using JSON the response will have headers status codes to allow you to easi
 
 ### Example response (txt)
 
-```
+```plain
 http://127.0.0.1/images/2014/06/04/example.png
 ```
 
@@ -144,13 +144,13 @@ By doing this, the `/api` route (sourced from `app/routes/overrides/route.api.ph
 
 If you want to use a different API key in this new customized API simply change this:
 
-```
+```plain
 !G\timing_safe_compare(CHV\getSetting('api_v1_key'), $_REQUEST['key'])
 ```
 
 To this:
 
-```
+```plain
 !G\timing_safe_compare('NowThisIsAnotherAPIKEY!', $_REQUEST['key'])
 ```
 

@@ -1,4 +1,4 @@
-# Root install (OpenLiteSpeed)
+# Ubuntu 20.04 (OpenLiteSpeed)
 
 This guide is for **Ubuntu 20.04 (LTS) x64** and it will show you how to set up Chevereto with OpenLiteSpeed web server on Ubuntu.
 
@@ -9,7 +9,7 @@ This guide is for **Ubuntu 20.04 (LTS) x64** and it will show you how to set up 
 
 Before begin, make sure that the base system is updated.
 
-```
+```sh
 sudo apt update && sudo apt upgrade
 ```
 
@@ -19,13 +19,13 @@ Changing the hostname on Ubuntu 20.04 is a rather simple process involving just 
 It is recommended to use a fully-qualified domain name (FQDN ) such as `host.example.com` for both static and transient names.
 First, check your current hostname, to do so use either `hostnamectl` or `hostname` command:
 
-```
+```sh
 hostnamectl
 ```
 
 Changing the system hostname is a simple process, the syntax is as follows:
 
-```
+```sh
 sudo hostnamectl set-hostname host.example.com
 ```
 
@@ -33,11 +33,11 @@ sudo hostnamectl set-hostname host.example.com
 
 On most systems, the hostname is mapped to `127.0.0.1` in `/etc/hosts`, open the file and change the old `hostname` to the new one.
 
-```
+```sh
 /etc/hosts
 ```
 
-```
+```sh
 127.0.0.1   localhost
 127.0.0.1   host.example.com
 
@@ -51,26 +51,26 @@ If you are running Ubuntu on a cloud instance and the `cloud-init` package is in
 This package is usually installed by default in the images provided by the cloud providers, and it is used to handle the initialization of the cloud instances.
 If the file exists on your system open it:
 
-```
+```sh
 sudo nano /etc/cloud/cloud.cfg
 ```
 
 Search for `preserve_hostname`, and change the value from `false` to `true`:
 
-```
+```sh
 # This will cause the set+update hostname module to not operate (if true)
 preserve_hostname: true
 ```
 
 Save the file and close your editor, and let us verify the change:
 
-```
+```sh
 hostnamectl
 ```
 
 Your new hostname will be printed on the terminal:
 
-```
+```sh
    Static hostname: host.example.com
    Pretty hostname: Chevereto's Webserver
          Icon name: computer-vm
@@ -85,7 +85,7 @@ Your new hostname will be printed on the terminal:
 
 **Note:** The rebooting of the system is an optional step and not required.
 
-```
+```sh
 sudo reboot
 ```
 
@@ -93,13 +93,13 @@ sudo reboot
 
 Unfortunately, OpenLiteSpeed is not in the official Ubuntu 20.04 repositories, so you will need to add OpenLiteSpeed official repository to your system:
 
-```
+```sh
 wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | sudo bash
 ```
 
 Once the repository is added, now install the application by refreshing the APT cache and running the following command:
 
-```
+```sh
 sudo apt update
 sudo apt install openlitespeed
 ```
@@ -108,13 +108,13 @@ sudo apt install openlitespeed
 
 Also, install the package that installs PHP 7.4 support for OpenLiteSpeed, you can install the PHP 7.4 by running this command:
 
-```
+```sh
 sudo apt install lsphp74 lsphp74-common lsphp74-mysql lsphp74-dev lsphp74-curl lsphp74-dbg lsphp74-imagick -y
 ```
 
 Now, enable PHP 7.4 support for OpenLiteSpeed, you will need to create a symbolic link of the installed package:
 
-```
+```sh
 sudo ln -sf /usr/local/lsws/lsphp74/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5
 ```
 
@@ -122,40 +122,40 @@ sudo ln -sf /usr/local/lsws/lsphp74/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5
 
 As first we have to import MariaDB gpk key:
 
-```
+```sh
 sudo apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
 ```
 
 Now you have to add MariaDB APT repository:
 
-```
+```sh
 sudo add-apt-repository 'deb [arch=amd64] http://mariadb.mirror.globo.tech/repo/10.5/ubuntu focal main'
 ```
 
-```
+```sh
 sudo apt update
 ```
 
-```
+```sh
 sudo apt install mariadb-client mariadb-server
 ```
 
 Once the installation is complete, start the MariaDB service and add it to the boot time:
 
-```
+```sh
 systemctl start mariadb
 systemctl enable mariadb
 ```
 
 As first we have to secure our MySQL installation, and we will use the 'mysql_secure_installation' command-line tool for it:
 
-```
+```sh
 mysql_secure_installation
 ```
 
 Set up your root password, and type "Y" for the rest of the configuration:
 
-```
+```sh
 Set a root password? [Y/n] Y
 Remove anonymous users? [Y/n] Y
 Remove test database and access to it? [Y/n] Y
@@ -164,13 +164,13 @@ Reload privilege tables now? [Y/n] Y
 
 Enter to the MySQL console:
 
-```
+```sh
 sudo mysql -u root
 ```
 
 Once in the MySQL console, you will see a `mysql>` prompt. Run the following statements:
 
-```
+```sh
 CREATE DATABASE chevereto;
 CREATE USER 'chevereto' IDENTIFIED BY 'enter_a_password_here';
 GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'enter_a_password_here';
@@ -186,7 +186,7 @@ the graphical interface works through port 7080 and requires a username and pass
 therefore we need to set up the user and password authentication for the OpenLiteSpeed dashboard.
 Go to the `/usr/local/lsws/admin/misc/` directory and now run the bash script `admpass.sh` as below.
 
-```
+```sh
 cd /usr/local/lsws/admin/misc/
 sh admpass.sh
 ```
@@ -198,7 +198,7 @@ To add the new PHP 7.4 configuration, click the add `+` button on the right.
 For the type, choose the `LiteSpeed SAPI App` and click the `Next` button.
 Now type details configuration as below:
 
-```
+```sh
 Name: lsphp74
 Address: uds://tmp/lshttpd/lsphp.sock
 Notes: lsphp74 for OpenLiteSpeed
@@ -216,17 +216,17 @@ And as a result, you've added and enabled the PHP 7.4 configuration for OpenLite
 
 On the `Default` listeners, click the `view` button, then on the `Address Settings` section, click the `edit` button on the right side, now type details configuration as below:
 
-```
+```sh
 Listener Name: Default
 IP Address: ANY
 Port: 80
 ```
 
-After that save it and click on the restart button in the dashboard, now we got OpenLiteSpeed runing on Port 80, open your web browser and type the server IP address on the address bar, and you should get the default index page of OpenLiteSpeed.
+After that save it and click on the restart button in the dashboard, now we got OpenLiteSpeed running on Port 80, open your web browser and type the server IP address on the address bar, and you should get the default index page of OpenLiteSpeed.
 
 It's time to setup Virtual Host, as first we have to create directorys for our Website:
 
-```
+```sh
 sudo mkdir /usr/local/lsws/example.com/{html,logs} -p
 ```
 
@@ -234,7 +234,7 @@ The html directory contains the public files and the logs directory contains the
 
 Next, navigate to the OpenLiteSpeed dashboard and access the `Virtual Hosts` section from the left and click the Add button, now enter the values as shown:
 
-```
+```sh
 Virtual Host Name: example.com
 Virtual Host Root: $SERVER_ROOT/example.com/
 Config File: $SERVER_ROOT/conf/vhosts/$VH_NAME/vhconf.conf
@@ -246,14 +246,14 @@ External App Set UID Mode: Server UID
 
 Click the Save button and when you're done, you will get following error:
 
-```
+```sh
 ⚠ file /usr/local/lsws/conf/vhosts/example.com/vhconf.conf does not exist. CLICK TO CREATE
 ```
 
 Because the configuration file does not exist for now, click on the link to create the configuration file under the `CLICK TO CREATE`.
 Click the Save button again to complete the virtual host creation, once the virtual host is created, go to `Virtual Hosts` -> `Select Virtual Host (example.com)` -> `General` and change the configuration as indicated.
 
-```
+```sh
 Document Root: $VH_ROOT/html/
 Domain Name: example.com
 Enable Compression: Yes
@@ -261,7 +261,7 @@ Enable Compression: Yes
 
 Click the Save button when you're done, next we need to set up index files, click the Edit button under `Index files` under the `General` section, set the following options:
 
-```
+```sh
 Use Server Index Files: No
 Index files: index.php, index.html, index.htm
 Auto Index: No
@@ -269,7 +269,7 @@ Auto Index: No
 
 Click Save when you're done, next we have to choose Log files, go to the `Log` section and click Edit against `Virtual Host Log` and enter the following values:
 
-```
+```sh
 Use Server’s Log: Yes
 File Name: $VH_ROOT/logs/error.log
 Log Level: ERROR
@@ -280,7 +280,7 @@ Rolling Size (bytes): 10M
 
 Click Save, then click the plus sign in the `Access Log` section to add a new entry, enter the following values:
 
-```
+```sh
 Log Control: Own Log File
 File Name: $VH_ROOT/logs/access.log
 Piped Logger: Not Set
@@ -294,7 +294,7 @@ Compress Archive: Yes
 
 Click Save when you're done, next, we need to configure `Access Control` under the `Security` section, set the following values:
 
-```
+```sh
 Allowed List: *
 Denied List: Not set
 ```
@@ -315,7 +315,7 @@ Now we need to edit `Rewrite Rules` in the `Rewrrite section`, place there Cheve
 
 Next we have to set `Listeners`, for this go to the `Listeners section` and click the View on Default Listeners button, then click the Add button under `Virtual Host Mappings` to add a new mapping and set the following values:
 
-```
+```sh
 Virtual Host: example.com
 Domains: example.com
 ```
@@ -326,19 +326,19 @@ Click Save when you're done, now click the Graceful restart button to apply all 
 
 Setting up SSL in OpenLiteSpeed requires setting up two certificates,  a self-signed certificate for the entire server and a Let's Encrypt location-specific server certificate, let's create the self-signed certificate first:
 
-```
+```sh
 openssl req -x509 -days 365 -newkey rsa:4096 -keyout key.pem -out cert.pem -nodes
 ```
 
 In order to be able to use Let's Encrypt, we have to install the Certbot tool:
 
-```
+```sh
 sudo apt install certbot
 ```
 
 Obtain the SSL certificate for Website:
 
-```
+```sh
 sudo certbot certonly --webroot -w /usr/local/lsws/example.com/html/ -d example.com
 ```
 
@@ -346,7 +346,7 @@ sudo certbot certonly --webroot -w /usr/local/lsws/example.com/html/ -d example.
 
 Now navigate to the OpenliteSpeed dashboard and go to `Listeners` >> `Add New Listener` and add the following values:
 
-```
+```sh
 Listener Name: SSL
 IP Address: ANY
 Port: 443
@@ -355,14 +355,14 @@ Secure: Yes
 
 Click Save when you're done, then go to the `Virtual Host Mappings` section under the `SSL listener` by clicking `SSL`, click the Add button and enter the following values:
 
-```
+```sh
 Virtual Host: example.com
 Domains: example.com
 ```
 
 Click Save when you're done, go to `Listeners` >> `SSL Listener` >> `SSL Tab` >> `SSL Private Key & Certificate` (Edit button) and enter the following values for the self-signed certificate we created earlier:
 
-```
+```sh
 Private Key File: /srv/self-signed/key.pem
 Certificate File: /srv/self-signed/cert.pem
 Chained Certificate: Yes
@@ -370,14 +370,14 @@ Chained Certificate: Yes
 
 Move the self-signed certificate to another directory from root:
 
-```
+```sh
 sudo mkdir /srv/self-signed
 mv key.pem cert.pem /srv/self-signed
 ```
 
 Next, go to `Virtual Hosts` >> example.com >> `SSL tab` >> `Private SSL key & certificate` (Edit button) and fill in the following values with the Let's Encrypt certificate:
 
-```
+```sh
 Private Key File: /etc/letsencrypt/live/example.com/privkey.pem
 Certificate File: /etc/letsencrypt/live/example.com/fullchain.pem
 Chained Certificate: Yes
@@ -387,13 +387,13 @@ Click Save when you're done, restart the server by clicking the Graceful restart
 
 Before we can go through the web-based setup process for Chevereto, we need to adjust some entries in our Chevereto directory, start by giving ownership of all files in the directory to the user nobody and the group nogroup, which the OpenLiteSpeed web server runs by default. The following chown command grants OpenLiteSpeed the ability to read and write files in the Chevereto directory so that it can serve the website and do updates automatically:
 
-```
+```sh
 chown -R nobody:nogroup /usr/local/lsws/example.com/
 ```
 
 To change php.ini file and to increase the upload limit, you have to change following values in `/usr/local/lsws/lsphp74/etc/php/7.4/litespeed/php.ini`:
 
-```
+```sh
 upload_max_filesize = 20M
 post_max_size = 20M
 max_execution_time = 30

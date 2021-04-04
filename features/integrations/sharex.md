@@ -44,7 +44,7 @@ Once you are ready editing this code, copy all the code and follow these steps:
 
 You will see that the information from the code block has been added to ShareX. Click on "Test" next to the "Image uploader" section. You should see something like this in the "Test result" log:
 
-```
+```plain
 URL: http://mysite.com/image/<id>
 ```
 

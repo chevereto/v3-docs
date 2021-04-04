@@ -2,7 +2,7 @@
 
 This tool allows to **mass import** images, albums, and users by parsing the contents of a filesystem location. It is intended to be used when you want to import a massive amount of content that otherwise will be troublesome to import by using the API or the web gui.
 
-::: tip Importing != Syncing
+::: danger Importing != Syncing
 Importing takes the content from the importing path and *import it* into database, filesystem or external storage, **removing the file from the importing path**.
 :::
 

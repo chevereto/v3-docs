@@ -22,4 +22,4 @@ When updating from these old versions try to always perform a database backup of
 ## Update from 2.0.X and older
 
 * Update to 2.1 (or newer) following the instructions in the download package
-* Proceed with the [Update from 2.1 - 2.6](#update-from-v21---v26) instructions
+* Proceed with the [Update from 2.1 - 2.6](#update-from-v2-1-v2-6) instructions

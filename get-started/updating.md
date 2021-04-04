@@ -3,7 +3,7 @@
 This section outlines the update process required for existing Chevereto V3 instances.
 
 ::: warning Check system requirements
-Always check that your server meets the requirements for running the target release to update.
+Always check that your server meets the [requirements](../setup/system/requirements.md) for running the target release to update.
 :::
 
 ::: danger Backup your database

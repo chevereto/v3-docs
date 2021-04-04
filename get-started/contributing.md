@@ -1,4 +1,4 @@
-# Contributing
+# ❤ Contributing
 
 🤗 Chevereto is indie developed. Any help is really welcome.
 

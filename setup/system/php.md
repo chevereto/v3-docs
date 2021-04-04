@@ -11,7 +11,7 @@ memory_limit = 512M;
 
 | Property            | Description                                      | Example             |
 | ------------------- | ------------------------------------------------ | ------------------- |
-| upload_max_filesize | Maximum upload size                              | `20M` for 20 MB     |
+| upload_max_filesize | Maximum upload size                              | `25M` for 20 MB     |
 | post_max_size       | Maximum post size                                | Same as above       |
 | max_execution_time  | Maximum time to execute the software, in seconds | `30` for 30 seconds |
 | memory_limit        | Maximum memory to allocate                       | `512M` for 512 MB   |

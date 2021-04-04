@@ -28,7 +28,7 @@ Don't miss any news!
 
 ## 🤗 Contributed
 
-We have a section for [user contributed](./contributed.md) content. [Send your tips](./get-updates.md) to get listed.
+We have a section for [user contributed](./contributed.md) content. Send your tips to get listed.
 
 ## 🌏 Localized Translations
 

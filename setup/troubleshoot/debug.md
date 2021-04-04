@@ -19,12 +19,6 @@ Using Docker? debug is always at `/dev/stderr`. Run `docker logs -f container` t
 | 2     | Print errors (no logging)            |
 | 3     | Print errors and log to `error_log`) |
 
-Default debug level is `1`  If your [settings file](../settings-file.md) doesn't have the `debug_level` property here is a sample:
-
-```php
-$settings['debug_level'] = 1;
-```
-
 ## Error reporting
 
 ::: warning

@@ -10,7 +10,7 @@
 
 You can help to build a bigger project by doing the following:
 
-* Getting our [updates](./get-updates.md)
+* Getting our [updates](../README.md#get-updates)
 * Mentioning Chevereto to your friends or colleagues
 * Writing about it (guides, blog posts, etc.)
 

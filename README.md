@@ -26,10 +26,6 @@ Don't miss any news!
 * [Twitter](https://twitter.com/chevereto) - Follow now
 * [Twitter (author)](https://twitter.com/godlike) - Follow, do it now
 
-## 🤗 Contributed
-
-We have a section for [user contributed](./contributed.md) content. Send your tips to get listed.
-
 ## 🌏 Localized Translations
 
 * [Chinese version](https://docs.doge.uk/zh/chevereto/) (thanks to [QSong](https://resbeta.com/)).

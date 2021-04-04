@@ -2,6 +2,6 @@
 
 return [
     'system/', 
-    'vps/', 
     'troubleshoot/', 
+    'vps/', 
 ];

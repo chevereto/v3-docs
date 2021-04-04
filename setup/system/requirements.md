@@ -127,7 +127,7 @@ location / {
 
 Make sure that [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) is enabled and that your virtual host settings allows to perform URL rewriting:
 
-```apache
+```apacheconf
     <Directory /var/www/html>
         Options -Indexes +FollowSymLinks +MultiViews
         AllowOverride All
@@ -139,7 +139,7 @@ Apache configuration `.htaccess` files are already included in the software.
 
 `/.htaccess`
 
-```apache
+```apacheconf
 # Disable server signature
 ServerSignature Off
 

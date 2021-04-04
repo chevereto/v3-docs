@@ -1,6 +1,6 @@
 # 📄 Settings file
 
-The file at `app/settings.php` contains the application settings like database credentials, table prefix, driver, debug level and moore.
+The file at `app/settings.php` contains the application settings like database credentials, table prefix, driver, debug level and more.
 
 ::: tip Try environment variables
 We recommended to use [environment variables](environment.md) instead `app/settings.php`.

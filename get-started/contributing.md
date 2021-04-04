@@ -4,7 +4,7 @@
 
 ## Purchase
 
-💸 Consider [purchasing](https://chevereto.com/pricing), that's the best way in which you can support my work. You can also purchase support for me.
+💸 Consider [purchasing](https://chevereto.com/pricing), that's the best way in which you can support my work. You can also purchase support from me.
 
 ## Project
 

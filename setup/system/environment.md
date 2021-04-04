@@ -1,10 +1,10 @@
-# Environment
+# 🏞 Environment
 
 This is the environment variables reference for Chevereto.
 
 ## Database
 
-Environment variables for the database credentials details.
+Environment variables for the database details.
 
 | Variable                  | Example                |
 | ------------------------- | ---------------------- |

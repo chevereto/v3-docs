@@ -1,4 +1,4 @@
-# Settings
+# 📄 Settings file
 
 The file at `app/settings.php` contains the application settings like database credentials, table prefix, driver, debug level and moore.
 

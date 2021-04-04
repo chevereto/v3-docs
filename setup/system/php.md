@@ -1,6 +1,6 @@
-# PHP
+# 🐘 PHP
 
-The following `php.ini` values are recommended for Chevereto installations.
+The following `ini` values are recommended for Chevereto installations.
 
 ```sh
 upload_max_filesize = 25M;

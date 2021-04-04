@@ -1,37 +1,59 @@
-# Requirements
+# 📌 Requirements
 
-- PHP 7.4
-- Database: MySQL 8 / MariaDB 10
-- Cron
-- Web Server: Nginx / Apache / *any*
+::: tip Docker
+Refer to the official [Docker images for Chevereto](https://github.com/chevereto/docker) for the recommended system setup to run Chevereto, including all libraries required.
+:::
+
+* PHP
+* Database (MySQL / MariaDB)
+* Cron setup
+* HTTP web Server (Nginx / Apache / *any*)
 
 ## PHP
 
-PHP **must** be provided with the following extensions: `curl hash json mbstring pdo pdo-mysql zip session xml fileinfo`.
+| Version | PHP |
+| ------- | --- |
+| 3.19    | 7.4 |
 
-PHP **must** include support for image formats `PNG GIF JPG BMP WEBP` (under Imagick or GD).
+### Extensions
 
-::: tip Imagick
-The system uses `Imagick` (ImageMagick) image processing **by default**. Fallback to GD.
-:::
+The following PHP extensions are required for Chevereto.
 
-### php.ini
+* imagick with `PNG GIF JPG BMP WEBP`
+* curl
+* hash
+* json
+* mbstring
+* pdo
+* pdo-mysql
+* zip
+* session
+* xml
+* fileinfo
 
-The following `ini` directives are recommended for Chevereto installations:
+### Filesystem
 
-```ini
-upload_max_filesize = 20M;
-post_max_size = 20M;
-max_execution_time = 30;
-memory_limit = 512M;
-```
+User running `php` must be in the owner group of your installation directory. This is required to allow Chevereto to modify the filesystem for uploading, one-click update and many other features.
+
+> PHP usually runs under `www-data`
+
+Chevereto user will require **read/write** access in the following paths:
+
+* `/tmp`
+* `app/content/`
+* `app/content/languages/`
+* `app/content/languages/cache/`
+* `app/content/system/`
+* `content/`
+* `images/`
 
 ## Database
 
-MySQL/MariaDB user must have `ALL PRIVILEGES` over the target database. Chevereto will require the following for connecting to the database:
+| Version | MySQL | MariaDB |
+| ------- | ----- | ------- |
+| 3.19    | 8     | 10      |
 
-- Database name
-- Database user and its password
+MySQL/MariaDB user must have `ALL PRIVILEGES` over the target database.
 
 ## Cron
 
@@ -43,17 +65,6 @@ A cron is required to process the application background jobs. The cron for your
 
 Where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
 
-### Using Docker
-
-When using Docker is recommended that the cron setup executes outside the container. You can achieve that by running this from the host:
-
-```sh
-docker exec -it \
-    --user www-data \
-    -e IS_CRON=1 \
-    my-container /usr/local/bin/php /var/www/html/cron.php
-```
-
 ### Run cron
 
 You can go to [explainshell](https://explainshell.com/explain?cmd=IS_CRON%3D1+%2Fusr%2Fbin%2Fphp+%2Fvar%2Fwww%2Fhtml%2Fchevereto.loc%2Fpublic_html%2Fcron.php+%3E%2Fdev%2Fnull+2%3E%261) to inspect the command, you can freely alter it to match your needs. Run the command as `www-data` user by adding `sudo -u www-data` to the command:
@@ -62,28 +73,20 @@ You can go to [explainshell](https://explainshell.com/explain?cmd=IS_CRON%3D1+%2
 sudo -u www-data IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php
 ```
 
+### Run cron using Docker
+
+When using Docker is recommended that the cron setup executes outside the container.
+
+You can achieve that by running this from the host:
+
+```sh
+docker exec -it \
+    --user www-data \
+    -e IS_CRON=1 \
+    my-container /usr/local/bin/php /var/www/html/cron.php
+```
+
 ## Web server
-
-### PHP provisioning
-
-The web server must be configured to execute [PHP](http://php.net/) and it is **recommended** to provision it using [PHP-FPM](https://www.php.net/manual/en/install.fpm.php).
-
-### Filesystem
-
-The webserver user should be in the owner group of your installation. This is required to allow Chevereto to modify the filesystem, which is required to one-click update and many other features.
-
-> Web server user is usually `www-data`
-
-Chevereto requires **recursive write** access in the following paths:
-
-- `app/content`
-- `app/content/languages`
-- `app/content/languages/cache`
-- `app/content/system`
-- `content`
-- `images`
-
-`Read` and `Write` access to the temp folder (`/tmp` in Linux; `C:/Windows/Temp` in Windows).
 
 ### URL rewriting
 
@@ -95,7 +98,7 @@ The web server must rewrite HTTP requests like `GET /image/some-name.<id>` to `/
 
 ```nginx
 # Context limits
-client_max_body_size 20M;
+client_max_body_size 25M;
 
 # Disable access to sensitive files
 location ~* (app|content|lib)/.*\.(po|php|lock|sql)$ {
@@ -177,7 +180,9 @@ Options -MultiViews
 
 For setups under any kind of proxy (including CloudFlare) is required that the web server sets the appropriate value for the client connecting IP.
 
-> ⚠ If this is not configured the software won't be able to detect the users IPs
+::: warning
+If this is not configured the software won't be able to detect the visitors IPs, failing to deliver IP based restrictions and flood control.
+:::
 
-- Nginx: `ngx_http_realip_module`
-- Apache: `mod_remoteip`
+* Nginx: `ngx_http_realip_module`
+* Apache: `mod_remoteip`

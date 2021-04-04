@@ -56,10 +56,6 @@ Using HTTP:
 
 ![Chevereto Installer](https://camo.githubusercontent.com/1c1a868703419338eb6b01802270171b4bbb134d/68747470733a2f2f63686576657265746f2e636f6d2f7372632f696d672f696e7374616c6c65722f73637265656e2d76322e706e673f3230313930363233)
 
-### Docker
-
-Official [Docker images for Chevereto](https://github.com/chevereto/docker) contains the recommended system setup to run Chevereto.
-
 ### Zip package
 
 * Download the [latest release](https://chevereto.com/panel/downloads)

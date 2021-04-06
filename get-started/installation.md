@@ -69,7 +69,7 @@ Using HTTP:
 The application background tasks needs to be executed by running a cron. At `/dashboard` you will find the [required cron](../setup/system/requirements.md#cron) entry for your installation.
 
 ::: warning
-Don't forger to provide the cron executing to fullfil the application background jobs.
+Don't forget to provide the cron executing to fullfil the application background jobs.
 :::
 
 ### Setup email

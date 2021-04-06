@@ -4,11 +4,6 @@
 Refer to the official [Docker images for Chevereto](https://github.com/chevereto/docker) for the recommended system setup to run Chevereto, including all libraries required.
 :::
 
-* PHP
-* Database (MySQL / MariaDB)
-* Cron setup
-* HTTP web Server (Nginx / Apache / *any*)
-
 ## PHP
 
 | Version | PHP |
@@ -53,7 +48,7 @@ Chevereto user will require **read/write** access in the following paths:
 | ------- | ----- | ------- |
 | 3.19    | 8     | 10      |
 
-MySQL/MariaDB user must have `ALL PRIVILEGES` over the target database.
+Database user must have `ALL PRIVILEGES` over the target database.
 
 ## Cron
 
@@ -180,8 +175,8 @@ Options -MultiViews
 
 For setups under any kind of proxy (including CloudFlare) is required that the web server sets the appropriate value for the client connecting IP.
 
-::: warning
-If this is not configured the software won't be able to detect the visitors IPs, failing to deliver IP based restrictions and flood control.
+::: danger
+If real connecting IP is not properly configured Chevereto won't be able to detect the visitors IPs, failing to deliver IP based restrictions and flood control.
 :::
 
 * Nginx: `ngx_http_realip_module`

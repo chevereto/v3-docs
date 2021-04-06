@@ -68,10 +68,12 @@ Using HTTP:
 
 The application background tasks needs to be executed by running a cron. At `/dashboard` you will find the [required cron](../setup/system/requirements.md#cron) entry for your installation.
 
-::: warning
+::: danger
 Don't forget to provide the cron executing to fullfil the application background jobs.
 :::
 
 ### Setup email
 
-Go to [Email settings](../settings/email.md) to configure the transactional email service. It is recommended to use a service made for such purpose and not a personal/self-hosted solution. We don't recommend to run your own email infrastructure.
+Go to [Email settings](../settings/email.md) to configure the transactional email service.
+
+It is recommended to use a service made for such purpose and not a personal/self-hosted solution. We don't recommend to run your own email infrastructure.

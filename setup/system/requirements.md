@@ -14,7 +14,7 @@ Refer to the official [Docker images for Chevereto](https://github.com/chevereto
 
 The following PHP extensions are required for Chevereto.
 
-* imagick with `PNG GIF JPG BMP WEBP`
+* imagick
 * curl
 * hash
 * json
@@ -25,6 +25,20 @@ The following PHP extensions are required for Chevereto.
 * session
 * xml
 * fileinfo
+
+## ImageMagick
+
+Chevereto needs ImageMagick to process images and it must be built with support for `PNG GIF JPG BMP WEBP`.
+
+Additional ImageMagick configuration required at `/etc/ImageMagick-6/policy.xml` file:
+
+```xml
+<policymap>
+    <!-- policies -->
+    <policy domain="resource" name="width" value="16KP"/>
+    <policy domain="resource" name="height" value="16KP"/>
+</policymap>
+```
 
 ### Filesystem
 

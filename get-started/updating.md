@@ -10,6 +10,22 @@ Always check that your server meets the [requirements](../setup/system/requireme
 Make sure to always have a working backup of your database. It will be impossible to rollback without a database backup.
 :::
 
+## CLI update (3.19)
+
+* Run the following command:
+
+```sh
+sudo -u www-data php cli.php -C update
+```
+
+* If you are using Docker:
+
+```sh
+docker exec -it \
+    --user www-data \
+    my-container /usr/local/bin/php /var/www/html/cli.php -C update
+```
+
 ## One-click update
 
 * Go to `/dashboard` and click on "check for updates"

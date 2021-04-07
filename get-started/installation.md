@@ -68,16 +68,54 @@ The installer HTTP API will POST to `/install` to complete Chevereto installatio
 
 ## Post-installation
 
-### Background jobs
+## Initial setup
+
+You can setup Chevereto using HTTP or CLI (recommended).
+
+### HTTP setup
+
+* Go to `/install` and submit the installation form.
+
+### CLI setup (3.19+)
+
+* Run the following command:
+
+<code-group>
+<code-block title="Shell">
+```sh
+sudo -u www-data php cli.php -C install \
+    -u dev \
+    -e dev@chevereto.loc \
+    -x password
+```
+</code-block>
+
+<code-block title="Docker">
+```sh
+docker exec -it \
+    --user www-data \
+    my-container /usr/local/bin/php /var/www/html/cli.php -C install \
+    -u dev \
+    -e dev@chevereto.loc \
+    -x password
+```
+</code-block>
+</code-group>
+
+| Option | Description    |
+| ------ | -------------- |
+| u      | Admin username |
+| e      | Admin email    |
+| x      | Admin password |
+
+### Background jobs (3.18+)
 
 The application background tasks needs to be executed by running a cron. At `/dashboard` you will find the [required cron](../setup/system/requirements.md#cron) entry for your installation.
 
 ::: danger
-Don't forget to provide the cron executing to fullfil the application background jobs.
+Don't forget to provide the cron executing to fullfil the application background jobs. If this is not configured Chevereto won't remove expired images, check for updates, process external storage deletes and more. It is very important to setup this.
 :::
 
 ### Setup email
 
 Go to [Email settings](../settings/email.md) to configure the transactional email service.
-
-It is recommended to use a service made for such purpose and not a personal/self-hosted solution. We don't recommend to run your own email infrastructure.

@@ -14,7 +14,7 @@ The [chevereto/installer](https://github.com/chevereto/installer) is a single `.
 
 * Upload the [installer](https://chevereto.com/download/file/installer) to your server target destination (usually the `public_html` folder).
 
-Using CLI:
+Using CLI (recommended):
 
 * Download the software at the installer path.
 
@@ -48,13 +48,17 @@ php installer.php -a extract -s chevereto-free -p /var/www/html -f chevereto-pkg
 </code-block>
 </code-group>
 
-Once done, open your website to complete the process.
+Once done, remove the `installer.php` file and open your website at `/install` to complete the process.
 
 Using HTTP:
 
 * Open your website at `/installer.php` and follow the process.
 
 ![Chevereto Installer](https://camo.githubusercontent.com/1c1a868703419338eb6b01802270171b4bbb134d/68747470733a2f2f63686576657265746f2e636f6d2f7372632f696d672f696e7374616c6c65722f73637265656e2d76322e706e673f3230313930363233)
+
+::: danger
+The installer HTTP API will POST to `/install` to complete Chevereto installation. If that process fail, you must remove the `installer.php` file and open your website at `/installer` to complete the process manually.
+:::
 
 ### Zip package
 

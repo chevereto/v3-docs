@@ -6,40 +6,41 @@ This section outlines the update process required for existing Chevereto V3 inst
 Always check that your server meets the [requirements](../setup/system/requirements.md) for running the target release to update.
 :::
 
-::: danger Backup your database
-Make sure to always have a working backup of your database. It will be impossible to rollback without a database backup.
+::: danger Backup
+Make sure to always have a working backup of your database and your code modifications (if any). Keep in mind that after the update you will need to re-apply your modifications.
 :::
 
-## CLI update (3.19)
+## From the command-line (3.19+)
+
+::: tip Recommended
+The CLI update is recommended as it has zero chances to fail due to time execution limitations. Try to always update from CLI if possible.
+:::
 
 * Run the following command:
 
+<code-group>
+<code-block title="Shell">
 ```sh
 sudo -u www-data php cli.php -C update
 ```
+</code-block>
 
-* If you are using Docker:
-
+<code-block title="Docker">
 ```sh
 docker exec -it \
     --user www-data \
     my-container /usr/local/bin/php /var/www/html/cli.php -C update
 ```
+</code-block>
+</code-group>
 
-## One-click update
+## From your website
 
 * Go to `/dashboard` and click on "check for updates"
 * Install the update when prompted
-* Restore or merge your file changes (only if needed)
-
-::: tip
-If the process fails, try with [manual update](#manual-update).
-:::
 
 ## Manual update
 
 * Download the [latest release](https://chevereto.com/panel/downloads)
-* Backup all your file changes (theme, routes, etc.)
-* Upload all the files and folders from the `chevereto` folder
-* Login to your website (admin user) and then go to `/install`
-* Restore or merge your file changes (only if needed)
+* Upload all the files and folders from the `chevereto` folder to your target website
+* Go to `/install`

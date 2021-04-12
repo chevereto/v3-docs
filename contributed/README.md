@@ -50,8 +50,12 @@ The following content has been provided by users of the software. It contains gu
 
 ## Guides
 
+- 2021-04-10 [[图床] 使用腾讯云轻量服务器 + 腾讯云 CDN 搭建 Chevereto 图床和加速分发方案](https://www.idc.moe/archives/QCloud-Lighthouse-BTPremium-Chevereto-CDN.html)
+- 2021-04-10 [Chevereto图床伪静态Rewrite规则（Nginx/Apache](https://pc6a.com/3680.html)
+- 2021-04-05 [https://www.queyikeji.cn/372.html](https://www.queyikeji.cn/372.html)
 - 2021-01-24 [[已解决]Chevereto后台在线升级出现Can’t write into /app/install/update/temp/ path 的错](https://www.4dmayi.com/3105.html)
 - 2021-01-23 [宝塔环境下配置Chevereto图床程序使其支持WeBP格式的图片|支持Chevereto免费版](https://www.4dmayi.com/3093.html)
+- 2021-01-05 [Chevereto图床程序搭建](https://www.52craft.cc/archives/9/)
 - 2020-10-18 [Chevereto 图片展示页面默认显示嵌入代码](https://www.openos.org/post/610/)
 - 2020-06-16 [Chevereto 接入又拍云实现图片外部存储方法](https://www.pieruo.com/192.html)
 - 2020-09-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
@@ -79,8 +83,8 @@ The following content has been provided by users of the software. It contains gu
 
 ## Integrating
 
-- 2021-02-25 [[自建图床] Chevereto 图床增加百度内容审核（鉴黄）功能](https://www.idc.moe/archives/image-review-for-Chevereto-Free.html)
-- 2021-01-10 [WordPress 主题 编辑器中添加上传到 Chevereto图床](https://www.letcloud.cn/1775.html) 
+- 2021-03-02 [WordPress编辑器中添加“上传到Chevereto图床”](https://www.virtualvmw.com/1830.html)
+- 2021-01-10 [WordPress 主题 编辑器中添加上传到 Chevereto图床](https://www.letcloud.cn/1775.html)
 - 2020-07-26 [网站图片从 wordpress 搬迁到图床 图片路径批量替换实现方法](https://www.pieruo.com/201.html)
 - 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](https://www.daniao.org/9947.html)
 - 2020-04-29 [Chevereto Imagehosting Upload By Jasper(zhujia18)](https://discuss.flarum.org/d/23585-chevereto-imagehosting-upload)
@@ -90,6 +94,7 @@ The following content has been provided by users of the software. It contains gu
 
 ## External tools
 
+- 2021-02-25 [[自建图床] Chevereto 图床增加百度内容审核（鉴黄）功能](https://www.idc.moe/archives/image-review-for-Chevereto-Free.html)
 - 2020-06-03 [Typora使用PicGo自动上传图片到Chevereto图床](https://www.zzhyun.com/2020/06/03/159/)
 - 2020-05-22 [[ITM] Chevereto Integration - XenForo 2.1](https://chevereto.com/community/threads/itm-chevereto-integration-xenforo-2-1.12234/)
 - 2020-04-18 [Mac uPic-Chevereto图床配置教程](https://www.sukeycz.com/course/uPic-Chevereto-imageuploads)

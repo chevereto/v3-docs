@@ -28,7 +28,9 @@ Don't miss any news!
 
 ## 🌏 Translations
 
+::: tip
 Feel free to contribute to [translations](https://chevereto.oneskyapp.com/) to get Chevereto available in your language.
+:::
 
 ### Translated documentation
 

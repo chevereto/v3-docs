@@ -2,17 +2,82 @@
 
 This tool allows to **mass import** images, albums, and users by parsing the contents of a filesystem location. It is intended to be used when you want to import a massive amount of content that otherwise will be troublesome to import by using the API or the web gui.
 
-::: danger Importing != Syncing
-Importing takes the content from the importing path and *import it* into database, filesystem or external storage, **removing the file from the importing path**.
+::: tip Importing != Syncing
+Importing takes the content from the importing path and *import it* into database, filesystem or external storage. Failed files will be moved to a special directory at `./importing/failed/`.
+:::
+
+::: danger Before V3.19
+In old releases failed files will be **permanently removed**. Make sure to use a backup.
 :::
 
 ## How to use it
 
-Go to `dashboard/bulk`, from there you will be able to add and manage importing jobs.
-
-::: warning Permissions
-The target importing path must be writable by the PHP user, make sure that `www-data` (or the specific user in your case) owns the target importing folder.
+::: tip demo-importing
+Check the repository at [chevereto/demo-importing](https://github.com/chevereto/demo-importing) for an example on how to organize your files to use the Bulk content importer.
 :::
+
+Bulk content importer works by scanning the `importing/` path, where folders are used to denote a given parsing format for the files contained within.
+
+Placing the content at these directories following the [parsing formats](#parsing-formats) conventions will enable to import images to users created as a folder, add categories, etc.
+
+| `./importing/`  | Parsing                                                       |
+| --------------- | ------------------------------------------------------------- |
+| `parse-users/`  | [Top-level folder as username](#top-level-folder-as-username) |
+| `parse-albums/` | [Top-level folders as albums](#top-level-folders-as-albums)   |
+| `no-parse/`     | [No folder parsing](#no-parse)                                |
+
+::: tip
+Go to `dashboard/bulk` to review importing jobs.
+:::
+
+### Command
+
+* V3.19+
+
+<code-group>
+<code-block title="Shell">
+```sh
+sudo -u www-data php cli.php -C importing
+```
+</code-block>
+
+<code-block title="Docker">
+```sh
+docker exec -it \
+    --user www-data \
+    my-container /usr/local/bin/php /var/www/html/cli.php -C importing
+```
+</code-block>
+</code-group>
+
+* Older
+
+```sh
+sudo -u www-data IS_CRON=1 THREAD_ID=1 php importing.php
+```
+
+### Cron entry
+
+The importing command can be automatically scheduled by using [cron](https://en.wikipedia.org/wiki/Cron):
+
+```sh
+* * * * * THREAD_ID=1 /usr/bin/php /var/www/html/cli.php -C importing >/dev/null 2>&1
+```
+
+### Threads
+
+You can speed up the process by running the importing in multiple threads by passing different `env` for `THREAD_ID`:
+
+```sh
+sudo -u www-data THREAD_ID=1 php cli.php -C importing
+sudo -u www-data THREAD_ID=2 php cli.php -C importing
+```
+
+### File locking
+
+The importing process can be locked by placing an empty lock file at `./importing/.lock`.
+
+The process won't be carried until this file gets removed. This comes handy when you want to import a large dataset and you care about the nested folder structure.
 
 ## Parsing formats
 
@@ -74,50 +139,9 @@ For the tree above, the parser will:
 
 - Upload the images contained in `./<path>` to public, as guest user.
 
-## Automatic importing
 
-Automatic importing works by continuously observe the `importing/` path. In this path you will find folders that follow a given parsing format. Simply add contents to this folder following the convention.
 
-| Path                       | Parsing                                                       |
-| -------------------------- | ------------------------------------------------------------- |
-| `./importing/parse-users`  | [Top-level folder as username](#top-level-folder-as-username) |
-| `./importing/parse-albums` | [Top-level folders as albums](#top-level-folders-as-albums)   |
-| `./importing/no-parse`     | [No folder parsing](#no-parse)                                |
 
-### Cron entry
-
-Automatic importing works with a scheduled command to continuously process the importing. At `dashboard/bulk` you will see a [cron](https://en.wikipedia.org/wiki/Cron) entry like this:
-
-```sh
-* * * * * IS_CRON=1 THREAD_ID=1 /usr/bin/php /public_html/importing.php >/dev/null 2>&1
-```
-
-The cron entry above instruct to run the importer each minute, with `THREAD_ID=1` flag.
-
-> Refer to your server administrator in how to add this entry to your server.
-
-### Performance tunning
-
-You can speed up the process by running the importing in multiple threads. Simply add more cron entries:
-
-```sh
-* * * * * IS_CRON=1 THREAD_ID=1 /usr/bin/php /public_html/importing.php >/dev/null 2>&1
-* * * * * IS_CRON=1 THREAD_ID=2 /usr/bin/php /public_html/importing.php >/dev/null 2>&1
-```
-
-You could add as many entries your hardware can tolerate.
-
-### Locking
-
-The automatic importing process can be locked by placing an empty lock file at `./importing/.lock`. The automatic importing process won't be carried until this file doesn't exists.
-
-## Manual importing
-
-Manual importing works by creating a one-time job that will be carried on a file system path and parsing method of your choice.
-
-::: danger Low-Performance
-Manual importing is orchestrated with XHR, meaning that you must keep the web browser active to carry on the process. This could be too slow when importing a large collection.
-:::
 
 ## Statuses
 
@@ -132,12 +156,12 @@ The importing jobs statuses get defined as follow:
 | Completed | Job completed (everything parsed)               |
 
 ::: tip
-Automatic importing may show "completed" when there's nothing else to parse, but internally it will get re-queued automatically.
+Importing may show "completed" when there's nothing else to parse, but internally it will get re-queued automatically.
 :::
 
 ## Metadata
 
-The bulk importer supports metadata (data that describes other data) using the JSON format, same as [Google Photos](#importing-from-google-photos).
+The bulk importer supports metadata using the JSON format, same as [Google Photos](#importing-from-google-photos).
 
 Metadata must be provided per content basis, meaning that you must use one metadata file for each content.
 
@@ -269,24 +293,4 @@ Profile images have to be located in the `.assets/` folder inside the user folde
 
 ::: warning User assets
 The type of the image assets must be one of the file formats handled by your installation.
-:::
-
-## View logs
-
-The whole importing process gets logged in texts files located at `/app/import/jobs/<id>/logs/`. You can tail `process.txt` and `error.txt` to get the live status of the importing process. You can also access these logs by clicking on the "Actions" menu.
-
-## Importing from Google Photos
-
-The metadata format used is exactly the same used by Google Photos, meaning that you can run away from that proprietary service and start owning your photos.
-
-- Go to [Google Takeout](https://takeout.google.com/)
-- Select **Google Photos** and follow the process
-- At Delivery method pick **Send download link via email**
-- Once done, you will get a zipped file
-- Rename `Takeout/Google Photos` folder to the target username, for example `Takeout/Rodolfo`
-
-From here you can take the folder for either [automatic](#automatic-importing) or [manual](#manual-importing) importing.
-
-::: warning Metadata
-All Google Photos metadata naming conventions are recognized from Chevereto V3.17
 :::

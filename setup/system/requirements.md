@@ -6,9 +6,9 @@ Refer to the official [Docker images for Chevereto](https://github.com/chevereto
 
 ## PHP
 
-| Version | PHP |
-| ------- | --- |
-| 3.19    | 7.4 |
+| Since | PHP |
+| ----- | --- |
+| 3.19  | 7.4 |
 
 ### Extensions
 
@@ -27,6 +27,10 @@ The following PHP extensions are required for Chevereto.
 * fileinfo
 
 ## ImageMagick
+
+| Since | Required         |
+| ----- | ---------------- |
+| 3.18  | imagick fileinfo |
 
 Chevereto needs ImageMagick to process images and it must be built with support for `PNG GIF JPG BMP WEBP`.
 

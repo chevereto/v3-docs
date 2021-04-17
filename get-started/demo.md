@@ -13,7 +13,7 @@ There's also a hosted demo at [demo.chevereto.com](https://demo.chevereto.com) (
 * [git](https://git-scm.com/)
 * [Docker](https://www.docker.com/get-started)
 
-You will require to clone the [chevereto/docker](https://github.com:chevereto/docker) repository.
+You will require to clone the [chevereto/docker](https://github.com/chevereto/docker) repository.
 
 ### Running
 

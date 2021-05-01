@@ -39,13 +39,9 @@ The following PHP extensions are required for Chevereto.
 
 ## ImageMagick
 
-| Since | Required         |
-| ----- | ---------------- |
-| 3.18  | imagick fileinfo |
-
 Chevereto needs ImageMagick to process images and it must be built with support for `PNG GIF JPG BMP WEBP`.
 
-Additional ImageMagick configuration required at `/etc/ImageMagick-6/policy.xml` file:
+Additional recommended ImageMagick configuration at `/etc/ImageMagick-6/policy.xml` file:
 
 ```xml
 <policymap>
@@ -75,7 +71,7 @@ Chevereto user will require **read/write** access in the following paths:
 
 | Version | MySQL | MariaDB |
 | ------- | ----- | ------- |
-| 3.19    | 8     | 10      |
+| 3.20    | 8     | 10      |
 
 Database user must have `ALL PRIVILEGES` over the target database.
 

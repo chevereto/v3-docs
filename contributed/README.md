@@ -20,6 +20,7 @@ The following content has been provided by users of the software. It contains gu
 ## Installation guides
 
 - 2021-04-01 [Ubuntu20.04搭建Chevereto图床](https://www.cherishspring.cn/archives/chevereto.html)
+- 2021-03-24 [利用chevereto搭建自己的图床](https://zhuanlan.zhihu.com/p/359545072)
 - 2020-12-25 [《零基础教程》Chevereto-年轻人的第一个私人图床_第2期](https://sakurasep.site/posts/22362/)
 - 2020-10-28 [chevereto收费版安装教程，这可能是我用过最好的图床程序了！](https://www.shejibiji.com/archives/4672)
 - 2020-10-24 [群晖通过Docker安装图床工具Chevereto的步骤](https://www.weizhiyong.com/archives/4309)

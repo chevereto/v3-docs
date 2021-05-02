@@ -15,7 +15,7 @@ This is the documentation for both [Chevereto V3](https://chevereto.com/pricing)
 
 Feel free to improve this documentation, all pages are editable.
 
-## 🌈 Get Updates
+## 🌈 Get updates
 
 Don't miss any news!
 

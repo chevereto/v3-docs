@@ -8,6 +8,7 @@ The following content has been provided by users of the software. It contains gu
 - [M1Screw/Chevereto-Telegram-Bot](https://github.com/M1Screw/Chevereto-Telegram-Bot)
 - [f97/chevereto](https://github.com/f97/chevereto)
 - [zhujia18/flarum-chevereto](https://github.com/zhujia18/flarum-chevereto)
+- [xiebruce/PicUploader](https://gitee.com/xiebruce/PicUploader/)
 
 ## Videos
 
@@ -22,6 +23,7 @@ The following content has been provided by users of the software. It contains gu
 - 2021-04-01 [Ubuntu20.04搭建Chevereto图床](https://www.cherishspring.cn/archives/chevereto.html)
 - 2021-03-24 [利用chevereto搭建自己的图床](https://zhuanlan.zhihu.com/p/359545072)
 - 2020-12-25 [《零基础教程》Chevereto-年轻人的第一个私人图床_第2期](https://sakurasep.site/posts/22362/)
+- 2020-12-16 [Install Chevereto – Open Source Image Hosting Website Using Docker](https://www.51sec.org/2020/12/16/install-chevereto-open-source-image-hosting-website-using-docker/)
 - 2020-10-28 [chevereto收费版安装教程，这可能是我用过最好的图床程序了！](https://www.shejibiji.com/archives/4672)
 - 2020-10-24 [群晖通过Docker安装图床工具Chevereto的步骤](https://www.weizhiyong.com/archives/4309)
 - 2020-10-17 [宝塔面板安装chevereto教程，一款强大好用的图床程序！](https://www.feiyubk.com/archives/29.html)
@@ -62,7 +64,6 @@ The following content has been provided by users of the software. It contains gu
 
 - 2021-04-10 [[图床] 使用腾讯云轻量服务器 + 腾讯云 CDN 搭建 Chevereto 图床和加速分发方案](https://www.idc.moe/archives/QCloud-Lighthouse-BTPremium-Chevereto-CDN.html)
 - 2021-04-10 [Chevereto图床伪静态Rewrite规则（Nginx/Apache](https://pc6a.com/3680.html)
-- 2021-06-06 [Typora + picgo + Chevereto 优雅地上传图片](https://www.cnblogs.com/programmerwang/p/14622946.html)
 - 2021-04-05 [用宝塔搭建Chevereto图床](https://www.queyikeji.cn/372.html)
 - 2021-02-28 [Chevereto-搭建一个自己的图床](https://blog.csdn.net/qq_44022113/article/details/114239677)
 - 2021-01-24 [[已解决]Chevereto后台在线升级出现Can’t write into /app/install/update/temp/ path 的错](https://www.4dmayi.com/3105.html)
@@ -102,6 +103,7 @@ The following content has been provided by users of the software. It contains gu
 - 2021-01-02 [Python脚本实现Typora插入图片自动上传到Chevereto图床](https://haoyufang.gitee.io/2021/01/02/Python%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0Typora%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0Chevereto%E5%9B%BE%E5%BA%8A/)
 - 2020-12-22 [Markdown配合Chevereto图床的使用](https://qiuchao.net/1387/)
 - 2020-12-11 [把ZBLOG文章图片自动上传到自建Chevereto图床](https://yeelz.com/post/508.html)
+- 2020-08-21 [PicGo配合Typora怎么配置Chevereto图床，PicGo的Chevereto图床配置](https://chens.life/picgo.html)
 - 2020-08-05 [在 WordPress 的文章编辑器里增加一键上传图片到 Chevereto](https://chaishiwei.com/blog/1828.html)
 - 2020-07-26 [网站图片从 wordpress 搬迁到图床 图片路径批量替换实现方法](https://www.pieruo.com/201.html)
 - 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](https://www.daniao.org/9947.html)

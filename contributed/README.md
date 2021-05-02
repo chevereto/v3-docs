@@ -2,6 +2,13 @@
 
 The following content has been provided by users of the software. It contains guides, reviews and everything you may want to known about Chevereto. Feel free to contribute yours and show others.
 
+## Software
+
+- [linuxserver/docker-chevereto](https://github.com/linuxserver/docker-chevereto)
+- [M1Screw/Chevereto-Telegram-Bot](https://github.com/M1Screw/Chevereto-Telegram-Bot)
+- [f97/chevereto](https://github.com/f97/chevereto)
+- [zhujia18/flarum-chevereto](https://github.com/zhujia18/flarum-chevereto)
+
 ## Videos
 
 - 2020-10-21 [搭建Chevereto开源图床作为云存储视频教程](https://jyg789.com/3940.html)

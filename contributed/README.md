@@ -52,7 +52,9 @@ The following content has been provided by users of the software. It contains gu
 
 - 2021-04-10 [[图床] 使用腾讯云轻量服务器 + 腾讯云 CDN 搭建 Chevereto 图床和加速分发方案](https://www.idc.moe/archives/QCloud-Lighthouse-BTPremium-Chevereto-CDN.html)
 - 2021-04-10 [Chevereto图床伪静态Rewrite规则（Nginx/Apache](https://pc6a.com/3680.html)
-- 2021-04-05 [https://www.queyikeji.cn/372.html](https://www.queyikeji.cn/372.html)
+- 2021-06-06 [Typora + picgo + Chevereto 优雅地上传图片](https://www.cnblogs.com/programmerwang/p/14622946.html)
+- 2021-04-05 [用宝塔搭建Chevereto图床](https://www.queyikeji.cn/372.html)
+- 2021-02-28 [Chevereto-搭建一个自己的图床](https://blog.csdn.net/qq_44022113/article/details/114239677)
 - 2021-01-24 [[已解决]Chevereto后台在线升级出现Can’t write into /app/install/update/temp/ path 的错](https://www.4dmayi.com/3105.html)
 - 2021-01-23 [宝塔环境下配置Chevereto图床程序使其支持WeBP格式的图片|支持Chevereto免费版](https://www.4dmayi.com/3093.html)
 - 2021-01-05 [Chevereto图床程序搭建](https://www.52craft.cc/archives/9/)

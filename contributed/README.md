@@ -12,6 +12,8 @@ The following content has been provided by users of the software. It contains gu
 
 ## Installation guides
 
+- 2021-04-01 [Ubuntu20.04搭建Chevereto图床](https://www.cherishspring.cn/archives/chevereto.html)
+- 2020-12-25 [《零基础教程》Chevereto-年轻人的第一个私人图床_第2期](https://sakurasep.site/posts/22362/)
 - 2020-10-28 [chevereto收费版安装教程，这可能是我用过最好的图床程序了！](https://www.shejibiji.com/archives/4672)
 - 2020-10-24 [群晖通过Docker安装图床工具Chevereto的步骤](https://www.weizhiyong.com/archives/4309)
 - 2020-10-17 [宝塔面板安装chevereto教程，一款强大好用的图床程序！](https://www.feiyubk.com/archives/29.html)
@@ -58,12 +60,14 @@ The following content has been provided by users of the software. It contains gu
 - 2021-01-24 [[已解决]Chevereto后台在线升级出现Can’t write into /app/install/update/temp/ path 的错](https://www.4dmayi.com/3105.html)
 - 2021-01-23 [宝塔环境下配置Chevereto图床程序使其支持WeBP格式的图片|支持Chevereto免费版](https://www.4dmayi.com/3093.html)
 - 2021-01-05 [Chevereto图床程序搭建](https://www.52craft.cc/archives/9/)
+- 2020-11-21 [在群晖中使用Chevereto搭建图床](https://lisenlinsirb.github.io/2020/11/21/20.11.21-chevereto_synology/)
 - 2020-10-18 [Chevereto 图片展示页面默认显示嵌入代码](https://www.openos.org/post/610/)
 - 2020-06-16 [Chevereto 接入又拍云实现图片外部存储方法](https://www.pieruo.com/192.html)
 - 2020-09-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
 
 ## Hacks/Tips
 
+- 2021-03-18 [Chevereto图床 图片转换WEBP格式大幅度提升图片加载速度](https://lwguang.com/archives/webp)
 - 2021-01-19 [Chevereto无法登录显示[请求被拒绝，您或者没有权限访问此页面]的解决办法](https://www.fuyimokuai.com/news/aHR0cDovL3d3dy5iYWlkdS5jb20vbGluaz91cmw9eVYyTENDTFI1c1BxWFpzZ3Z6cl9fby03WXFBQm5hQWVEMnlTTzlXVUlIUDVBXzlhRDZ3d2s0LUx3cm51M1ZTUkVZZ1ppUER0WXJJNDE0V2gxMk8xeV8tdWw4MUduQjVMaTVsS0N2TVhTeXE=.html)
 - 2020-09-18 [Chevereto 首页显示图片托管数量的实现方法](https://www.pieruo.com/204.html)
 - 2020-09-09 [Chevereto 图床程序注册页面添加通过邀请码注册功能](https://www.pieruo.com/203.html)
@@ -87,8 +91,15 @@ The following content has been provided by users of the software. It contains gu
 
 - 2021-03-02 [WordPress编辑器中添加“上传到Chevereto图床”](https://www.virtualvmw.com/1830.html)
 - 2021-01-10 [WordPress 主题 编辑器中添加上传到 Chevereto图床](https://www.letcloud.cn/1775.html)
+- 2021-01-02 [Python脚本实现Typora插入图片自动上传到Chevereto图床](https://haoyufang.gitee.io/2021/01/02/Python%E8%84%9A%E6%9C%AC%E5%AE%9E%E7%8E%B0Typora%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0Chevereto%E5%9B%BE%E5%BA%8A/)
+- 2020-12-22 [Markdown配合Chevereto图床的使用](https://qiuchao.net/1387/)
+- 2020-12-11 [把ZBLOG文章图片自动上传到自建Chevereto图床](https://yeelz.com/post/508.html)
+- 2020-08-05 [在 WordPress 的文章编辑器里增加一键上传图片到 Chevereto](https://chaishiwei.com/blog/1828.html)
 - 2020-07-26 [网站图片从 wordpress 搬迁到图床 图片路径批量替换实现方法](https://www.pieruo.com/201.html)
 - 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](https://www.daniao.org/9947.html)
+- 2020-06-24 [chevereto图床使用python上传图片](https://www.yinxiang.com/everhub/note/eafe8861-6ea9-4824-8323-d27a4094f157)
+- 2020-06-26 [利用python脚本实现使用typora编写markdown时图片自动上传到chevereto图床](https://youwolf.cn/?p=515)
+- 2020-06-03 [Typora使用PicGo自动上传图片到Chevereto图床](https://www.zzhyun.com/2020/06/03/159/)
 - 2020-04-29 [Chevereto Imagehosting Upload By Jasper(zhujia18)](https://discuss.flarum.org/d/23585-chevereto-imagehosting-upload)
 - 2020-03-12 [给你的 Chevereto 添加鉴黄功能,支持百度,腾讯,Moderatecontent,Sightengine](https://alone88.cn/archives/804.html)
 - 2020-03-09 [Chevereto 增加百度AI审核功能,开启鉴黄功能，后台可设置](https://alone88.cn/archives/796.html)
@@ -97,7 +108,7 @@ The following content has been provided by users of the software. It contains gu
 ## External tools
 
 - 2021-02-25 [[自建图床] Chevereto 图床增加百度内容审核（鉴黄）功能](https://www.idc.moe/archives/image-review-for-Chevereto-Free.html)
-- 2020-06-03 [Typora使用PicGo自动上传图片到Chevereto图床](https://www.zzhyun.com/2020/06/03/159/)
+- 2020-08-02 [Chevereto Quicker](https://getquicker.net/Sharedaction?code=8966d68c-4c0e-41fc-0e0a-08d8337898d1)
 - 2020-05-22 [[ITM] Chevereto Integration - XenForo 2.1](https://chevereto.com/community/threads/itm-chevereto-integration-xenforo-2-1.12234/)
 - 2020-04-18 [Mac uPic-Chevereto图床配置教程](https://www.sukeycz.com/course/uPic-Chevereto-imageuploads)
 - 2020-02-26 [typora + chevereto之博客图片终极解决方法](http://guiu.xyz/p/c90ee787.html)
@@ -106,6 +117,8 @@ The following content has been provided by users of the software. It contains gu
 
 ## Reviews
 
+- 2021-03-22 [免费开源图床chevereto](https://www.nginxisok.com/website/chevereto.html)
 - 2020-12-05 [Gone too Soon - From Koken to Chevereto](https://den.black/gone-too-soon-from-koken-to-chevereto/)
+- 2020-11-29 [一款强大好用的图床工具：Chevereto](https://www.xinac.net/9036.html)
 - 2020-07-01 [Saying goodbye to Flickr and hi to Chevereto](https://guneetnarula.com/blog/2020/07/saying-goodbye-to-flickr-and-hi-to-chevereto/)
 - 2020-01-10 [Chevereto: Bilder Hosting für den eigenen Server](https://www.youtube.com/watch?v=wriVgnEfJ0Y)

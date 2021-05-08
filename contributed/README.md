@@ -12,7 +12,6 @@ The following content has been provided by users of the software. It contains gu
 
 ## Videos
 
-- 2020-10-21 [搭建Chevereto开源图床作为云存储视频教程](https://jyg789.com/3940.html)
 - 2020-09-08 [Chevereto图床搭建教程 | VPS搭建个人图床 小白一学就会的搭建教学 属于自己的图床 谷歌云GCP一键宝塔安装 简单图床教学](https://www.youtube.com/watch?v=QLa9VC1r94A)
 - 2020-08-07 [Chevereto Installed on Docker - Self-Hosted Imgur](https://www.youtube.com/watch?v=SO4Mt0ikukY)
 - 2020-07-27 [Let's Install Chevereto with Docker! Self-Hosted Image Hosting](https://www.youtube.com/watch?v=zcliC-QIVgE)

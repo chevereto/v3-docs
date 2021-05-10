@@ -15,6 +15,10 @@ There's also a hosted demo at [demo.chevereto.com](https://demo.chevereto.com) (
 
 Clone the [chevereto/docker](https://github.com/chevereto/docker) repository.
 
+```sh
+git clone git@github.com:chevereto/docker.git
+```
+
 ### Running
 
 Run demo shell script:

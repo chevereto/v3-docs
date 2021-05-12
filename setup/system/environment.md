@@ -4,7 +4,7 @@ This is the environment variables reference for Chevereto.
 
 ## Debug
 
-Environment variables for debug.
+Environment variables for [debug](../troubleshoot/debug.md).
 
 ::: tip
 When using Docker it always logs to `/dev/stderr` regardless this configuration.
@@ -52,6 +52,11 @@ Environment variables for the file uploading upper limits.
 
 Environment variables for the servicing used.
 
-| Variable            | Example |
-| ------------------- | ------- |
-| CHEVERETO_SERVICING | docker  |
+| Variable                          | Example              |
+| --------------------------------- | -------------------- |
+| CHEVERETO_HOSTNAME                | chevereto.loc        |
+| CHEVERETO_HOSTNAME_PATH           | /                    |
+| CHEVERETO_HTTPS                   | true                 |
+| CHEVERETO_SERVICING               | docker               |
+| CHEVERETO_DISABLE_PHP_PAGES       | false                |
+| CHEVERETO_IMAGE_FORMATS_AVAILABLE | JPG,PNG,BMP,GIF,WEBP |

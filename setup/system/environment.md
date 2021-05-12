@@ -53,11 +53,11 @@ Environment variables for the file uploading upper limits.
 
 Environment variables for the servicing used.
 
-| Variable                          | Example                            |
-| --------------------------------- | ---------------------------------- |
-| CHEVERETO_HOSTNAME                | chevereto.loc                      |
-| CHEVERETO_HOSTNAME_PATH           | /                                  |
-| CHEVERETO_HTTPS                   | `1`                                |
-| CHEVERETO_SERVICING               | docker                             |
-| CHEVERETO_DISABLE_PHP_PAGES       | `0`                                |
-| CHEVERETO_IMAGE_FORMATS_AVAILABLE | `["JPG","PNG","BMP","GIF","WEBP"]` |
+| Variable                          | Example                |
+| --------------------------------- | ---------------------- |
+| CHEVERETO_HOSTNAME                | chevereto.loc          |
+| CHEVERETO_HOSTNAME_PATH           | /                      |
+| CHEVERETO_HTTPS                   | `1`                    |
+| CHEVERETO_SERVICING               | docker                 |
+| CHEVERETO_DISABLE_PHP_PAGES       | `0`                    |
+| CHEVERETO_IMAGE_FORMATS_AVAILABLE | `JPG,PNG,BMP,GIF,WEBP` |

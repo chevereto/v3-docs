@@ -1,41 +1,56 @@
 # 📄 Settings file
 
-The file at `app/settings.php` contains the application settings like database credentials, table prefix, driver, debug level and more.
+The file at `app/settings.php` contains the application core settings like database credentials, debug level, hostname, enabled formats and more.
 
-::: tip Try environment variables
-We recommended to use [environment variables](environment.md) instead `app/settings.php`.
-:::
+A settings file may look like this (we recommend using [environment](environment.md) variables).
 
-A settings file may look like this:
-
+<code-group>
+<code-block title="Env">
 ```php
 <?php
-
-$settings['db_host'] = '127.0.0.1';
-$settings['db_port'] = 'port';
-$settings['db_name'] = 'name';
-$settings['db_user'] = 'user';
-$settings['db_pass'] = 'password';
-$settings['db_table_prefix'] = 'chv_';
-$settings['db_driver'] = 'mysql';
-$settings['debug_level'] = 1;
+$settings = [
+    'db_host' => getenv('CHEVERETO_DB_HOST'),
+    'db_name' => getenv('CHEVERETO_DB_NAME'),
+    'db_user' => getenv('CHEVERETO_DB_USER'),
+    'db_pass' => getenv('CHEVERETO_DB_PASS'),
+    'db_port' => getenv('CHEVERETO_DB_PORT'),
+    'db_table_prefix' => getenv('CHEVERETO_DB_TABLE_PREFIX'),
+    'db_driver' => getenv('CHEVERETO_DB_DRIVER'),
+    'db_pdo_attrs' => getenv('CHEVERETO_DB_PDO_ATTRS'),
+    'image_formats_available' => getenv('CHEVERETO_IMAGE_FORMATS_AVAILABLE'),
+    'hostname' => getenv('CHEVERETO_HOSTNAME'),
+    'hostname_path' => getenv('CHEVERETO_HOSTNAME_PATH'),
+    'debug_level' => getenv('CHEVERETO_DEBUG_LEVEL'),
+    'session.save_handler' => getenv('CHEVERETO_SESSION_SAVE_HANDLER'),
+    'session.save_path' => getenv('CHEVERETO_SESSION_SAVE_PATH'),
+    'https' => getenv('CHEVERETO_HTTPS');
+];
 ```
+</code-block>
 
-## Options
-
+<code-block title="Direct">
 ```php
-$settings['session.save_handler'] = 'session_save_handler';
-$settings['session.save_path'] = 'absolute_path_to_sessions';
-$settings['https'] = TRUE;
-$settings['image_formats_available'] = ['JPG', 'PNG', 'GIF'];
+<?php
+$settings = [
+  'db_host' => 'localhost',
+  'db_name' => 'chevereto',
+  'db_user' => 'user',
+  'db_pass' => 'pass',
+  'db_port' => '3306',
+  'db_table_prefix' => 'chv_',
+  'db_driver' => 'mysql',
+  'db_pdo_attrs' => [],
+  'image_formats_available' => ['PNG', 'GIF', 'JPG', 'BMP', 'WEBP'],
+  'hostname' => 'chevereto.loc',
+  'hostname_path' => '/',
+  'debug_level' => 1,
+  'session.save_handler' => 'session_save_handler',
+  'session.save_path' => 'absolute_path_to_sessions',
+  'https' => true;
+];
 ```
-
-| Option                    | Effect                                                                                                |
-| ------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `session.save_handler`    | Set the session save handler                                                                          |
-| `session.save_path`       | Set the target session directory                                                                      |
-| `https`                   | Use `true` to always force HTTPS                                                                      |
-| `image_formats_available` | Comma-separated list of system-enabled image formats. Defaults `['PNG', 'GIF', 'JPG', 'BMP', 'WEBP']` |
+</code-block>
+</code-group>
 
 ## Runtime `php.ini` configuration
 

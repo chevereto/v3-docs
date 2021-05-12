@@ -18,15 +18,16 @@ When using Docker it always logs to `/dev/stderr` regardless this configuration.
 
 Environment variables for the database details.
 
-| Variable                  | Example                |
-| ------------------------- | ---------------------- |
-| CHEVERETO_DB_HOST         | mariadb                |
-| CHEVERETO_DB_USER         | chevereto              |
-| CHEVERETO_DB_PASS         | user_database_password |
-| CHEVERETO_DB_NAME         | chevereto              |
-| CHEVERETO_DB_TABLE_PREFIX | chv_                   |
-| CHEVERETO_DB_PORT         | 3306                   |
-| CHEVERETO_DB_DRIVER       | mysql                  |
+| Variable                  | Example                  |
+| ------------------------- | ------------------------ |
+| CHEVERETO_DB_HOST         | mariadb                  |
+| CHEVERETO_DB_USER         | chevereto                |
+| CHEVERETO_DB_PASS         | user_database_password   |
+| CHEVERETO_DB_NAME         | chevereto                |
+| CHEVERETO_DB_TABLE_PREFIX | chv_                     |
+| CHEVERETO_DB_PORT         | 3306                     |
+| CHEVERETO_DB_DRIVER       | mysql                    |
+| CHEVERETO_DB_PDO_ATTRS    | `{"key":"value"}` (json) |
 
 ## Session
 
@@ -52,11 +53,11 @@ Environment variables for the file uploading upper limits.
 
 Environment variables for the servicing used.
 
-| Variable                          | Example              |
-| --------------------------------- | -------------------- |
-| CHEVERETO_HOSTNAME                | chevereto.loc        |
-| CHEVERETO_HOSTNAME_PATH           | /                    |
-| CHEVERETO_HTTPS                   | true                 |
-| CHEVERETO_SERVICING               | docker               |
-| CHEVERETO_DISABLE_PHP_PAGES       | false                |
-| CHEVERETO_IMAGE_FORMATS_AVAILABLE | JPG,PNG,BMP,GIF,WEBP |
+| Variable                          | Example                                   |
+| --------------------------------- | ----------------------------------------- |
+| CHEVERETO_HOSTNAME                | chevereto.loc                             |
+| CHEVERETO_HOSTNAME_PATH           | /                                         |
+| CHEVERETO_HTTPS                   | true                                      |
+| CHEVERETO_SERVICING               | docker                                    |
+| CHEVERETO_DISABLE_PHP_PAGES       | false                                     |
+| CHEVERETO_IMAGE_FORMATS_AVAILABLE | `["JPG","PNG","BMP","GIF","WEBP"]` (json) |

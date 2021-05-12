@@ -23,7 +23,8 @@ $settings = [
     'debug_level' => getenv('CHEVERETO_DEBUG_LEVEL'),
     'session.save_handler' => getenv('CHEVERETO_SESSION_SAVE_HANDLER'),
     'session.save_path' => getenv('CHEVERETO_SESSION_SAVE_PATH'),
-    'https' => getenv('CHEVERETO_HTTPS');
+    'https' => getenv('CHEVERETO_HTTPS'),
+    'disable_php_pages' => getenv('CHEVERETO_DISABLE_PHP_PAGES'),
 ];
 ```
 </code-block>
@@ -32,21 +33,22 @@ $settings = [
 ```php
 <?php
 $settings = [
-  'db_host' => 'localhost',
-  'db_name' => 'chevereto',
-  'db_user' => 'user',
-  'db_pass' => 'pass',
-  'db_port' => '3306',
-  'db_table_prefix' => 'chv_',
-  'db_driver' => 'mysql',
-  'db_pdo_attrs' => [],
-  'image_formats_available' => ['PNG', 'GIF', 'JPG', 'BMP', 'WEBP'],
-  'hostname' => 'chevereto.loc',
-  'hostname_path' => '/',
-  'debug_level' => 1,
-  'session.save_handler' => 'session_save_handler',
-  'session.save_path' => 'absolute_path_to_sessions',
-  'https' => true;
+    'db_host' => 'localhost',
+    'db_name' => 'chevereto',
+    'db_user' => 'user',
+    'db_pass' => 'pass',
+    'db_port' => '3306',
+    'db_table_prefix' => 'chv_',
+    'db_driver' => 'mysql',
+    'db_pdo_attrs' => [],
+    'image_formats_available' => ['PNG', 'GIF', 'JPG', 'BMP', 'WEBP'],
+    'hostname' => 'chevereto.loc',
+    'hostname_path' => '/',
+    'debug_level' => 1,
+    'session.save_handler' => 'session_save_handler',
+    'session.save_path' => 'absolute_path_to_sessions',
+    'https' => true,
+    'disable_php_pages' => false
 ];
 ```
 </code-block>

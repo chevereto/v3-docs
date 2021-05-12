@@ -4,6 +4,14 @@
 Refer to the official [Docker images for Chevereto](https://github.com/chevereto/docker) for the recommended system setup to run Chevereto, including all libraries required.
 :::
 
+## Docker Servicing
+
+| Docker hub                                                                                                                                 | Description                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- |
+| [demo:latest](https://hub.docker.com/repository/docker/chevereto/demo/tags?page=1&ordering=last_updated&name=latest)                       | Demo with dummy data         |
+| [servicing:v3-httpd-php](https://hub.docker.com/repository/docker/chevereto/servicing/tags?page=1&ordering=last_updated&name=v3-httpd-php) | httpd (mpm_prefork), mod_php |
+| [servicing:v3-php-fpm](https://hub.docker.com/repository/docker/chevereto/servicing/tags?page=1&ordering=last_updated&name=v3-php-fpm)     | php-fpm                      |
+
 ## PHP
 
 | Version | PHP |

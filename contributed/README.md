@@ -2,68 +2,76 @@
 
 The following content has been provided by users of the software. Feel free to contribute yours and show others.
 
-## 💽 Software
+# 👍 Reviews
+
+- 2021-03-22 [免费开源图床chevereto](https://www.nginxisok.com/website/chevereto.html)
+- 2020-11-29 [一款强大好用的图床工具：Chevereto](https://www.xinac.net/9036.html)
+- 2020-04-28 [Chevereto v3.15.0 - 国外经典图床程序](https://www.321002.com/563.html)
+
+
+# 💽 Software
 
 - [xiebruce/PicUploader](https://gitee.com/xiebruce/PicUploader/)
 
-##📺 Videos
+# 📺 Videos
 
 - 2020-09-08 [Chevereto图床搭建教程 | VPS搭建个人图床 小白一学就会的搭建教学 属于自己的图床 谷歌云GCP一键宝塔安装 简单图床教学](https://www.youtube.com/watch?v=QLa9VC1r94A)
 - 2020-05-28 [【群晖NAS】商用级图床项目，Chevereto](https://www.youtube.com/watch?v=h26LpCaBXiY)
 
-## Installation guides
+# 📘 Installation guides
 
-- 2021-04-24 [Chevereto图床搭建 | 利用云服务器搭建免费图床完整教程](https://blog.csdn.net/JunyouYH/article/details/116092326)
-- 2021-04-01 [Ubuntu20.04搭建Chevereto图床](https://www.cherishspring.cn/archives/chevereto.html)
+- 2021-04-24 ⭐[Chevereto图床搭建 | 利用云服务器搭建免费图床完整教程](https://blog.csdn.net/JunyouYH/article/details/116092326)
+- 2021-04-01 ⭐[Ubuntu20.04搭建Chevereto图床](https://www.cherishspring.cn/archives/chevereto.html)
 - 2021-03-24 [利用Chevereto搭建自己的图床](https://zhuanlan.zhihu.com/p/359545072)
-- 2020-10-28 [Chevereto收费版安装教程，这可能是我用过最好的图床程序了！](https://www.shejibiji.com/archives/4672)
-- 2020-10-24 [群晖通过Docker安装图床工具Chevereto的步骤](https://www.weizhiyong.com/archives/4309)
-- 2020-10-17 [宝塔面板安装Chevereto教程，一款强大好用的图床程序！](https://www.feiyubk.com/archives/29.html)
-- 2020-10-07 [自建Chevereto图床](https://left.pink/archives/3321)
-- 2020-10-01 [【自建图床】通过宝塔面板搭建图床|Chevereto图床程序搭建教程](https://zhujiget.com/5465.html)
+- 2021-02-28 ⭐[Chevereto-搭建一个自己的图床](https://blog.csdn.net/qq_44022113/article/details/114239677)
+- 2020-10-28 ⭐[Chevereto收费版安装教程，这可能是我用过最好的图床程序了！](https://www.shejibiji.com/archives/4672)
+- 2020-10-17 ⭐[宝塔面板安装Chevereto教程，一款强大好用的图床程序！](https://www.feiyubk.com/archives/29.html)
+- 2020-10-07 ⭐[自建Chevereto图床](https://left.pink/archives/3321)
+- 2020-10-01 **PP** [【自建图床】通过宝塔面板搭建图床|Chevereto图床程序搭建教程](https://zhujiget.com/5465.html)
 - 2020-09-19 [一台服务器搭建Hexo和Chevereto](https://blog.shenyuanluo.com/ConfigHexoAndChevereto.html)
 - 2020-08-19 ⭐[Chevereto免费图床搭建教程 | vps搭建免费图床教程](https://chens.life/How-to-build-a-free-image-bed.html)
-- 2020-08-04 [使用 Docker 安装 Chevereto](https://juejin.im/post/6857029114718355463)
 - 2020-07-23 ⭐[Chevereto——简介及安装](https://cloud.tencent.com/developer/article/1667722)
-- 2020-07-03 [宝塔面板安装Chevereto3：多域版本的安装使用教程/附如何开启webp图片上传](https://www.daniao.org/9937.html)
-- 2020-07-03 [Chevereto 调用百度图像内容审核 – 实现Chevereto图片鉴黄](https://www.daniao.org/9947.html)
-- 2020-06-18 [Docker Composer+Google Drive安装付费版著名图床Chevereto无限容量](https://1024.ee/index.php/2020/06/18/docker-composergoogle-drive%E5%AE%89%E8%A3%85%E4%BB%98%E8%B4%B9%E7%89%88%E8%91%97%E5%90%8D%E5%9B%BE%E5%BA%8Achevereto%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F/)
-- 2020-06-15 [群晖Docker安装chevereto图床](https://cloud.tencent.com/developer/article/1645239)
-- 2020-05-20 [群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
+- 2020-07-03 ⭐[宝塔面板安装Chevereto3：多域版本的安装使用教程/附如何开启webp图片上传](https://www.daniao.org/9937.html)
+- 2020-05-20 ⭐[群晖搭建 chevereto 图床](https://post.smzdm.com/p/a3gvxnon/)
 - 2020-04-16 [利用 Chevereto 自建图床](https://heysen.xyz/other/self-picture-bed.html)
 - 2020-04-05 [服务器搭建图床：Chevereto安装教程](https://blog.csdn.net/weixin_43426647/article/details/105328153)
-- 2020-03-09 [Chevereto图床搭建教程](https://www.dqzboy.com/chevereto%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B)
-- 2020-02-28 [基于阿里云对象存储OSS搭建图床教程](https://lmqyu.cn/869.html)
+- 2020-03-09 ⭐[Chevereto图床搭建教程](https://www.dqzboy.com/1831.html)
 - 2020-02-18 [威联通（NAS）搭建个人图床](https://juejin.im/post/6844904067236364295)
 - 2020-02-18 [折腾笔记：用Chevereto搭建个人图库&分享小姐姐们](https://www.littlemodesty.com/website-building/use-chevereto-to-build-a-self-hosted-image-home/)
 - 2020-02-06 [Chevereto图床搭建教程 | 利用VPS搭建个人图床实战](https://merlinblog.xyz/wiki/chevereto.html)
-- 2020-02-02 [docker compose 部署迁移 Chevereto 图床程序教程](https://www.ioiox.com/archives/80.html)
-- 2020-01-25 [[Guide] Docker paid version with nmtan/chevereto:installer and real ip fix (reverse proxy)](https://chevereto.com/community/threads/guide-docker-paid-version-with-nmtan-chevereto-installer-and-real-ip-fix-reverse-proxy.11887/)
-- 2020-01-15 [宝塔面板docker安装chevereto图床 – 优点就是不用自己配置环境](https://www.daniao.org/7896.html)
-- 2020-01-12 [宝塔面板源码安装Chevereto最新免费版](https://www.sevesum.com/221.html)
-- 2020-01-04 [宝塔面板源码安装Chevereto最新免费版 – 算是靠谱的图床解决方案之一](https://www.daniao.org/7882.html)
-- 2020-01-01 [使用 Chevereto 图床程序搭建个人图床实现图片自助托管](https://www.pieruo.com/17415.html)
+- 2020-01-12 **PP** ⭐[宝塔面板源码安装Chevereto最新免费版](https://www.sevesum.com/221.html)
+- 2020-01-04 **PP**⭐[宝塔面板源码安装Chevereto最新免费版 – 算是靠谱的图床解决方案之一](https://www.daniao.org/7882.html)
+- 2020-01-01 ⭐[使用 Chevereto 图床程序搭建个人图床实现图片自助托管](https://www.pieruo.com/17415.html)
 - 2019-11-04 [在宝塔环境下安装Chevereto最新免费版](https://sunsea.im/bt-install-Chevereto-Free.html)
-- 2019-11-01 [CentOS下使用Docker搭建Chevereto图床](https://www.qinayu.cn/posts/1e84ba96.html)
 - 2019-08-29 [Chevereto安装教程](https://yremp.live/chevereto/)
-- 2019-05-18 [Chevereto免费相册程序安装与使用-免费自建图床和公共图片相册](https://wzfou.com/chevereto/)
+- 2019-05-18 ⭐[Chevereto免费相册程序安装与使用-免费自建图床和公共图片相册](https://wzfou.com/chevereto/)
 
-## Guides
+# Docker 
 
-- 2021-04-10 [[图床] 使用腾讯云轻量服务器 + 腾讯云 CDN 搭建 Chevereto 图床和加速分发方案](https://www.idc.moe/archives/QCloud-Lighthouse-BTPremium-Chevereto-CDN.html)
+- 2020-10-24 [群晖通过Docker安装图床工具Chevereto的步骤](https://www.weizhiyong.com/archives/4309)
+- 2020-08-04 [使用 Docker 安装 Chevereto](https://juejin.im/post/6857029114718355463)
+- 2020-06-18 ⭐[Docker Composer+Google Drive安装付费版著名图床Chevereto无限容量](https://1024.ee/index.php/2020/06/18/docker-composergoogle-drive%E5%AE%89%E8%A3%85%E4%BB%98%E8%B4%B9%E7%89%88%E8%91%97%E5%90%8D%E5%9B%BE%E5%BA%8Achevereto%E6%97%A0%E9%99%90%E5%AE%B9%E9%87%8F/)
+- 2020-06-15 [群晖Docker安装Chevereto图床](https://cloud.tencent.com/developer/article/1645239)
+- 2020-02-02 ⭐[docker compose 部署迁移 Chevereto 图床程序教程](https://www.ioiox.com/archives/80.html)
+- 2020-01-15 [宝塔面板docker安装chevereto图床 – 优点就是不用自己配置环境](https://www.daniao.org/7896.html)
+- 2019-11-01 [CentOS下使用Docker搭建Chevereto图床](https://www.qinayu.cn/posts/1e84ba96.html)
+
+
+# 📗 Other guides
+
+- 2021-04-10 ⭐[[图床] 使用腾讯云轻量服务器 + 腾讯云 CDN 搭建 Chevereto 图床和加速分发方案](https://www.idc.moe/archives/QCloud-Lighthouse-BTPremium-Chevereto-CDN.html)
 - 2021-04-10 [Chevereto图床伪静态Rewrite规则（Nginx/Apache](https://pc6a.com/3680.html)
 - 2021-04-05 [用宝塔搭建Chevereto图床](https://www.queyikeji.cn/372.html)
 - 2021-03-26 [如何使用 chevereto 搭建免费图床系统](https://www.ml6x.com/pages/851.html)
-- 2021-02-28 [Chevereto-搭建一个自己的图床](https://blog.csdn.net/qq_44022113/article/details/114239677)
+- 2021-02-27 [Typora 配置 PicGo 插件 Chevereto Uploader，实现自动上传图片到自建的 Chevereto 图床](https://www.4dmayi.com/3235.html)
 - 2021-01-24 [[已解决]Chevereto后台在线升级出现Can’t write into /app/install/update/temp/ path 的错](https://www.4dmayi.com/3105.html)
 - 2021-01-23 [宝塔环境下配置Chevereto图床程序使其支持WeBP格式的图片|支持Chevereto免费版](https://www.4dmayi.com/3093.html)
 - 2021-01-05 [Chevereto图床程序搭建](https://www.52craft.cc/archives/9/)
-- 2020-12-26 [Chevereto 调用百度图像内容审核（图片鉴黄） – 让你的Chevereto图床高枕无忧](https://www.321002.com/761.html)
+- 2020-12-26 ⭐[Chevereto 调用百度图像内容审核（图片鉴黄） – 让你的Chevereto图床高枕无忧](https://www.321002.com/761.html)
 - 2020-11-21 [在群晖中使用Chevereto搭建图床](https://lisenlinsirb.github.io/2020/11/21/20.11.21-chevereto_synology/)
-- 2020-10-18 [Chevereto 图片展示页面默认显示嵌入代码](https://www.openos.org/post/610/)
 - 2020-06-16 [Chevereto 接入又拍云实现图片外部存储方法](https://www.pieruo.com/192.html)
-- 2020-09-11 [Chevereto: generare facilmente il “diff” con WSL](https://gioxx.org/2020/09/11/chevereto-generare-facilmente-il-diff-con-wsl/)
-- 2020-03-24 [用docker方式自建图床chevereto](https://dana5haw.com/posts/Docker-Image-Hosting-Chevereto.html)
+- 2020-03-24 ⭐[用docker方式自建图床chevereto](https://dana5haw.com/posts/Docker-Image-Hosting-Chevereto.html)
+- 2020-02-28 ⭐[基于阿里云对象存储OSS搭建图床教程](https://lmqyu.cn/869.html)
 
 ## Hacks/Tips
 
@@ -120,10 +128,4 @@ The following content has been provided by users of the software. Feel free to c
 - 2020-01-22 [uPic 图床配置教程 - Chevereto](https://xiaodongxier.com/118.html)
 - 2019-08-17 [Chevereto也能用QQ、GitHub、微博登陆啦](https://doge.uk/coding/chevereto-qq-login.html)
 
-## Reviews
 
-- 2021-03-22 [免费开源图床chevereto](https://www.nginxisok.com/website/chevereto.html)
-- 2020-12-05 [Gone too Soon - From Koken to Chevereto](https://den.black/gone-too-soon-from-koken-to-chevereto/)
-- 2020-11-29 [一款强大好用的图床工具：Chevereto](https://www.xinac.net/9036.html)
-- 2020-07-01 [Saying goodbye to Flickr and hi to Chevereto](https://guneetnarula.com/blog/2020/07/saying-goodbye-to-flickr-and-hi-to-chevereto/)
-- 2020-01-10 [Chevereto: Bilder Hosting für den eigenen Server](https://www.youtube.com/watch?v=wriVgnEfJ0Y)

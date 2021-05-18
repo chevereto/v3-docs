@@ -5,6 +5,6 @@ return [
     'contributed/' => '🤗 Contributed',
     'features/' => '🎠 Features',
     'get-started/' => '🔥 Get Started',
-    'setup/' => '🏗 Setup',
+    'setup/' => '🥳 Setup',
     'settings/' => '⚙️ Settings',
 ];

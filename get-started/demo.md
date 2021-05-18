@@ -1,4 +1,4 @@
-# 🏟 Demo
+# 🍰 Demo
 
 Build your own Chevereto demo with sample data, all you need to extensively try Chevereto anywhere.
 

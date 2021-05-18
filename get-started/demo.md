@@ -1,9 +1,9 @@
 # 🏟 Demo
 
-You can setup your own demo populated with sample data, including all you need to extensively try Chevereto anywhere.
+Build your own Chevereto demo with sample data, all you need to extensively try Chevereto anywhere.
 
-::: tip
-There's also a hosted demo at [demo.chevereto.com](https://demo.chevereto.com) (no administrative access).
+::: tip hosted demo
+See a hosted demo at [demo.chevereto.com](https://demo.chevereto.com) (no admin access).
 :::
 
 ## Step-by-step guide
@@ -14,10 +14,6 @@ There's also a hosted demo at [demo.chevereto.com](https://demo.chevereto.com) (
 * [Docker](https://www.docker.com/get-started)
 
 Clone the [chevereto/docker](https://github.com/chevereto/docker) repository.
-
-```sh
-git clone git@github.com:chevereto/docker.git
-```
 
 ### Running
 

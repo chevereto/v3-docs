@@ -13,7 +13,6 @@
 
 - 2021-03-22 [免费开源图床Chevereto](https://www.nginxisok.com/website/chevereto.html)
 - 2020-11-29 [一款强大好用的图床工具：Chevereto](https://www.xinac.net/9036.html)
-- 2020-04-28 [Chevereto v3.15.0 - 国外经典图床程序](https://www.321002.com/563.html)
 
 ## Software
 
@@ -72,7 +71,6 @@
 - 2021-01-24 [[已解决]Chevereto后台在线升级出现Can’t write into /app/install/update/temp/ path 的错](https://www.4dmayi.com/3105.html)
 - 2021-01-23 [宝塔环境下配置Chevereto图床程序使其支持WeBP格式的图片|支持Chevereto免费版](https://www.4dmayi.com/3093.html)
 - 2021-01-05 [Chevereto图床程序搭建](https://www.52craft.cc/archives/9/)
-- 2020-12-26 ⭐[Chevereto 调用百度图像内容审核（图片鉴黄） – 让你的Chevereto图床高枕无忧](https://www.321002.com/761.html)
 - 2020-11-21 [在群晖中使用Chevereto搭建图床](https://lisenlinsirb.github.io/2020/11/21/20.11.21-chevereto_synology/)
 - 2020-06-16 [Chevereto 接入又拍云实现图片外部存储方法](https://www.pieruo.com/192.html)
 

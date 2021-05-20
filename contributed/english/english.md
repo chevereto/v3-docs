@@ -1,6 +1,6 @@
 # Contributed
 
-*The following content has been provided by users of the software. Feel free to contribute yours and show others.*
+The following content has been provided by users of the software. Feel free to contribute yours and show others.
 
 | Icon |  |
 | ----------- | ----------- |

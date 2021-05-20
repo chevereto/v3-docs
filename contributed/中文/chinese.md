@@ -1,6 +1,6 @@
 # Contributed
 
-*The following content has been provided by users of the software. Feel free to contribute yours and show others.*
+The following content has been provided by users of the software. Feel free to contribute yours and show others.
 
 | Icon   |              |
 | ------ | ------------ |
@@ -25,6 +25,7 @@
 
 ## Installation guides
 
+- 2021-05-20 [一款强大好用的图床程序：Chevereto安装教程](https://www.tracymc.cn/archives/2387)
 - 2021-04-24 ⭐[Chevereto图床搭建 | 利用云服务器搭建免费图床完整教程](https://blog.csdn.net/JunyouYH/article/details/116092326)
 - 2021-04-01 ⭐[Ubuntu20.04搭建Chevereto图床](https://www.cherishspring.cn/archives/chevereto.html)
 - 2021-03-26 [如何使用 chevereto 搭建免费图床系统](https://www.ml6x.com/pages/851.html)

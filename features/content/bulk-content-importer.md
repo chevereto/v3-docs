@@ -6,7 +6,7 @@ This tool allows to **mass import** images, albums, and users by parsing the con
 Importing takes the content from the importing path and *import it* into database, filesystem or external storage. Failed files will be moved to a special directory at `./importing/failed/`.
 :::
 
-::: danger Before V3.19
+::: danger Before V3.20
 In old releases failed files will be **permanently removed**. Make sure to use a backup.
 :::
 
@@ -32,7 +32,7 @@ Go to `dashboard/bulk` to review importing jobs.
 
 ### Command
 
-* V3.19+
+* V3.20+
 
 <code-group>
 <code-block title="Shell">

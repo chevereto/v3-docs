@@ -8,7 +8,7 @@ Always check that your server meets the [requirements](../setup/system/requireme
 Make sure to always have a working backup of your database and your code modifications (if any). Keep in mind that after the update you will need to re-apply your modifications.
 :::
 
-## CLI update (3.19+)
+## CLI update (V3.20+)
 
 ::: tip Recommended
 This is recommended as it has zero chances to fail due to time execution limitations.

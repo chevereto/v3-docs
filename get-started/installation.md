@@ -76,7 +76,7 @@ You can setup Chevereto using HTTP or CLI (recommended).
 
 * Go to `/install` and submit the installation form.
 
-### CLI setup (3.19+)
+### CLI setup (V3.20+)
 
 * Run the following command:
 

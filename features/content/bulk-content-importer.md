@@ -37,7 +37,7 @@ Go to `dashboard/bulk` to review importing jobs.
 <code-group>
 <code-block title="Shell">
 ```sh
-sudo -u www-data php cli.php -C importing
+sudo -u www-data php /var/www/html/cli.php -C importing
 ```
 </code-block>
 

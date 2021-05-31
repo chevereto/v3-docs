@@ -9,5 +9,6 @@ return [
     'upgrading.md' => '🚀 Upgrading',
     'contributing.md' => '💖 Contributing',
     'installation.md' => '📦 Installation',
+    'installation.md' => '💯 Post-Install',
     'updating.md' => '⚡ Updating',
 ];

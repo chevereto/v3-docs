@@ -15,7 +15,7 @@ Make sure to always have a working backup of your database and your code modific
 <code-group>
 <code-block title="Shell">
 ```sh
-sudo -u www-data php cli.php -C update
+sudo -u www-data php /var/www/html/cli.php -C update
 ```
 </code-block>
 

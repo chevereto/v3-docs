@@ -17,15 +17,15 @@ You can easily override to configure another error log device (such as a regular
 ## Accessing logs
 
 <code-group>
-<code-block title="Docker">
-```sh
-docker logs -f container-name | sed 's/\\n/\n/g'
-```
-</code-block>
-
 <code-block title="Shell">
 ```sh
 tail -f /var/log/apache2/error.log | sed 's/\\n/\n/g'
+```
+</code-block>
+
+<code-block title="Docker">
+```sh
+docker logs -f container-name | sed 's/\\n/\n/g'
 ```
 </code-block>
 </code-group>

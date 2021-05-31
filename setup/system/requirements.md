@@ -77,33 +77,29 @@ Chevereto requires a MySQL/MariaDB database. Database user must have `ALL PRIVIL
 
 ## Cron
 
-A cron is required to process the application background jobs. The cron may look like this:
+A cron (scheduled run command) is required to process the application background jobs. The cron may look like this where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
 
 ```sh
 * * * * * IS_CRON=1 /usr/bin/php /var/www/html/cli.php -C cron
 ```
 
-Where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
-
-### Run cron
-
-Run the command as `www-data` user by adding `sudo -u www-data` to the command:
+### Command
 
 <code-group>
 <code-block title="V3.20+">
 ```sh
-sudo -u www-data IS_CRON=1 /usr/bin/php /var/www/html/cli.php -C cron
+sudo -u www-data php /var/www/html/cli.php -C cron
 ```
 </code-block>
 
 <code-block title="Older">
 ```sh
-sudo -u www-data IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php
+sudo -u www-data IS_CRON=1 php /var/www/html/cron.php
 ```
 </code-block>
 </code-group>
 
-### Run cron using Docker
+#### Docker command
 
 <code-group>
 <code-block title="V3.20+">

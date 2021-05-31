@@ -1,9 +1,9 @@
 # 🍰 Demo
 
-Build your own Chevereto demo with sample data, all you need to extensively try Chevereto anywhere.
+Build your own Docker-based Chevereto demo with sample data to extensively try Chevereto anywhere.
 
-::: tip hosted demo
-See a hosted demo at [demo.chevereto.com](https://demo.chevereto.com) (no admin access).
+::: tip Hosted demo
+There's a hosted demo at [demo.chevereto.com](https://demo.chevereto.com) (no admin access).
 :::
 
 ## Step-by-step guide

@@ -2,6 +2,7 @@
 
 return [
     'README.md' => '👋🏾 Introduction',
+    'deploy.md' => '🚀 Deploy',
     'demo.md' => '🍰 Demo',
     'status.md' => '✨ Status',
     'version.md' => '🎉 Version',

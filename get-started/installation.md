@@ -1,14 +1,14 @@
 # 📦 Installation
 
-To install Chevereto it requires a server environment where the software and uploaded files will be served. This server can be anywhere, but it must be configured to run Chevereto properly.
+To install Chevereto it requires a server environment where the software and uploaded files will be served.
 
 ::: warning Requirements
-Always check that the server for Chevereto provides the [requirements](../setup/system/requirements.md) required to run Chevereto. Don't ignore the system messages mentioning lack of server software as those are detections in the application layer.
+Always check that the server provides the [requirements](../setup/system/requirements.md) required to run Chevereto. Don't ignore the system messages mentioning lack of server software as those are detections in the application layer.
 :::
 
 ## Installation methods
 
-### Installer (recommended)
+### Installer
 
 The [chevereto/installer](https://github.com/chevereto/installer) is a single `.php` file which will download and extract the latest release in the target destination.
 
@@ -108,7 +108,7 @@ docker exec -it \
 | e      | Admin email    |
 | x      | Admin password |
 
-### Background jobs (3.18+)
+### Background jobs (V3.18+)
 
 The application background tasks needs to be executed by running a cron. At `/dashboard` you will find the [required cron](../setup/system/requirements.md#cron) entry for your installation.
 

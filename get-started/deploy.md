@@ -1,6 +1,6 @@
 # 🚀 Deploy on Vultr
 
-<img src="../src/partners/vultr/logo_onwhite.svg" alt="Vultr" width="200"/>
+<img src="../src/partners/vultr/logo_onwhite.svg" alt="Vultr" width="500"/>
 
 Chevereto can be easily deployed on [Vultr](https://www.vultr.com/?ref=8880328-6G) directly from the [Vultr Marketplace](https://www.vultr.com/marketplace/?ref=8880328-6G).
 

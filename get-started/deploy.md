@@ -14,7 +14,7 @@ Use our Vultr links to get $100 credit to try Vultr services. We get $25 back, e
 
 Chevereto is available directly under Server Type, **Marketplace Apps** when creating a new server.
 
-![Chevereto on Vultr](../src/partners/vultr/screen/panel-server-type.webp "Chevereto on Vultr")
+![Chevereto on Vultr](../src/partners/vultr/screen/panel-server-type.jpg "Chevereto on Vultr")
 
 * Configure your server as your needs
 * That's all

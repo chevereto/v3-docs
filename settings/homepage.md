@@ -27,22 +27,6 @@ Adds a new cover image.
 | ----- | ----------- |
 | Image | `<400KB`    |
 
-## Vector logo image
-
-The vector logo image for homepage. The size is just for reference, the system will display the logo fixing height.
-
-| Type | Default |
-| ---- | ------- |
-| SVG  | 500x76  |
-
-## Raster logo image
-
-The raster logo image homepage. The size is just for reference, the system will display the logo fixing height.
-
-| Type | Default |
-| ---- | ------- |
-| PNG  | 314x48  |
-
 ## Title
 
 Determines the title shown in homepage.

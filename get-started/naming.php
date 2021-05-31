@@ -6,9 +6,9 @@ return [
     'demo.md' => '🍰 Demo',
     'status.md' => '✨ Status',
     'version.md' => '🎉 Version',
-    'upgrading.md' => '🚀 Upgrading',
+    'upgrading.md' => '🪄 Upgrading',
     'contributing.md' => '💖 Contributing',
     'installation.md' => '📦 Installation',
-    'installation.md' => '💯 Post-Install',
+    'post-install.md' => '💯 Post-Install',
     'updating.md' => '⚡ Updating',
 ];

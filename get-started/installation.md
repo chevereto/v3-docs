@@ -80,7 +80,7 @@ Check our [Docker Hub](https://hub.docker.com/r/chevereto/chevereto/tags?page=1&
 Run the following to create the `chevereto` database and its user binding:
 
 ```sh
-docker exec chv-mariadb mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
+sudo mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
     CREATE USER 'chevereto' IDENTIFIED BY 'user_database_password'; \
     GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
 ```

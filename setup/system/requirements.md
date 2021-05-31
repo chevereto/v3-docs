@@ -4,14 +4,6 @@
 Refer to the official [Docker images for Chevereto](https://github.com/chevereto/docker) for the recommended system setup to run Chevereto, including all libraries required.
 :::
 
-## Docker Servicing
-
-| Docker hub                                                                                                                                 | Description                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- |
-| [demo:latest](https://hub.docker.com/repository/docker/chevereto/demo/tags?page=1&ordering=last_updated&name=latest)                       | Demo with dummy data         |
-| [servicing:v3-httpd-php](https://hub.docker.com/repository/docker/chevereto/servicing/tags?page=1&ordering=last_updated&name=v3-httpd-php) | httpd (mpm_prefork), mod_php |
-| [servicing:v3-php-fpm](https://hub.docker.com/repository/docker/chevereto/servicing/tags?page=1&ordering=last_updated&name=v3-php-fpm)     | php-fpm                      |
-
 ## PHP
 
 | Version | PHP |
@@ -81,38 +73,56 @@ Chevereto user will require **read/write** access in the following paths:
 | ------- | ----- | ------- |
 | 3.20    | 8     | 10      |
 
-Database user must have `ALL PRIVILEGES` over the target database.
+Chevereto requires a MySQL/MariaDB database. Database user must have `ALL PRIVILEGES` over the target database.
 
 ## Cron
 
-A cron is required to process the application background jobs. The cron for your installation may look like this:
+A cron is required to process the application background jobs. The cron may look like this:
 
 ```sh
-* * * * * IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php
+* * * * * IS_CRON=1 /usr/bin/php /var/www/html/cli.php -C cron
 ```
 
 Where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
 
 ### Run cron
 
-You can go to [explainshell](https://explainshell.com/explain?cmd=IS_CRON%3D1+%2Fusr%2Fbin%2Fphp+%2Fvar%2Fwww%2Fhtml%2Fchevereto.loc%2Fpublic_html%2Fcron.php+%3E%2Fdev%2Fnull+2%3E%261) to inspect the command, you can freely alter it to match your needs. Run the command as `www-data` user by adding `sudo -u www-data` to the command:
+Run the command as `www-data` user by adding `sudo -u www-data` to the command:
 
+<code-group>
+<code-block title="V3.20+">
+```sh
+sudo -u www-data IS_CRON=1 /usr/bin/php /var/www/html/cli.php -C cron
+```
+</code-block>
+
+<code-block title="Older">
 ```sh
 sudo -u www-data IS_CRON=1 /usr/bin/php /var/www/html/chevereto.loc/public_html/cron.php
 ```
+</code-block>
+</code-group>
 
 ### Run cron using Docker
 
-When using Docker is recommended that the cron setup executes outside the container.
+<code-group>
+<code-block title="V3.20+">
+```sh
+docker exec -it \
+    --user www-data \
+    chevereto-container /usr/local/bin/php /var/www/html/cli.php -C cron
+```
+</code-block>
 
-You can achieve that by running this from the host:
-
+<code-block title="Older">
 ```sh
 docker exec -it \
     --user www-data \
     -e IS_CRON=1 \
-    my-container /usr/local/bin/php /var/www/html/cron.php
+    chevereto-container /usr/local/bin/php /var/www/html/cron.php
 ```
+</code-block>
+</code-group>
 
 ## Web server
 

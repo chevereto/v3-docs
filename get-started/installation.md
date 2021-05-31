@@ -3,10 +3,87 @@
 To install Chevereto it requires a server environment where the software and uploaded files will be served.
 
 ::: warning Requirements
-Always check that the server provides the [requirements](../setup/system/requirements.md) required to run Chevereto. Don't ignore the system messages mentioning lack of server software as those are detections in the application layer.
+Always check that the server provides the [requirements](../setup/system/requirements.md) required to run Chevereto.
 :::
 
-## Installation methods
+## Docker
+
+Create the `chv-network` that containers will use to comunicate each other.
+
+```sh
+docker network create chv-network
+```
+
+### Database container
+
+Create the `chv-mariadb` container connected to `chv-network`.
+
+```sh
+docker run -d \
+    --name chv-mariadb \
+    --network chv-network \
+    --network-alias mariadb \
+    --health-cmd='mysqladmin ping --silent' \
+    -e MYSQL_ROOT_PASSWORD=password \
+    mariadb:focal
+```
+
+```sh
+sudo mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
+    CREATE USER 'chevereto' IDENTIFIED BY 'user_database_password'; \
+    GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
+```
+
+### Chevereto container
+
+Chevereto containers are bootstrapped, Chevereto will be downloaded and installed on first container run.
+
+::: tip
+Check the environment variables reference for all `-e` options that you can pass.
+:::
+
+<code-group>
+<code-block title="Paid">
+```sh
+docker run -d \
+    -p 8008:80 \
+    --name chv-httpd-php \
+    --network chv-network \
+    --network-alias chv-httpd-php \
+    -e "CHEVERETO_SOFTWARE=chevereto" \
+    -e "CHEVERETO_LICENSE=put_license_here" \
+    -e "CHEVERETO_TAG=3.20.0" \
+    chevereto/chevereto:3.20-httpd-php
+```
+</code-block>
+
+<code-block title="Free">
+```sh
+docker run -d \
+    -p 8008:80 \
+    --name chv-httpd-php \
+    --network chv-network \
+    --network-alias chv-httpd-php \
+    -e "CHEVERETO_SOFTWARE=chevereto-free" \
+    -e "CHEVERETO_TAG=1.3.0" \
+    chevereto/chevereto:3.20-httpd-php
+```
+</code-block>
+</code-group>
+
+Check our [Docker Hub](https://hub.docker.com/r/chevereto/chevereto/tags?page=1&ordering=last_updated) for more system tags.
+
+## Root installation
+
+### Prepare Database
+
+Run the following to create the `chevereto` database and its user binding:
+
+```sh
+docker exec chv-mariadb mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
+    CREATE USER 'chevereto' IDENTIFIED BY 'user_database_password'; \
+    GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
+```
 
 ### Installer
 

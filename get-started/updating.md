@@ -10,10 +10,6 @@ Make sure to always have a working backup of your database and your code modific
 
 ## CLI update (V3.20+)
 
-::: tip Recommended
-This is recommended as it has zero chances to fail due to time execution limitations.
-:::
-
 * Run the following command:
 
 <code-group>

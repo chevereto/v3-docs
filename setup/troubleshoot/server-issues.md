@@ -14,18 +14,17 @@ Not all web servers follow some basic standards and in some cases even having a 
 
 PHP runs over your Webserver in different flavours (module or `fcgi`) and with different libraries and settings that can cause issues:
 
-- Outdated PHP version (Chevereto needs PHP 5.6+)
-- Misconfiguration in PHP libraries (GD, cURL, BCMath, etc.)
+- Outdated PHP version
+- Misconfiguration in PHP libraries
 - Bad php.ini directives
-- Low execution time (system is halted before complete)
-- Bad sessions setup (permissions)
-- eAccelerator enabled (Deprecated for PHP 5.3+)
+- Low execution time
+- Bad sessions setup
 
 ## MySQL issues
 
 The most common things to worry are:
 
 - Wrong credentials (user/password)
-- Invalid or missing privileges (can't read or write in the database)
+- Invalid or missing privileges (read/write in the database)
 - Outdated MySQL version
-- Bad configured socket
+- Bad configured MySQL socket

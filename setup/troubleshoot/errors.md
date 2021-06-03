@@ -2,17 +2,23 @@
 
 ## Stack Trace
 
-Code below shows an example error stack trace. It describes the error, provide its code and it shows the files stack.
+Code below shows an example error stack trace. It describes the error, provide its `errorId` and it shows the call stack.
 
 ```txt
-Fatal error [123]: Test
-Triggered in /app/routes/route.index.php at line 22
+Aw, snap! Internal Server Error [debug @ error_log] - https://v3-docs.chevereto.com/setup/troubleshoot/debug.html
+
+** errorId #dacb7f96fb9fd28d **
+>> PDOException [2002]: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+At /lib/G/classes/class.db.php:66
+
+>> PDOException [0]: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+At /lib/G/classes/class.db.php:66
 
 Stack trace:
-#0 /lib/G/classes/class.handler.php(205): G\Handler->{closure}(G\Handler)
-#1 /lib/G/classes/class.handler.php(100): G\Handler->processRequest()
-#2 /app/loader.php(201): G\Handler->__construct(Array)
-#3 /index.php(21): include_once('/app/loader.php')
+#0 /lib/G/classes/class.db.php(66): PDO->__construct()
+#1 /lib/G/classes/class.db.php(80): G\\DB->__construct()
+#2 /app/loader.php(58): G\\DB::getInstance()
+#3 /index.php(20): include_once('/app/loader.php')
 ```
 
 ## It is Chevereto related?

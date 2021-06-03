@@ -1,4 +1,4 @@
-# 🪄 Upgrading
+# 🌠 Upgrading
 
 This section outlines the upgrade process required to upgrade to V3 from old releases.
 

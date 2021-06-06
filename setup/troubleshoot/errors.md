@@ -1,8 +1,21 @@
 # 😰 Errors
 
+When having an error Chevereto will always indicate an error id (**errorId**):
+
+```plain
+HTTP 500: ** errorId #dacb7f96fb9fd28d **
+```
+
+This is normal as system errors in Chevereto **are hidden by default** on production mode. The errorId is a randomly generated unique identifer per error event.
+
+::: tip Note: ErrorId is not an error message
+When requesting help **you need to provide the actual error message**, not just the error id. The errorId exists so you can look for that error in your configured system log device.
+:::
+
 ## Stack Trace
 
-Code below shows an example error stack trace. It describes the error, provide its `errorId` and it shows the call stack.
+Code below shows an example error stack trace. It describes the error, provide its unique errorId and it shows the call stack. 
+
 
 ```txt
 Aw, snap! Internal Server Error [debug @ error_log] - https://v3-docs.chevereto.com/setup/troubleshoot/debug.html

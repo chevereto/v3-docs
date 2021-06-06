@@ -43,8 +43,8 @@ Depending on your work context you may need to configure debug accordingly.
 
 ## Error reporting
 
-::: warning
+::: warning Not for production!
 Enable this is recommended only in development environments.
 :::
 
-To enable printed errors (`error_reporting`) you will need to go to your `Dashboard > Settings > System`. By enabling this all the runtime errors will be printed which means that they will be visible.
+To enable printed errors you will need to go to [system settings](../../settings/system.md). By enabling this all the runtime errors will be printed which means that they will be visible.

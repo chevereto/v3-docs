@@ -44,7 +44,9 @@ docker exec -it \
 
 ## Background jobs (V3.18+)
 
-Background tasks needs to be executed by running a [cron](../setup/system/requirements.md#cron).
+Background jobs refers to a command-line action that needs to be carried frequently to fullfil the application background tasks, it needs to be configured by running a [cron](../setup/system/requirements.md#cron).
+
+You need to configure this every time you provide Chevereto to a new server, it also applies if you migrate servers.
 
 ::: danger
 Don't forget to provide the cron executing to fullfil the application background jobs. If this is not configured Chevereto won't remove expired images, check for updates, process external storage deletes and run maintenance tasks.
@@ -52,4 +54,10 @@ Don't forget to provide the cron executing to fullfil the application background
 
 ## Setup email
 
-Go to [Email settings](../settings/email.md) to configure the transactional email service. Don't skip this as user registration rely on this.
+Email setup refers to the system required to deliver email in Chevereto. Go to [Email settings](../settings/email.md) to understand how configure the transactional email service.
+
+You need to configure this every time you change email delivery provider.
+
+::: danger
+Don't forget to configure email delivery as as user registration rely on this. If email delivery isn't configured Chevereto won't be able to recover user's lost passwords neither complete registrations requiring to confirm email address.
+:::

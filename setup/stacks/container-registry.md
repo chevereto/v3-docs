@@ -25,7 +25,12 @@ The container registry is where the container image will be available for your d
 ## Step-by-step guide
 
 1. Follow the instructions at [chevereto/container-builder](https://github.com/chevereto/container-builder)
-2. Once your image gets created you can invoke it as `owner/image:tag`
+2. Provide a Docker network and a MySQL container following [this guide](../../get-started/installation.md#docker)
+3. Once your image gets created you can invoke it as `owner/image:tag`
+
+::: tip
+Check [Environment](../system/environment.md) for all the `-e` options you can pass in command below.
+:::
 
 ```sh
 docker run -d \
@@ -70,4 +75,4 @@ git merge template/main
 ```
 
 * Create the new image as [described earlier](#step-by-step-guide)
-* Pull the updated image and re-build the Chevereto container(s)
+* Pull the updated image and re-build the Chevereto container

@@ -36,42 +36,7 @@ docker exec chv-mariadb sudo mysql -uroot -ppassword -e "CREATE DATABASE chevere
 
 ### Chevereto container
 
-Chevereto containers are bootstrapped, Chevereto will be downloaded and installed on first container run.
-
-::: tip
-Check the environment variables reference for all `-e` options that you can pass.
-:::
-
-<code-group>
-<code-block title="Paid">
-```sh
-docker run -d \
-    -p 8008:80 \
-    --name chv-httpd-php \
-    --network chv-network \
-    --network-alias chv-httpd-php \
-    -e "CHEVERETO_SOFTWARE=chevereto" \
-    -e "CHEVERETO_LICENSE=put_license_here" \
-    -e "CHEVERETO_TAG=3.20.0" \
-    chevereto/chevereto:3.20-httpd-php
-```
-</code-block>
-
-<code-block title="Free">
-```sh
-docker run -d \
-    -p 8008:80 \
-    --name chv-httpd-php \
-    --network chv-network \
-    --network-alias chv-httpd-php \
-    -e "CHEVERETO_SOFTWARE=chevereto-free" \
-    -e "CHEVERETO_TAG=1.3.0" \
-    chevereto/chevereto:3.20-httpd-php
-```
-</code-block>
-</code-group>
-
-Check our [Docker Hub](https://hub.docker.com/r/chevereto/chevereto/tags?page=1&ordering=last_updated) for more system tags.
+A Chevereto [container](../setup/stacks/container.md) can be either bootstrapped or you can build and manage your system images using [container registry](../setup/stacks/container-registry.md) (recommended).
 
 ## Root installation
 

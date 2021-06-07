@@ -21,6 +21,26 @@ Packages and PECL provides the same convenience, but as packages are made for de
 Note that packages not only contain the software, it could also trigger other effects in the system.
 :::
 
+### PHP configuration
+
+The following `ini` values are recommended for Chevereto installations.
+
+```sh
+upload_max_filesize = 50M;
+post_max_size = 50M;
+max_execution_time = 30;
+memory_limit = 512M;
+```
+
+| Property            | Description                                      | Example             |
+| ------------------- | ------------------------------------------------ | ------------------- |
+| upload_max_filesize | Maximum upload size                              | `50M` for 50 MB     |
+| post_max_size       | Maximum post size                                | Same as above       |
+| max_execution_time  | Maximum time to execute the software, in seconds | `30` for 30 seconds |
+| memory_limit        | Maximum memory to allocate                       | `512M` for 512 MB   |
+
+You can toggle this limits to reflect your hardware and server load. Check this article for more info: [PHP common pitfalls](http://www.php.net/manual/en/features.file-upload.common-pitfalls.php).
+
 ### Extensions
 
 The following PHP extensions are required for Chevereto.
@@ -132,7 +152,7 @@ The web server must rewrite HTTP requests like `GET /image/some-name.<id>` to `/
 
 ```nginx
 # Context limits
-client_max_body_size 25M;
+client_max_body_size 50M;
 
 # Disable access to sensitive files
 location ~* (app|content|lib)/.*\.(po|php|lock|sql)$ {

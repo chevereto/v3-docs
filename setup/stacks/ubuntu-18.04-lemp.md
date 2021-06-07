@@ -74,8 +74,8 @@ sudo nano /etc/php/7.2/fpm/conf.d/chevereto.ini
 Paste `Ctrl+Shift+V` this:
 
 ```sh
-upload_max_filesize = 25M;
-post_max_size = 25M;
+upload_max_filesize = 50M;
+post_max_size = 50M;
 max_execution_time = 30;
 memory_limit = 512M;
 ```
@@ -114,7 +114,7 @@ server {
     index          index.html;
 
     # Context limits
-    client_max_body_size 25M;
+    client_max_body_size 50M;
 
     # Disable access to sensitive files
     location ~* (app|content|lib)/.*\.(po|php|lock|sql)$ {

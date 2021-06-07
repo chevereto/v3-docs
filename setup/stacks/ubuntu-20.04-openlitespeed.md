@@ -1,4 +1,4 @@
-# 🎾 Ubuntu 20.04 (OpenLiteSpeed)
+# Ubuntu 20.04 (OpenLiteSpeed)
 
 This guide is for **Ubuntu 20.04 (LTS) x64** and it will show you how to set up Chevereto with OpenLiteSpeed web server on Ubuntu.
 

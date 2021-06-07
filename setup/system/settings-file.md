@@ -2,7 +2,7 @@
 
 The file at `app/settings.php` contains the application core settings like database credentials, debug level, hostname, enabled formats and more.
 
-A settings file may look like this (we recommend using [environment](environment.md) variables).
+A settings file may look like this (we recommend checking [environment](environment.md) variables for more info).
 
 <code-group>
 <code-block title="Env">
@@ -29,6 +29,7 @@ $settings = [
     'db_table_prefix' => getenv('CHEVERETO_DB_TABLE_PREFIX'),
     'db_user' => getenv('CHEVERETO_DB_USER'),
     'debug_level' => (int) getenv('CHEVERETO_DEBUG_LEVEL'),
+    'error_log' => getenv('CHEVERETO_ERROR_LOG'),
     'disable_php_pages' => (bool) getenv('CHEVERETO_DISABLE_PHP_PAGES'),
     'hostname_path' => getenv('CHEVERETO_HOSTNAME_PATH'),
     'hostname' => getenv('CHEVERETO_HOSTNAME'),
@@ -64,6 +65,7 @@ $settings = [
     'db_table_prefix' => 'chv_',
     'db_user' => 'user',
     'debug_level' => 1,
+    'error_log' => 'syslog',
     'disable_php_pages' => false,
     'hostname_path' => '/',
     'hostname' => 'chevereto.loc',

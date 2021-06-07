@@ -2,6 +2,10 @@
 
 This is the environment variables reference for Chevereto.
 
+::: tip Settings file?
+If you can't use environment variables in your setup you must rely on [settings file](settings-file.md) to configure these.
+:::
+
 ## Assets
 
 Environment variables for storing assets that can be uploaded to any of the supported external storage APIs.

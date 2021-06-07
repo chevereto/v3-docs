@@ -1,4 +1,4 @@
-# Container
+# Container (bootstrapped)
 
 This guide is for bootstrapped container based provisioning for Chevereto using system images published at [Docker Hub](https://hub.docker.com/r/chevereto/chevereto).
 

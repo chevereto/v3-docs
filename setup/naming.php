@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'vps/' => 'VPS',
+    'stacks/' => 'Stacks',
 ];

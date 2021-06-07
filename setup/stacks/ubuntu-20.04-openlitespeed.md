@@ -1,4 +1,4 @@
-# 🎾 Ubuntu 20.04 (OpenLiteSpeed)
+# Ubuntu 20.04 (OpenLiteSpeed)
 
 This guide is for **Ubuntu 20.04 (LTS) x64** and it will show you how to set up Chevereto with OpenLiteSpeed web server on Ubuntu.
 
@@ -394,8 +394,8 @@ chown -R nobody:nogroup /usr/local/lsws/example.com/
 To change php.ini file and to increase the upload limit, you have to change following values in `/usr/local/lsws/lsphp74/etc/php/7.4/litespeed/php.ini`:
 
 ```sh
-upload_max_filesize = 25M
-post_max_size = 25M
+upload_max_filesize = 50M
+post_max_size = 50M
 max_execution_time = 30
 memory_limit = 512M
 ```

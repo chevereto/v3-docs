@@ -41,21 +41,28 @@ memory_limit = 512M;
 
 You can toggle this limits to reflect your hardware and server load. Check this article for more info: [PHP common pitfalls](http://www.php.net/manual/en/features.file-upload.common-pitfalls.php).
 
-### Extensions
+### PHP Extensions
 
 The following PHP extensions are required for Chevereto.
 
-* imagick
 * curl
+* exif
+* fileinfo
 * hash
+* imagick
 * json
 * mbstring
 * pdo
 * pdo-mysql
-* zip
 * session
 * xml
-* fileinfo
+* zip
+
+### PHP Features
+
+Chevereto requires unrestricted access to all PHP functions. If some or any PHP function is removed it could cause Chevereto to fail or to not work at all. Note that the following functions must not be restricted:
+
+* [set_time_limit](https://www.php.net/set-time-limit)
 
 ## ImageMagick
 

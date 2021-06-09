@@ -1,8 +1,8 @@
 # 🌠 Upgrading
 
-This section outlines the upgrade process required to upgrade to V3 from old releases.
+This section outlines the upgrade process required to upgrade to V3 from old major releases (V2 and older).
 
-::: warning Unsupported
+::: danger Unsupported
 These versions are really old, if you encounter any issue upgrading from these please [report](https://chv.to/open-bug) it.
 :::
 

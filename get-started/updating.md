@@ -1,11 +1,10 @@
 # ⚡ Updating
 
-::: warning Check system requirements
-Always check that your server meets the [requirements](../setup/system/requirements.md) for running the target release to update.
-:::
+This section outlines the update process required to upgrade to V3 from old releases (V3.X).
 
-::: danger Backup
-Make sure to always have a working backup of your database and your code modifications (if any). Keep in mind that after the update you will need to re-apply your modifications.
+::: danger
+* Always check that your server meets the [requirements](../setup/system/requirements.md) for running the target release to update.
+* Make sure to always have a working backup of your database and your code modifications (if any). Keep in mind that after the update you will need to re-apply your modifications.
 :::
 
 ## CLI update (V3.20+)

@@ -8,7 +8,7 @@ return [
     'demo.md',
     'installation.md',
     'post-install.md',
+    'updating.md',
     'upgrading.md',
     'contributing.md',
-    'updating.md'
 ];

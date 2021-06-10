@@ -24,7 +24,7 @@ The container registry is where the container image will be available for your d
 
 ## Step-by-step guide
 
-1. Follow the instructions at [chevereto/container-builder](https://github.com/chevereto/container-builder)
+1. Follow the instructions at [chevereto/container-builder](https://github.com/chevereto/container-builder) to create the image
 2. Provide a Docker network and a MySQL container following [this guide](../../get-started/installation.md#docker)
 3. Once your image gets created you can invoke it as `owner/image:tag`
 
@@ -57,22 +57,9 @@ docker run -d \
 Do not update using the built-in update system available at `/dashboard` as those changes won't persist. You need to re-build the image and container(s).
 :::
 
-* Add the base template as remote `template`
+To update your custom build all the system files and its provisioning will be replaced. This only affects the application container, don't touch the database container.
 
-This is required just once.
-  
-```sh
-git remote add template https://github.com/chevereto/container-builder 
-```
-
-* Fetch `template` and merge it with `main`
-
-This will pull the updated Dockerfile.
-
-```sh
-git fetch --all
-git merge template/main
-```
-
-* Create the new image as [described earlier](#step-by-step-guide)
-* Pull the updated image and re-build the Chevereto container
+* Follow the [updating](https://github.com/chevereto/container-builder#updating) instructions for the base template repository
+* Create the new image following previous procedure
+* Pull the updated image to your host system
+* Re-run the Chevereto container tagging the new image

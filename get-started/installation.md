@@ -19,7 +19,7 @@ docker network create chv-network
 Create the `chv-mariadb` container connected to `chv-network`.
 
 ```sh
-docker run -d \
+docker run -it \
     --name chv-mariadb \
     --network chv-network \
     --network-alias mariadb \
@@ -28,8 +28,10 @@ docker run -d \
     mariadb:focal
 ```
 
+Create the `chevereto` database and its user. Note that MySQL could take a while to start mysqld.
+
 ```sh
-docker exec chv-mariadb sudo mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
+docker exec chv-mariadb mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
     CREATE USER 'chevereto' IDENTIFIED BY 'user_database_password'; \
     GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
 ```
@@ -45,7 +47,7 @@ A Chevereto [container](../setup/stacks/container.md) can be either bootstrapped
 Run the following to create the `chevereto` database and its user binding:
 
 ```sh
-mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
+sudo mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
     CREATE USER 'chevereto' IDENTIFIED BY 'user_database_password'; \
     GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
 ```

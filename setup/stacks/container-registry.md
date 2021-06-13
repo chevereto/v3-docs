@@ -1,6 +1,6 @@
-# Container registry
+# Container Registry
 
-This guide covers how to build your own private Chevereto container images and how to publish it to the container registry of your choice from where you can re-purpose it for all the Chevereto instances you may need to run.
+This guide covers how to build your own private Chevereto container images and how to publish it to the container registry of your choice.
 
 Container images provided by this guide use the same servicing layer as the basic [container](container.md) guide, but here **the application is provided at Dockerfile layer**.
 
@@ -34,20 +34,21 @@ Check [Environment](../system/environment.md) for all the `-e` options you can p
 
 ```sh
 docker run -d \
-    -p "8080:80" \
-    -e "CHEVERETO_DB_HOST=build-mariadb" \
+    -p 8012:80 \
+    -e "CHEVERETO_SOFTWARE=chevereto" \
+    -e "CHEVERETO_DB_HOST=chv-mariadb" \
     -e "CHEVERETO_DB_USER=chevereto" \
     -e "CHEVERETO_DB_PASS=user_database_password" \
     -e "CHEVERETO_DB_NAME=chevereto" \
-    -e "CHEVERETO_ASSET_STORAGE_NAME=build-assets" \
+    -e "CHEVERETO_ASSET_STORAGE_NAME=chv-assets" \
     -e "CHEVERETO_ASSET_STORAGE_TYPE=local" \
-    --name chv-build \
+    -e "CHEVERETO_ASSET_STORAGE_URL=http://localhost:8012/public_assets" \
+    -e "CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/public_assets/" \
+    --name chv-container \
     --network chv-network \
-    --network-alias build \
+    --network-alias chv-container \
+    --mount src="/local/assets",target=/var/www/html/public_assets,type=bind \
     --mount src="/local/images",target=/var/www/html/images,type=bind \
-    --mount src="/local/importing/no-parse",target=/var/www/html/importing/no-parse,type=bind \
-    --mount src="/local/importing/parse-users",target=/var/www/html/importing/parse-users,type=bind \
-    --mount src="/local/importing/parse-albums",target=/var/www/html/importing/parse-albums,type=bind \
     owner/image:tag
 ```
 

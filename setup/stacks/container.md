@@ -22,41 +22,23 @@ Follow the [Container registry](container-registry.md) guide to learn how to lev
 Check [Environment](../system/environment.md) for all the `-e` options you can pass in command below.
 :::
 
-<code-group>
-<code-block title="Paid">
 ```sh
 docker run -d \
-    -p 8080:80 \
+    -p 8000:80 \
     -e "CHEVERETO_SOFTWARE=chevereto" \
     -e "CHEVERETO_LICENSE=put_license_here" \
-    -e "CHEVERETO_TAG=3.20.3" \
+    -e "CHEVERETO_DB_HOST=chv-mariadb" \
+    -e "CHEVERETO_DB_USER=chevereto" \
+    -e "CHEVERETO_DB_PASS=user_database_password" \
+    -e "CHEVERETO_DB_NAME=chevereto" \
     -e "CHEVERETO_ASSET_STORAGE_NAME=chv-assets" \
     -e "CHEVERETO_ASSET_STORAGE_TYPE=local" \
+    -e "CHEVERETO_ASSET_STORAGE_URL=http://localhost:8000/public_assets" \
+    -e "CHEVERETO_ASSET_STORAGE_BUCKET=/var/www/html/public_assets/" \
     --name chv-container \
     --network chv-network \
     --network-alias chv-container \
+    --mount src="/local/assets",target=/var/www/html/public_assets,type=bind \
     --mount src="/local/images",target=/var/www/html/images,type=bind \
-    --mount src="/local/importing/no-parse",target=/var/www/html/importing/no-parse,type=bind \
-    --mount src="/local/importing/parse-users",target=/var/www/html/importing/parse-users,type=bind \
-    --mount src="/local/importing/parse-albums",target=/var/www/html/importing/parse-albums,type=bind \
     chevereto/chevereto:latest-httpd-php
 ```
-</code-block>
-
-<code-block title="Free">
-```sh
-docker run -d \
-    -p 8080:80 \
-    -e "CHEVERETO_SOFTWARE=chevereto-free" \
-    -e "CHEVERETO_TAG=1.3.0" \
-    --name chv-container \
-    --network chv-network \
-    --network-alias chv-container \
-    --mount src="/local/images",target=/var/www/html/images,type=bind \
-    --mount src="/local/importing/no-parse",target=/var/www/html/importing/no-parse,type=bind \
-    --mount src="/local/importing/parse-users",target=/var/www/html/importing/parse-users,type=bind \
-    --mount src="/local/importing/parse-albums",target=/var/www/html/importing/parse-albums,type=bind \
-    chevereto/chevereto:latest-httpd-php
-```
-</code-block>
-</code-group>

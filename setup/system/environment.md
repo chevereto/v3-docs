@@ -60,10 +60,10 @@ When using Docker it always logs to `/dev/stderr` regardless this configuration.
 
 Environment variables for the session driver.
 
-| Variable                       | Example |
-| ------------------------------ | ------- |
-| CHEVERETO_SESSION_SAVE_HANDLER | files   |
-| CHEVERETO_SESSION_SAVE_PATH    | /tmp    |
+| Variable                       | Example          |
+| ------------------------------ | ---------------- |
+| CHEVERETO_SESSION_SAVE_HANDLER | redis,files      |
+| CHEVERETO_SESSION_SAVE_PATH    | tcp://redis,/tmp |
 
 ## File upload
 
@@ -80,11 +80,12 @@ Environment variables for the file uploading limits.
 
 Environment variables for the servicing used.
 
-| Variable                          | Example                                    |
-| --------------------------------- | ------------------------------------------ |
-| CHEVERETO_HOSTNAME                | chevereto.loc                              |
-| CHEVERETO_HOSTNAME_PATH           | /                                          |
-| CHEVERETO_HTTPS                   | `true` (boolean)                           |
-| CHEVERETO_SERVICING               | docker                                     |
-| CHEVERETO_DISABLE_PHP_PAGES       | `false` (boolean)                          |
-| CHEVERETO_IMAGE_FORMATS_AVAILABLE | `['JPG','PNG','BMP','GIF','WEBP']` (array) |
+| Variable                          | Example                                         |
+| --------------------------------- | ----------------------------------------------- |
+| CHEVERETO_HOSTNAME                | chevereto.loc                                   |
+| CHEVERETO_HOSTNAME_PATH           | /                                               |
+| CHEVERETO_HTTPS                   | `true` (boolean)                                |
+| CHEVERETO_SERVICING               | docker                                          |
+| CHEVERETO_DISABLE_PHP_PAGES       | `false` (boolean)                               |
+| CHEVERETO_IMAGE_FORMATS_AVAILABLE | `'JPG','PNG','BMP','GIF','WEBP'` (comma-string) |
+| CHEVERETO_IMAGE_LIBRARY           | imagick,gd                                      |

@@ -1,47 +1,9 @@
 # 📄 Settings file
 
-The file at `app/settings.php` contains the application core settings like database credentials, debug level, hostname, enabled formats and more.
+The file at `app/settings.php` contains the application settings. It is used when running non-docker provisioning.
 
-A settings file may look like this (we recommend checking [environment](environment.md) variables for more info).
+A settings file may look like this (check [environment](environment.md) variables for more info).
 
-<code-group>
-<code-block title="Env">
-```php
-<?php
-$settings = [
-    'asset_storage_account_id' => getenv('CHEVERETO_ASSET_STORAGE_ACCOUNT_ID'),
-    'asset_storage_account_name' => getenv('CHEVERETO_ASSET_STORAGE_ACCOUNT_NAME'),
-    'asset_storage_bucket' => getenv('CHEVERETO_ASSET_STORAGE_BUCKET'),
-    'asset_storage_key' => getenv('CHEVERETO_ASSET_STORAGE_KEY'),
-    'asset_storage_name' => getenv('CHEVERETO_ASSET_STORAGE_NAME'),
-    'asset_storage_region' => getenv('CHEVERETO_ASSET_STORAGE_REGION'),
-    'asset_storage_secret' => getenv('CHEVERETO_ASSET_STORAGE_SECRET'),
-    'asset_storage_server' => getenv('CHEVERETO_ASSET_STORAGE_SERVER'),
-    'asset_storage_service' => getenv('CHEVERETO_ASSET_STORAGE_SERVICE'),
-    'asset_storage_type' => getenv('CHEVERETO_ASSET_STORAGE_TYPE'),
-    'asset_storage_url' => getenv('CHEVERETO_ASSET_STORAGE_URL'),
-    'db_driver' => getenv('CHEVERETO_DB_DRIVER'),
-    'db_host' => getenv('CHEVERETO_DB_HOST'),
-    'db_name' => getenv('CHEVERETO_DB_NAME'),
-    'db_pass' => getenv('CHEVERETO_DB_PASS'),
-    'db_pdo_attrs' => getenv('CHEVERETO_DB_PDO_ATTRS'),
-    'db_port' => (int) getenv('CHEVERETO_DB_PORT'),
-    'db_table_prefix' => getenv('CHEVERETO_DB_TABLE_PREFIX'),
-    'db_user' => getenv('CHEVERETO_DB_USER'),
-    'debug_level' => (int) getenv('CHEVERETO_DEBUG_LEVEL'),
-    'error_log' => getenv('CHEVERETO_ERROR_LOG'),
-    'disable_php_pages' => (bool) getenv('CHEVERETO_DISABLE_PHP_PAGES'),
-    'hostname_path' => getenv('CHEVERETO_HOSTNAME_PATH'),
-    'hostname' => getenv('CHEVERETO_HOSTNAME'),
-    'https' => (bool) getenv('CHEVERETO_HTTPS'),
-    'image_formats_available' => explode(',', getenv('CHEVERETO_IMAGE_FORMATS_AVAILABLE')),
-    'session.save_handler' => getenv('CHEVERETO_SESSION_SAVE_HANDLER'),
-    'session.save_path' => getenv('CHEVERETO_SESSION_SAVE_PATH'),
-];
-```
-</code-block>
-
-<code-block title="Direct">
 ```php
 <?php
 $settings = [
@@ -71,12 +33,11 @@ $settings = [
     'hostname' => 'chevereto.loc',
     'https' => true,
     'image_formats_available' => ['PNG', 'GIF', 'JPG', 'BMP', 'WEBP'],
-    'session.save_handler' => 'session_save_handler',
-    'session.save_path' => 'absolute_path_to_sessions',
+    'image_library' => 'imagick',
+    'session.save_handler' => 'files',
+    'session.save_path' => '/tmp',
 ];
 ```
-</code-block>
-</code-group>
 
 ## Runtime `php.ini` configuration
 

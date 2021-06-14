@@ -1,6 +1,6 @@
 # ✨ Status
 
-🔥 Chevereto V3.20: Long Term Support (LTS) until **2022-11** (PHP 7.4 eol).
+🔥 Chevereto V3.20: Long Term Support (LTS) until **2022-11**.
 
 Long Term Support means that Chevereto V3 is getting active maintenance, including:
 
@@ -9,7 +9,7 @@ Long Term Support means that Chevereto V3 is getting active maintenance, includi
 * Software bugs
 * Deprecated dependencies
 
-Once Chevereto V3.20 LTS ends this version will stop getting updates and tech support as it follows the PHP version end-of-life.
+Once Chevereto V3.20 LTS ends this version will stop getting updates and tech support as it follows the PHP version 7.4 end-of-life.
 
 ## Long run
 

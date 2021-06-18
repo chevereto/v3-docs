@@ -106,11 +106,18 @@ Chevereto requires a MySQL/MariaDB database. Database user must have `ALL PRIVIL
 
 A cron (scheduled run command) is required to process the application background jobs. The cron may look like this where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
 
+The easiest way to provide the cron is by creating a file at `/etc/cron.d/chevereto` with the following contents:
+
 ```sh
-* * * * * IS_CRON=1 /usr/bin/php /var/www/html/cli.php -C cron
+* * * * * www-data php /var/www/html/cli.php -C cron
+
 ```
 
+> Note: In debian-based the cron file must have a newline eof
+
 ### Command
+
+The command should be run by `www-data` user. The location of `php` binary may vary in different systems.
 
 <code-group>
 <code-block title="V3.20+">

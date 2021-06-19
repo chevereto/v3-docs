@@ -10,5 +10,4 @@ return [
     'post-install.md',
     'updating.md',
     'upgrading.md',
-    'contributing.md',
 ];

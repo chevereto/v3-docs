@@ -18,5 +18,3 @@ Chevereto V3.20 LTS was built using [Ubuntu 20.04](https://wiki.ubuntu.com/Relea
 | Version | End of LTS | End of Life |
 | ------- | ---------- | ----------- |
 | V3.20   | 2022-11    | 2025-04     |
-
-We drive community support for old releases. We offer special support services for old installations.

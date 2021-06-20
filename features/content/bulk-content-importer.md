@@ -45,7 +45,7 @@ sudo -u www-data php /var/www/html/cli.php -C importing
 ```sh
 docker exec -it \
     --user www-data \
-    my-container /usr/local/bin/php /var/www/html/cli.php -C importing
+    my-container php /var/www/html/cli.php -C importing
 ```
 </code-block>
 </code-group>
@@ -102,10 +102,10 @@ Top-level folders within the importing path will be handled as `username`. Secon
 
 For the tree above, the parser will:
 
-- Create `rodolfo` user (if the user doesn't exists)
-- Create album `weapons` under `rodolfo` user (if the album doesn't exists)
-- Upload the images contained in `./<path>/rodolfo/weapons` to rodolfo's `weapons` album
-- Upload `logo-alt.png` to `rodolfo` (no album)
+* Create `rodolfo` user (if the user doesn't exists)
+* Create album `weapons` under `rodolfo` user (if the album doesn't exists)
+* Upload the images contained in `./<path>/rodolfo/weapons` to rodolfo's `weapons` album
+* Upload `logo-alt.png` to `rodolfo` (no album)
 
 ### Top-level folders as albums
 
@@ -121,8 +121,8 @@ Top-level folders within the importing path will be handled as `album_name`.
 
 For the tree above, the parser will:
 
-- Create album `weapons` as guest user (if the album doesn't exists)
-- Upload the images contained in `./<path>/weapons` to `weapons` album
+* Create album `weapons` as guest user (if the album doesn't exists)
+* Upload the images contained in `./<path>/weapons` to `weapons` album
 
 ### No parse
 
@@ -137,11 +137,7 @@ No folder is parsed, only images will be imported as guest.
 
 For the tree above, the parser will:
 
-- Upload the images contained in `./<path>` to public, as guest user.
-
-
-
-
+* Upload the images contained in `./<path>` to public, as guest user.
 
 ## Statuses
 

@@ -22,7 +22,7 @@ sudo -u www-data php /var/www/html/cli.php -C update
 ```sh
 docker exec -it \
     --user www-data \
-    my-container /usr/local/bin/php /var/www/html/cli.php -C update
+    my-container php /var/www/html/cli.php -C update
 ```
 </code-block>
 </code-group>

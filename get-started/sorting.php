@@ -5,7 +5,6 @@ return [
     'status.md',
     'version.md',
     'deploy.md',
-    'demo.md',
     'installation.md',
     'post-install.md',
     'updating.md',

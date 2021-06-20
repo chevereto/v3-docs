@@ -1,4 +1,4 @@
-# 💯 Post-Install
+# Post-Install
 
 ## Initial setup
 
@@ -28,7 +28,7 @@ sudo -u www-data php /var/www/html/cli.php -C install \
 ```sh
 docker exec -it \
     --user www-data \
-    my-container /usr/local/bin/php /var/www/html/cli.php -C install \
+    my-container php /var/www/html/cli.php -C install \
     -u dev \
     -e dev@chevereto.loc \
     -x password

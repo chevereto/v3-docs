@@ -1,4 +1,4 @@
-# 👋🏾 Introduction
+# Introduction
 
 ## What is Chevereto?
 
@@ -18,12 +18,3 @@ The point of Chevereto is that it handles very large image collections and is op
 ## Origin
 
 Chevereto began in 2007 as a self-hosted alternative to ImageShack. It started as one-click image hosting service and here we are.
-
-### Major Releases
-
-| Version                                            | Release    | Licensing (release) | Licensing (actual) |
-| -------------------------------------------------- | ---------- | ------------------- | ------------------ |
-| [V1](https://code.google.com/archive/p/chevereto/) | 2009-02-26 | MIT License         | MIT License        |
-| [V2](https://github.com/chevereto/chevereto-2)     | 2011-06-15 | Proprietary         | MIT License        |
-| [V3](https://chevereto.com/releases)               | 2014-04-05 | Proprietary         | --                 |
-| [V4](https://chevereto.com/releases)               | 2021-09-XX | Proprietary         | --                 |

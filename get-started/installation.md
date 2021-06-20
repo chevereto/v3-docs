@@ -1,4 +1,4 @@
-# 📦 Installation
+# Installation
 
 To install Chevereto it requires a server environment where the software and uploaded files will be served.
 
@@ -62,35 +62,15 @@ Using CLI (recommended):
 
 * Download the software at the installer path.
 
-<code-group>
-<code-block title="Paid">
 ```php
 php installer.php -a download -s chevereto -l=licenseKeyHere
 ```
-</code-block>
-
-<code-block title="Free">
-```php
-php installer.php -a download -s chevereto-free
-```
-</code-block>
-</code-group>
 
 * Extract the software indicating target `-p` path to extract.
 
-<code-group>
-<code-block title="Paid">
 ```php
 php installer.php -a extract -s chevereto -p /var/www/html -f chevereto-pkg-*.zip
 ```
-</code-block>
-
-<code-block title="Free">
-```php
-php installer.php -a extract -s chevereto-free -p /var/www/html -f chevereto-pkg-*.zip
-```
-</code-block>
-</code-group>
 
 Once done, remove the `installer.php` file and open your website at `/install` to complete the process.
 

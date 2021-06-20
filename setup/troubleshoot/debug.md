@@ -1,4 +1,4 @@
-# 🐞 Debug
+# Debug
 
 Debug enables to dump information about errors that may be affecting the software functionality. If Chevereto isn't working properly you must start debugging it.
 

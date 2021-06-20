@@ -7,11 +7,7 @@ actionText: Get Started →
 actionLink: /get-started/
 ---
 
-# Chevereto V3
-
-::: tip
-This is the documentation for both [Chevereto V3](https://chevereto.com/pricing) and [Chevereto-Free](https://github.com/chevereto/chevereto-free/releases)
-:::
+# Chevereto V3 Documentation
 
 ## 👀 Shortcuts
 

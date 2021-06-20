@@ -1,6 +1,6 @@
 # ✨ Status
 
-🔥 Chevereto V3.20: Long Term Support (LTS) until **2022-11**.
+Chevereto V3.20: Long Term Support (LTS) until **2022-11**.
 
 Long Term Support means that Chevereto V3 is getting active maintenance, including:
 

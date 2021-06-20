@@ -1,4 +1,4 @@
-# 📌 Requirements
+# Requirements
 
 ::: tip Docker
 Refer to the official [Docker images for Chevereto](https://github.com/chevereto/docker) for the recommended system setup to run Chevereto, including all libraries required.
@@ -50,6 +50,7 @@ The following PHP extensions are required for Chevereto.
 * fileinfo
 * hash
 * imagick
+* gd
 * json
 * mbstring
 * pdo
@@ -64,9 +65,15 @@ Chevereto requires unrestricted access to all PHP functions. If some or any PHP 
 
 * [set_time_limit](https://www.php.net/set-time-limit)
 
-## ImageMagick
+## Image library
 
-Chevereto needs ImageMagick to process images and it must be built with support for `PNG GIF JPG BMP WEBP`.
+The image library should be built with support for `PNG GIF JPG BMP WEBP`.
+
+## Configuring image library
+
+Check for [CHEVERETO_IMAGE_LIBRARY](environment.md#servicing) for changing the default image library.
+
+### ImageMagick
 
 Additional recommended ImageMagick configuration at `/etc/ImageMagick-6/policy.xml` file:
 
@@ -96,9 +103,9 @@ Chevereto user will require **read/write** access in the following paths:
 
 ## Database
 
-| Version | MySQL | MariaDB |
-| ------- | ----- | ------- |
-| 3.20    | 8     | 10      |
+| Version | MySQL  | MariaDB |
+| ------- | ------ | ------- |
+| 3.20    | 5.7, 8 | 10      |
 
 Chevereto requires a MySQL/MariaDB database. Database user must have `ALL PRIVILEGES` over the target database.
 
@@ -117,7 +124,7 @@ The easiest way to provide the cron is by creating a file at `/etc/cron.d/chever
 
 ### Command
 
-The command should be run by `www-data` user. The location of `php` binary may vary in different systems.
+The command should be run by `www-data` user. Note that location of `php` binary may vary in different systems.
 
 <code-group>
 <code-block title="V3.20+">
@@ -140,7 +147,7 @@ sudo -u www-data IS_CRON=1 php /var/www/html/cron.php
 ```sh
 docker exec -it \
     --user www-data \
-    chevereto-container /usr/local/bin/php /var/www/html/cli.php -C cron
+    chevereto-container php /var/www/html/cli.php -C cron
 ```
 </code-block>
 
@@ -149,7 +156,7 @@ docker exec -it \
 docker exec -it \
     --user www-data \
     -e IS_CRON=1 \
-    chevereto-container /usr/local/bin/php /var/www/html/cron.php
+    chevereto-container php /var/www/html/cron.php
 ```
 </code-block>
 </code-group>

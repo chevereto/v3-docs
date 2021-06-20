@@ -1,4 +1,4 @@
-# 😰 Errors
+# Errors
 
 When having an error Chevereto will always indicate an error id (**errorId**):
 

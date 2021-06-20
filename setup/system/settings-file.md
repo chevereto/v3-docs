@@ -1,4 +1,4 @@
-# 📄 Settings file
+# Settings file
 
 The file at `app/settings.php` contains the application settings. It is used when running non-docker provisioning.
 

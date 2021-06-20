@@ -1,4 +1,4 @@
-# 🔠 Environment
+# Environment
 
 This is the environment variables reference for Chevereto.
 

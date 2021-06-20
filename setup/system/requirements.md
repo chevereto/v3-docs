@@ -107,7 +107,12 @@ Chevereto user will require **read/write** access in the following paths:
 | ------- | ------ | ------- |
 | 3.20    | 5.7, 8 | 10      |
 
-Chevereto requires a MySQL/MariaDB database. Database user must have `ALL PRIVILEGES` over the target database.
+* Database user must have `ALL PRIVILEGES` over the target database.
+* InnoDB storage engine
+
+::: tip
+If you are upgrading from old versions note that you will need to manually convert the tables to InnoDB before upgrading the software.
+:::
 
 ## Cron
 

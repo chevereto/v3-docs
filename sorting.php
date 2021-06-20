@@ -6,6 +6,5 @@ return [
     'setup/', 
     'features/', 
     'api/', 
-    'contributed/',
     'settings/',
 ];

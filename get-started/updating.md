@@ -1,4 +1,4 @@
-# ⚡ Updating
+# Updating
 
 This section outlines the update process required to upgrade to V3 from old releases (V3.X).
 

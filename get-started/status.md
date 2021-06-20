@@ -1,4 +1,4 @@
-# ✨ Status
+# Status
 
 Chevereto V3.20: Long Term Support (LTS) until **2022-11**.
 

@@ -9,22 +9,22 @@ actionLink: /get-started/
 
 # Chevereto V3 Documentation
 
-## 👀 Shortcuts
+## Shortcuts
 
-* [📦 Installation](get-started/installation.md)
-* [💯 Post-Install](get-started/post-install.md)
-* [⚡ Updating](get-started/updating.md)
-* [🌠 Upgrading](get-get-started/upgrading.md)
-* [🐳 Container](setup/stacks/container.md)
+* [Installation](get-started/installation.md)
+* [Post-Install](get-started/post-install.md)
+* [Updating](get-started/updating.md)
+* [Upgrading](get-get-started/upgrading.md)
+* [Container](setup/stacks/container.md)
 
-## 🌈 Get updates
+## Get updates
 
 * [Official website](https://chevereto.com)
 * [GitHub organization](https://github.com/chevereto)
 * [Newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrgHu89RPRifGX6GXWko9jbzN892DN892XkwATqNm2slYVMHJyPXHV763yXE9jZoh0ZhJySXQ) - Get the news in your email
 * [Blog](https://chevereto.com/blog) - Learn about the upcoming things and more
 
-## 🌏 Translations
+## Translations
 
 ::: tip
 Contribute to [translations](https://chevereto.oneskyapp.com/) to get Chevereto available in your language.

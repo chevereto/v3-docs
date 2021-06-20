@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.svg
 heroText: Chevereto V3
-tagline: Self-hosted image sharing
+tagline: Self-hosted image sharing software
 actionText: Get Started →
 actionLink: /get-started/
 ---

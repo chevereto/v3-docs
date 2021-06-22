@@ -38,7 +38,14 @@ module.exports = {
         ['meta', {
             name: 'msapplication-TileColor',
             content: '#000000'
-        }]
+        }],
+        ['script', {id: "scriptImporter"}, `
+            (function() { 
+            var script = document.createElement("script"); 
+            script.src = "/livechat.js";
+            setTimeout(() => document.body.append(script))
+            })(); 
+        `]
     ],
     themeConfig: {
         logo: '/logo.svg',

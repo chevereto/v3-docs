@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'stacks/' => 'Stacks',
+    'container/' => 'Container',
 ];

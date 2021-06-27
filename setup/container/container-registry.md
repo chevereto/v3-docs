@@ -1,11 +1,9 @@
 # Container Registry
 
-This guide covers how to build your own private Chevereto container images and how to publish it to the container registry of your choice.
+This guide covers how to build your own private Chevereto container images and how to publish those to the container registries of your choice.
 
-Container images provided by this guide use the same servicing layer as the basic [container](container.md) guide, but here **the application is provided at Dockerfile layer**.
-
-::: tip Template available
-Use [chevereto/container-builder](https://github.com/chevereto/container-builder) to easily create your own private Chevereto container images.
+::: tip One-click available
+Use [chevereto/container-builder](https://github.com/chevereto/container-builder) to easily create your own private Chevereto container images, with application updates.
 :::
 
 ## Requirements
@@ -16,11 +14,11 @@ The license is required upfront to build the image using licensed access.
 
 * GitHub account
 
-At this time our automated workflows only works with [GitHub](https://github.com) so you will require a GitHub account for the easiest and free way to build the container image. You can actually build the image anywhere, but with GitHub we have configured a dead easy implementation.
+At this time our automated workflows only works with [GitHub](https://github.com) so you will require a GitHub account for the easiest and hassle-free way to build the container image.
 
 * Container registry ([OCI](https://opencontainers.org/))
 
-The container registry is where the container image will be available for your disposal. From there you can spawn all the systems you may need. Container registry credentials will be required to push the build image.
+The container registry is where the container image will be available for your disposal. From there you can spawn all the systems (containers) you may need.
 
 ## Step-by-step guide
 
@@ -55,7 +53,7 @@ docker run -d \
 ## Updating
 
 ::: tip
-Do not update using the built-in update system available at `/dashboard` as those changes won't persist. You need to re-build the image and container(s).
+Do not update using the built-in update system available at `/dashboard` as those changes won't persist. You need to re-create the container pulling the latest image.
 :::
 
 To update your custom build all the system files and its provisioning will be replaced. This only affects the application container, don't touch the database container.

@@ -1,2 +1,5 @@
 <?php
-return [];
+return [
+    'introduction.md' => 'Introduction',
+    'registry.md' => 'Registry',
+];

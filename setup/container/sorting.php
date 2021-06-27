@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'container.md',
-    'container-registry.md',
+    'introduction.md',
+    'registry.md',
 ];

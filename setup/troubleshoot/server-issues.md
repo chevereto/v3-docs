@@ -2,7 +2,7 @@
 
 Not all web servers follow some basic standards and in some cases even having a server that meets the [system requirements](../system/requirements.md) you could find issues that won't allow Chevereto to work properly.
 
-## Webserver issues
+## Webserver
 
 - Apache `mod_rewrite` disabled or `Allow Override All` missing in virtual hosts
 - Missing writing permissions in Chevereto paths
@@ -10,21 +10,21 @@ Not all web servers follow some basic standards and in some cases even having a 
 - Wrong NGINX server block / PHP-FPM issues
 - `mod_security` or any other artifact blocking requests from/to
 
-## PHP issues
+## PHP
 
-PHP runs over your Webserver in different flavours (module or `fcgi`) and with different libraries and settings that can cause issues:
+PHP runs over your Webserver in different flavours and with different libraries and settings that can cause issues:
 
 - Outdated PHP version
 - Misconfiguration in PHP libraries
 - Bad php.ini directives
 - Low execution time
 - Bad sessions setup
+- Open basedir restrictions
 
-## MySQL issues
-
-The most common things to worry are:
+## MySQL Database
 
 - Wrong credentials (user/password)
 - Invalid or missing privileges (read/write in the database)
 - Outdated MySQL version
 - Bad configured MySQL socket
+- Usage of MyISAM storage engine (`ALTER` table to InnoDB storage)

@@ -14,7 +14,7 @@ actionLink: /get-started/
 * [Installation](get-started/installation.md)
 * [Post-Install](get-started/post-install.md)
 * [Updating](get-started/updating.md)
-* [Upgrading](get-get-started/upgrading.md)
+* [Upgrading](get-started/upgrading.md)
 * [Container](setup/container/introduction.md)
 
 ## Get updates

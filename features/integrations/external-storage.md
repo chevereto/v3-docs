@@ -4,16 +4,22 @@ External storage allows to use external servers for storing user uploads, which 
 
 ## Supported APIs
 
-- [Alibaba Cloud OSS](#alibaba-cloud-oss)
-- [Amazon S3](#amazon-s3)
-- [Backblaze B2](#backblaze-b2)
-- [FTP](#ftp)
-- [Google Cloud](#google-cloud)
-- [Local](#local)
-- [Microsoft Azure](#microsoft-azure)
-- [OpenStack](#openstack)
-- [S3 Compatible](#s3-compatible)
-- [SFTP](#sftp)
+- [External storage](#external-storage)
+  - [Supported APIs](#supported-apis)
+  - [How it works](#how-it-works)
+    - [Storage URL](#storage-url)
+    - [Storage URL with CDN](#storage-url-with-cdn)
+  - [External storage APIs](#external-storage-apis)
+    - [Alibaba Cloud OSS](#alibaba-cloud-oss)
+    - [Amazon S3](#amazon-s3)
+    - [Backblaze B2](#backblaze-b2)
+    - [FTP](#ftp)
+    - [Google Cloud](#google-cloud)
+    - [Local](#local)
+    - [Microsoft Azure](#microsoft-azure)
+    - [OpenStack](#openstack)
+    - [S3 Compatible](#s3-compatible)
+    - [SFTP](#sftp)
 
 ## How it works
 
@@ -100,6 +106,33 @@ If you want to use a custom domain follow the [CNAME](https://docs.aws.amazon.co
 ### Backblaze B2
 
 The Backblaze B2 API allows to upload images to [Backblaze's cloud storage system](https://www.backblaze.com/b2/cloud-storage.html).
+
+1. Go to **B2 Cloud Storage** and click on **Create a Bucket**
+2. Files in Bucket are: **Public**
+3. Go to **App Keys** and click on **Add a New Application Key**
+   1. Type of Access: **Read and Write**
+4. When done, use the following reference:
+
+Select **S3 Compatible** storage API for **B2 S3 Storage** (current offering):
+
+| B2 Value       | Chevereto Storage                                |
+| -------------- | ------------------------------------------------ |
+| Region         | `us-west-002` (take note from your Endpoint)     |
+| keyID          | Storage key                                      |
+| applicationKey | Storage secret                                   |
+| Endpoint*      | `s3.us-west-002.backblazeb2.com`                 |
+| URL            | `https://f002.backblazeb2.com/file/your_bucket/` |
+
+> (*) You will find the endpoint under the bucket details.
+
+Select **Backblaze B2** storage API for legacy **B2 Storage**:
+
+| B2 Value       | Chevereto Storage                       |
+| -------------- | --------------------------------------- |
+| keyID          | Storage key (Account ID)                |
+| applicationKey | Storage secret (Master Application Key) |
+
+
 
 ### FTP
 

@@ -36,10 +36,6 @@ docker exec chv-mariadb mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
     GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
 ```
 
-### Chevereto container
-
-A Chevereto [container](../setup/stacks/container.md) can be either bootstrapped or you can build and manage your system images using [container registry](../setup/stacks/container-registry.md) (recommended).
-
 ## Root installation
 
 ### Prepare Database

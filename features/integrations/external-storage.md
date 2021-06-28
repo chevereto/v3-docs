@@ -120,7 +120,7 @@ Select **S3 Compatible** storage API for **B2 S3 Storage** (current offering):
 | Region         | `us-west-002` (take note from your Endpoint)     |
 | keyID          | Storage key                                      |
 | applicationKey | Storage secret                                   |
-| Endpoint*      | `s3.us-west-002.backblazeb2.com`                 |
+| Endpoint*      | `https://s3.us-west-002.backblazeb2.com`         |
 | URL            | `https://f002.backblazeb2.com/file/your_bucket/` |
 
 > (*) You will find the endpoint under the bucket details.

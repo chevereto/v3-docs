@@ -1,8 +1,40 @@
 # Container Running
 
+You can run the container following the indications below depending on how you want to provide the persistent data layer.
+
+## Persistent layers
+
+Chevereto requires the following persistence:
+
+* Asset storage
+
+For asset storage you can use any external storage API and if you want to use Local Storage you will need yo mount the appropriate volume in a path visible to the application.
+
+* Sessions
+
+For sessions you can use Redis by configuring the [Environment Session](../system/environment.md#session) variables.
+
+* Database
+
+For database you can create a volume for persistence, or use a server over the network.
+
+* User uploads storage
+  
+This persistent layer can be configured directly in the application [Dashboard panel](../../settings/external-storage.md). You can add multiple storages, all that configuration will be stored in the database.
+
+## Environment
+
 ::: tip
-Check [Environment](../system/environment.md) for all the `-e` options you can pass in command below.
+Check [Environment](../system/environment.md) for all the `-e` options you can pass in the Docker command.
 :::
+
+## Using External storage
+
+## Using volumes
+
+
+
+## Using Bind mounts
 
 ```sh
 docker run -d \

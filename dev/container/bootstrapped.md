@@ -1,8 +1,12 @@
-# Container bootstrapped
+# Container Bootstrapped
+
+::: danger
+This is used only for development purposes and this is still a work in progress. Use [Container Registry](../../setup/container/registry.md) for production grade container provisioning.
+:::
 
 This guide is for bootstrapped container based provisioning for Chevereto using system images published at [Docker Hub](https://hub.docker.com/r/chevereto/chevereto).
 
-This provisioning uses containers to provide only the servicing layer, the **application is provided on first container run** and re-used from there. As Chevereto ahead releases are distributed under a proprietary license, we can't mass distribute the application code to public so we provide the system servicing required for it.
+This provisioning uses containers to provide only the servicing layer, the **application is provided on first container run** and re-used from there.
 
 ## Requirements
 
@@ -10,13 +14,34 @@ This provisioning uses containers to provide only the servicing layer, the **app
 
 ## Step-by-step guide
 
-1. Provide a Docker network and a MySQL container following [this guide](../../get-started/installation.md#docker)
-2. Select the [image tag](https://hub.docker.com/r/chevereto/chevereto/tags) you want to use, for example `chevereto/chevereto:latest-httpd-php`
-3. Run the Chevereto container as:
+* Create the `chv-network` that containers will use to comunicate each other.
 
-::: tip
-Check [Environment](../system/environment.md) for all the `-e` options you can pass in command below.
-:::
+```sh
+docker network create chv-network
+```
+
+* Create the `chv-mariadb` container connected to `chv-network`.
+
+```sh
+docker run -it \
+    --name chv-mariadb \
+    --network chv-network \
+    --network-alias mariadb \
+    --health-cmd='mysqladmin ping --silent' \
+    -e MYSQL_ROOT_PASSWORD=password \
+    mariadb:focal
+```
+
+Create the `chevereto` database and its user. Note that MySQL could take a while to start mysqld.
+
+```sh
+docker exec chv-mariadb mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
+    CREATE USER 'chevereto' IDENTIFIED BY 'user_database_password'; \
+    GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
+```
+
+* Select the [image tag](https://hub.docker.com/r/chevereto/chevereto/tags) you want to use, for example `chevereto/chevereto:latest-httpd-php`
+* Run the Chevereto container as:
 
 ```sh
 docker run -d \

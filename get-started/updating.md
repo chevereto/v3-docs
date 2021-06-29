@@ -11,21 +11,9 @@ This section outlines the update process required to upgrade to V3 from old rele
 
 * Run the following command:
 
-<code-group>
-<code-block title="Shell">
 ```sh
 sudo -u www-data php /var/www/html/cli.php -C update
 ```
-</code-block>
-
-<code-block title="Docker">
-```sh
-docker exec -it \
-    --user www-data \
-    my-container php /var/www/html/cli.php -C update
-```
-</code-block>
-</code-group>
 
 ## HTTP update
 

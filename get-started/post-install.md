@@ -14,27 +14,12 @@ You can install Chevereto using HTTP (web) or using CLI.
 
 * Run the following command:
 
-<code-group>
-<code-block title="Shell">
 ```sh
 sudo -u www-data php /var/www/html/cli.php -C install \
     -u dev \
     -e dev@chevereto.loc \
     -x password
 ```
-</code-block>
-
-<code-block title="Docker">
-```sh
-docker exec -it \
-    --user www-data \
-    my-container php /var/www/html/cli.php -C install \
-    -u dev \
-    -e dev@chevereto.loc \
-    -x password
-```
-</code-block>
-</code-group>
 
 | Option | Description    |
 | ------ | -------------- |

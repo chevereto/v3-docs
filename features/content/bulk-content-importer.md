@@ -34,21 +34,9 @@ Go to `dashboard/bulk` to review importing jobs.
 
 * V3.20+
 
-<code-group>
-<code-block title="Shell">
 ```sh
 sudo -u www-data php /var/www/html/cli.php -C importing
 ```
-</code-block>
-
-<code-block title="Docker">
-```sh
-docker exec -it \
-    --user www-data \
-    my-container php /var/www/html/cli.php -C importing
-```
-</code-block>
-</code-group>
 
 * Older
 

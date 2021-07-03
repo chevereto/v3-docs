@@ -1,16 +1,22 @@
 # Post-Install
 
+This document outlines the installation process once the application files have been provided to the server.
+
+::: tip
+If you haven't provided the application files you need to go back to [Installation](installation.md) guide.
+:::
+
 ## Initial setup
 
-Initial setup refers to the process that actually creates the chevereto database and create its admin user. You need to run this just one, the first time you install Chevereto.
+Initial setup refers to the process that creates the chevereto database tables and the Chevereto admin user. This is needed just once, the first time the system gets installed and it can be made using HTTP (web) or CLI.
 
-You can install Chevereto using HTTP (web) or using CLI.
-
-### HTTP setup
+### HTTP setup (recommended)
 
 * Go to `/install` and submit the installation form.
 
-### CLI setup (V3.20+)
+We recommend this method as is completely gui-based and very friendly to follow.
+
+### CLI setup
 
 * Run the following command:
 
@@ -27,22 +33,20 @@ sudo -u www-data php /var/www/html/cli.php -C install \
 | e      | Admin email    |
 | x      | Admin password |
 
-## Background jobs (V3.18+)
+Note that this method relies on the PHP CLI so it should be preferred when possible as it is more reliable than HTTP API just because it doesn't require the HTTP web server. Kindly note that CLI setup is for advanced users.
 
-Background jobs refers to a command-line action that needs to be carried frequently to fullfil the application background tasks, it needs to be configured by running a [cron](../setup/system/requirements.md#cron).
+## Setup cron
 
-You need to configure this every time you provide Chevereto to a new server, it also applies if you migrate servers.
+Background jobs needs to be configured by running a [cron](../setup/system/requirements.md#cron). You need to configure this and make sure that is working every time you deploy Chevereto.
 
-::: danger
-Don't forget to provide the cron executing to fullfil the application background jobs. If this is not configured Chevereto won't remove expired images, check for updates, process external storage deletes and run maintenance tasks.
+::: danger Must have
+If this is not configured Chevereto won't remove expired images, check for updates, process external storage deletes and run maintenance tasks.
 :::
 
 ## Setup email
 
-Email setup refers to the system required to deliver email in Chevereto. Go to [Email settings](../settings/email.md) to understand how configure the transactional email service.
+Go to [Email settings](../settings/email.md) to understand how configure the transactional email service. You need to configure this every time you change email delivery provider.
 
-You need to configure this every time you change email delivery provider.
-
-::: danger
-Don't forget to configure email delivery as as user registration rely on this. If email delivery isn't configured Chevereto won't be able to recover user's lost passwords neither complete registrations requiring to confirm email address.
+::: danger Must have
+If email delivery isn't configured Chevereto won't be able to recover user's lost passwords neither complete registrations requiring to confirm email address.
 :::

@@ -4,17 +4,21 @@ This is the environment variables reference for Chevereto, it contains the syste
 
 To pass settings to Chevereto is recommended to use system level environment variables so it entirely depends on how you run the PHP process.
 
-::: tip Using settings file?
-If you can't use environment variables in your setup you must rely on [settings file](settings-file.md) to configure these.
+::: tip Settings file
+If you can't use environment variables in your setup you can use the [settings file](settings-file.md) to configure the Chevereto variables.
 :::
 
-* Apache HTTP Web Server
+* Apache HTTP Web Server (PHP module)
 
-If PHP runs as a module, refer to the documentation on [Apache HTTP Server environment variables](https://httpd.apache.org/docs/current/env.html). You may check our real use cases at [chevereto/vultr-marketplace](https://github.com/chevereto/vultr-marketplace/blob/main/files/var/lib/cloud/scripts/per-instance/provision.sh).
+If PHP is provided using `mpm_prefork` you must refer to the documentation on [Apache HTTP Server environment variables](https://httpd.apache.org/docs/current/env.html). You may check our real use cases at [chevereto/vultr-marketplace](https://github.com/chevereto/vultr-marketplace/blob/main/files/var/lib/cloud/scripts/per-instance/provision.sh).
 
-* Nginx & Other Web servers
+* Other Web servers
 
 For these you will be running [PHP-FPM](https://www.php.net/manual/en/install.fpm.configuration.php) so you can add those at your `php-fpm.conf` file.
+
+* Application servers
+
+For these you will be running PHP CLI so you should be able to pass those at `php.ini` for your CLI. You can also `export` those in your shell. Kindly refer to the documentation of each application server for the best way to pass those to Chevereto.
 
 * Container
 
@@ -92,12 +96,21 @@ Environment variables for controlling image handling.
 
 Environment variables for the hostname configuration.
 
-| Variable                    | Setting Key       | Example       |
-| --------------------------- | ----------------- | ------------- |
-| CHEVERETO_HOSTNAME          | hostname          | chevereto.loc |
-| CHEVERETO_HOSTNAME_PATH     | hostname_path     | /             |
-| CHEVERETO_HTTPS             | https             | `true`        |
-| CHEVERETO_DISABLE_PHP_PAGES | disable_php_pages | `false`       |
+| Variable                | Setting Key   | Example       |
+| ----------------------- | ------------- | ------------- |
+| CHEVERETO_HOSTNAME      | hostname      | chevereto.loc |
+| CHEVERETO_HOSTNAME_PATH | hostname_path | /             |
+| CHEVERETO_HTTPS         | https         | `true`        |
+
+## System context
+
+Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable some sensitive functionality.
+
+| Variable                      | Setting Key         | Example |
+| ----------------------------- | ------------------- | ------- |
+| CHEVERETO_DISABLE_PHP_PAGES   | disable_php_pages   | `false` |
+| CHEVERETO_DISABLE_UPDATE_HTTP | disable_update_http | `false` |
+| CHEVERETO_DISABLE_UPDATE_CLI  | disable_update_cli  | `false` |
 
 ## File upload
 

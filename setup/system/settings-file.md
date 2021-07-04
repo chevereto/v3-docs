@@ -1,8 +1,6 @@
 # Settings file
 
-The file at `app/settings.php` contains the application settings. It is used when running non-docker provisioning.
-
-A settings file may look like this (check [environment](environment.md) variables for more info).
+The file at `app/settings.php` contains the application system level settings. A settings file may look like this (check [environment](environment.md) variables for more info).
 
 ```php
 <?php
@@ -39,6 +37,6 @@ $settings = [
 ];
 ```
 
-## Runtime `php.ini` configuration
-
-As `app/settings.php` is loaded everywhere and not override by the update procedure, is the safer place to add runtime `php.ini` directives using [`ini_set`](https://www.php.net/manual/en/function.ini-set.php).
+::: tip
+Note that when running containers this file is not used as it all rely to environment variables for container context.
+:::

@@ -47,11 +47,11 @@ The Installer will also detect any missing library in your system, it also works
 
 The [chevereto/installer](https://github.com/chevereto/installer) is a single-file tool which will ease the installation of the software. It's an API client which downloads and extracts the software for you.
 
-The installer provides a HTTP API for the whole process:
+The installer provides a [HTTP API](https://github.com/chevereto/installer/blob/master/HTTP.md) for the whole process:
 
 ![Chevereto Installer](https://camo.githubusercontent.com/1c1a868703419338eb6b01802270171b4bbb134d/68747470733a2f2f63686576657265746f2e636f6d2f7372632f696d672f696e7374616c6c65722f73637265656e2d76322e706e673f3230313930363233)
 
-The Installer also provides a [CLI API](https://github.com/chevereto/installer/blob/master/CLI_API.md).
+The Installer also provides a [CLI API](https://github.com/chevereto/installer/blob/master/CLI.md).
 
 ### Zip package
 

@@ -1,16 +1,12 @@
 # Requirements
 
-::: tip Docker
-Refer to the official [Docker images for Chevereto](https://github.com/chevereto/docker) for the recommended system setup to run Chevereto, including all libraries required.
-:::
-
 ## PHP
 
 | Version | PHP |
 | ------- | --- |
 | 3.20    | 7.4 |
 
-Chevereto is [PHP](https://php.net/) software.
+Chevereto is [PHP](https://php.net/) software, it has been designed using:
 
 * [PHP packages](https://deb.sury.org/) from Ondřej Surý.
 * [PHP extensions](https://www.php.net/manual/en/extensions.membership.php) provided by [PECL](https://pecl.php.net/).
@@ -67,11 +63,25 @@ Chevereto requires unrestricted access to all PHP functions. If some or any PHP 
 
 ## Image library
 
-The image library should be built with support for `PNG GIF JPG BMP WEBP`.
+The image library (GD, Imagick) should be provided with support for `PNG GIF JPG BMP WEBP`. By default, Chevereto uses Imagick and fallback to GD.
+
+If you need to explicit use GD you can add this key to [Settings file](settings-file.md):
+
+```php
+'image_library' => 'gd',
+```
+
+::: danger Workaround missing formats
+If you can't provide all the image formats you can use the following [Settings file](settings-file.md) workaround, in which for example we enable support only for `PNG, GIF`:
+
+```php
+'image_formats_available' => ['PNG', 'GIF'],
+```
+:::
 
 ## Configuring image library
 
-Check for [CHEVERETO_IMAGE_LIBRARY](environment.md#servicing) for changing the default image library.
+Check for [CHEVERETO_IMAGE_LIBRARY](environment.md#image-handling) for changing the default image library.
 
 ### ImageMagick
 

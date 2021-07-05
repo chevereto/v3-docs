@@ -2,6 +2,8 @@
 
 `/dashboard/settings/image-upload`
 
+This control the settings related to image uploading.
+
 ## Enabled image formats
 
 Determines which image formats can be uploaded.

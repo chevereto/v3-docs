@@ -1,4 +1,4 @@
-# Container Introduction
+# Container
 
 ::: tip
 Chevereto works in both contexts (containers and not-containers). If you aren't familiar with containers we really hope you discover it with Chevereto.

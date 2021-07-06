@@ -32,8 +32,6 @@ Check [Environment](../system/environment.md) for all the `-e` options you can p
 
 ## Using volumes
 
-
-
 ## Using Bind mounts
 
 ```sh

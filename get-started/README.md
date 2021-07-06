@@ -2,18 +2,18 @@
 
 ## What is Chevereto?
 
-Chevereto is a self-hosted multi-user, full-featured image sharing solution.
+Chevereto is a self-hosted multi-user, full-featured image hosting solution.
 
 ## Use
 
-Chevereto on its core provides an image sharing solution that you can configure to use it in many different context. It has many applications, including:
+Chevereto on its core provides an image hosting service that you can configure to use it in many different context. It has many applications, including:
 
-* Image sharing service
+* Image host service
 * Showcase galleries
 * Asset image storage
 * Image-based sharing communities
 
-The point of Chevereto is that it handles very large image collections and is optimized for network usage. Chevereto has been designed to provide cheap massive image sharing and many [websites](https://chevereto.top/) showoff that.
+The point of Chevereto is that it handles very large image collections and is optimized for network usage. Chevereto has been designed to provide image hosting and sharing at large scale.
 
 ## Origin
 

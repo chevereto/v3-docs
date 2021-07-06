@@ -1,12 +1,12 @@
 # Container Bootstrapped
 
 ::: danger
-This is used only for development purposes and this is still a work in progress. Use [Container Registry](../../setup/container/registry.md) for production grade container provisioning.
+ Use [Container Registry](../../setup/container/registry.md) for production grade container provisioning.
 :::
 
-This guide is for bootstrapped container based provisioning for Chevereto using system images published at [Docker Hub](https://hub.docker.com/r/chevereto/chevereto).
+This guide is for bootstrapped container based provisioning for Chevereto using system images published at [Docker Hub](https://hub.docker.com/r/chevereto/chevereto). This is used only for development purposes.
 
-This provisioning uses containers to provide only the servicing layer, the **application is provided on first container run** and re-used from there.
+This provisioning uses containers only for the servicing layer, the **application is provided on first container run** and re-used from there.
 
 ## Requirements
 

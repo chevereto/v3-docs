@@ -1,6 +1,6 @@
 module.exports = {
     title: 'V3 Docs',
-    description: 'Documentation for Chevereto V3',
+    description: 'Documentation for Chevereto image hosting software (V3)',
     head: [
         ['link', {
             rel: 'icon',

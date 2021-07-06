@@ -1,13 +1,17 @@
 ---
 home: true
 heroImage: /logo.svg
-heroText: Chevereto V3
-tagline: Self-hosted image sharing software
+heroText: Chevereto V3 Docs
+tagline: Self-hosted image hosting software
 actionText: Get Started →
 actionLink: /get-started/
 ---
 
 # Chevereto V3 Documentation
+
+Welcome to the Chevereto documentation!
+
+Here you will find all the official guides and instructions for Chevereto V3. You are welcome to contribute improving this documentation.
 
 ## Shortcuts
 
@@ -17,10 +21,19 @@ actionLink: /get-started/
 * [Upgrading](get-started/upgrading.md)
 * [Container](setup/container/introduction.md)
 
+## Additional resources
+
+* [Guides](https://github.com/chevereto/guides)
+
+## Get in touch
+
+* [Community](https://chevereto.com/community)
+* [Discord](https://chv.to/discord)
+
 ## Get updates
 
-* [Official website](https://chevereto.com)
-* [GitHub organization](https://github.com/chevereto)
+* [Chevereto.com](https://chevereto.com)
+* [GitHub](https://github.com/chevereto)
 * [Newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrgHu89RPRifGX6GXWko9jbzN892DN892XkwATqNm2slYVMHJyPXHV763yXE9jZoh0ZhJySXQ) - Get the news in your email
 * [Blog](https://chevereto.com/blog) - Learn about the upcoming things and more
 

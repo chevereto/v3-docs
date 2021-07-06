@@ -14,22 +14,22 @@ Click on "Add IP ban".
 
 The IP address to ban.
 
-| Type  | Accepted  |
-|---|---|
-| String  | IPV4 and IPV6 addresses  |
+| Type   | Accepted                |
+| ------ | ----------------------- |
+| String | IPV4 and IPV6 addresses |
 
 ### Expiration date
 
 Determines the expiration date for the IP ban.
 
-| Type  | Optional  |
-|---|---|
-| Datetime  | Y  |
+| Type     | Optional |
+| -------- | -------- |
+| Datetime | Y        |
 
 ### Description
 
 A brief description about the category. It will be used in the `<meta name="description">` tag for the category page.
 
-| Type  | Accepted  |
-|---|---|
-| String  | Any |
+| Type   | Accepted |
+| ------ | -------- |
+| String | Any      |

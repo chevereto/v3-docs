@@ -12,47 +12,47 @@ All settings here applies only if `Flood protection` is enabled.
 
 Toggles sending a notification when flood is detected.
 
-| Value  | Effect  |
-|---|---|
-| Enabled | Email notify on flood |
+| Value    | Effect                      |
+| -------- | --------------------------- |
+| Enabled  | Email notify on flood       |
 | Disabled | Don't email notify on flood |
 
 ## Minute limit
 
 Determines the maximum image uploads per minute.
 
-| Type  | Recommended  |
-|---|---|
-| Integer  | 50  |
+| Type    | Recommended |
+| ------- | ----------- |
+| Integer | 50          |
 
 ## Hourly limit
 
 Determines the maximum image uploads per hour.
 
-| Type  | Recommended  |
-|---|---|
-| Integer  | 500  |
+| Type    | Recommended |
+| ------- | ----------- |
+| Integer | 500         |
 
 ## Daily limit
 
 Determines the maximum image uploads per day.
 
-| Type  | Recommended  |
-|---|---|
-| Integer  | 1000  |
+| Type    | Recommended |
+| ------- | ----------- |
+| Integer | 1000        |
 
 ## Weekly limit
 
 Determines the maximum image uploads per week.
 
-| Type  | Recommended  |
-|---|---|
-| Integer  | 5000  |
+| Type    | Recommended |
+| ------- | ----------- |
+| Integer | 5000        |
 
 ## Monthly limit
 
 Determines the maximum image uploads per minute.
 
-| Type  | Recommended  |
-|---|---|
-| Integer  | 10000  |
+| Type    | Recommended |
+| ------- | ----------- |
+| Integer | 10000       |

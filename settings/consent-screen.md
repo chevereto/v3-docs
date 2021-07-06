@@ -6,9 +6,9 @@
 
 Toggles the use of a consent screen when browsing the website for the first time.
 
-| Value  | Effect  |
-|---|---|
-| Enabled | Enable consent screen |
+| Value    | Effect                 |
+| -------- | ---------------------- |
+| Enabled  | Enable consent screen  |
 | Disabled | Disable consent screen |
 
 ## Consent screen cover image
@@ -17,6 +17,6 @@ Toggles the use of a consent screen when browsing the website for the first time
 
 Determines the background image used for the consent screen page.
 
-| Type  | Recommended  |
-|---|---|
-| Image | < `400KB` |
+| Type  | Recommended |
+| ----- | ----------- |
+| Image | < `400KB`   |

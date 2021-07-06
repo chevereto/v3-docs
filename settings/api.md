@@ -6,6 +6,6 @@
 
 Determines the API v1 key.
 
-| Type  | Accepted  |
-|---|---|
-| String  | Any  |
+| Type   | Accepted |
+| ------ | -------- |
+| String | Any      |

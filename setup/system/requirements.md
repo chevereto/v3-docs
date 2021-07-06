@@ -117,11 +117,11 @@ Chevereto user will require **read/write** access in the following paths:
 | ------- | ------ | ------- |
 | 3.20    | 5.7, 8 | 10      |
 
-* Database user must have `ALL PRIVILEGES` over the target database.
-* InnoDB storage engine
+* Database user must have `ALL PRIVILEGES` over the target database
+* InnoDB table storage engine
 
-::: tip
-If you are upgrading from old versions note that you will need to manually convert the tables to InnoDB before upgrading the software.
+::: danger Upgrading from old installation
+When upgrading from old versions using MyISAM table storage engine will require to manually convert the alleged tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
 :::
 
 ## Cron

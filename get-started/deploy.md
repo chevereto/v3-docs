@@ -2,7 +2,7 @@
 
 <img src="../src/partners/vultr/logo_onwhite.svg" alt="Vultr" width="300"/>
 
-Chevereto can be easily deployed on Vultr from the [Vultr Marketplace](https://chv.to/vultr) and if you use our Vultr links to get **$100 credit** to try Vultr services.
+Chevereto can be easily deployed on Vultr from the [Vultr Marketplace](https://chv.to/vultr) and if you use our Vultr links you get **$100 credit** to try Vultr services.
 
 This provisioning is officially supported by us and you can check the [repository](https://github.com/chevereto/vultr-marketplace) we made for it.
 
@@ -14,7 +14,7 @@ This provisioning includes the following:
 * Sets the MySQL root password.
 * Sets up the debian-sys-maint user in MySQL so the system’s init scripts for MySQL will work without requiring the MySQL root user password.
 * Sets the cron required for background tasks.
-* Certbot pre-installed
+* Includes Certbot pre-installed.
 :::
 
 ## Step-by-step guide

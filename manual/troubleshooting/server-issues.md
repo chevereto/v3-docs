@@ -1,6 +1,6 @@
 # Server issues
 
-Not all web servers follow some basic standards and in some cases even having a server that meets the [system requirements](../system/requirements.md) you could find issues that won't allow Chevereto to work properly.
+Not all web servers follow some basic standards and in some cases even having a server that meets the [system requirements](../server/requirements.md) you could find issues that won't allow Chevereto to work properly.
 
 ## Webserver
 

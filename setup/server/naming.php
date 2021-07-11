@@ -6,4 +6,5 @@ return [
     'post-install.md' => 'Post-Install',
     'updating.md' => 'Updating',
     'upgrading.md' => 'Upgrading',
+    'requirements.md' => 'Requirements',
 ];

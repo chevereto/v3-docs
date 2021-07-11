@@ -8,7 +8,7 @@ If you want to run Chevereto using containers refer to this [guide](../container
 
 ## Requirements
 
-Before installing anything double-check that the target server provides the system [requirements](../system/requirements.md) required to run Chevereto.
+Before installing anything double-check that the target server provides the system [requirements](../server/requirements.md) required to run Chevereto.
 
 ::: danger
 We can't stress how important is that you always check requirements as failing to provide requirements could break your installation.

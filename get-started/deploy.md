@@ -1,8 +1,8 @@
 # Deploy Chevereto
 
-<img src="../src/partners/vultr/logo_onwhite.svg" alt="Vultr" width="300"/>
+<img src="../src/partners/vultr/logo_onwhite.svg" alt="Vultr" width="200"/>
 
-Chevereto can be easily deployed on Vultr from the [Vultr Marketplace](https://chv.to/vultr) and if you use our Vultr links you get **$100 credit** to try Vultr services.
+Chevereto can be easily deployed on Vultr from the [Vultr Marketplace](https://vultr.grsm.io/chevereto) and if you use our Vultr links you get **$100 credit** to try Vultr services.
 
 This provisioning is officially supported by us and you can check the [repository](https://github.com/chevereto/vultr-marketplace) we made for it.
 
@@ -19,7 +19,7 @@ This provisioning includes the following:
 
 ## Step-by-step guide
 
-* Click the [deploy](https://chv.to/vultr) button
+* Click the [deploy](https://vultr.grsm.io/chevereto) button
 
 Chevereto is available directly under Server Type, **Marketplace Apps** when creating a new server.
 

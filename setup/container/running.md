@@ -12,7 +12,7 @@ For asset storage you can use any external storage API and if you want to use Lo
 
 * Sessions
 
-For sessions you can use Redis by configuring the [Environment Session](../system/environment.md#session) variables.
+For sessions you can use Redis by configuring the [Environment Session](../system/environment.md#session-variables) variables.
 
 * Database
 
@@ -53,3 +53,7 @@ docker run -d \
     --mount src="/local/images",target=/var/www/html/images,type=bind \
     owner/image:tag
 ```
+
+## First run
+
+Refer to [First-steps](../../manual/first-steps/README.md) instructions.

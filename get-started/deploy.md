@@ -21,5 +21,5 @@ Chevereto is available directly under Server Type, **Marketplace Apps** when cre
 * Configure your server as your needs
 
 ::: tip Enable swap
-If you setup a small machine ($5/mo) you should definitely [Use/add swap space](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04).
+If you setup a small machine ($5/mo) you should definitely [Add swap space](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04).
 :::

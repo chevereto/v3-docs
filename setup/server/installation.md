@@ -1,14 +1,14 @@
-# Installation
+# Server Installation
 
 To install Chevereto it requires a server environment where the software and uploaded files will be served. This document outlines the installation process from scratch.
 
-::: tip Installation service
-As part of our [Extra Support](https://chevereto.com/support) offering you can get official installation services for your needs.
+::: tip Containers?
+If you want to run Chevereto using containers refer to this [guide](../container/introduction.md).
 :::
 
 ## Requirements
 
-Before installing anything double-check that the target server provides the system [requirements](../setup/system/requirements.md) required to run Chevereto.
+Before installing anything double-check that the target server provides the system [requirements](../system/requirements.md) required to run Chevereto.
 
 ::: danger
 We can't stress how important is that you always check requirements as failing to provide requirements could break your installation.
@@ -59,6 +59,6 @@ The Installer also provides a [CLI API](https://github.com/chevereto/installer/b
 * Upload all the contents of the `chevereto` folder to your server (usually in the `public_html` folder)
 * Go to your target website URL and follow the instructions
 
-## Next steps
+## Post-Install
 
-Now that the software application has been provided to the server, you can continue with [Post-install](post-install.md) instructions to configure the software application for your use case.
+Refer to [First-steps](../../manual/first-steps/README.md) instructions.

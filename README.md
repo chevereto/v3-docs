@@ -13,22 +13,15 @@ Welcome to the Chevereto documentation!
 
 Here you will find all the official guides and instructions for Chevereto V3. You are welcome to contribute improving this documentation.
 
-## Shortcuts
-
-* [Installation](get-started/installation.md)
-* [Post-Install](get-started/post-install.md)
-* [Updating](get-started/updating.md)
-* [Upgrading](get-started/upgrading.md)
-* [Container](setup/container/introduction.md)
-
 ## Additional resources
 
+* [Releases](https://releases.chevereto.com)
 * [Guides](https://github.com/chevereto/guides)
 
 ## Get in touch
 
 * [Community](https://chevereto.com/community)
-* [Discord](https://chv.to/discord)
+* [Chat](https://chv.to/discord)
 
 ## Get updates
 

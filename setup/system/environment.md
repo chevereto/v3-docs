@@ -7,7 +7,7 @@ These are the system level settings that can be used to tweak Chevereto provisio
 To pass settings to Chevereto is recommended to use system level environment variables so it entirely depends on how you run the PHP process.
 
 ::: tip Settings file
-If you can't use environment variables in your setup you can use the [settings file](settings-file.md) to configure the Chevereto variables.
+If is not possible to use environment variables you can use the [settings file](../server/settings-file.md) to configure the Chevereto variables.
 :::
 
 ### Apache HTTP Web Server (PHP module)

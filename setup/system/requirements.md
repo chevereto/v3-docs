@@ -81,7 +81,7 @@ If the server setup can't provide all the image formats you must use the followi
 
 ## Configuring image library
 
-Check for [CHEVERETO_IMAGE_LIBRARY](environment.md#image-handling) for changing the default image library used by Chevereto.
+Check for [CHEVERETO_IMAGE_LIBRARY](environment.md#image-handling-variables) for changing the default image library used by Chevereto.
 
 ### ImageMagick
 
@@ -177,7 +177,6 @@ docker exec -it \
 ```
 </code-block>
 </code-group>
-
 
 ## Web server
 

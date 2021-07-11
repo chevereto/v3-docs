@@ -2,6 +2,7 @@
 
 return [
     'system/', 
+    'server/', 
+    'container/', 
     'troubleshoot/', 
-    'vps/', 
 ];

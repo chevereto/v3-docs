@@ -8,7 +8,7 @@ Chevereto is a self-hosted multi-user, full-featured image hosting solution.
 
 Chevereto on its core provides an image hosting service that you can configure to use it in many different context. It has many applications, including:
 
-* Image host service
+* Image host/sharing service
 * Showcase galleries
 * Asset image storage
 * Image-based sharing communities

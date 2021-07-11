@@ -1,10 +1,4 @@
-# Container
-
-::: tip
-Chevereto works in both contexts (containers and not-containers). If you aren't familiar with containers we really hope you discover it with Chevereto.
-:::
-
-## What are Containers?
+# Container Introduction
 
 Containers is a term to refer to a software package that you run in a OS-level virtualization. To put it simple, a container is a stand-alone instance of an application including all what the application needs to operate. This includes the application files, the library requirements and up to the operating system.
 

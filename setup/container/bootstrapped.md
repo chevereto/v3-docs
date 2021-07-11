@@ -1,7 +1,7 @@
 # Container Bootstrapped
 
 ::: danger
- Use [Container Registry](../../setup/container/registry.md) for production grade container provisioning.
+Use [Container Registry](../../setup/container/registry.md) for production container provisioning.
 :::
 
 This guide is for bootstrapped container based provisioning for Chevereto using system images published at [Docker Hub](https://hub.docker.com/r/chevereto/chevereto). This is used only for development purposes.

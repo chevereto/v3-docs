@@ -1,6 +1,10 @@
-# Settings file
+# Server Settings file
 
-The file at `app/settings.php` contains the application system level settings. A settings file may look like this (check [environment](environment.md) variables for more info).
+The file at `app/settings.php` contains the application system level settings. A settings file may look like this (check [environment](../system/environment.md) variables for more info).
+
+::: tip Running container?
+You can ignore this as you can pass `-e` variables directly.
+:::
 
 ```php
 <?php
@@ -38,7 +42,3 @@ $settings = [
     'session.save_path' => '/tmp',
 ];
 ```
-
-::: tip
-Note that when running containers this file is not used as it all rely to environment variables for container context.
-:::

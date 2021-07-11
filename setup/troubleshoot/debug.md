@@ -9,7 +9,7 @@ To debug Chevereto you will need to:
 
 ## Configuring debug
 
-Debug can be configured using [environment](../system/environment.md#debug) variables. It can be also enabled using the [settings file](../system/settings-file.md).
+Debug can be configured using [environment](../system/environment.md#debug-variables) variables. It can be also enabled using the [settings file](../system/settings-file.md).
 
 Table below shows the equivalent setting key to environment variables.
 

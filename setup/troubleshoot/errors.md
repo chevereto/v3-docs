@@ -1,15 +1,19 @@
 # Errors
 
-When having an error Chevereto will always indicate an error id (**errorId**):
+Application errors can be caused by several different causes and understanding in which layer the error is affecting the system will drive towards an easy outcome. Kindly understand that in multi-layered systems like Chevereto is crucial to understand when an error is caused by Chevereto or when the problem is elsewhere.
+
+## Error Id
+
+Chevereto logs all those unique events (errors) under an unique **errorId** associated with a unique stack trace and debug information. When detecting a system error Chevereto will always indicate the error id:
 
 ```plain
 <some code>: ** errorId #dacb7f96fb9fd28d **
 ```
 
-This is normal as system errors in Chevereto **are hidden by default** on production mode. Errors won't be displayed **for security reasons** and the errorId is a randomly generated unique identifer per error event.
+Application errors in Chevereto **are hidden by default** on production mode, the only public part is the errorId identifier. Errors won't be displayed **for security reasons** and the errorId is a randomly generated unique identifer per error event.
 
 ::: tip Note: A error id is not an error message
-When requesting help **you need to provide the actual error message**, not just the error id. The error id exists so you can [debug it](debug.md) for that error in your configured system log device.
+The error id exists so you can lookup for that error in your configured system debug device.
 :::
 
 ## Stack Trace
@@ -47,6 +51,14 @@ It is likely that Chevereto **won't cause** the following issues:
 
 ## Understanding errors
 
+### HTTP 500 Internal Server Error
+
+This is a generic error response emitted by the web server layer. This message only indicates the existence of an error, it doesn't specify any concrete reason neither it can be related to anything.
+
+::: warning Debugging HTTP 500 error
+This kind of errors need to be debugged in the web server layer, which will vary depending on the web server software being used. Refer to your web server provisioning documentation.
+:::
+
 ### Aw, snap! Internal Server Error
 
 ```txt
@@ -55,11 +67,7 @@ Aw, snap! Internal Server Error - Check your error_log or enable debug_mode = 3
 
 This message indicates an error caught by Chevereto, but hidden due to **production error reporting** settings. To actually know what is going on you have to [debug](./debug.md).
 
-> By default the system hints `debug_mode = 3` but you can use any level (1, 2, 3).
-
-When debug is enabled, the message will now include the full error trace which allows a better understanding of the situation. This information is what you need to provide others when asking for help.
-
-### Database
+### Database messages
 
 ::: danger Dumped update query
 If at `/install` you see a plain text message starting with `#Dumped update query` it means that you **MUST** manually run the printed queries in your MySQL console.

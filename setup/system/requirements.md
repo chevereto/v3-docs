@@ -72,7 +72,7 @@ If you need to explicit use GD you can add this key to [Settings file](settings-
 ```
 
 ::: danger Workaround missing formats
-If you can't provide all the image formats you can use the following [Settings file](settings-file.md) workaround, in which for example we enable support only for `PNG, GIF`:
+If the server setup can't provide all the image formats you must use the following [Settings file](settings-file.md) workaround. In the following example Chevereto is configured with explicit support only for `PNG, GIF`:
 
 ```php
 'image_formats_available' => ['PNG', 'GIF'],
@@ -81,7 +81,7 @@ If you can't provide all the image formats you can use the following [Settings f
 
 ## Configuring image library
 
-Check for [CHEVERETO_IMAGE_LIBRARY](environment.md#image-handling) for changing the default image library.
+Check for [CHEVERETO_IMAGE_LIBRARY](environment.md#image-handling) for changing the default image library used by Chevereto.
 
 ### ImageMagick
 
@@ -121,21 +121,23 @@ Chevereto user will require **read/write** access in the following paths:
 * InnoDB table storage engine
 
 ::: danger Upgrading from old installation
-When upgrading from old versions using MyISAM table storage engine will require to manually convert the alleged tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
+Old versions using MyISAM table storage engine will require to manually convert the alleged tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
 :::
 
 ## Cron
 
-A cron (scheduled run command) is required to process the application background jobs. The cron may look like this where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
+A cron is required to process the application background jobs. The cron may look like this where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
 
-The easiest way to provide the cron is by creating a file at `/etc/cron.d/chevereto` with the following contents:
+### Cron.d
+
+Create a cron file at `/etc/cron.d/chevereto` with the following contents:
 
 ```sh
 * * * * * www-data php /var/www/html/cli.php -C cron
 
 ```
 
-> Note: In debian-based the cron file must have a newline eof
+> Note: In debian-based systems the cron file must have a newline eof
 
 ### Command
 
@@ -175,6 +177,7 @@ docker exec -it \
 ```
 </code-block>
 </code-group>
+
 
 ## Web server
 

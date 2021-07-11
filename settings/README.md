@@ -2,12 +2,10 @@
 
 System is controlled at the Dashboard panel, which is the route at `/dashboard` where you can administer your website.
 
-![Dashboard](../src/screen/dashboard_3.19.png "Dashboard")
-
-## Locating the Dashboard
-
 - Click on your user menu on the top bar
 - Select "Dashboard"
+
+![Dashboard](../src/screen/dashboard_3.19.png "Dashboard")
 
 ## Granting access to the Dashboard
 

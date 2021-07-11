@@ -1,6 +1,8 @@
 # Environment
 
-This is the environment variables reference for Chevereto, it contains the system level settings that you can use in your provisioning.
+These are the system level settings that can be used to tweak Chevereto provisioning.
+
+## Passing values
 
 To pass settings to Chevereto is recommended to use system level environment variables so it entirely depends on how you run the PHP process.
 
@@ -8,23 +10,23 @@ To pass settings to Chevereto is recommended to use system level environment var
 If you can't use environment variables in your setup you can use the [settings file](settings-file.md) to configure the Chevereto variables.
 :::
 
-* Apache HTTP Web Server (PHP module)
+### Apache HTTP Web Server (PHP module)
 
 If PHP is provided using `mpm_prefork` you must refer to the documentation on [Apache HTTP Server environment variables](https://httpd.apache.org/docs/current/env.html). You may check our real use cases at [chevereto/vultr-marketplace](https://github.com/chevereto/vultr-marketplace/blob/main/files/var/lib/cloud/scripts/per-instance/provision.sh).
 
-* Other Web servers
+### Other setups
 
-For these you will be running [PHP-FPM](https://www.php.net/manual/en/install.fpm.configuration.php) so you can add those at your `php-fpm.conf` file.
+For these you will be running [PHP-FPM](https://www.php.net/manual/en/install.fpm.configuration.php) so you can add those settings at your `php-fpm.conf` file.
 
-* Application servers
+### Application servers
 
 For these you will be running PHP CLI so you should be able to pass those at `php.ini` for your CLI. You can also `export` those in your shell. Kindly refer to the documentation of each application server for the best way to pass those to Chevereto.
 
-* Container
+### Container
 
 Pass the environment variables directly to the container run command or at `docker-compose` layer.
 
-## Assets
+## Assets variables
 
 Environment variables for storing assets that can be uploaded to any of the supported external storage APIs.
 
@@ -46,7 +48,7 @@ Check [External storage](../../settings/external-storage.md) for adding external
 | CHEVERETO_ASSET_STORAGE_TYPE         | asset_storage_type         | s3             |
 | CHEVERETO_ASSET_STORAGE_URL          | asset_storage_url          | `<url>/bucket` |
 
-## Database
+## Database variables
 
 Environment variables for the database details.
 
@@ -61,7 +63,7 @@ Environment variables for the database details.
 | CHEVERETO_DB_TABLE_PREFIX | db_table_prefix | chv_                     |
 | CHEVERETO_DB_USER         | db_user         | chevereto                |
 
-## Debug
+## Debug variables
 
 Environment variables for [debug](../troubleshoot/debug.md).
 
@@ -74,7 +76,7 @@ When using Docker it always logs to `/dev/stderr` regardless this configuration.
 | CHEVERETO_DEBUG_LEVEL | debug_level | `1`                          |
 | CHEVERETO_ERROR_LOG   | error_log   | /var/log/chevereto-error.log |
 
-## Session
+## Session variables
 
 Environment variables for the session driver.
 
@@ -83,7 +85,7 @@ Environment variables for the session driver.
 | CHEVERETO_SESSION_SAVE_HANDLER | session.save_handler | `redis` `files`      |
 | CHEVERETO_SESSION_SAVE_PATH    | session.save_path    | `tcp://redis` `/tmp` |
 
-## Image handling
+## Image handling variables
 
 Environment variables for controlling image handling.
 
@@ -92,7 +94,7 @@ Environment variables for controlling image handling.
 | CHEVERETO_IMAGE_FORMATS_AVAILABLE | image_formats_available | `'JPG','PNG','BMP','GIF','WEBP'` |
 | CHEVERETO_IMAGE_LIBRARY           | image_library           | `imagick` `gd`                   |
 
-## Hostname
+## Hostname variables
 
 Environment variables for the hostname configuration.
 
@@ -102,7 +104,7 @@ Environment variables for the hostname configuration.
 | CHEVERETO_HOSTNAME_PATH | hostname_path | /             |
 | CHEVERETO_HTTPS         | https         | `true`        |
 
-## System context
+## System context variables
 
 Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable some sensitive functionality.
 
@@ -112,7 +114,7 @@ Environment variables for the context where Chevereto system is being provided. 
 | CHEVERETO_DISABLE_UPDATE_HTTP | disable_update_http | `false` |
 | CHEVERETO_DISABLE_UPDATE_CLI  | disable_update_cli  | `false` |
 
-## File upload
+## File upload variables
 
 Environment variables for the file uploading limits. Note that the following environment variables will only work for container provisioning.
 

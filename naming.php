@@ -5,5 +5,5 @@ return [
     'features/' => 'Features',
     'get-started/' => 'Get Started',
     'setup/' => 'Setup',
-    'settings/' => 'Settings',
+    'settings/' => 'Admin settings',
 ];

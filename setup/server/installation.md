@@ -2,10 +2,6 @@
 
 To install Chevereto it requires a server environment where the software and uploaded files will be served. This document outlines the installation process from scratch.
 
-::: tip Containers?
-If you want to run Chevereto using containers refer to this [guide](../container/introduction.md).
-:::
-
 ## Requirements
 
 Before installing anything double-check that the target server provides the system [requirements](../server/requirements.md) required to run Chevereto.

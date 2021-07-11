@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'introduction.md',
+    'requirements.md',
     'registry.md',
     'running.md',
     'bootstrapped.md',

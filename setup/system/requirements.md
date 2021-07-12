@@ -7,6 +7,11 @@ Minimum requirements:
 
 > Kindly note that systems like Chevereto depends entirely on the use case so this is just a base reference. If your system gets bigger you need to consider upgrading your machines and tweak swap space, cache strategies, etc.
 
+::: tip Requirements per provisioning method
+* [Server requirements](../server/requirements.md)
+* [Container requirements](../container/requirements.md)
+:::
+
 ## Cron
 
 A cron is required to process the application background jobs. The cron may look like this where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.

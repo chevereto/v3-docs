@@ -20,7 +20,13 @@ For persistent sessions you can use Redis by configuring the [Session environmen
 
 ### Database
 
-For database you can create a volume for persistence, or use a server over the network.
+For database you can create a volume for persistence, or use a server over the network. If you manually provide the database you will need to create its user binding:
+
+```sh
+docker exec chv-mariadb mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
+    CREATE USER 'chevereto' IDENTIFIED BY 'user_database_password'; \
+    GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
+```
 
 ### User uploads storage
   

@@ -9,25 +9,29 @@ To debug Chevereto you will need to:
 
 ## Configuring debug
 
-Debug can be configured using [environment](../system/environment.md#debug-variables) variables. It can be also enabled using the [settings file](../system/settings-file.md).
+Debug can be configured using [environment](../system/environment.md#debug-variables) variables and it can be also enabled using the [settings file](../system/settings-file.md).
 
-Table below shows the equivalent setting key to environment variables.
+> Table below shows the equivalent setting key to environment variables.
 
 | Setting key | Environment equivalent |
 | ----------- | ---------------------- |
 | debug_level | CHEVERETO_DEBUG_LEVEL  |
 | error_log   | CHEVERETO_ERROR_LOG    |
 
-::: tip Custom `error_log`
+::: tip Custom log location
 Configure your own error log device (file, system, etc.) to control where the logs will be happening. If you don't alter this it will fallback to the default system log facility.
 :::
 
 ## Debug levels
 
-Depending on your work context you may need to configure debug accordingly. Note that Docker will always log to `/dev/stderr`.
+Depending on your work context you may need to configure debug accordingly.
 
 ::: warning
-Error level 3 is not recommended for production environments. Is not safe to print the errors to the screen, handle it with care.
+Error level >= 2 is not recommended for production environments. Is not safe to print the errors to the screen, handle it with care.
+:::
+
+::: tip Containers
+Containers will always log to `/dev/stderr` regardless this setting.
 :::
 
 | Level | Description                              |
@@ -58,6 +62,12 @@ This vary a lot depending the server provider:
   * Logs by default at `../domain.com.error.log` (parent of `public_html` folder)
 * Docker
   * Always logs to `/dev/stderr`
+
+### I can't find the logs
+
+Don't worry, if you can't find the logs we strongly suggest you to request [extra support](https://chevereto.com/support) service so we safely do this for you.
+
+Alternatively, you can configure `debug_level` >= 2 but note that such error reporting level will expose your installation. Restrict any public access to the system and revert back to `debug_level=1` as soon as possible.
 
 ### Reading logs
 

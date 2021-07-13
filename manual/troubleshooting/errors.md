@@ -43,21 +43,26 @@ Chevereto exists on top of many different technologies working at the same time 
 
 It is likely that Chevereto **won't cause** the following issues:
 
-* Unable to connect (network)
-* SQL "server gone"
+* Unable to connect (network issues)
+* MySQL server gone
 * CORS (missing icons, fonts)
-* http 400 @ `/install`
-* Cookies/Sessions not working
+* Cookies/Sessions not working (permissions)
+* Restricted functions (`set_time_limit`)
+* Server restrictions (`mod_security`)
 
-## Understanding errors
+## Common errors
 
 ### HTTP 500 Internal Server Error
 
-This is a generic error response emitted by the web server layer. This message only indicates the existence of an error, it doesn't specify any concrete reason neither it can be related to anything.
+This is a generic error response emitted by the web server layer and this it only indicates the existence of an error, it doesn't specify any concrete reason for it.
+
+As these errors may spawn in any layer, it is recommended to check the system error log device (read [accessing logs](debug.md#accessing-logs) to learn how-to).
 
 ::: warning Debugging HTTP 500 error
 This kind of errors need to be debugged in the web server layer, which will vary depending on the web server software being used. Refer to your web server provisioning documentation.
 :::
+
+Once you get the actual error you can either solve the situation in your own context or use that information to request [support](https://chevereto.com/support) from us.
 
 ### Aw, snap! Internal Server Error
 

@@ -133,7 +133,6 @@ Select **Backblaze B2** storage API for legacy **B2 Storage**:
 | applicationKey | Storage secret (Master Application Key) |
 
 
-
 ### FTP
 
 The FTP API allows to upload images to a server implementing the [File Transfer Protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
@@ -181,6 +180,7 @@ The S3 Compatible API allows to upload images to any server implementing the Ama
 
 Some providers supporting S3 API are:
 
+- Vultr Object Storage (use region `us-east-1`)
 - Ceph
 - DigitalOcean Spaces
 - Dreamhost Cloud Storage

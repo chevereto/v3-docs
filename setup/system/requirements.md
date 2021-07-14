@@ -29,7 +29,7 @@ Create a cron file at `/etc/cron.d/chevereto` with the following contents:
 
 ### Command
 
-The command should be run by `www-data` user. Note that location of `php` binary may vary in different systems.
+The command should be run by `www-data` user. Note use `which php` to locate the binary as its location may vary in different systems.
 
 <code-group>
 <code-block title="V3.20+">

@@ -216,7 +216,7 @@ Options -MultiViews
 
 ### Real connecting IP
 
-For setups under any kind of proxy (including CloudFlare) is required that the web server sets the appropriate value for the client connecting IP.
+For setups under any kind of proxy (including [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs)) is required that the web server sets the appropriate value for the client connecting IP.
 
 ::: danger
 If real connecting IP is not properly configured Chevereto won't be able to detect the visitors IPs, failing to deliver IP based restrictions and flood control.

@@ -14,7 +14,7 @@ Minimum requirements:
 
 ## Cron
 
-A cron is required to process the application background jobs. The cron may look like this where [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
+A [cron](https://en.wikipedia.org/wiki/Cron) is required to process the application background jobs.
 
 ### Cron.d
 
@@ -26,6 +26,12 @@ Create a cron file at `/etc/cron.d/chevereto` with the following contents:
 ```
 
 > Note: In debian-based systems the cron file must have a newline eof
+
+In the instruction above [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute, `www-data` is the webserver, `php` is the PHP binary, `/var/www/html/cli.php` is the location of the Chevereto CLI and `-C cron` is the option passed to Chevereto.
+
+::: danger Suit your context
+The above cron works when running debian-based OS provided with our default deploy provisioning. If you don't use our server provisioning you will be likely required to alter the default instructions for user, PHP binary and Chevereto CLI location.
+:::
 
 ### Command
 

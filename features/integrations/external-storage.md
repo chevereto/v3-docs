@@ -141,17 +141,23 @@ The FTP API allows to upload images to a server implementing the [File Transfer 
 
 The Google Cloud API allows to upload images to a Google Cloud Storage bucket. You will need a [Google Cloud](https://cloud.google.com/) service account and [activate cloud storage](https://cloud.google.com/storage/docs/signup) for this.
 
-- To setup Google Cloud Storage:
-  - Create a project
-  - Go to "APIs & services" dashboard and make sure that "Google Cloud Storage JSON API" is enabled
-  - Go to "APIs & services" > "Credentials", click on "Create credentials" then click on "Service account key"
-  - Make sure to use the following settings:
-    - Select your service account or create a new one.
-    - Key type: JSON
-    - Your browser will start to download the JSON key file. Store **the file contents**.
-  - Go to "Storage" then click on "Browser"
-  - Create a bucket by clicking the "Create bucket" button. Store the **bucket name**.
+To setup Google Cloud Storage:
 
+- Create a project
+- Go to **APIs & services** dashboard and make sure that **Google Cloud Storage JSON API** is enabled.
+  - If is not enabled click on **Enable API and Services** and enable Google Cloud Storage JSON API
+- Go to **Cloud Storage** then click on **Browser**
+- Create a bucket by clicking **Create bucket** button. Make sure to:
+  - Prevent public access: Unselect **Enforce public access prevention on this bucket** as you want public access for the bucket
+  - Access control: Fine-grained
+- Go to **Credentials** under APIs & services, click on **Create credentials** then click on **Service account**. Make sure to use the following settings:
+  - Grant access: Role owner
+  - Key type: JSON
+- When done, go to your newly created service account under **Service Accounts**
+- Go yo **keys** and create a new **JSON key**
+- Your browser will start to download the JSON key file, the contents of the file is what you need to paste on Chevereto's **Secret Key** textarea
+
+  
 ### Local
 
 The [Local API](../settings/external-storage.md#local) allows to upload images to any filesystem path in the server.

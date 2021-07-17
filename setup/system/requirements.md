@@ -85,5 +85,3 @@ If you don't run containers you need to review the [Server Requirements](../serv
 ### Image library
 
 Refer to [Image library](../server/requirements.md#image-library) server requirements.
-
-### 

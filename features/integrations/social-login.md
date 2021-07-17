@@ -25,12 +25,11 @@ To enable Twitter login you will need to create a [Twitter app](https://apps.twi
 
 - Go to `apps.twitter.com` and click on "Create New App".
 - Use the following settings:
-
   - Website: `http://www.yourwebsite.com`
   - Callback URL: `http://www.yourwebsite.com/connect/twitter`
   - Allow this application to be used to Sign in with Twitter (On).
   - Use the following permissions:
-    - Read and Write (selected).
+    - Read and Write (selected)
 
 ## Google login
 
@@ -44,7 +43,7 @@ To enable Google Google Sign-in:
 
 After configuration is complete, **take note** of the **client ID** and **Client Secret** that got created.
 
-Go to [Google login settings](https://v3-docs.chevereto.com/settings/social-networks.html#google) to enable Google login in your Chevereto installation.
+Go to [Google login settings](../../settings/social-networks.md#google) to enable Google login in your Chevereto installation.
 
 ## VK login
 

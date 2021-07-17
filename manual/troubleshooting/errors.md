@@ -21,7 +21,7 @@ The error id exists so you can lookup for that error in your configured system d
 Code below shows an example error stack trace. It describes the error, provide its unique errorId and it shows the call stack.
 
 ```txt
-Aw, snap! Internal Server Error [debug @ error_log] - https://v3-docs.chevereto.com/setup/troubleshoot/debug.html
+Aw, snap! Internal Server Error [debug @ error_log] - https://chv.to/v3/debug
 
 ** errorId #dacb7f96fb9fd28d **
 >> PDOException [2002]: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known

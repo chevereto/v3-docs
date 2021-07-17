@@ -77,3 +77,13 @@ In the instruction above [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cro
 ::: danger Suit your context
 The above default cron works when running our official deploy provisioning. If you don't use our server provisioning you will be likely required to alter the default instructions for user, PHP binary and Chevereto CLI location. Refer to your system documentation.
 :::
+
+## Server requirements
+
+If you don't run containers you need to review the [Server Requirements](../server/requirements.md).
+
+### Image library
+
+Refer to [Image library](../server/requirements.md#image-library) server requirements.
+
+### 

@@ -4,14 +4,14 @@
 
 Final - [3.20.9](https://releases.chevereto.com/3.X/3.20/3.20.9.html) `coqueto` - Chevereto V3.20 LTS (Long Term Support).
 
-This version is getting active maintenance until **2022-11** for:
+This version is getting active maintenance and updates until **2022-11** for:
 
 * Security updates
 * PHP updates
 * Software bugs
 * Deprecated dependencies
 
-Chevereto V3.20 LTS was built using [Ubuntu 20.04](https://wiki.ubuntu.com/Releases) and thanks to this you should be able to run V3.20 based systems until **2025-04**.
+Chevereto V3.20 LTS is made using [Ubuntu 20.04](https://wiki.ubuntu.com/Releases) and thanks to this you should be able to run V3.20 based systems until **2025-04**.
 
 | Version | End of LTS | End of Life |
 | ------- | ---------- | ----------- |

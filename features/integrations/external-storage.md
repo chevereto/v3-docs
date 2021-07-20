@@ -2,37 +2,17 @@
 
 External storage allows to use external servers for storing user uploads, which helps to leverage your server load and deliver a more reliable website. If you use multiple external storage servers, it will help to distribute the traffic of these assets.
 
-## Supported APIs
+External storage works by adding a external storage server where file uploads will be stored. This external storage server expose those files using HTTP, enabling users and visitors of your Chevereto installation to access these images directly.
 
-- [External storage](#external-storage)
-  - [Supported APIs](#supported-apis)
-  - [How it works](#how-it-works)
-    - [Storage URL](#storage-url)
-    - [Storage URL with CDN](#storage-url-with-cdn)
-  - [External storage APIs](#external-storage-apis)
-    - [Alibaba Cloud OSS](#alibaba-cloud-oss)
-    - [Amazon S3](#amazon-s3)
-    - [Backblaze B2](#backblaze-b2)
-    - [FTP](#ftp)
-    - [Google Cloud](#google-cloud)
-    - [Local](#local)
-    - [Microsoft Azure](#microsoft-azure)
-    - [OpenStack](#openstack)
-    - [S3 Compatible](#s3-compatible)
-    - [SFTP](#sftp)
+## Storage URL
 
-## How it works
+::: tip Storage server provided
+The storage server must provide the URL for public-read file access. Check the documentation of your service provider.
+:::
 
-External storage works in two layers:
+Chevereto maps external storage uploads to the corresponding external storage server using the given Storage URL as a base URL to locate that file in the external storage.
 
-- Backend: Uploads objects to the target server
-- Frontend: Access uploaded objects directly
-
-### Storage URL
-
-Chevereto maps each image to the corresponding storage server using the given Storage URL, which acts as a base URL to locate that file.
-
-For example, using Amazon S3 with direct storage:
+Using Amazon S3 with direct storage:
 
 | Property     | Value                                          |
 | ------------ | ---------------------------------------------- |
@@ -45,7 +25,7 @@ For example, using Amazon S3 with direct storage:
 Is recommended that you use URLs that match your domain so try to take advantage of using a [CNAME record](https://en.wikipedia.org/wiki/CNAME_record).
 :::
 
-Another example, Amazon S3 with folder-based storage and custom CNAME (`img.domain.com`):
+Amazon S3 with folder-based storage and custom CNAME (`img.domain.com`):
 
 | Property     | Value                                                   |
 | ------------ | ------------------------------------------------------- |
@@ -54,13 +34,9 @@ Another example, Amazon S3 with folder-based storage and custom CNAME (`img.doma
 | Stored image | `/my-bucket/2020/10/06/image.jpg`                       |
 | Mapped URL   | `https://img.domain.com/my-bucket/2020/10/06/image.jpg` |
 
-::: danger URL resolver
-The mapped URL MUST resolve to the given resource. Chevereto won't resolve this URL, it will only handle the mapping. Check the documentation of your external storage to retrieve this URL or how to customize it to use your own domain.
-:::
+## Storage URL with CDN
 
-### Storage URL with CDN
-
-Easily add a CDN for each storage you want to use. You only need to go to your CDN provider and create a pull zone for the origin storage URL.
+Add a CDN for each storage URL you want to use. At your CDN provider create a pull zone for the origin storage URL.
 
 If you are using Amazon S3, the source (origin) URL will be something like this:
 
@@ -80,13 +56,11 @@ Adding a CNAME record for the above URL will allow you to end up with a Storage 
 https://s3-cdn.domain.com/
 ```
 
-## External storage APIs
-
-### Alibaba Cloud OSS
+## Alibaba Cloud OSS
 
 The Alibaba Cloud OSS API allows to upload images to [Alibaba Cloud (Aliyun) Object Storage System (OSS)](https://www.alibabacloud.com/product/oss/).
 
-### Amazon S3
+## Amazon S3
 
 The Amazon S3 API allows to upload images to an [Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3) bucket. You will need an [Amazon Web Services](https://aws.amazon.com/) (AWS) account for this.
 
@@ -103,7 +77,7 @@ The Amazon S3 API allows to upload images to an [Amazon S3](https://en.wikipedia
 
 If you want to use a custom domain follow the [CNAME](https://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html#VirtualHostingCustomURLs) documentation. Otherwise just make sure that the [Storage URL](#storage-url) ends with `/<your_bucket_name>/`
 
-### Backblaze B2
+## Backblaze B2
 
 The Backblaze B2 API allows to upload images to [Backblaze's cloud storage system](https://www.backblaze.com/b2/cloud-storage.html).
 
@@ -132,12 +106,11 @@ Select **Backblaze B2** storage API for legacy **B2 Storage**:
 | keyID          | Storage key (Account ID)                |
 | applicationKey | Storage secret (Master Application Key) |
 
-
-### FTP
+## FTP
 
 The FTP API allows to upload images to a server implementing the [File Transfer Protocol](https://en.wikipedia.org/wiki/File_Transfer_Protocol).
 
-### Google Cloud
+## Google Cloud
 
 The Google Cloud API allows to upload images to a Google Cloud Storage bucket. You will need a [Google Cloud](https://cloud.google.com/) service account and [activate cloud storage](https://cloud.google.com/storage/docs/signup) for this.
 
@@ -157,16 +130,15 @@ To setup Google Cloud Storage:
 - Go yo **keys** and create a new **JSON key**
 - Your browser will start to download the JSON key file, the contents of the file is what you need to paste on Chevereto's **Secret Key** textarea
 
-  
-### Local
+## Local
 
 The [Local API](../settings/external-storage.md#local) allows to upload images to any filesystem path in the server.
 
-### Microsoft Azure
+## Microsoft Azure
 
 The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](https://azure.microsoft.com/en-us/services/storage/).
 
-### OpenStack
+## OpenStack
 
 The [OpenStack API](../settings/external-storage.md#openstack) allows to upload images to an [OpenStack](https://en.wikipedia.org/wiki/OpenStack) container.
 
@@ -180,7 +152,7 @@ The [OpenStack API](../settings/external-storage.md#openstack) allows to upload 
   - Tenant name: Your `project id`, found on OpenStack Horizon on the left side (CURRENT PROJECT))
   - URL: Your URL to access the container (see [RunAbove CNAME](https://community.runabove.com/kb/en/object-storage/how-to-put-object-storage-behind-your-domain-name.html))
 
-### S3 Compatible
+## S3 Compatible
 
 The S3 Compatible API allows to upload images to any server implementing the Amazon S3 standard, also known as "AWS S3 API". The configuration is exactly the same as Amazon S3, but it requires to provide the provider endpoint.
 
@@ -197,6 +169,6 @@ Some providers supporting S3 API are:
 - Tencent Cloud Object Storage (COS)
 - Wasabi
 
-### SFTP
+## SFTP
 
 The SFTP API allows to upload images to a server implementing the [SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol).

@@ -31,10 +31,10 @@ Toggles usage of [Facebook login](../features/social-login.md#facebook-login).
 
 Toggles usage of [Twitter login](../features/social-login.md#twitter-login).
 
-| Value    | Effect                     |
-| -------- | -------------------------- |
-| Enabled  | Enable login with Twitter  |
-| Disabled | Disable login with Twitter |
+| Value    | Effect                                      |
+| -------- | ------------------------------------------- |
+| Enabled  | Enable login with Twitter (not recommended) |
+| Disabled | Disable login with Twitter (recommended)    |
 
 ## Twitter API key
 

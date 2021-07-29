@@ -1,16 +1,16 @@
 # System Requirements
 
-Minimum requirements:
+Chevereto system requirements depends entirely on the use case. If your installation gets bigger you need to consider upgrading your machines and tweak swap space, cache strategies, etc.
+
+Minimum machine requirements:
 
 * 1GB RAM
 * 1 CPU
 
-> Kindly note that systems like Chevereto depends entirely on the use case so this is just a base reference. If your system gets bigger you need to consider upgrading your machines and tweak swap space, cache strategies, etc.
+## Software requirements
 
-::: tip Requirements per provisioning method
 * [Server requirements](../server/requirements.md)
 * [Container requirements](../container/requirements.md)
-:::
 
 ## Cron
 

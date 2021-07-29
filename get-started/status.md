@@ -2,7 +2,7 @@
 
 ## Current version
 
-Final - [3.20.9](https://releases.chevereto.com/3.X/3.20/3.20.9.html) `coqueto` - Chevereto V3.20 LTS (Long Term Support).
+Final - [3.20.10](https://releases.chevereto.com/3.X/3.20/3.20.10.html) `coqueto` - Chevereto V3.20 LTS (Long Term Support).
 
 This version is getting active maintenance and updates until **2022-11** for:
 

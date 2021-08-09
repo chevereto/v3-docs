@@ -256,7 +256,7 @@ JSON metadata file bellow provides a sample metadata for `rodolfo/` user.
         },
         "networks": {
             "facebook": "no!",
-            "twitter": "godlike"
+            "twitter": "no!"
         },
         "timezone": "America/Santiago",
         "language": "cl",

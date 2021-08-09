@@ -2,6 +2,10 @@
 
 ## Facebook login
 
+::: danger Not secure
+This service provider is known for its lack of security and violation of privacy policies. We don't recommend using this feature.
+:::
+
 To enable Facebook login you will need to create a [Facebook app](https://developers.facebook.com/).
 
 - Go to `https://developers.facebook.com/apps` (you must be logged in Facebook) and click on "Add a New App".
@@ -20,6 +24,10 @@ To enable Facebook login you will need to create a [Facebook app](https://develo
 Take special note for the Facebook APP Review. Your app will be only visible to you until you complete all the information required by Facebook.
 
 ## Twitter login
+
+::: danger Not secure
+This service provider is known for its lack of security and violation of privacy policies. We don't recommend using this feature.
+:::
 
 To enable Twitter login you will need to create a [Twitter app](https://apps.twitter.com/).
 

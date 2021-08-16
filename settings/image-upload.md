@@ -16,6 +16,10 @@ JPG PNG BMP GIF WEBP
 
 Toggles the image upload functionality.
 
+## Enable uploads (URL)
+
+Toggles the image upload functionality from URL.
+
 ## Upload user interface
 
 Determines how the upload will be displayed.

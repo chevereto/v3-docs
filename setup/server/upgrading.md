@@ -1,9 +1,9 @@
 # Server Upgrading
 
-This section outlines the upgrade process required to upgrade to V3 from old major releases (V2 and older).
+This section outlines the upgrade process required to upgrade to V3 from old releases (V2 and older).
 
 ::: danger Unsupported
-These versions are really old, if you encounter any issue upgrading from these please [report](https://chv.to/open-bug) it.
+These versions are old, if you encounter any issue upgrading from these please [report](https://chv.to/open-bug) it.
 :::
 
 ## Update from V2.1 - V2.6

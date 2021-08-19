@@ -4,17 +4,17 @@ To install Chevereto it requires a server environment where the software and upl
 
 ## Requirements
 
-Before installing anything double-check that the target server provides the system [requirements](../server/requirements.md) required to run Chevereto.
+Before installing anything check that the target server provides the system [requirements](../server/requirements.md) to run Chevereto.
 
 ::: danger
-We can't stress how important is that you always check requirements as failing to provide requirements could break your installation.
+We can't stress how important is that you check requirements as failing to provide requirements could break your installation.
 :::
 
 ## Database
 
 ### Using web panels
 
-You can refer to the documentation for creating the MySQL database required for Chevereto. Here some references for the most popular panels:
+You can refer to the documentation for creating the MySQL database required for Chevereto. Here references for the most popular panels:
 
 * [CloudPanel Database](https://www.cloudpanel.io/docs/cloudpanel-ce/frontend-area/databases)
 * [cPanel Database](https://docs.cpanel.net/cpanel/databases/mysql-databases/)
@@ -33,10 +33,10 @@ sudo mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
 
 ## Provide application
 
-You will require to provide the Chevereto software application files to your server. You can do this automatically with the [Installer](#installer) or manually downloading the [zip package](#zip-package).
+You will require to provide the Chevereto software application files to your server. You can do this auto with the [Installer](#installer) or manual by downloading the [zip package](#zip-package).
 
 ::: tip
-The Installer will also detect any missing library in your system, it also works as a system check utility.
+The Installer will detect any missing library in your system, it works as a system check utility.
 :::
 
 ## Installer

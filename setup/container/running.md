@@ -20,7 +20,7 @@ For persistent sessions you can use Redis by configuring the [Session environmen
 
 ### Database
 
-For database you can create a volume for persistence, or use a server over the network. If you manually provide the database you will need to create its user binding:
+For database you can create a volume for persistence, or use a server over the network. If you manual provide the database you will need to create its user binding:
 
 ```sh
 docker exec chv-mariadb mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
@@ -30,12 +30,12 @@ docker exec chv-mariadb mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
 
 ### User uploads storage
   
-This persistent layer can be configured directly in the application [Dashboard panel](../../settings/external-storage.md). You can add multiple storages, all that configuration will be stored in the database.
+This persistent layer can be configured in the application [Dashboard panel](../../settings/external-storage.md).
 
 ## Compose
 
 ::: tip
-Check [Environment](../system/environment.md) for all the `-e` options you can pass in the Docker command.
+Check [Environment](../system/environment.md) for the `-e` options you can pass in the Docker command.
 :::
 
 In the following example volumes are used for all data persistence. The image used is [httpd-php](https://github.com/chevereto/container-builder/blob/main/httpd-php.Dockerfile) which includes Apache HTTP Web server.

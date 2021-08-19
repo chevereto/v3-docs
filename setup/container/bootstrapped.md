@@ -6,14 +6,10 @@ Use [Container Registry](../../setup/container/registry.md) for disposable conta
 
 ## Why bootstrapping?
 
-Ideally, you want to run Chevereto building your own image container image but that requires some setup. This method doesn't require registry setup. A volume must be used for the application files, ideally a bind mount.
+Ideally, you want to run Chevereto by building your own image container image for it. But that requires setup. This method doesn't require registry setup.
 
-We recommend using this method only if you are just trying the software or if you run it locally in your computer.
+We recommend using this method if you are trying Chevereto or if you run it local in your computer for **development purposes**.
 
 ## Instructions
 
 Check the repository at [chevereto/docker](https://github.com/chevereto/docker).
-
-## Images
-
-The images are published at [Docker Hub](https://hub.docker.com/r/chevereto/chevereto).

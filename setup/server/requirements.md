@@ -14,7 +14,7 @@ Chevereto is [PHP](https://php.net/) software, it has been designed using:
 Packages and PECL provides the same convenience, but as packages are made for debian-based systems you should prefer PECL if you don't have a compatible system.
 
 ::: warning Packages vs PECL
-Note that packages not only contain the software, it could also trigger other effects in the system.
+Packages not only contain the software, it could trigger other effects in the system.
 :::
 
 ### PHP configuration
@@ -57,7 +57,7 @@ The following PHP extensions are required for Chevereto.
 
 ### PHP Features
 
-Chevereto requires unrestricted access to all PHP functions. If some or any PHP function is removed it could cause Chevereto to fail or to not work at all. Note that the following functions must not be restricted:
+Chevereto requires unrestricted access to all PHP functions. If any PHP function is removed it could cause Chevereto to fail or to not work at all. Note that the following functions must not be restricted:
 
 * [set_time_limit](https://www.php.net/set-time-limit)
 
@@ -99,8 +99,6 @@ Additional recommended ImageMagick configuration at `/etc/ImageMagick-6/policy.x
 
 User running `php` must be in the owner group of your installation directory. This is required to allow Chevereto to modify the filesystem for uploading, one-click update and many other features.
 
-> PHP usually runs under `www-data`
-
 Chevereto user will require **read/write** access in the following paths:
 
 * `/tmp`
@@ -121,7 +119,7 @@ Chevereto user will require **read/write** access in the following paths:
 * InnoDB table storage engine
 
 ::: danger Upgrading from old installation
-Old versions using MyISAM table storage engine will require to manually convert the alleged tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
+Old versions using MyISAM table storage engine will require to convert the old tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
 :::
 
 ## Web server
@@ -219,7 +217,7 @@ Options -MultiViews
 For setups under any kind of proxy (including [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200170786-Restoring-original-visitor-IPs)) is required that the web server sets the appropriate value for the client connecting IP.
 
 ::: danger
-If real connecting IP is not properly configured Chevereto won't be able to detect the visitors IPs, failing to deliver IP based restrictions and flood control.
+If real connecting IP is not configured Chevereto won't be able to detect the real visitors IPs, failing to deliver IP based restrictions and flood control.
 :::
 
 * Nginx: `ngx_http_realip_module`

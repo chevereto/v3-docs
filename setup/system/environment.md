@@ -4,7 +4,7 @@ These are the system level settings that can be used to tweak Chevereto provisio
 
 ## Passing values
 
-To pass settings to Chevereto is recommended to use system level environment variables so it entirely depends on how you run the PHP process.
+To pass settings to Chevereto is recommended to use system level environment variables.
 
 ::: tip Settings file
 If is not possible to use environment variables you can use the [settings file](../server/settings-file.md) to configure the Chevereto variables.
@@ -20,11 +20,11 @@ For these you will be running [PHP-FPM](https://www.php.net/manual/en/install.fp
 
 ### Application servers
 
-For these you will be running PHP CLI so you should be able to pass those at `php.ini` for your CLI. You can also `export` those in your shell. Kindly refer to the documentation of each application server for the best way to pass those to Chevereto.
+For these you will be running PHP CLI so you should be able to pass those at `php.ini` for your CLI. You can also `export` those in your shell. Refer to the documentation of each application server for the best way to pass those to Chevereto.
 
 ### Container
 
-Pass the environment variables directly to the container run command or at `docker-compose` layer.
+Pass the environment variables to the container run command or at `docker-compose` layer.
 
 ## Assets variables
 
@@ -68,7 +68,7 @@ Environment variables for the database details.
 Environment variables for [debug](../troubleshoot/debug.md).
 
 ::: tip
-When using Docker it always logs to `/dev/stderr` regardless this configuration.
+When using Docker it logs to `/dev/stderr` regardless this configuration.
 :::
 
 | Variable              | Setting Key | Example                      |
@@ -106,7 +106,7 @@ Environment variables for the hostname configuration.
 
 ## System context variables
 
-Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable some sensitive functionality.
+Environment variables for the context where Chevereto system is being provided. Depending on where you run it, you may want to disable sensitive functionality.
 
 | Variable                      | Setting Key         | Example |
 | ----------------------------- | ------------------- | ------- |
@@ -116,7 +116,7 @@ Environment variables for the context where Chevereto system is being provided. 
 
 ## File upload variables
 
-Environment variables for the file uploading limits. Note that the following environment variables will only work for container provisioning.
+Environment variables for the file uploading limits. Note that the following environment variables will work for container provisioning.
 
 | Variable                      | Example |
 | ----------------------------- | ------- |

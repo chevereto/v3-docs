@@ -17,12 +17,12 @@ Don't worry about image management, we have an automated one-time setup [Contain
 
 * One-time setup
 
-Our container registry repo setup needs to be configured just once. From there, all the experience is just button clicking to instruct base image update and re-deploy.
+Our container registry repo setup needs to be configured once. From there, the experience is button clicking to instruct base image update and re-deploy.
 
 * One-click experience
 
-Get your container images one-click updated from the friendly Github web-based user interface. No more messy commands, just button clicking.
+Get your container images one-click updated from the Github web-based user interface. No more commands, just button clicking.
 
 * Better isolation
 
-Running the build process in disposable CI machinery is better and safer than using any other system. This makes the process way harder to temper with.
+Running the build process in disposable CI machinery is safer than using any other system. This makes the process harder to temper with.

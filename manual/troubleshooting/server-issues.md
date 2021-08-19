@@ -1,6 +1,6 @@
 # Server issues
 
-Not all web servers follow some basic standards and in some cases even having a server that meets the [system requirements](../server/requirements.md) you could find issues that won't allow Chevereto to work properly.
+Not all web servers follow basic standards and in some cases even having a server that meets the [system requirements](../server/requirements.md) you could find issues that won't allow Chevereto to work.
 
 ## Webserver
 
@@ -12,7 +12,7 @@ Not all web servers follow some basic standards and in some cases even having a 
 
 ## PHP
 
-PHP runs over your Webserver in different flavours and with different libraries and settings that can cause issues:
+PHP runs over your web-server in different favours and with different libraries and settings that can cause issues:
 
 - Outdated PHP version
 - Misconfiguration in PHP libraries

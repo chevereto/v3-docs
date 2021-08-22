@@ -7,4 +7,5 @@ return [
     'updating.md' => 'Updating',
     'upgrading.md' => 'Upgrading',
     'requirements.md' => 'Requirements',
+    'cpanel.md' => 'cPanel',
 ];

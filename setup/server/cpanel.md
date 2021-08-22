@@ -38,7 +38,7 @@ Go to **MultiPHP Manager** and select `PHP 7.4` for your website.
 
 ![MultiPHP manager](../../src/screen/cpanel/multiphp-manager.png)
 
-* From here you can also enable the [extensions required](installation.md#php-extensions) by Chevereto.
+* From here you can also enable the [extensions required](requirements.md#php-extensions) by Chevereto.
 
 ## Files
 

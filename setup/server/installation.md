@@ -2,10 +2,8 @@
 
 To install Chevereto it requires a server environment where the software and uploaded files will be served. This document outlines the generic installation process from scratch.
 
-::: tip
-
-* [cPanel installation](cpanel.md)
-
+::: tip cPanel
+cPanel users are advised to check the [cPanel guide](cpanel.md).
 :::
 
 ## Requirements

@@ -43,7 +43,7 @@ $settings = [
 ];
 ```
 
-To add or override settings simply pass a new key pair:
+To add or override settings simply assign the key value:
 
 ```php
 <?php

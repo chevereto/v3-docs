@@ -1,14 +1,16 @@
 # Server Installation
 
-To install Chevereto it requires a server environment where the software and uploaded files will be served. This document outlines the installation process from scratch.
+To install Chevereto it requires a server environment where the software and uploaded files will be served. This document outlines the generic installation process from scratch.
+
+::: tip
+
+* [cPanel installation](cpanel.md)
+
+:::
 
 ## Requirements
 
 Before installing anything check that the target server provides the system [requirements](../server/requirements.md) to run Chevereto.
-
-::: danger
-We can't stress how important is that you check requirements as failing to provide requirements could break your installation.
-:::
 
 ## Database
 
@@ -41,13 +43,15 @@ The Installer will detect any missing library in your system, it works as a syst
 
 ## Installer
 
-The [chevereto/installer](https://github.com/chevereto/installer) is a single-file tool which will ease the installation of the software. It's an API client which downloads and extracts the software for you.
+The [installer.php](https://chevereto.com/download/file/installer) is a single-file tool which will ease the installation of the software. It's an API client which downloads and extracts the software for you.
 
 The installer provides a [HTTP API](https://github.com/chevereto/installer/blob/master/HTTP.md) for the whole process:
 
 ![Chevereto Installer](https://camo.githubusercontent.com/1c1a868703419338eb6b01802270171b4bbb134d/68747470733a2f2f63686576657265746f2e636f6d2f7372632f696d672f696e7374616c6c65722f73637265656e2d76322e706e673f3230313930363233)
 
 The Installer also provides a [CLI API](https://github.com/chevereto/installer/blob/master/CLI.md).
+
+You can check the repository at [chevereto/installer](https://github.com/chevereto/installer).
 
 ### Zip package
 

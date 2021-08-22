@@ -68,14 +68,16 @@ The image library (GD, Imagick) should be provided with support for `PNG GIF JPG
 If you need to explicit use GD you can add this key to [Settings file](settings-file.md):
 
 ```php
-'image_library' => 'gd',
+$settings['image_library'] = 'gd';
 ```
 
 ::: danger Workaround missing formats
-If the server setup can't provide all the image formats you must use the following [Settings file](settings-file.md) workaround. In the following example Chevereto is configured with explicit support only for `PNG, GIF`:
+If the server doesn't provide support for all the image formats handled by Chevereto you must use the following [Settings file](settings-file.md) workaround.
+
+In the following example Chevereto is configured with explicit support only for PNG, GIF, BMP and JPG (removes WEBP):
 
 ```php
-'image_formats_available' => ['PNG', 'GIF'],
+$settings['image_formats_available'] = ['PNG', 'GIF', 'BMP', 'JPG'];
 ```
 :::
 

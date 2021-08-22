@@ -43,4 +43,11 @@ $settings = [
 ];
 ```
 
+To add or override settings simply pass a new key pair:
+
+```php
+<?php
+$settings['key'] = 'value';
+```
+
 Check [environment](../system/environment.md) variables for more info.

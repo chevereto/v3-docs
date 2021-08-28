@@ -2,8 +2,6 @@
 
 Use [chevereto/container-builder](https://github.com/chevereto/container-builder) to create your own private Chevereto container images which will be available in the container registry of your choice.
 
-## How it works?
-
 The system works by using a GitHub template repository which you clone in your account. You configure your own build context and generate on demand, for free, your own private Chevereto container images.
 
 ## Setup

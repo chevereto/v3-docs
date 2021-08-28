@@ -1,15 +1,19 @@
 # Container Bootstrapped
 
-::: danger
-Use [Container Registry](../../setup/container/registry.md) for disposable container provisioning. Note that bootstrapped means that the application layer is provided on container run.
+::: tip
+Use [Container Registry](../../setup/container/registry.md) for disposable container provisioning. Bootstrapped means that the application layer is provided on container run.
 :::
 
-## Why bootstrapping?
+This method for running Chevereto is recommended when you install it in your local computer. Check the repository at [chevereto/docker](https://github.com/chevereto/docker) for instructions.
 
-Ideally, you want to run Chevereto by building your own image container image for it. But that requires setup. This method doesn't require registry setup.
+## Reference
 
-We recommend using this method if you are trying Chevereto or if you run it local in your computer for **development purposes**.
+The [REFERENCE](https://github.com/chevereto/docker/blob/dev/REFERENCE.md) guide explains the Docker image provides and how it works.
 
-## Instructions
+## Compose
 
-Check the repository at [chevereto/docker](https://github.com/chevereto/docker).
+The [COMPOSE](https://github.com/chevereto/docker/blob/dev/COMPOSE.md) guide contains the instructions for spawn the services using `docker-compose`.
+
+## Dev
+
+The [DEV](https://github.com/chevereto/docker/blob/dev/DEV.md) guide outlines the process required to setup the development repository with Docker.

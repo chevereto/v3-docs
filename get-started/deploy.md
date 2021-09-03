@@ -24,8 +24,3 @@ Chevereto is available under Server Type, **Marketplace Apps** when creating a n
 ![Chevereto on Vultr](../src/partners/vultr/screen/panel-server-type.jpg "Chevereto on Vultr")
 
 * Configure your server as your needs
-* That's all
-
-::: tip Enable swap
-If you setup a small machine ($5/mo) you should definitely [Add swap space](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04).
-:::

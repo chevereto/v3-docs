@@ -40,6 +40,10 @@ Go to **MultiPHP Manager** and select `PHP 7.4` for your website.
 
 * From here you can also enable the [extensions required](requirements.md#php-extensions) by Chevereto.
 
+::: danger PHP Extensions
+Refer to the cPanel [PHP Extensions and Applications Package](https://docs.cpanel.net/whm/software/php-extensions-and-applications-package/) and WHM [How to install a PHP extension in WHM](https://support.cpanel.net/hc/en-us/articles/360050971633) documentation if your cPanel provisioning lacks the extensions required by Chevereto.
+:::
+
 ## Files
 
 Go to **File Manager** under **Files**.

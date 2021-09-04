@@ -2,11 +2,11 @@
 
 Get Chevereto easily one-click deployed in seconds.
 
-* [Linode](https://www.linode.com/marketplace/apps/chevereto/chevereto/?r=b14b22fdc1bf3f958fdf294c5a8624627d7f2315)
-  * [docs](https://www.linode.com/docs/guides/deploying-chevereto-marketplace-app/?r=b14b22fdc1bf3f958fdf294c5a8624627d7f2315)
-  * [repository](https://github.com/chevereto/vultr-marketplace)
-* [Vultr Marketplace](https://vultr.grsm.io/rodolfoberrios5076)
-  * [repository](https://github.com/chevereto/vultr-marketplace)
+* [Chevereto on Linode Marketplace](https://www.linode.com/marketplace/apps/chevereto/chevereto/?r=b14b22fdc1bf3f958fdf294c5a8624627d7f2315)
+  * [Docs](https://www.linode.com/docs/guides/deploying-chevereto-marketplace-app/?r=b14b22fdc1bf3f958fdf294c5a8624627d7f2315)
+  * [Repository](https://github.com/chevereto/linode-marketplace)
+* [Chevereto on Vultr Marketplace](https://vultr.grsm.io/rodolfoberrios5076)
+  * [Repository](https://github.com/chevereto/vultr-marketplace)
 
 All these provisioning alternatives are **officially supported by us**.
 

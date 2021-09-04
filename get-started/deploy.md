@@ -1,11 +1,17 @@
-# Deploy on Vultr
+# Deploy on Cloud
 
-Get Chevereto one-click deployed on Vultr from the [Vultr Marketplace](https://vultr.grsm.io/rodolfoberrios5076) and get **$100 credit** to try Vultr services.
+Get Chevereto easily one-click deployed in seconds.
 
-This provisioning is supported by us and you can check the [repository](https://github.com/chevereto/vultr-marketplace) we made for it.
+* [Linode](https://www.linode.com/marketplace/apps/chevereto/chevereto/?r=b14b22fdc1bf3f958fdf294c5a8624627d7f2315)
+  * [docs](https://www.linode.com/docs/guides/deploying-chevereto-marketplace-app/?r=b14b22fdc1bf3f958fdf294c5a8624627d7f2315)
+  * [repository](https://github.com/chevereto/vultr-marketplace)
+* [Vultr Marketplace](https://vultr.grsm.io/rodolfoberrios5076)
+  * [repository](https://github.com/chevereto/vultr-marketplace)
+
+All these provisioning alternatives are **officially supported by us**.
 
 ::: tip All-included
-This provisioning includes the following:
+Our marketplace provisioning includes the following:
 
 * Enables the UFW firewall to allow only SSH (port 22, rate limited), HTTP (port 80), and HTTPS (port 443) access.
 * Sets up the Chevereto database and its user.
@@ -14,13 +20,3 @@ This provisioning includes the following:
 * Sets the cron required for background tasks.
 * Includes Certbot pre-installed.
 :::
-
-## Step-by-step guide
-
-* Click the [deploy](https://vultr.grsm.io/rodolfoberrios5076) button
-
-Chevereto is available under Server Type, **Marketplace Apps** when creating a new server.
-
-![Chevereto on Vultr](../src/partners/vultr/screen/panel-server-type.jpg "Chevereto on Vultr")
-
-* Configure your server as your needs

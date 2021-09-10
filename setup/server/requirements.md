@@ -126,6 +126,35 @@ Old versions using MyISAM table storage engine will require to convert the old t
 
 ## Web server
 
+## Disable PHP in sensitive files
+
+* Apache HTTP server
+
+Use an `.htaccess` file to disable PHP interpreter on folders containing public upload content.
+
+```apacheconf
+<FilesMatch "\.php$">
+	<IfModule !mod_authz_core.c>
+		Order Allow,Deny
+		Deny from all
+	</IfModule>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule> 
+</FilesMatch>
+
+SetHandler default-handler
+php_flag engine off
+```
+
+* nginx
+
+```nginx
+location ~* images/.*\.php$  {
+    deny all;
+}
+```
+
 ### URL rewriting
 
 The web server must rewrite HTTP requests like `GET /image/some-name.<id>` to `/index.php`. Instructions for [Nginx](https://nginx.org/) and [Apache HTTP Server](https://httpd.apache.org/) below.
@@ -140,6 +169,11 @@ client_max_body_size 50M;
 
 # Disable access to sensitive files
 location ~* (app|content|lib)/.*\.(po|php|lock|sql)$ {
+    deny all;
+}
+
+# Disable PHP on image path
+location ~* images/.*\.php$  {
     deny all;
 }
 

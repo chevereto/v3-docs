@@ -130,26 +130,63 @@ Old versions using MyISAM table storage engine will require to convert the old t
 
 * Apache HTTP server
 
-Use an `.htaccess` file to disable PHP interpreter on folders containing public upload content.
+Edit the [Virtual Host](https://httpd.apache.org/docs/2.4/vhosts/) entry by adding the following directive for your upload directory. This will disable PHP interpreter on folders containing public upload content:
+
+> Must edit `/var/www/html/images` to reflect your actual upload directory.
+
+```apacheconf
+<Directory /var/www/html/images>
+    AllowOverride None
+    <LimitExcept GET>
+        <IfModule !mod_authz_core.c>
+            Order Allow,Deny
+            Deny from all
+        </IfModule>
+        <IfModule mod_authz_core.c>
+            Require all denied
+        </IfModule>
+    </LimitExcept>
+    <FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(html?)$">
+        <IfModule !mod_authz_core.c>
+            Order Allow,Deny
+            Deny from all
+        </IfModule>
+        <IfModule mod_authz_core.c>
+            Require all denied
+        </IfModule>
+    </FilesMatch>
+    <IfModule mod_php7.c>
+        php_flag engine off
+    </IfModule>
+    <FilesMatch ".+\.*$">
+        SetHandler !
+    </FilesMatch>
+    <IfModule mod_rewrite.c>
+        RewriteRule ^.*\.php$ - [F,L]
+    </IfModule>
+</Directory>
+```
+
+If you don't have access to editing Apache Virtual Host you can use a `.htaccess` file in the alleged paths:
 
 ```apacheconf
 <LimitExcept GET>
     <IfModule !mod_authz_core.c>
-		Order Allow,Deny
-		Deny from all
-	</IfModule>
-	<IfModule mod_authz_core.c>
-		Require all denied
-	</IfModule>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
 </LimitExcept>
 <FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(html?)$">
-	<IfModule !mod_authz_core.c>
-		Order Allow,Deny
-		Deny from all
-	</IfModule>
-	<IfModule mod_authz_core.c>
-		Require all denied
-	</IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
 </FilesMatch>
 <IfModule mod_php7.c>
     php_flag engine off
@@ -162,7 +199,7 @@ Use an `.htaccess` file to disable PHP interpreter on folders containing public 
 </IfModule>
 ```
 
-* nginx
+* NGINX users
 
 ```nginx
 location ~* images/.*\.php$  {
@@ -172,9 +209,9 @@ location ~* images/.*\.php$  {
 
 ### URL rewriting
 
-The web server must rewrite HTTP requests like `GET /image/some-name.<id>` to `/index.php`. Instructions for [Nginx](https://nginx.org/) and [Apache HTTP Server](https://httpd.apache.org/) below.
+The web server must rewrite HTTP requests like `GET /image/some-name.<id>` to `/index.php`. Instructions for [NGINX](https://nginx.org/) and [Apache HTTP Server](https://httpd.apache.org/) below.
 
-#### Nginx URL rewriting
+#### NGINX URL rewriting
 
 `example.com.conf`
 
@@ -271,5 +308,5 @@ For setups under any kind of proxy (including [CloudFlare](https://support.cloud
 If real connecting IP is not configured Chevereto won't be able to detect the real visitors IPs, failing to deliver IP based restrictions and flood control.
 :::
 
-* Nginx: `ngx_http_realip_module`
-* Apache: `mod_remoteip`
+* NGINX: `ngx_http_realip_module`
+* Apache HTTP Server: `mod_remoteip`

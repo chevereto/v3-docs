@@ -51,10 +51,10 @@ To access logs you will need to determine the location for those. If you don't c
 
 This vary a lot depending the server provider:
 
-* Apache/Nginx
+* Apache/NGINX
   * Logs by default at `/var/log/apache2/error.log` OR `/var/log/nginx/error.log`
   * Apache: Virtual host directive defines custom error log location
-  * Nginx: Server block defines custom error log location
+  * NGINX: Server block defines custom error log location
   * Commonly configured for `/var/www/domain.com/logs`
   * Some configure it for `syslog`
 * cPanel

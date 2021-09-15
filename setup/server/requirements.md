@@ -133,18 +133,33 @@ Old versions using MyISAM table storage engine will require to convert the old t
 Use an `.htaccess` file to disable PHP interpreter on folders containing public upload content.
 
 ```apacheconf
-<FilesMatch "\.php$">
+<LimitExcept GET>
+    <IfModule !mod_authz_core.c>
+		Order Allow,Deny
+		Deny from all
+	</IfModule>
+	<IfModule mod_authz_core.c>
+		Require all denied
+	</IfModule>
+</LimitExcept>
+<FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(html?)$">
 	<IfModule !mod_authz_core.c>
 		Order Allow,Deny
 		Deny from all
 	</IfModule>
 	<IfModule mod_authz_core.c>
 		Require all denied
-	</IfModule> 
+	</IfModule>
 </FilesMatch>
-
-SetHandler default-handler
-php_flag engine off
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<FilesMatch ".+\.*$">
+    SetHandler !
+</FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteRule ^.*\.php$ - [F,L]
+</IfModule>
 ```
 
 * nginx

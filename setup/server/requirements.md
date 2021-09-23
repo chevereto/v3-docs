@@ -146,7 +146,7 @@ Edit the [Virtual Host](https://httpd.apache.org/docs/2.4/vhosts/) entry by addi
             Require all denied
         </IfModule>
     </LimitExcept>
-    <FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(html?)$">
+    <FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(po|sql|html?)$">
         <IfModule !mod_authz_core.c>
             Order Allow,Deny
             Deny from all
@@ -179,7 +179,7 @@ If you don't have access to editing Apache Virtual Host you can use a `.htaccess
         Require all denied
     </IfModule>
 </LimitExcept>
-<FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(html?)$">
+<FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(po|sql|html?)$">
     <IfModule !mod_authz_core.c>
         Order Allow,Deny
         Deny from all

@@ -24,7 +24,7 @@ For these you will be running PHP CLI so you should be able to pass those at `ph
 
 ### Container
 
-Pass the environment variables to the container run command or at `docker-compose` layer.
+Pass the environment variables to the container run command or at `docker compose` layer.
 
 ## Assets variables
 

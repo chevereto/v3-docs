@@ -1,9 +1,5 @@
 # Container Running
 
-## Guides
-
-* [Portainer](https://github.com/chevereto/container-builder/blob/main/guides/portainer/README.md)
-
 ## Persistent layers
 
 ### Asset storage
@@ -48,8 +44,6 @@ services:
     image: mariadb:focal
     networks:
       - chv-network
-    healthcheck:
-      test: ["CMD-SHELL", "mysqladmin ping --silent"]
     volumes:
       - chv-data:/var/lib/mysql
     restart: always

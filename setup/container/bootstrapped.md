@@ -8,12 +8,12 @@ This method for running Chevereto is recommended when you install it in your loc
 
 ## Reference
 
-The [REFERENCE](https://github.com/chevereto/docker/blob/dev/REFERENCE.md) guide explains the Docker image provides and how it works.
+The [REFERENCE](https://github.com/chevereto/docker/blob/3.20/docs/REFERENCE.md) guide explains the Docker image provides and how it works.
 
 ## Compose
 
-The [COMPOSE](https://github.com/chevereto/docker/blob/dev/COMPOSE.md) guide contains the instructions for spawn the services using `docker-compose`.
+The [COMPOSE](https://github.com/chevereto/docker/blob/3.20/docs/COMPOSE.md) guide contains the instructions for spawn the services using `docker compose`.
 
 ## Dev
 
-The [DEV](https://github.com/chevereto/docker/blob/dev/DEV.md) guide outlines the process required to setup the development repository with Docker.
+The [DEV](https://github.com/chevereto/docker/blob/3.20/docs/DEV.md) guide outlines the process required to setup the development repository with Docker.

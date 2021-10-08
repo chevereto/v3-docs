@@ -34,7 +34,7 @@ This persistent layer can be configured in the application [Dashboard panel](../
 Check [Environment](../system/environment.md) for the `-e` options you can pass in the Docker command.
 :::
 
-In the following example volumes are used for all data persistence. The image used is [httpd-php](https://github.com/chevereto/container-builder/blob/main/httpd-php.Dockerfile) which includes Apache HTTP Web server.
+In the following example volumes are used for all data persistence. The image used is [httpd-php](https://github.com/chevereto/container-builder/blob/3.20/httpd-php.Dockerfile) which includes Apache HTTP Web server.
 
 ```yaml
 version: "3"

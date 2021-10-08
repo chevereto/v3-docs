@@ -43,11 +43,11 @@ The Installer will detect any missing library in your system, it works as a syst
 
 The [installer.php](https://chevereto.com/download/file/installer) is a single-file tool which will ease the installation of the software. It's an API client which downloads and extracts the software for you.
 
-The installer provides a [HTTP API](https://github.com/chevereto/installer/blob/master/HTTP.md) for the whole process:
+The installer provides a [HTTP API](https://github.com/chevereto/installer/blob/main/docs/HTTP.md) for the whole process:
 
 ![Chevereto Installer](https://camo.githubusercontent.com/1c1a868703419338eb6b01802270171b4bbb134d/68747470733a2f2f63686576657265746f2e636f6d2f7372632f696d672f696e7374616c6c65722f73637265656e2d76322e706e673f3230313930363233)
 
-The Installer also provides a [CLI API](https://github.com/chevereto/installer/blob/master/CLI.md).
+The Installer also provides a [CLI API](https://github.com/chevereto/installer/blob/main/docs/CLI.md).
 
 You can check the repository at [chevereto/installer](https://github.com/chevereto/installer).
 

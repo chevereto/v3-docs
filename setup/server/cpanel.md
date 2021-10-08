@@ -60,4 +60,4 @@ Click on **Upload** and **Select File** [installer.php](https://chevereto.com/do
 
 ## Install Chevereto
 
-Go to `http://your_website/installer.php` and follow the [Installer instructions](https://github.com/chevereto/installer/blob/master/HTTP.md).
+Go to `http://your_website/installer.php` and follow the [Installer instructions](https://github.com/chevereto/installer/blob/main/docs/HTTP.md).

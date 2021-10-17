@@ -124,11 +124,23 @@ Chevereto user will require **read/write** access in the following paths:
 Old versions using MyISAM table storage engine will require to convert the old tables to InnoDB. Read [Convert MyISAM tables to InnoDB](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html)
 :::
 
-## Web server
+## Web server configuration
 
-## Disable PHP in sensitive files
+### Apache HTTP server
 
-* Apache HTTP server
+Make sure that [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) is enabled and that your virtual host settings allows to perform URL rewriting:
+
+```apacheconf
+    <Directory /var/www/html>
+        Options -Indexes +FollowSymLinks +MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+```
+
+Apache configuration `.htaccess` files are already included in the software.
+
+#### Restrict direct access to PHP files
 
 Edit the [Virtual Host](https://httpd.apache.org/docs/2.4/vhosts/) entry by adding the following directive for your upload directory. This will disable PHP interpreter on folders containing public upload content:
 
@@ -199,105 +211,42 @@ If you don't have access to editing Apache Virtual Host you can use a `.htaccess
 </IfModule>
 ```
 
-* NGINX users
+### NGINX
+
+`nginx.conf` for `server {}` block:
 
 ```nginx
-location ~* images/.*\.php$  {
-    deny all;
-}
-```
+    # Context limits
+    client_max_body_size 50M;
 
-### URL rewriting
+    # Disable access to sensitive application files
+    location ~* (app|content|lib)/.*\.(po|php|lock|sql)$ {
+        deny all;
+    }
 
-The web server must rewrite HTTP requests like `GET /image/some-name.<id>` to `/index.php`. Instructions for [NGINX](https://nginx.org/) and [Apache HTTP Server](https://httpd.apache.org/) below.
+    # Image not found replacement
+    location ~ \.(jpe?g|png|gif|webp)$ {
+        log_not_found off;
+        error_page 404 /content/images/system/default/404.gif;
+    }
 
-#### NGINX URL rewriting
+    # CORS header (avoids font rendering issues)
+    location ~ \.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$ {
+        add_header Access-Control-Allow-Origin "*";
+    }
 
-`example.com.conf`
+    # PHP front controller
+    location / {
+        index index.php;
+        try_files $uri $uri/ /index.php$is_args$query_string;
+    }
 
-```nginx
-# Context limits
-client_max_body_size 50M;
-
-# Disable access to sensitive files
-location ~* (app|content|lib)/.*\.(po|php|lock|sql)$ {
-    deny all;
-}
-
-# Disable PHP on image path
-location ~* images/.*\.php$  {
-    deny all;
-}
-
-# Image not found replacement
-location ~ \.(jpe?g|png|gif|webp)$ {
-    log_not_found off;
-    error_page 404 /content/images/system/default/404.gif;
-}
-
-# CORS header (avoids font rendering issues)
-location ~ \.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$ {
-    add_header Access-Control-Allow-Origin "*";
-}
-
-# Pretty URLs
-location / {
-    index index.php;
-    try_files $uri $uri/ /index.php$is_args$query_string;
-}
-```
-
-#### Apache HTTP Server URL rewriting
-
-Make sure that [`mod_rewrite`](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) is enabled and that your virtual host settings allows to perform URL rewriting:
-
-```apacheconf
-    <Directory /var/www/html>
-        Options -Indexes +FollowSymLinks +MultiViews
-        AllowOverride All
-        Require all granted
-    </Directory>
-```
-
-Apache configuration `.htaccess` files are already included in the software.
-
-`/.htaccess`
-
-```apacheconf
-# Disable server signature
-ServerSignature Off
-
-# Enable CORS across all your subdomains (replace dev\.local with your domain\.com)
-# SetEnvIf Origin ^(https?://.+\.dev\.local(?::\d{1,5})?)$   CORS_ALLOW_ORIGIN=$1
-# Header append Access-Control-Allow-Origin  %{CORS_ALLOW_ORIGIN}e   env=CORS_ALLOW_ORIGIN
-# Header merge  Vary "Origin"
-
-# Disable directory listing (-indexes), Multiviews (-MultiViews)
-Options -Indexes
-Options -MultiViews
-
-<IfModule mod_rewrite.c>
-
-    RewriteEngine On
-
-    # If you have problems with the rewrite rules remove the "#" from the following RewriteBase line
-    # You will also have to change the path to reflect the path to your Chevereto installation
-    # If you are using alias is most likely that you will need this.
-    #RewriteBase /
-
-    # 404 images
-    # If you want to have your own fancy "image not found" image remove the "#" from RewriteCond and RewriteRule lines
-    # Make sure to apply the correct paths to reflect your current installation
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule images/.+\.(gif|jpe?g|png|bmp|webp) - [NC,L,R=404]
-    #RewriteRule images/.+\.(gif|jpe?g|a?png|bmp|webp) content/images/system/default/404.gif [NC,L]
-
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} !\.(css|js|html|htm|rtf|rtx|svg|svgz|txt|xsd|xsl|xml|asf|asx|wax|wmv|wmx|avi|bmp|class|divx|doc|docx|exe|gif|gz|gzip|ico|jpe?g|jpe|mdb|mid|midi|mov|qt|mp3|m4a|mp4|m4v|mpeg|mpg|mpe|mpp|odb|odc|odf|odg|odp|ods|odt|ogg|pdf|png|pot|pps|ppt|pptx|ra|ram|swf|tar|tif|tiff|wav|webp|wma|wri|xla|xls|xlsx|xlt|xlw|zip)$ [NC]
-    RewriteRule . index.php [L]
-
-</IfModule>
+    # Single PHP-entrypoint (disables direct access to .php files)
+    location ~ \.php$  {
+        internal;
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+    }
 ```
 
 ### Real connecting IP

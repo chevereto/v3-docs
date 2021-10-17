@@ -216,22 +216,25 @@ If you don't have access to editing Apache Virtual Host you can use a `.htaccess
 `nginx.conf` for `server {}` block:
 
 ```nginx
-    # Context limits
-    client_max_body_size 50M;
-
     # Disable access to sensitive application files
     location ~* (app|content|lib)/.*\.(po|php|lock|sql)$ {
-        deny all;
+        return 404;
+    }
+    location ~* composer\.json|composer\.lock|.gitignore$ {
+        return 404;
+    }
+    location ~* /\.ht {
+        return 404;
     }
 
     # Image not found replacement
-    location ~ \.(jpe?g|png|gif|webp)$ {
+    location ~* \.(jpe?g|png|gif|webp)$ {
         log_not_found off;
         error_page 404 /content/images/system/default/404.gif;
     }
 
     # CORS header (avoids font rendering issues)
-    location ~ \.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$ {
+    location ~* \.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$ {
         add_header Access-Control-Allow-Origin "*";
     }
 
@@ -240,9 +243,9 @@ If you don't have access to editing Apache Virtual Host you can use a `.htaccess
         index index.php;
         try_files $uri $uri/ /index.php$is_args$query_string;
     }
-
+    
     # Single PHP-entrypoint (disables direct access to .php files)
-    location ~ \.php$  {
+    location ~* \.php$  {
         internal;
         include snippets/fastcgi-php.conf;
         fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;

@@ -14,6 +14,10 @@ Minimum machine requirements:
 
 A [cron](https://en.wikipedia.org/wiki/Cron) is required to process the application background jobs. A cron is system in which a command is executed in a regular basis, this way Chevereto can perform operations in the background.
 
+::: tip Check your server documentation
+This cron setup reference applies only for Debian-based servers with root access. We **strongly recommend** checking your server documentation on how to setup and run cron.
+:::
+
 ### Command
 
 The command should be run by the web-server user which is `www-data` (may vary). To run the command in Chevereto it requires to call PHP binary at the Chevereto CLI.
@@ -61,16 +65,17 @@ docker exec -it \
 
 ### Cron.d file
 
-With a [cron.d file](https://manpages.debian.org/stretch/cron/cron.8) the cron can be easily setup. To do this create a cron file at `/etc/cron.d/chevereto` with the following contents:
+With a [cron.d file](https://manpages.debian.org/stretch/cron/cron.8) the cron can be easily setup. For example:
 
 ```sh
+cat >/etc/cron.d/chevereto <<EOM
 * * * * * www-data php /var/www/html/cli.php -C cron
-
+EOM
 ```
 
-> Note: In debian-based systems the cron file must have a newline eof
+### Cron schedule
 
-In the instruction above [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute and `www-data` is the web-server user. The rest of the instruction is just the command.
+In the instruction above [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cron schedule to run every minute.
 
 ::: danger Suit your context
 The above default cron works when running our official provisioning. If you don't use our server provisioning you will be required to alter the default instructions for user, PHP binary and Chevereto CLI location. Refer to your system documentation.

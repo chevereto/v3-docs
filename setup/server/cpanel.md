@@ -61,3 +61,8 @@ Click on **Upload** and **Select File** [installer.php](https://chevereto.com/do
 ## Install Chevereto
 
 Go to `http://your_website/installer.php` and follow the [Installer instructions](https://github.com/chevereto/installer/blob/main/docs/HTTP.md).
+
+## Post-installation
+
+* [Setup CRON](../../manual/first-steps/setup-cron.md)
+* [Setup Email](../../manual/first-steps/setup-email.md)

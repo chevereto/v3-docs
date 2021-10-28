@@ -149,15 +149,6 @@ Edit the [Virtual Host](https://httpd.apache.org/docs/2.4/vhosts/) entry by addi
 ```apacheconf
 <Directory /var/www/html/images>
     AllowOverride None
-    <LimitExcept GET>
-        <IfModule !mod_authz_core.c>
-            Order Allow,Deny
-            Deny from all
-        </IfModule>
-        <IfModule mod_authz_core.c>
-            Require all denied
-        </IfModule>
-    </LimitExcept>
     <FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(po|sql|html?)$">
         <IfModule !mod_authz_core.c>
             Order Allow,Deny
@@ -182,15 +173,6 @@ Edit the [Virtual Host](https://httpd.apache.org/docs/2.4/vhosts/) entry by addi
 If you don't have access to editing Apache Virtual Host you can use a `.htaccess` file in the alleged paths:
 
 ```apacheconf
-<LimitExcept GET>
-    <IfModule !mod_authz_core.c>
-        Order Allow,Deny
-        Deny from all
-    </IfModule>
-    <IfModule mod_authz_core.c>
-        Require all denied
-    </IfModule>
-</LimitExcept>
 <FilesMatch "\.(?:[Pp][Hh][Pp][345]?|[Pp][Hh][Tt][Mm][Ll])|(po|sql|html?)$">
     <IfModule !mod_authz_core.c>
         Order Allow,Deny

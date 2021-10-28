@@ -21,7 +21,6 @@ Here you will find all the official guides and instructions for Chevereto V3. Yo
 ## Get in touch
 
 * [Community](https://chevereto.com/community)
-* [Chat](https://chv.to/discord)
 
 ## Get updates
 

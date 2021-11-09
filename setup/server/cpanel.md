@@ -44,25 +44,27 @@ Go to **MultiPHP Manager** and select `PHP 7.4` for your website.
 Refer to the cPanel [PHP Extensions and Applications Package](https://docs.cpanel.net/whm/software/php-extensions-and-applications-package/) and WHM [How to install a PHP extension in WHM](https://support.cpanel.net/hc/en-us/articles/360050971633) documentation if your cPanel provisioning lacks the extensions required by Chevereto.
 :::
 
-## Files
+## Chevereto Files
 
-Go to **File Manager** under **Files**.
+* Go to **File Manager** under **Files**.
 
 ![Files](../../src/screen/cpanel/files.png)
 
-Navigate to your website `public_html` directory.
+* Navigate to your website `public_html/` directory.
 
 ![File Manager](../../src/screen/cpanel/file-manager.png)
 
-Click on **Upload** and **Select File** [installer.php](https://chevereto.com/download/file/installer)
-
-![File Manager upload](../../src/screen/cpanel/file-manager-upload.png)
+* Click on **Upload** and on **Select File** upload the release zip file downloaded from [chevereto.com/panel/downloads](https://chevereto.com/panel/downloads)
+* Once uploaded, go back to your `public_html/` directory.
+* Right-click on the zip file file and select **Extract**.
+* Delete the zip file when the extraction completes.
 
 ## Install Chevereto
 
-Go to `http://your_website/installer.php` and follow the [Installer instructions](https://github.com/chevereto/installer/blob/main/docs/HTTP.md).
+Go to `http://your_website/` and follow the instructions to the create the admin account.
 
 ## Post-installation
 
 * [Setup CRON](../../manual/first-steps/setup-cron.md)
+  * For CloudLinux based cPanel you will find PHP binary at `/opt/alt/php74/usr/bin/php`
 * [Setup Email](../../manual/first-steps/setup-email.md)

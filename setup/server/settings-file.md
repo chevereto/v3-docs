@@ -40,6 +40,7 @@ $settings = [
     'image_library' => 'imagick',
     'session.save_handler' => 'files',
     'session.save_path' => '/tmp',
+    'htaccess_enforce' => true,
 ];
 ```
 

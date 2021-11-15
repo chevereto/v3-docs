@@ -2,7 +2,7 @@
 
 To install Chevereto it requires a server environment where the software and uploaded files will be served. This document outlines the generic installation process from scratch.
 
-::: tip cPanel
+::: warning Using cPanel?
 cPanel users are advised to check the [cPanel guide](cpanel.md).
 :::
 
@@ -31,32 +31,29 @@ sudo mysql -uroot -ppassword -e "CREATE DATABASE chevereto; \
     GRANT ALL ON chevereto.* TO 'chevereto' IDENTIFIED BY 'user_database_password';"
 ```
 
-## Provide application
-
-You will require to provide the Chevereto software application files to your server. You can do this auto with the [Installer](#installer) or manual by downloading the [zip package](#zip-package).
+## Provide application files
 
 ::: tip
-The Installer will detect any missing library in your system, it works as a system check utility.
+When providing files to your server make sure that the files `owner:group` permissions are usable by the Web Server user.
 :::
 
-## Installer
-
-The [installer.php](https://chevereto.com/download/file/installer) is a single-file tool which will ease the installation of the software. It's an API client which downloads and extracts the software for you.
-
-The installer provides a [HTTP API](https://github.com/chevereto/installer/blob/main/docs/HTTP.md) for the whole process:
-
-![Chevereto Installer](https://camo.githubusercontent.com/1c1a868703419338eb6b01802270171b4bbb134d/68747470733a2f2f63686576657265746f2e636f6d2f7372632f696d672f696e7374616c6c65722f73637265656e2d76322e706e673f3230313930363233)
-
-The Installer also provides a [CLI API](https://github.com/chevereto/installer/blob/main/docs/CLI.md).
-
-You can check the repository at [chevereto/installer](https://github.com/chevereto/installer).
+You will require to provide the Chevereto software application files to your server.
 
 ### Zip package
 
-* Download the [latest release](https://chevereto.com/panel/downloads)
-* Upload all the contents of the `chevereto` folder to your server (usually in the `public_html` folder)
-* Go to your target website URL and follow the instructions
+::: warning
+If you upload using a root account you will require to fix permissions for `www-data`.
+:::
+
+* Upload the [latest release](https://chevereto.com/panel/downloads) package to your server (usually in the `public_html` folder)
+* Unzip the software using your server built-in `unzip` utility
+* Remove the `.zip` file
+* Open your target website URL and follow the instructions
+
+### Installer
+
+The [installer.php](https://github.com/chevereto/installer) is a single-file tool which will ease the installation of the software. It's an API client which downloads and extracts the software for you.
 
 ## Post-Install
 
-Refer to [First-steps](../../manual/first-steps/README.md) instructions.
+Refer to [Initial setup](../../manual/first-steps/initial-setup.md) instructions.

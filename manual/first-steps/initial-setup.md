@@ -2,7 +2,7 @@
 
 This will create the chevereto database tables and the Chevereto admin user. This is needed for the first time the system gets installed and it can be made using HTTP (web) or CLI.
 
-## HTTP setup (recommended)
+## HTTP setup
 
 * Go to `/install` and submit the installation form.
 

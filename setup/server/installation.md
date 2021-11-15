@@ -2,7 +2,7 @@
 
 To install Chevereto it requires a server environment where the software and uploaded files will be served. This document outlines the generic installation process from scratch.
 
-::: warning Using cPanel?
+::: danger Using cPanel?
 cPanel users are advised to check the [cPanel guide](cpanel.md).
 :::
 
@@ -40,10 +40,6 @@ When providing files to your server make sure that the files `owner:group` permi
 You will require to provide the Chevereto software application files to your server.
 
 ### Zip package
-
-::: warning
-If you upload using a root account you will require to fix permissions for `www-data`.
-:::
 
 * Upload the [latest release](https://chevereto.com/panel/downloads) package to your server (usually in the `public_html` folder)
 * Unzip the software using your server built-in `unzip` utility

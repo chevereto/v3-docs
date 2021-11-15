@@ -1,6 +1,12 @@
 # System Requirements
 
+::: tip Universal VPS infra available
+Check our [VPS](https://github.com/chevereto/vps) universal bash script for all-included worry-free server setup.
+:::
+
 Minimum machine requirements:
+
+**Note:** When running with minimum requirements it is recommended to [add swap space](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04).
 
 * 1GB RAM
 * 1 CPU
@@ -80,11 +86,3 @@ In the instruction above [* * * * *](https://crontab.guru/#*_*_*_*_*) is the cro
 ::: danger Suit your context
 The above default cron works when running our official provisioning. If you don't use our server provisioning you will be required to alter the default instructions for user, PHP binary and Chevereto CLI location. Refer to your system documentation.
 :::
-
-## Server requirements
-
-If you don't run containers you need to review the [Server Requirements](../server/requirements.md).
-
-### Image library
-
-Refer to [Image library](../server/requirements.md#image-library) server requirements.

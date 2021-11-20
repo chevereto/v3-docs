@@ -109,3 +109,30 @@ php-binary cli-path -C cron >/dev/null 2>&1
 ## Setup Email
 
 * Refer to: [Setup Email](../../manual/first-steps/setup-email.md)
+
+## PHP Versioning
+
+::: tip Did you know?
+cPanel uses root `.htaccess` file to add rules that enable to override the default cPanel PHP versioning. This may cause issues in your Chevereto installation.
+:::
+
+If you have PHP versioning issues make sure that the root `.htaccess` file contains the following:
+
+<code-group>
+<code-block title="Apache HTTP Web Server">
+```apacheconf
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+```
+</code-block>
+<code-block title="LiteSpeed">
+```apacheconf
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74___lsphp .php .php7 .phtml
+</IfModule>
+```
+</code-block>
+</code-group>
+
+> Note that the configuration in your system may vary. In doubt check with your service provider.

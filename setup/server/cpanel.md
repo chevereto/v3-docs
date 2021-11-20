@@ -135,4 +135,4 @@ If you have PHP versioning issues make sure that the root `.htaccess` file conta
 </code-block>
 </code-group>
 
-> Note that the configuration in your system may vary. In doubt check with your service provider.
+> Note that the configuration in your system may vary. Double-check with your service provider.

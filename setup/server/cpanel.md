@@ -16,6 +16,30 @@ Grant `ALL PRIVILEGES` on the newly created database and user.
 
 ![MySQL wizard privileges](../../src/screen/cpanel/mysql-wizard-privileges.png)
 
+## Chevereto Files
+
+* Go to **File Manager** under **Files**.
+
+![Files](../../src/screen/cpanel/files.png)
+
+* Navigate to your website `public_html/` directory.
+
+![File Manager](../../src/screen/cpanel/file-manager.png)
+
+* Click on **Upload** and on **Select File** upload the release zip file downloaded from [chevereto.com/panel/downloads](https://chevereto.com/panel/downloads)
+* Once uploaded, go back to the file manager at `public_html/` directory.
+* Right-click on the zip file file and select **Extract**.
+
+![File Manager Extract](../../src/screen/cpanel/file-manager-extract.png)
+
+* A prompt appears, click on **Extract Files**
+
+![File Manager Extract Files](../../src/screen/cpanel/file-manager-extract-files.png)
+
+* Delete the zip file when the extraction completes.
+
+![File Manager Delete File](../../src/screen/cpanel/file-manager-delete-file.png)
+
 ## PHP
 
 Go to **MultiPHP INI Editor** under **Software**.
@@ -43,30 +67,6 @@ Go to **MultiPHP Manager** and select `PHP 7.4` for your website.
 ::: danger PHP Extensions
 Refer to the cPanel [PHP Extensions and Applications Package](https://docs.cpanel.net/whm/software/php-extensions-and-applications-package/) and WHM [How to install a PHP extension in WHM](https://support.cpanel.net/hc/en-us/articles/360050971633) documentation if your cPanel provisioning lacks the extensions required by Chevereto.
 :::
-
-## Chevereto Files
-
-* Go to **File Manager** under **Files**.
-
-![Files](../../src/screen/cpanel/files.png)
-
-* Navigate to your website `public_html/` directory.
-
-![File Manager](../../src/screen/cpanel/file-manager.png)
-
-* Click on **Upload** and on **Select File** upload the release zip file downloaded from [chevereto.com/panel/downloads](https://chevereto.com/panel/downloads)
-* Once uploaded, go back to the file manager at `public_html/` directory.
-* Right-click on the zip file file and select **Extract**.
-
-![File Manager Extract](../../src/screen/cpanel/file-manager-extract.png)
-
-* A prompt appears, click on **Extract Files**
-
-![File Manager Extract Files](../../src/screen/cpanel/file-manager-extract-files.png)
-
-* Delete the zip file when the extraction completes.
-
-![File Manager Delete File](../../src/screen/cpanel/file-manager-delete-file.png)
 
 ## Install Chevereto
 

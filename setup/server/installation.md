@@ -72,7 +72,7 @@ curl -f -SOJL \
 && unzip chevereto*.zip \
 && rm -rf chevereto*.zip \
 && composer install \
-&& chown www-data: . -R \
+&& chown www-data: . -R
 ```
 </code-block>
 </code-group>

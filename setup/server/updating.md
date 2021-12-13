@@ -26,7 +26,7 @@ Using Composer the update carried in CLI context. It requires:
 * CLI with `curl`, `unzip`
 * [Composer](https://getcomposer.org/)
 
-👉 This method is recommended for VPS and machines with CLI access.
+👉 This method is recommended for **VPS** and machines with **CLI access**.
 
 * Run the following command from your **Chevereto project folder**:
 

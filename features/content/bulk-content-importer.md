@@ -6,10 +6,6 @@ This tool allows to **mass import** images, albums, and users by parsing the con
 Importing takes the content from the importing path and *import it* into database, filesystem or external storage. Failed files will be moved to a special directory at `./importing/failed/`.
 :::
 
-::: danger Before V3.20
-In old releases failed files will be **permanently removed**. Make sure to use a backup.
-:::
-
 ## How to use it
 
 ::: tip demo-importing
@@ -30,31 +26,37 @@ Placing the content at these directories following the [parsing formats](#parsin
 Go to `dashboard/bulk` to review importing jobs.
 :::
 
+### Charset
+
+Files and `.json` metadata must be in UTF-8.
+
 ### Command
 
-* V3.20+
-
+<code-group>
+<code-block title="V3.20+">
 ```sh
 sudo -u www-data php /var/www/html/cli.php -C importing
 ```
+</code-block>
 
-* Older
-
+<code-block title="Older">
 ```sh
 sudo -u www-data IS_CRON=1 THREAD_ID=1 php importing.php
 ```
+</code-block>
+</code-group>
 
 ### Cron entry
 
 The importing command can be automatically scheduled by using [cron](https://en.wikipedia.org/wiki/Cron):
 
 ```sh
-* * * * * THREAD_ID=1 /usr/bin/php /var/www/html/cli.php -C importing >/dev/null 2>&1
+* * * * * COMMAND_HERE >/dev/null 2>&1
 ```
 
 ### Threads
 
-You can speed up the process by running the importing in multiple threads by passing different `env` for `THREAD_ID`:
+You can speed up the process by running the importing in multiple threads by passing different `env` for `THREAD_ID`.
 
 ```sh
 sudo -u www-data THREAD_ID=1 php cli.php -C importing
@@ -145,9 +147,11 @@ Importing may show "completed" when there's nothing else to parse, but internall
 
 ## Metadata
 
-The bulk importer supports metadata using the JSON format, same as [Google Photos](#importing-from-google-photos).
+The bulk importer supports metadata using the JSON format, same as [Google Photos](#importing-from-google-photos). Metadata must be provided per content basis, meaning that you must use one metadata file for each content.
 
-Metadata must be provided per content basis, meaning that you must use one metadata file for each content.
+::: tip UTF-8
+Metadata must be in UTF-8 format. Don't forget to fix your charset.
+:::
 
 | Content                               | Type     | Metadata file                          |
 | ------------------------------------- | -------- | -------------------------------------- |

@@ -48,7 +48,6 @@ Search allows users to locate content based on a search query.
 | Value    | Effect         |
 | -------- | -------------- |
 | Enabled  | Enable search  |
-| Disabled | Disable search |
 
 ## Explore
 
@@ -59,7 +58,7 @@ Explore browses the public available images.
 | Value    | Effect          |
 | -------- | --------------- |
 | Enabled  | Enable explore  |
-| Disabled | Disable explore |
+
 
 ## Explore (guests)
 
@@ -70,7 +69,7 @@ Same as [explore](#explore), but only affects guests users.
 | Value    | Effect                    |
 | -------- | ------------------------- |
 | Enabled  | Enable explore for guest  |
-| Disabled | Disable explore for guest |
+
 
 ## Random
 
@@ -81,7 +80,7 @@ Random allows to randomly show a public image. It enables `?random` to fetch a r
 | Value    | Effect                |
 | -------- | --------------------- |
 | Enabled  | Enable random button  |
-| Disabled | Disable random button |
+
 
 ## Likes
 

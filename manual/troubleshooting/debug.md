@@ -67,9 +67,9 @@ This vary a lot depending the server provider and how PHP runs in the server. In
 
 ### I can't find the logs
 
-Don't worry, if you can't find the logs we strongly suggest you to request [extra support](https://chevereto.com/support) service so we safely do this for you.
+You can configure `debug_level` >= 2 but note that such error reporting level **could compromise** your installation. Restrict any public access to your website and revert back to `debug_level=1` as soon as possible.
 
-Alternatively, you can configure `debug_level` >= 2 but note that such error reporting level will expose your installation. Restrict any public access to the system and revert back to `debug_level=1` as soon as possible.
+If you can't find the logs or you are having a hard time with this you can request [extra support](https://chevereto.com/support) so we can safely debug your installation.
 
 ### Reading logs
 

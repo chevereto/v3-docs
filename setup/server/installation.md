@@ -71,7 +71,7 @@ curl -f -SOJL \
     "https://chevereto.com/api/download/3.20" \
 && unzip chevereto*.zip \
 && rm -rf chevereto*.zip \
-&& composer install \
+&& composer install --ignore-platform-reqs \
 && chown www-data: . -R
 ```
 </code-block>

@@ -24,8 +24,8 @@ Here you will find all the official guides and instructions for Chevereto V3. Yo
 
 ## Get updates
 
-* [Newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrgHu89RPRifGX6GXWko9jbzN892DN892XkwATqNm2slYVMHJyPXHV763yXE9jZoh0ZhJySXQ) - Get the news in your email
-* [Blog](https://blog.chevereto.com) - Stay in the loop
+* [Newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrgHu89RPRifGX6GXWko9jbzN892DN892XkwATqNm2slYVMHJyPXHV763yXE9jZoh0ZhJySXQ)
+* [Blog](https://blog.chevereto.com)
 * [Chevereto.com](https://chevereto.com)
 * [GitHub](https://github.com/chevereto)
 
@@ -35,7 +35,11 @@ Here you will find all the official guides and instructions for Chevereto V3. Yo
 Contribute to [translations](https://chevereto.oneskyapp.com/) to get Chevereto available in your language.
 :::
 
-### Translated documentation
-
 * [Chinese version](https://docs.doge.uk/zh/chevereto/) (thanks to [QSong](https://resbeta.com/))
 * [Chinese version](https://ch.cndrew.cn/) (thanks to [Uncle_drew](https://cndrew.cn/))
+
+## License
+
+Copyright 2022 [Rodolfo Berrios A.](https://rodolfoberrios.com/)
+
+Chevereto V3 documentation is licensed under the Apache License, Version 2.0. See [LICENSE](https://github.com/chevereto/v3-docs/blob/main/LICENSE) for the full license text.

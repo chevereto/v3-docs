@@ -2,6 +2,10 @@
 
 ## PHP
 
+::: v4
+Check the updated documentation at [🐘 PHP](https://v4-docs.chevereto.com/application/stack/php.html).
+:::
+
 | Version | PHP |
 | ------- | --- |
 | 3.20    | 7.4 |
@@ -114,6 +118,10 @@ Chevereto user will require **read/write** access in the following paths:
 
 ## Database
 
+::: v4
+Check the updated documentation at [🐬 MySQL Server](https://v4-docs.chevereto.com/application/stack/mysql-server.html).
+:::
+
 | Version | MySQL  | MariaDB |
 | ------- | ------ | ------- |
 | 3.20    | 5.7, 8 | 10      |
@@ -126,6 +134,10 @@ Old versions using MyISAM table storage engine will require to convert the old t
 :::
 
 ## Web server configuration
+
+::: v4
+Check the updated documentation at [🪶 Web Server](https://v4-docs.chevereto.com/application/stack/web-server.html).
+:::
 
 ### Apache HTTP server
 
@@ -226,7 +238,7 @@ If you don't have access to editing Apache Virtual Host you can use a `.htaccess
         index index.php;
         try_files $uri $uri/ /index.php$is_args$query_string;
     }
-    
+
     # Single PHP-entrypoint (disables direct access to .php files)
     location ~* \.php$  {
         internal;

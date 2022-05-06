@@ -57,8 +57,17 @@ module.exports = {
         [
             '@vuepress/google-analytics',
             {
-            'ga': 'UA-25384365-3'
+                'ga': 'UA-25384365-3'
             }
+        ],
+        [
+            'vuepress-plugin-container',
+            {
+                type: 'v4',
+                defaultTitle: '',
+                before: `<div class="custom-block highlight"><p class="custom-block-title">🦄 Chevereto V4 users</p>`,
+                after: '</div>',
+            },
         ]
     ]
 };

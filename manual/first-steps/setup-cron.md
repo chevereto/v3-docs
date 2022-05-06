@@ -1,5 +1,9 @@
 # Setup cron
 
+::: v4
+Check the updated documentation at [⏲️ Cron](https://v4-docs.chevereto.com/application/stack/cron.html)
+:::
+
 Background jobs needs to be configured by running a [cron](../../setup/system/requirements.md#cron). You need to configure this and make sure that is working every time you deploy Chevereto.
 
 ::: danger Must have

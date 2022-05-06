@@ -1,5 +1,13 @@
 # cPanel
 
+::: v4
+Check the updated documentation at:
+* [🐬 cPanel Database](https://v4-docs.chevereto.com/guides/cpanel/database.html)
+* [📂 cPanel App files](https://v4-docs.chevereto.com/guides/cpanel/app-files.html)
+* [🐘 cPanel PHP](https://v4-docs.chevereto.com/guides/cpanel/php.html)
+* [⏲️ cPanel Cron](https://v4-docs.chevereto.com/guides/cpanel/cron.html)
+:::
+
 This guide will enable you to install Chevereto on cPanel from scratch.
 
 ## Database

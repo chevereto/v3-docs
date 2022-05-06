@@ -1,5 +1,9 @@
 # Initial setup
 
+::: v4
+Check the updated documentation at [📦 Initial Setup](https://v4-docs.chevereto.com/application/installing/installation.html#initial-setup)
+:::
+
 This will create the chevereto database tables and the Chevereto admin user. This is needed for the first time the system gets installed and it can be made using HTTP (web) or CLI.
 
 ## HTTP setup

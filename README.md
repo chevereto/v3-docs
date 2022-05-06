@@ -7,6 +7,10 @@ actionText: Get Started →
 actionLink: /get-started/
 ---
 
+::: v4
+Check the updated documentation at [v4-docs.chevereto.com](https://v4-docs.chevereto.com/).
+:::
+
 # Chevereto V3 Documentation
 
 Welcome to the Chevereto documentation!
@@ -15,23 +19,16 @@ Here you will find all the official guides and instructions for Chevereto V3. Yo
 
 ## Additional resources
 
-* [Releases](https://releases.chevereto.com)
-* [Guides](https://github.com/chevereto/guides)
-
-## Get in touch
-
-* [Community](https://chevereto.com/community)
-
-## Get updates
-
-* [Newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrgHu89RPRifGX6GXWko9jbzN892DN892XkwATqNm2slYVMHJyPXHV763yXE9jZoh0ZhJySXQ)
-* [Blog](https://blog.chevereto.com)
 * [Chevereto.com](https://chevereto.com)
+* [Community](https://chevereto.com/community)
+* [Blog](https://blog.chevereto.com)
+* [Releases](https://releases.chevereto.com)
+* [Newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrgHu89RPRifGX6GXWko9jbzN892DN892XkwATqNm2slYVMHJyPXHV763yXE9jZoh0ZhJySXQ)
 * [GitHub](https://github.com/chevereto)
 
 ## Translations
 
-💡 Contribute to [translations](https://chevereto.oneskyapp.com/) to get Chevereto available in your language.
+> Contribute to [translations](https://chevereto.oneskyapp.com/) to get Chevereto available in your language.
 
 * [Chinese version](https://docs.doge.uk/zh/chevereto/) (thanks to [QSong](https://resbeta.com/))
 * [Chinese version](https://ch.cndrew.cn/) (thanks to [Uncle_drew](https://cndrew.cn/))

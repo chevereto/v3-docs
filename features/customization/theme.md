@@ -1,5 +1,9 @@
 # Theme
 
+::: v4
+Check the updated documentation at [🎨 Theme](https://v4-docs.chevereto.com/developer/customization/theme.html).
+:::
+
 ## Theme overrides
 
 Theme overrides works by detecting a file override which replaces a given theme file, so the system will use the override instead of the default file. Overrides are placed at `app/themes/Peafowl/overrides`. For example, let's say you want to replace `app/themes/Peafowl/views/image.php` you have to simply copy the file to `app/themes/Peafowl/overrides/views/image.php` and the system will now use the override instead of the default file.

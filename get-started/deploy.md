@@ -8,15 +8,15 @@ Get Chevereto easily one-click deployed in seconds.
 * [Chevereto on Vultr Marketplace](https://vultr.grsm.io/rodolfoberrios5076)
   * [Repository](https://github.com/chevereto/vultr-marketplace)
 
-All these provisioning alternatives are **officially supported by us**.
+All these provisioning alternatives are **officially supported by Chevereto**.
 
 ::: tip All-included
-Our marketplace provisioning includes the following:
+Our cloud marketplace provisioning includes the following:
 
 * Enables the UFW firewall to allow only SSH (port 22, rate limited), HTTP (port 80), and HTTPS (port 443) access.
 * Sets up the Chevereto database and its user.
 * Sets the MySQL root password.
 * Sets up the debian-sys-maint user in MySQL so the system’s init scripts for MySQL will work without requiring the MySQL root user password.
 * Sets the cron required for background tasks.
-* Includes Certbot pre-installed.
+* Certbot pre-installed.
 :::

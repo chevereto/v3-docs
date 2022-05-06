@@ -1,5 +1,9 @@
 # Social login
 
+::: v4
+Check the updated documentation at [🔐 Social login](https://v4-admin.chevereto.com/features/social-login.html).
+:::
+
 ## Facebook login
 
 ::: danger Not secure

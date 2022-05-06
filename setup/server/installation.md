@@ -1,5 +1,9 @@
 # Server Installation
 
+::: v4
+Check the updated documentation at [📦 Installation](https://v4-docs.chevereto.com/application/installing/installation.html).
+:::
+
 To install Chevereto it requires a server environment where the software and uploaded files will be served. This document outlines the generic installation process from scratch.
 
 ::: danger Using cPanel?

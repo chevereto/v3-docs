@@ -1,5 +1,9 @@
 # Server Upgrading
 
+::: v4
+Check the updated documentation at [🚀 Upgrading](https://v4-docs.chevereto.com/application/installing/upgrading.html).
+:::
+
 This section outlines the upgrade process required to upgrade to V3 from old releases (V2 and older).
 
 ::: danger Unsupported

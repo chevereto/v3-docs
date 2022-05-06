@@ -1,5 +1,9 @@
 # External storage
 
+::: v4
+Check the updated documentation at [🪣 External storage](https://v4-admin.chevereto.com/features/external-storage.html).
+:::
+
 External storage allows to use external servers for storing user uploads, which helps to leverage your server load and deliver a more reliable website. If you use multiple external storage servers, it will help to distribute the traffic of these assets.
 
 External storage works by adding a external storage server where file uploads will be stored. This external storage server expose those files using HTTP, enabling users and visitors of your Chevereto installation to access these images directly.

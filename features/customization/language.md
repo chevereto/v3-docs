@@ -1,5 +1,9 @@
 # Language
 
+::: v4
+Check the updated documentation at [💬 Language](https://v4-docs.chevereto.com/developer/customization/language.html).
+:::
+
 Chevereto uses `gettext` for its translations and the system comes with a lot of languages built-in which you can find in the `app/content/languages` folder.
 
 ## Add new languages

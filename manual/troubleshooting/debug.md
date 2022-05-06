@@ -1,5 +1,9 @@
 # Debug
 
+::: v4
+Check the updated documentation at [🐞 Debug](https://v4-docs.chevereto.com/developer/how-to/debug.html).
+:::
+
 Debug enables to dump information about errors that may be affecting the software functionality. If Chevereto isn't working properly you must start debugging it.
 
 ## Configuring debug

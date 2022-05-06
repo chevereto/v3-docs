@@ -1,5 +1,9 @@
 # Bulk content importer
 
+::: v4
+Check the updated documentation at [📥 Bulk importer](https://v4-admin.chevereto.com/dashboard/bulk-importer.html).
+:::
+
 This tool allows to **mass import** images, albums, and users by parsing the contents of a filesystem location. It is intended to be used when you want to import a massive amount of content that otherwise will be troublesome to import by using the API or the web gui.
 
 ::: tip Importing != Syncing

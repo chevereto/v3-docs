@@ -1,5 +1,9 @@
 # API v1
 
+::: v4
+Check the updated documentation at [🖼 API Version 1.1](https://v4-docs.chevereto.com/developer/api/api-v1.html).
+:::
+
 Chevereto API v1 allows to upload pictures as guest to your Chevereto powered website.
 
 API v1 doesn't have rate limiting but is affected by the configured flood upload limit in your admin dashboard. You should only use this API for your very own applications or scripts, is not intended for public usage.
@@ -134,7 +138,7 @@ CHV\Image::uploadToWebsite($source);
 To this (replace juanito with the target username or user_id):
 
 ```php
-// This will upload images to 'juanito' account 
+// This will upload images to 'juanito' account
 CHV\Image::uploadToWebsite($source, 'juanito');
 ```
 

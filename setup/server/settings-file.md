@@ -1,5 +1,9 @@
 # Server Settings file
 
+::: v4
+Check the updated documentation at [📌 app/env.php](https://v4-docs.chevereto.com/application/configuration/env.php.html).
+:::
+
 The file at `app/settings.php` contains the application system level settings.
 
 ::: tip Running container?

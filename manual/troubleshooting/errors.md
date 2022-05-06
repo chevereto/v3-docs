@@ -1,5 +1,9 @@
 # Errors
 
+::: v4
+Check the updated documentation at [😖 Debug](https://v4-docs.chevereto.com/application/reference/errors.html).
+:::
+
 Application errors can be caused by several causes and understanding in which layer the error is affecting the system will drive towards an easy outcome. Kindly understand that in multi-layered systems like Chevereto is crucial to understand when an error is caused by Chevereto or when the problem is elsewhere.
 
 ## Error Id

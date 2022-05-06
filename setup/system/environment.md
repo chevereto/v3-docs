@@ -1,5 +1,9 @@
 # System Environment
 
+::: v4
+Check the updated documentation at [🗿 Environment](https://v4-docs.chevereto.com/application/configuration/environment.html).
+:::
+
 These are the system level settings that can be used to tweak Chevereto provisioning.
 
 ## Passing values

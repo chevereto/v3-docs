@@ -1,9 +1,5 @@
 # System Requirements
 
-::: tip Universal VPS infra available
-Check our [VPS](https://github.com/chevereto/vps) universal bash script for all-included worry-free server setup.
-:::
-
 Minimum machine requirements:
 
 **Note:** When running with minimum requirements it is recommended to [add swap space](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04).
@@ -11,18 +7,15 @@ Minimum machine requirements:
 * 1GB RAM
 * 1 CPU
 
-## Software requirements
-
-* [Server requirements](../server/requirements.md)
-* [Container requirements](../container/requirements.md)
-
 ## Cron
+
+::: v4
+Check the updated documentation at [⏲️ Cron](https://v4-docs.chevereto.com/application/stack/cron.html).
+:::
 
 A [cron](https://en.wikipedia.org/wiki/Cron) is required to process the application background jobs. A cron is system in which a command is executed in a regular basis, this way Chevereto can perform operations in the background.
 
-::: tip Check your server documentation
 This cron setup reference applies only for Debian-based servers with root access. We **strongly recommend** checking your server documentation on how to setup and run cron.
-:::
 
 ### Command
 

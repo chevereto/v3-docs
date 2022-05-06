@@ -1,5 +1,9 @@
 # Routes
 
+::: v4
+Check the updated documentation at [🛤 Routes](https://v4-docs.chevereto.com/developer/customization/routes.html).
+:::
+
 Routes refers to virtual paths like `/dashboard` which doesn't exists in the system as a real folder and Chevereto map that request to PHP. By default Chevereto comes with a lot of routes and all of them are in the `/app/routes` folder.
 
 Custom routes are useful if you want to add things like your own API or you want to change how the default `/image` route works. With this system you don't need plugins at all and you can highly customize anything by adding routes or overriding the existing ones.

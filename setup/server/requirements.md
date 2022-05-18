@@ -6,6 +6,10 @@
 Check the updated documentation at [🐘 PHP](https://v4-docs.chevereto.com/application/stack/php.html).
 :::
 
+::: danger PHP support
+Chevereto V3.20 works only with PHP 7.4. Upgrade to [Chevereto V4](https://v4-docs.chevereto.com/application/installing/upgrading.html) **for PHP 8 support**.
+:::
+
 | Version | PHP |
 | ------- | --- |
 | 3.20    | 7.4 |

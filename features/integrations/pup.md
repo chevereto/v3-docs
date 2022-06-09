@@ -1,7 +1,7 @@
 # Popup Upload Plugin
 
 ::: v4
-Check the updated documentation at [🔌 Popup Upload Plugin](https://v4-user.chevereto.com/features/pup.html).
+Check the updated documentation at [🔌 Popup Upload Plugin](https://v4-user.chevereto.com/integrations/pup.html).
 :::
 
 The popup upload plugin (PUP) is a small file that allows to provide external image uploading via a small JavaScript file.

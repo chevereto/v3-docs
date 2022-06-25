@@ -4,7 +4,7 @@
 Check the updated documentation at [🌈 ShareX](https://v4-user.chevereto.com/integrations/pup.html).
 :::
 
-[ShareX](https://en.wikipedia.org/wiki/ShareX) is an utility for Windows that allows you to upload images, screen captures, text and other kind of content to several providers. You can easily use ShareX with your Chevereto website to upload images directly from your computer thanks to the [Chevereto API](./../API/V1.md).
+[ShareX](https://en.wikipedia.org/wiki/ShareX) is an utility for Windows that allows you to upload images, screen captures, text and other kind of content to several providers. You can easily use ShareX with your Chevereto website to upload images directly from your computer thanks to the [Chevereto API](../../api/README.md).
 
 ## Get ShareX
 
@@ -56,7 +56,7 @@ If everything is OK you will see that and ShareX is ready to upload directly to 
 
 ## Upload images to an user account
 
-Chevereto API V1 works uploading images as guest. If you want to upload images to a given user check the [API user upload Workaround](./../API/V1.md).
+Chevereto API V1 works uploading images as guest. If you want to upload images to a given user check the [API user upload Workaround](../../api/README.md#upload-to-user-workaround).
 
 ## Need help?
 

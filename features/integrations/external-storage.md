@@ -140,7 +140,7 @@ The [Local API](../../settings/external-storage.md#local) allows to upload image
 
 ## Microsoft Azure
 
-The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](https://azure.microsoft.com/en-us/services/storage/).
+The Microsoft Azure API allows to upload images to [Microsoft Azure Storage](https://azure.microsoft.com/services/storage/).
 
 ## OpenStack
 

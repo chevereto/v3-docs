@@ -30,7 +30,7 @@ Here you will find all the official guides and instructions for Chevereto V3. Yo
 
 > Contribute to [translations](https://chevereto.oneskyapp.com/) to get Chevereto available in your language.
 
-* [Chinese version](https://docs.doge.uk/zh/chevereto/) (thanks to [QSong](https://resbeta.com/))
+* [Chinese version](https://docs.doge.uk/zh/chevereto/) (thanks to QSong)
 * [Chinese version](https://ch.cndrew.cn/) (thanks to [Uncle_drew](https://cndrew.cn/))
 
 ## License

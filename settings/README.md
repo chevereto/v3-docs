@@ -1,7 +1,7 @@
 # Dashboard settings
 
 ::: v4
-Check the updated documentation at [⚙️ Settings](https://v4-admin.chevereto.com/settings/).
+Check the updated documentation at [⚙️ Settings](https://v4-admin.chevereto.com/).
 :::
 
 System is controlled at the Dashboard panel, which is the route at `/dashboard` where you can administer your website.

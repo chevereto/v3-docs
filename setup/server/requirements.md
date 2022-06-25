@@ -92,7 +92,7 @@ $settings['image_formats_available'] = ['PNG', 'GIF', 'BMP', 'JPG'];
 
 ## Configuring image library
 
-Check for [CHEVERETO_IMAGE_LIBRARY](environment.md#image-handling-variables) for changing the default image library used by Chevereto.
+Check for [CHEVERETO_IMAGE_LIBRARY](../system/environment.md#image-handling-variables) for changing the default image library used by Chevereto.
 
 ### ImageMagick
 

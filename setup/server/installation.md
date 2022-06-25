@@ -23,7 +23,6 @@ You can refer to the documentation for creating the MySQL database required for 
 * [CloudPanel Database](https://www.cloudpanel.io/docs/cloudpanel-ce/frontend-area/databases)
 * [cPanel Database](https://docs.cpanel.net/cpanel/databases/mysql-databases/)
 * [Plesk Database](https://docs.plesk.com/en-US/obsidian/customer-guide/website-databases/creating-databases.65157/)
-* [CyberPanel Database](https://cyberpanel.net/docs/view-and-manage-databases-table-from-cloud-platform/)
 
 ### Using the MySQL console
 

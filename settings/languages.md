@@ -3,7 +3,7 @@
 `/dashboard/settings/languages`
 
 ::: tip
-Check our [language customization](../customization/language.md) guide if you need to add new languages or just alter some language strings.
+Check the [language customization](../features/customization/language.md) guide if you need to add new languages or just alter some language strings.
 :::
 
 ## Default language

@@ -69,7 +69,7 @@ Environment variables for the database details.
 
 ## Debug variables
 
-Environment variables for [debug](../troubleshoot/debug.md).
+Environment variables for [debug](../../manual/troubleshooting/debug.md).
 
 ::: tip
 When using Docker it logs to `/dev/stderr` regardless this configuration.

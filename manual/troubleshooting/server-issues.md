@@ -4,7 +4,7 @@
 Check the updated documentation at [⛑️ Troubleshoot](https://v4-docs.chevereto.com/developer/how-to/troubleshoot.html).
 :::
 
-Not all web servers follow basic standards and in some cases even having a server that meets the [system requirements](../server/requirements.md) you could find issues that won't allow Chevereto to work.
+Not all web servers follow basic standards and in some cases even having a server that meets the [server requirements](../../setup/server/requirements.md) you could find issues that won't allow Chevereto to work.
 
 ## Webserver
 

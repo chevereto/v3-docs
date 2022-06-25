@@ -127,6 +127,10 @@ http://127.0.0.1/images/2014/06/04/example.png
 
 ## Upload to user workaround
 
+::: v4
+Check out Chevereto V4, which includes [API V1.1](https://v4-docs.chevereto.com/developer/api/api-v1.html) which provides user-based keys.
+:::
+
 API V1 one doesn't have a way to upload images associated with a given user but you can override the default API. Copy the default `app/routes/route.api.php` file to `app/routes/overrides/route.api.php` folder.
 
 Change this:

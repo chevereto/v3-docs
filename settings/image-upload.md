@@ -88,7 +88,7 @@ Toggles if users can determine how to handle Exif data.
 Determines the maximum image size allowed.
 
 ::: warning
-This setting is capped by local `php.ini` [configuration](../setup/system/php.md).
+This setting is capped by local `php.ini` [configuration](../setup/server/requirements.md#php-configuration)
 :::
 
 ## Maximum upload file size (guests)

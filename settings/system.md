@@ -104,7 +104,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 
 ## Debug level
 
-Shows the debug level. This value is taken from the [settings file](../setup/settings-file.md).
+Shows the debug level. This value is taken from the [settings file](../setup/server/settings-file.md).
 
 | Type    | Example              |
 | ------- | -------------------- |

@@ -26,10 +26,10 @@ http://mysite.com/api/1/<action>/
 
 ### Parameters
 
-- key The API v1 key, it can be set in your admin dashboard settings.
-- action What you want to do [values: upload].
-- source Either a image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. You can also use FILES["source"] in your request.
-- format Sets the return format [values: json (default), redirect, txt].
+- `key` The API v1 key, it can be set in your admin dashboard settings.
+- `action` What you want to do [values: upload].
+- `source` Either a image URL or a [base64](https://en.wikipedia.org/wiki/Base64) encoded image string. You can also use FILES["source"] in your request.
+- `format` Sets the return format [values: json (default), redirect, txt].
 
 ### Example call
 
@@ -43,9 +43,9 @@ Note: Always use POST when uploading local files. Url encoding may alter the bas
 
 API v1 responses will vary depending on the **format** parameter:
 
-- json Display all the image uploaded information in JSON format. [default]
-- txt Returns the image direct URL in text/plain format.
-- redirect Redirects to the image viewer URL.
+- `json` Display all the image uploaded information in JSON format. [default]
+- `txt` Returns the image direct URL in text/plain format.
+- `redirect` Redirects to the image viewer URL.
 
 When using JSON the response will have headers status codes to allow you to easily notice if the request was OK or not. It will also output the `status_txt` and `status_code` properties.
 

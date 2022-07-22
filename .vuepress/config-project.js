@@ -42,16 +42,11 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/logo.svg',
-        // repo: 'chevereto/chevereto',
         docsRepo: 'chevereto/v3-docs',
         docsBranch: 'main',
         smoothScroll: true,
         editLinks: true,
-        lastUpdated: true,
-        algolia: {
-            apiKey: '250992199b7863078c8399e2638107af',
-            indexName: 'chevereto',
-        }
+        lastUpdated: true
     },
     plugins: [
         [

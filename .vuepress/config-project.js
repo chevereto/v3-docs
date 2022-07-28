@@ -48,8 +48,9 @@ module.exports = {
         editLinks: true,
         lastUpdated: true,
         algolia: {
-            apiKey: '250992199b7863078c8399e2638107af',
+            apiKey: '06052a1c5591ae720a8d2d7f98901d0d',
             indexName: 'chevereto',
+            appId: 'DA09ED37YY',
         }
     },
     plugins: [

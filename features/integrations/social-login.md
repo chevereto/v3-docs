@@ -1,7 +1,7 @@
 # Social login
 
 ::: v4
-Check the updated documentation at [🔐 Social login](https://v4-admin.chevereto.com/features/social-login.html).
+Check the updated documentation at [🔌 Login providers](https://v4-admin.chevereto.com/features/login-providers.html).
 :::
 
 ## Facebook login

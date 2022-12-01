@@ -10,7 +10,7 @@ Chevereto V3 [ended its servicing](https://blog.chevereto.com/2022/09/05/end-of-
 
 ## Updates
 
-Chevereto V3.X doesn't get any further updates.
+Chevereto V3.X doesn't get any further updates. Instances running Chevereto V3 are exposed to security issues and software bugs that won't get fixed. There's no further maintenance for Chevereto V3.
 
 ## Next version
 

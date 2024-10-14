@@ -7,7 +7,7 @@ Check the updated documentation at [🚀 Upgrading](https://v4-docs.chevereto.co
 This section outlines the upgrade process required to upgrade to V3 from old releases (V2 and older).
 
 ::: danger Unsupported
-These versions are old, if you encounter any issue upgrading from these please [report](https://chv.to/open-bug) it.
+These versions are old, if you encounter any issue upgrading from these please [report](https://chevereto.com/go/open-bug) it.
 :::
 
 ## Update from V2.1 - V2.6

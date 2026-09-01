@@ -17,21 +17,40 @@ Welcome to the Chevereto documentation!
 
 Here you will find all the official guides and instructions for Chevereto V3. You are welcome to contribute improving this documentation.
 
-## Additional resources
+## Chevereto Cloud
 
-* [Chevereto.com](https://chevereto.com)
-* [Community](https://chevereto.com/community)
-* [Blog](https://blog.chevereto.com)
-* [Releases](https://releases.chevereto.com)
-* [Newsletter](https://newsletter.chevereto.com/subscription?f=PmL892XuTdfErVq763PCycJQrgHu89RPRifGX6GXWko9jbzN892DN892XkwATqNm2slYVMHJyPXHV763yXE9jZoh0ZhJySXQ)
-* [GitHub](https://github.com/chevereto)
+Don't want to manage servers? [Chevereto Cloud](https://cloud.chevereto.com) handles the infrastructure for you, so you can enjoy Chevereto without any technical overhead.
 
-## Translations
+<a href="https://cloud.chevereto.com"><img src="./src/products/cloud/social-preview.png" style="max-width: 419px; width: 100%;"></a>
 
-> Contribute to [translations](https://chevereto.oneskyapp.com/) to get Chevereto available in your language.
+## General resources
+
+* [Website](https://chevereto.com/) - The main hub for all things Chevereto.
+* [YouTube](https://www.youtube.com/@cheveretocms) - Tutorials and video guides.
+* [Newsletter](https://chevereto.com/go/newsletter) - Get updates via email.
+* [Blog](https://blog.chevereto.com/) - News and announcements.
+* [Community](https://chevereto.com/community/) - Forums to connect with others.
+* [Discord](https://chevereto.com/go/discord) - Live chat with the community.
+* [GitHub](https://github.com/chevereto) - Open source projects and contributions.
+* [Releases](https://releases.chevereto.com/) - All software release notes.
+
+## Author's resources
+
+Learn more about the person behind Chevereto. Discover the author's work, contributions, and personal projects that reflect the philosophy driving the platform.
+
+* [Rodolfo Berrios](https://rodolfoberrios.com) - Creator of Chevereto.
+* [rodber (GitHub)](https://github.com/rodber) - Open source contributions.
+
+## Related projects
+
+Chevereto is supported by complementary tools and libraries that extend its functionality and showcase its innovative roots. Explore these related projects for additional resources.
+
+* [Chevere](https://chevere.org) - PHP development library.
+* [xrDebug](https://xrdebug.com) - Debugging tool.
+
+## Documentation translations
 
 * [Chinese version](https://docs.doge.uk/zh/chevereto/) (thanks to QSong)
-* [Chinese version](https://ch.cndrew.cn/) (thanks to [Uncle_drew](https://cndrew.cn/))
 
 ## License
 

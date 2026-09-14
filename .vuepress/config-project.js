@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'V3 Docs',
+    title: 'Chevereto V3 Docs',
     description: 'Documentation for Chevereto image hosting software (V3)',
     head: [
         ['link', {
@@ -54,22 +54,18 @@ module.exports = {
         logo: '/logo.svg',
         docsRepo: 'chevereto/v3-docs',
         docsBranch: 'main',
-        smoothScroll: true,
+        smoothScroll: false,
         editLinks: true,
         lastUpdated: true,
+        sidebarDepth: 3,
+        searchPlaceholder: 'Search',
         algolia: {
-            apiKey: '06052a1c5591ae720a8d2d7f98901d0d',
+            apiKey: '49544d26dbc3a0d69593dac1d83f8ab1',
             indexName: 'chevereto',
             appId: 'DA09ED37YY',
         }
     },
     plugins: [
-        [
-            '@vuepress/plugin-google-analytics',
-            {
-                'ga': 'G-WL8RV7RGEN'
-            }
-        ],
         [
             'vuepress-plugin-container',
             {
